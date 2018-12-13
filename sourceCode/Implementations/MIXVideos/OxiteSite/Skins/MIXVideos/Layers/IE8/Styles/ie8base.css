@@ -1,0 +1,191 @@
+﻿/** LAYOUT **/
+#header,
+#main .primary {
+    width:961px;
+}
+#main .secondary,
+#footer {
+    padding-left:15px;
+    padding-right:15px;
+    width:931px;
+}
+#main .primary {
+    padding-left:0;
+    padding-right:0;
+}
+#main .primary div.post {
+    background:#E9ECEC;
+    padding:20px 0;
+}
+#main .secondary {
+    padding:20px 15px;
+}
+#main .primary ul.posts,
+#main .primary div.post .title,
+#main .primary div.post .posted,
+#main .primary div.post .content,
+#main .primary div.post .more,
+#main .primary div.post #comments {
+    padding-left:15px;
+    padding-right:15px;
+}
+.admin.manage.buttons,
+#main .primary .pageState,
+#main .primary .pager,
+#main .primary div.post .addlinks {
+    padding-right:15px;
+}
+.posts.medium .post {
+    margin:0 17px 17px 0;
+    width:220px
+}
+#discovermore .sub {
+    width:220px;
+}
+#discovermore .tags {
+    width:458px;
+}
+#discovermore .recent {
+    margin-left:17px;
+}
+#discovermore .recent li {
+    width:220px;
+}
+
+/** HEADER **/
+#header {
+    background:url(../../mix09/styles/images/masthead.png) no-repeat 100% 0;
+    height:120px;
+}
+#header #title h1 {
+    margin-bottom:0px;
+}
+#menucontainer .menu {
+    bottom:-5px;
+}
+#menucontainer .masthead a {
+    background:url(images/ie8_masthead.png) no-repeat;
+    height:91px;
+    left:1.5em;
+    overflow:hidden;
+    position:absolute;
+    text-indent:-9999px;
+    top:140px;
+    width:620px;
+}
+#main .primary {
+    padding-top:120px;
+    background-image:url(images/background.jpg);
+    background-repeat:no-repeat;
+}
+
+/** POST **/
+.post .addlinks {
+    display:inline;
+    float:right;
+    width:22.2em;
+}
+.post .addlinks ul {
+    font-size:1.3em;
+    margin:0;
+}
+.post .addlinks li {
+    list-style-type:none;
+    margin:0 0 .5em;
+}
+div.post .content,
+div.post .more {
+    width:695px;
+}
+div.post .content {
+    margin-bottom:1em;
+}
+.post object.player {
+    display:block;
+    margin-bottom:1.33em;
+    margin-left:0;
+}
+div.post ul.more {
+    margin-bottom:0;
+}
+
+/** POSTS **/
+#main .primary ul.posts {
+    margin-top:2em;
+}
+
+/** COLOR OVERRIDES **/
+.posts.medium .post {
+    background:#FFF url(images/blue.png) no-repeat -9999px 0;
+}
+.posts.medium .title {
+    background:#FFF url(images/white.png) no-repeat -9999px 0;
+}
+.posts.medium .posted {
+    background-color:#FFF;
+}
+.posts.medium .posted {
+    background-image:url(images/bar_blue.png);
+    color:#A9A9A9;
+}
+.posts.medium .post .details {
+    background-image:url(images/white.png);
+}
+.posts.medium .post.hover .details {
+    background-image:url(images/blue.png);
+}
+.posts.medium .post.hover .title,
+.posts.medium .post.hover .posted {
+    background-color:#739DC9;
+}
+.posts.medium .post.hover .title a, .posts.medium .post.hover .title a:link, .posts.medium .post.hover .title a:visited,
+.posts.medium .post.hover .title a:hover, .posts.medium .post.hover .title a:active {
+    color:#FFF;
+}
+.posts.medium .post.hover .posted,
+#discovermore .posts.medium .post.hover .posted {
+    background-image:url(../../../styles/images/bar_white.png);
+    color:#E0E0E0;
+}
+#discovermore .recent .post .details {
+    background-image:url(images/white.png);
+}
+#discovermore .recent .post.hover .details {
+    background-image:url(images/blue.png);
+}
+.posts.medium .title a, .posts.medium .title a:link, .posts.medium .title a:visited,
+.posts.medium .title a:hover, .posts.medium .title a:active,
+.posts.medium .details a, .posts.medium .details a:link, .posts.medium .details a:visited,
+.posts.medium .details a:hover, .posts.medium .details a:active,
+#discovermore .post a, #discovermore .post a:link, #discovermore .post a:visited,
+#discovermore .post a:hover, #discovermore .post a:active {
+color:#5085BC;
+}
+.posts.medium .post.hover .details a, .posts.medium .post.hover .details a:link, .posts.medium .post.hover .details a:visited,
+.posts.medium .post.hover .details a:hover, .posts.medium .post.hover .details a:active,
+#discovermore .post.hover a, #discovermore .post.hover a:link, #discovermore .post.hover a:visited,
+#discovermore .post.hover a:hover, #discovermore .post.hover a:active {
+color:#D3E5EF;
+}
+#discovermore .post.hover a.title, #discovermore .post.hover a:link.title, #discovermore .post.hover a:visited.title,
+#discovermore .post.hover a:hover.title, #discovermore .post.hover a:active.title {
+    color:#FFF;
+}
+.posts.medium ul.tags li {
+    background-image:url(../../../styles/images/bullet_white.png);
+}
+.posts.medium ul.tags li.first {
+    background-image:none;
+}
+ul.tags li {
+    background-image:url(images/bullet_blue.png);
+}
+div.addlinks ul li.selected a
+{
+    font-weight:bold;
+}
+
+/** MESSAGES **/
+#main .primary .message.m_404 {
+    margin:0 15px;
+}

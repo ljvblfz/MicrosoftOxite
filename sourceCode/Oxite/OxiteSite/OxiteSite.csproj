@@ -1,0 +1,473 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MvcBuildViews>true</MvcBuildViews>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F3B77E5-FD70-4C94-A8DE-503357FE7174}</ProjectGuid>
+    <ProjectTypeGuids>{603c0e0b-db56-11dc-be95-000d561079b0};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OxiteSite</RootNamespace>
+    <AssemblyName>OxiteSite</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC Beta\Assemblies\System.Web.Abstractions.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC RC\Assemblies\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC Beta\Assemblies\System.Web.Routing.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Modules\OxiteSite\OxiteSiteModule.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Content Include="Plugins\Oxite\Twitter\TwitterPlugin.cs" />
+    <Content Include="Plugins\Oxite\AddThis\AddThisPlugin.cs" />
+    <Content Include="Plugins\Oxite\XboxLiveGamercard\XboxLiveGamercardPlugin.cs" />
+    <Content Include="Plugins\Oxite\SpamControl\SpamControlPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Oxite.Database.mdf">
+    </Content>
+    <Content Include="Styles\images\accept.png" />
+    <Content Include="Styles\images\bullet_grey.png" />
+    <Content Include="Styles\images\bullet_blue.png" />
+    <Content Include="Styles\images\bullet_red.png" />
+    <Content Include="Styles\images\bullet_toggle_minus.png" />
+    <Content Include="Styles\images\bullet_toggle_plus.png" />
+    <Content Include="Styles\images\bullet_toggle_plus_onoff.png" />
+    <Content Include="Styles\images\bullet_toggle_minus_onoff.png" />
+    <Content Include="Styles\images\delete.png" />
+    <Content Include="Styles\images\famfamfam.gif" />
+    <Content Include="Styles\images\gravatar.gif" />
+    <Content Include="Styles\images\information.png" />
+    <Content Include="Styles\images\oxite.png" />
+    <Content Include="Styles\images\page_add.png" />
+    <Content Include="Styles\images\page_delete.png" />
+    <Content Include="Styles\images\page_edit.png" />
+    <Content Include="Styles\images\tag_red.png" />
+    <Content Include="Styles\base.css" />
+    <Content Include="Scripts\base.js" />
+    <Content Include="Content\images\valid-rss.png" />
+    <Content Include="Content\images\valid-xhtml10-blue.png" />
+    <Content Include="Content\images\vcss-blue.gif" />
+    <Content Include="Styles\yui.reset.2.6.0.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Skins\Admin\Views\Site\Dashboard.aspx" />
+    <Content Include="Skins\Admin\Views\Blog\Find.aspx" />
+    <Content Include="Skins\Admin\Views\Blog\ItemEdit.aspx" />
+    <Content Include="Skins\Admin\Views\BlogML\Import.aspx" />
+    <Content Include="Skins\Admin\Views\Site\Item.aspx" />
+    <Content Include="Skins\Admin\Views\User\ChangePassword.aspx" />
+    <Content Include="Views\Page\Item.aspx" />
+    <Content Include="Skins\Admin\Views\Post\ItemAdd.aspx" />
+    <Content Include="Skins\Admin\Views\Post\ItemEdit.ascx" />
+    <Content Include="Views\Post\List.aspx" />
+    <Content Include="Views\Post\Atom.aspx" />
+    <Content Include="Views\Post\Item.aspx" />
+    <Content Include="Views\Post\Rss.aspx" />
+    <Content Include="Views\Post\ListByTag.aspx" />
+    <Content Include="Views\Shared\ArchiveBreadcrumb.ascx" />
+    <Content Include="Views\Shared\CommentCreatorInfo.ascx" />
+    <Content Include="Views\Shared\ArchivesByYear.ascx" />
+    <Content Include="Skins\Admin\Views\Post\ItemEditMetadata.ascx" />
+    <Content Include="Skins\Admin\Views\Post\ItemEdit.aspx" />
+    <Content Include="Views\Post\ListByArchive.aspx" />
+    <Content Include="Views\Post\ListByBlog.aspx" />
+    <Content Include="Views\Shared\PostListMedium.ascx" />
+    <Content Include="Views\Utility\OpenSearch.aspx" />
+    <Content Include="Views\Search\List.aspx" />
+    <Content Include="Views\Comment\Rss.aspx" />
+    <Content Include="Views\Shared\Archives.ascx" />
+    <Content Include="Views\Shared\Comment.ascx" />
+    <Content Include="Views\Shared\CommentFormAnonymous.ascx" />
+    <Content Include="Views\Shared\CommentFormAuthenticated.ascx" />
+    <Content Include="Views\Post\Comments.ascx" />
+    <Content Include="Views\Pingback\IndexError.aspx" />
+    <Content Include="Views\Pingback\IndexSuccess.aspx" />
+    <Content Include="Views\Shared\Footer.ascx" />
+    <Content Include="Views\Shared\HeadCustomContents.ascx" />
+    <Content Include="Views\Shared\Header.ascx" />
+    <Content Include="Views\Shared\ManageComment.ascx" />
+    <Content Include="Views\Page\ManagePage.ascx" />
+    <Content Include="Views\Post\ManagePost.ascx" />
+    <Content Include="Views\Shared\NotFound.aspx" />
+    <Content Include="Views\Comment\Atom.aspx" />
+    <Content Include="Views\Utility\RobotsTxt.aspx" />
+    <Content Include="Views\Shared\Search.ascx" />
+    <Content Include="Views\Tag\Cloud.aspx" />
+    <Content Include="Views\Trackback\Add.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Views\User\SignIn.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LoginUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Oxite.Blogs\Oxite.Blogs.csproj">
+      <Project>{FDDD5FC8-4CD7-49AC-A1F8-16BA8F0359CD}</Project>
+      <Name>Oxite.Blogs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oxite.CMS\Oxite.CMS.csproj">
+      <Project>{9AAA42D3-8F6B-4EA0-B67A-0A8E4AC403EC}</Project>
+      <Name>Oxite.CMS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oxite.Setup\Oxite.Setup.csproj">
+      <Project>{21EE56F7-D4A8-4C3E-BD83-67F90BEF370B}</Project>
+      <Name>Oxite.Setup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oxite\Oxite.csproj">
+      <Project>{D54AF39D-CB43-4D32-A89D-D55EE924AB57}</Project>
+      <Name>Oxite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\icons\flame.ico" />
+    <Content Include="Content\images\flame.png" />
+    <Content Include="Content\icons\frog.ico" />
+    <Content Include="Content\images\frog.png" />
+    <Content Include="Content\icons\mushroom.ico" />
+    <Content Include="Content\images\mushroom.png" />
+    <Content Include="Styles\images\add.png" />
+    <Content Include="Styles\images\asterisk_yellow.png" />
+    <Content Include="Styles\images\find.png" />
+    <Content Include="Styles\images\plugin.png" />
+    <Content Include="Styles\images\plugin_disabled.png" />
+    <Content Include="Skins\Admin\Views\Comment\ListForAdmin.aspx" />
+    <Content Include="Skins\Admin\Views\Page\ItemAdd.aspx" />
+    <Content Include="Skins\Admin\Views\Page\ItemEdit.aspx" />
+    <Content Include="Skins\Admin\Views\Page\ItemEditButtons.ascx" />
+    <Content Include="Skins\Admin\Views\Post\ListWithDrafts.aspx" />
+    <Content Include="Views\Shared\CommentListSmall.ascx" />
+    <Content Include="Views\Shared\CommentListMedium.ascx" />
+    <Content Include="Views\Shared\PostListSmall.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\Site.Master" />
+    <Content Include="Views\Shared\SideBar.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\icons\flame.png" />
+    <Content Include="Content\icons\frog.png" />
+    <Content Include="Content\icons\mushroom.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Skins\Admin\Scripts\base.js" />
+    <Content Include="Skins\Admin\Styles\images\accept.png" />
+    <Content Include="Skins\Admin\Styles\images\add.png" />
+    <Content Include="Skins\Admin\Styles\images\admin.png" />
+    <Content Include="Skins\Admin\Styles\images\arrow_left.png" />
+    <Content Include="Skins\Admin\Styles\images\arrow_menu.gif" />
+    <Content Include="Skins\Admin\Styles\images\arrow_refresh.png" />
+    <Content Include="Skins\Admin\Styles\images\arrow_refresh_large.png" />
+    <Content Include="Skins\Admin\Styles\images\asterisk_yellow.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_blue.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_red.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_toggle_minus.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_toggle_minus_onoff.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_toggle_plus.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_toggle_plus_onoff.png" />
+    <Content Include="Skins\Admin\Styles\images\calendar.png" />
+    <Content Include="Skins\Admin\Styles\images\delete.png" />
+    <Content Include="Skins\Admin\Styles\images\exclamation.png" />
+    <Content Include="Skins\Admin\Styles\images\famfamfam.gif" />
+    <Content Include="Skins\Admin\Styles\images\feed.png" />
+    <Content Include="Skins\Admin\Styles\images\find.png" />
+    <Content Include="Skins\Admin\Styles\images\gravatar.gif" />
+    <Content Include="Skins\Admin\Styles\images\information.png" />
+    <Content Include="Skins\Admin\Styles\images\newspaper.png" />
+    <Content Include="Skins\Admin\Styles\images\oooohhhh.gif" />
+    <Content Include="Skins\Admin\Styles\images\oxite.png" />
+    <Content Include="Skins\Admin\Styles\images\oxite_logo.png" />
+    <Content Include="Skins\Admin\Styles\images\oxite_medium.png" />
+    <Content Include="Skins\Admin\Styles\images\page_add.png" />
+    <Content Include="Skins\Admin\Styles\images\page_delete.png" />
+    <Content Include="Skins\Admin\Styles\images\page_edit.png" />
+    <Content Include="Skins\Admin\Styles\images\page_files.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin_large.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin_disabled.png" />
+    <Content Include="Skins\Admin\Styles\images\tag_red.png" />
+    <Content Include="Skins\Admin\Styles\images\windows_search.png" />
+    <Content Include="Skins\Admin\Styles\jquery.css" />
+    <Content Include="Skins\Admin\Styles\base.css" />
+    <Content Include="Skins\Admin\Styles\yui.reset.2.6.0.css" />
+    <Content Include="Skins\Admin\Views\Shared\HeadCustomContents.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\Header.ascx" />
+    <Content Include="Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Skins\Admin\Styles\images\disk.png" />
+    <Content Include="Styles\images\page_files.png" />
+    <Content Include="Styles\images\exclamation.png" />
+    <Content Include="Styles\images\feed.png" />
+    <Content Include="Styles\images\newspaper.png" />
+    <Content Include="Styles\images\oxite_logo.png" />
+    <Content Include="Styles\images\windows_search.png" />
+    <Content Include="Skins\Web.config" />
+    <Content Include="Views\Comment\AtomFeedElements.ascx" />
+    <Content Include="Views\Comment\AtomFeedEntry.ascx" />
+    <Content Include="Views\Comment\RssChannel.ascx" />
+    <Content Include="Views\Comment\RssChannelItem.ascx" />
+    <Content Include="Skins\Admin\Views\File\ManageFile.ascx" />
+    <Content Include="Skins\Admin\Views\File\ManageFiles.ascx" />
+    <Content Include="Skins\Admin\Views\File\ListByPost.aspx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginInfo.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginEditSettings.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginEditCode.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginInfoError.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\ItemEdit.aspx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginDetails.ascx" />
+    <Content Include="Views\Post\AtomFeedElements.ascx" />
+    <Content Include="Views\Post\AtomFeedEntry.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\Menu.ascx" />
+    <Content Include="Views\Shared\CommentOnPost.ascx" />
+    <Content Include="Views\Shared\CommentOnComment.ascx" />
+    <Content Include="Views\Post\RssChannel.ascx" />
+    <Content Include="Views\Post\RssChannelItem.ascx" />
+    <Content Include="Skins\Admin\Views\Role\Find.aspx" />
+    <Content Include="Skins\Admin\Views\Role\ItemEdit.aspx" />
+    <Content Include="Skins\Admin\Views\Shared\SettingsMenu.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\QuickMenu.ascx" />
+    <Content Include="Skins\Admin\Views\Site\ManageUsers.aspx" />
+    <Content Include="Skins\Admin\Views\Site\ManageAreas.aspx" />
+    <Content Include="Skins\Admin\Views\Site\ManageSite.aspx" />
+    <Content Include="Skins\Admin\Views\User\Roles.aspx" />
+    <Content Include="Skins\Admin\Views\User\ItemAdd.aspx" />
+    <Content Include="Skins\Admin\Views\User\Find.aspx" />
+    <Content Include="Skins\Admin\Views\User\ItemEdit.aspx" />
+    <Content Include="Views\Utility\OpenSearchOSDX.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Plugins\Oxite\AddThis\images\addThis_16x16.png" />
+    <Content Include="Plugins\Oxite\AddThis\images\addThis_32x32.png" />
+    <Content Include="Plugins\Oxite\AddThis\templates\AddThisButton.ascx" />
+    <Content Include="Plugins\Oxite\SpamControl\images\ham_32x32.png" />
+    <Content Include="Plugins\Oxite\Twitter\images\t_large.png" />
+    <Content Include="Plugins\Oxite\Twitter\templates\PostCheckBox.ascx" />
+    <Content Include="Plugins\Oxite\XboxLiveGamercard\images\xfw_32x32.png" />
+    <Content Include="Plugins\Oxite\XboxLiveGamercard\templates\Gamercard.ascx" />
+    <Content Include="Plugins\Web.config" />
+    <Content Include="Skins\Admin\Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Skins\Admin\Scripts\jquery-1.3.2.js" />
+    <Content Include="Skins\Admin\Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Skins\Admin\Scripts\markitup\jquery.markitup.js" />
+    <Content Include="Skins\Admin\Scripts\markitup\jquery.markitup.pack.js" />
+    <Content Include="Skins\Admin\Scripts\markitup\sets\default\set.js" />
+    <Content Include="Skins\Admin\Scripts\markitup\sets\html\set.js" />
+    <Content Include="Skins\Admin\Styles\images\arrow_down_bright.png" />
+    <Content Include="Skins\Admin\Styles\images\arrow_down_light.png" />
+    <Content Include="Skins\Admin\Styles\images\arrow_right.png" />
+    <Content Include="Skins\Admin\Styles\images\book.png" />
+    <Content Include="Skins\Admin\Styles\images\book_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\book_open.png" />
+    <Content Include="Skins\Admin\Styles\images\book_open_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\cog.png" />
+    <Content Include="Skins\Admin\Styles\images\cog_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\error.png" />
+    <Content Include="Skins\Admin\Styles\images\error_zoom_large.png" />
+    <Content Include="Skins\Admin\Styles\images\exclamation_zoom_large.png" />
+    <Content Include="Skins\Admin\Styles\images\house.png" />
+    <Content Include="Skins\Admin\Styles\images\house_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\lightbulb.png" />
+    <Content Include="Skins\Admin\Styles\images\lightbulb_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\page_edit_dim.png" />
+    <Content Include="Skins\Admin\Styles\images\page_white_stack.png" />
+    <Content Include="Skins\Admin\Styles\images\page_white_stack_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\page_white_text.png" />
+    <Content Include="Skins\Admin\Styles\images\page_white_text_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\pencil.png" />
+    <Content Include="Skins\Admin\Styles\images\pencil_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin_large_disabled.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin_large_error.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin_large_warning.png" />
+    <Content Include="Skins\Admin\Styles\images\user.png" />
+    <Content Include="Skins\Admin\Styles\images\user_grey.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\bold.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\clean.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\image.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\italic.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\link.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\picture.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\preview.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\stroke.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\style.css" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\bold.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\clean.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\h1.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\h2.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\h3.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\h4.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\h5.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\h6.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\image.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\italic.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\link.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\list-bullet.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\list-item.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\list-numeric.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\paragraph.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\picture.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\preview.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\stroke.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\style.css" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-container.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-bbcode.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-dotclear.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-html.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-json.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-markdown.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-textile.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-wiki.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-xml.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\handle.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\menu.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\submenu.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\style.css" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\simple\images\handle.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\simple\images\menu.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\simple\images\submenu.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\simple\style.css" />
+    <Content Include="Skins\Admin\Styles\markitup\templates\preview.html" />
+    <Content Include="Skins\Admin\Views\Page\ItemEdit.ascx" />
+    <Content Include="Skins\Admin\Views\Page\ItemEditContent.ascx" />
+    <Content Include="Skins\Admin\Views\Page\ItemEditMetadata.ascx" />
+    <Content Include="Skins\Admin\Views\Page\List.ascx" />
+    <Content Include="Skins\Admin\Views\Page\List.aspx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginInfoErrorSmall.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginDetailsSmall.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\ManagePluginNotInstalled.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\List.aspx" />
+    <Content Include="Skins\Admin\Views\Plugin\ManagePlugin.ascx" />
+    <Content Include="Skins\Admin\Views\Post\ItemEditButtons.ascx" />
+    <Content Include="Skins\Admin\Views\Post\ItemEditContent.ascx" />
+    <Content Include="Skins\Admin\Views\Setup\BasicSettings.aspx" />
+    <Content Include="Skins\Admin\Views\Setup\Storage.aspx" />
+    <Content Include="Skins\Admin\Views\Shared\Dialog.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\Dialog.aspx" />
+    <Content Include="Skins\Admin\Views\Plugin\List.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Plugins\Oxite\SpamControl\images\flag_red.png" />
+    <Content Include="Plugins\Oxite\SpamControl\scripts\base.js" />
+    <Content Include="Plugins\Oxite\SpamControl\styles\base.css" />
+    <Content Include="Plugins\Oxite\SpamControl\templates\MarkAsSpam.ascx" />
+    <Content Include="Skins\Admin\Views\Setup\SiteType.aspx" />
+    <Content Include="Skins\Admin\Views\Setup\SetupComplete.aspx" />
+    <Content Include="Skins\Admin\Views\Shared\Error.aspx" />
+    <Content Include="Skins\Admin\Views\Shared\NotFound.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Skins\Admin\Views\ContentItem\GlobalContentEdit.ascx" />
+    <Content Include="Skins\Admin\Views\ContentItem\GlobalContentEdit.aspx" />
+    <Content Include="Skins\Admin\Views\Setup\AdminSettings.aspx" />
+    <Content Include="Skins\Admin\Views\Setup\Modules.aspx" />
+    <Content Include="Views\Search\SearchResults.ascx" />
+    <Content Include="Views\Shared\SiteMap.aspx" />
+    <Content Include="Views\Shared\SiteMapIndex.aspx" />
+    <Content Include="Views\Shared\Unauthorized.aspx" />
+    <Content Include="Skins\Admin\Views\Shared\EditContentItems.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\Setup.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Oxite.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>30913</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Oxite</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

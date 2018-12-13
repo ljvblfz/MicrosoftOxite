@@ -1,0 +1,131 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite", "Oxite\Oxite.csproj", "{D54AF39D-CB43-4D32-A89D-D55EE924AB57}"
+EndProject
+Project("{A9ACE9BB-CECE-4E62-9AA4-C7E7C5BD2124}") = "Oxite.Database", "Oxite.Database\Oxite.Database.dbproj", "{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OxiteSite", "OxiteSite\OxiteSite.csproj", "{9F3B77E5-FD70-4C94-A8DE-503357FE7174}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{977FEAC6-4F0B-4665-93A1-887A4D694DFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite.Blogs", "Oxite.Blogs\Oxite.Blogs.csproj", "{FDDD5FC8-4CD7-49AC-A1F8-16BA8F0359CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite.CMS", "Oxite.CMS\Oxite.CMS.csproj", "{9AAA42D3-8F6B-4EA0-B67A-0A8E4AC403EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite.Setup", "Oxite.Setup\Oxite.Setup.csproj", "{21EE56F7-D4A8-4C3E-BD83-67F90BEF370B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite.Conferences", "Oxite.Conferences\Oxite.Conferences.csproj", "{AB169B00-83EE-4F00-BFA5-A1A4D976A8EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite.Bing", "Oxite.Bing\Oxite.Bing.csproj", "{6E731028-11C4-4918-9C3C-09F3BD077522}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7D3792B5-83B7-43E8-A74B-ED2706C22F87}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		Oxite.Dev.vsmdi = Oxite.Dev.vsmdi
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs04.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Oxite.Database\\Oxite.Database.dbproj
+		SccProjectName1 = Oxite.Database
+		SccLocalPath1 = Oxite.Database
+		SccProjectUniqueName2 = Oxite\\Oxite.csproj
+		SccProjectName2 = Oxite
+		SccLocalPath2 = Oxite
+		SccProjectUniqueName3 = OxiteSite\\OxiteSite.csproj
+		SccProjectName3 = OxiteSite
+		SccLocalPath3 = OxiteSite
+		SccProjectUniqueName4 = Oxite.Blogs\\Oxite.Blogs.csproj
+		SccProjectTopLevelParentUniqueName4 = Oxite.Dev.sln
+		SccProjectName4 = Oxite.Blogs
+		SccLocalPath4 = Oxite.Blogs
+		SccProjectUniqueName5 = Oxite.CMS\\Oxite.CMS.csproj
+		SccProjectTopLevelParentUniqueName5 = Oxite.Dev.sln
+		SccProjectName5 = Oxite.CMS
+		SccLocalPath5 = Oxite.CMS
+		SccProjectUniqueName6 = Oxite.Setup\\Oxite.Setup.csproj
+		SccProjectTopLevelParentUniqueName6 = Oxite.Dev.sln
+		SccProjectName6 = Oxite.Setup
+		SccLocalPath6 = Oxite.Setup
+		SccProjectUniqueName7 = Oxite.Conferences\\Oxite.Conferences.csproj
+		SccProjectTopLevelParentUniqueName7 = Oxite.Dev.sln
+		SccProjectName7 = Oxite.Conferences
+		SccLocalPath7 = Oxite.Conferences
+		SccProjectUniqueName8 = Oxite.Bing\\Oxite.Bing.csproj
+		SccProjectTopLevelParentUniqueName8 = Oxite.Dev.sln
+		SccProjectName8 = Oxite.Bing
+		SccLocalPath8 = Oxite.Bing
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Default|Any CPU = Default|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Debug|Any CPU.ActiveCfg = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Debug|Any CPU.Build.0 = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Default|Any CPU.ActiveCfg = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Default|Any CPU.Build.0 = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Default|Any CPU.Deploy.0 = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Release|Any CPU.ActiveCfg = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Release|Any CPU.Build.0 = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Release|Any CPU.Deploy.0 = Default|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDDD5FC8-4CD7-49AC-A1F8-16BA8F0359CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDDD5FC8-4CD7-49AC-A1F8-16BA8F0359CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDDD5FC8-4CD7-49AC-A1F8-16BA8F0359CD}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDDD5FC8-4CD7-49AC-A1F8-16BA8F0359CD}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{FDDD5FC8-4CD7-49AC-A1F8-16BA8F0359CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDDD5FC8-4CD7-49AC-A1F8-16BA8F0359CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AAA42D3-8F6B-4EA0-B67A-0A8E4AC403EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AAA42D3-8F6B-4EA0-B67A-0A8E4AC403EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AAA42D3-8F6B-4EA0-B67A-0A8E4AC403EC}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AAA42D3-8F6B-4EA0-B67A-0A8E4AC403EC}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{9AAA42D3-8F6B-4EA0-B67A-0A8E4AC403EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AAA42D3-8F6B-4EA0-B67A-0A8E4AC403EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EE56F7-D4A8-4C3E-BD83-67F90BEF370B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EE56F7-D4A8-4C3E-BD83-67F90BEF370B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EE56F7-D4A8-4C3E-BD83-67F90BEF370B}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EE56F7-D4A8-4C3E-BD83-67F90BEF370B}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{21EE56F7-D4A8-4C3E-BD83-67F90BEF370B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EE56F7-D4A8-4C3E-BD83-67F90BEF370B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB169B00-83EE-4F00-BFA5-A1A4D976A8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB169B00-83EE-4F00-BFA5-A1A4D976A8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB169B00-83EE-4F00-BFA5-A1A4D976A8EA}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB169B00-83EE-4F00-BFA5-A1A4D976A8EA}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{AB169B00-83EE-4F00-BFA5-A1A4D976A8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB169B00-83EE-4F00-BFA5-A1A4D976A8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E731028-11C4-4918-9C3C-09F3BD077522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E731028-11C4-4918-9C3C-09F3BD077522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E731028-11C4-4918-9C3C-09F3BD077522}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E731028-11C4-4918-9C3C-09F3BD077522}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{6E731028-11C4-4918-9C3C-09F3BD077522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E731028-11C4-4918-9C3C-09F3BD077522}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FDDD5FC8-4CD7-49AC-A1F8-16BA8F0359CD} = {977FEAC6-4F0B-4665-93A1-887A4D694DFE}
+		{9AAA42D3-8F6B-4EA0-B67A-0A8E4AC403EC} = {977FEAC6-4F0B-4665-93A1-887A4D694DFE}
+		{21EE56F7-D4A8-4C3E-BD83-67F90BEF370B} = {977FEAC6-4F0B-4665-93A1-887A4D694DFE}
+		{AB169B00-83EE-4F00-BFA5-A1A4D976A8EA} = {977FEAC6-4F0B-4665-93A1-887A4D694DFE}
+		{6E731028-11C4-4918-9C3C-09F3BD077522} = {977FEAC6-4F0B-4665-93A1-887A4D694DFE}
+	EndGlobalSection
+EndGlobal

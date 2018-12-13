@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Oxite.Database" Class="OxiteDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Oxite.Database;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.oxite_Site" Member="oxite_Sites">
+    <Type Name="oxite_Site">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SiteHost" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SiteName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SiteDisplayName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SiteDescription" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageDefault" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="TimeZoneOffset" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="PageTitleSeparator" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FavIconUrl" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CommentStateDefault" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="IncludeOpenSearch" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AuthorAutoSubscribe" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PostEditTimeout" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="GravatarDefault" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SkinsPath" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SkinsScriptsPath" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SkinsStylesPath" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Skin" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdminSkin" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceRetryCountDefault" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="HasMultipleBlogs" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RouteUrlPrefix" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CommentingDisabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PluginsPath" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Site_oxite_SiteRedirect" Member="oxite_SiteRedirects" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_SiteRedirect" />
+      <Association Name="oxite_Site_oxite_ExtendedPropertyValue" Member="oxite_ExtendedPropertyValues" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_ExtendedPropertyValue" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_SiteRedirect" Member="oxite_SiteRedirects">
+    <Type Name="oxite_SiteRedirect">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SiteRedirect" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_Site_oxite_SiteRedirect" Member="oxite_Site" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_Site" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_StringResource" Member="oxite_StringResources">
+    <Type Name="oxite_StringResource">
+      <Column Name="StringResourceKey" Type="System.String" DbType="NVarChar(256) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Language" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="Version" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="StringResourceValue" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_MessageOutbound" Member="oxite_MessageOutbounds">
+    <Type Name="oxite_MessageOutbound">
+      <Column Name="MessageOutboundID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MessageTo" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageSubject" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBody" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IsSending" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RemainingRetryCount" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SentDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="LastAttemptDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Language" Member="oxite_Languages">
+    <Type Name="oxite_Language">
+      <Column Name="LanguageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageDisplayName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_ExtendedProperty" Member="oxite_ExtendedProperties">
+    <Type Name="oxite_ExtendedProperty">
+      <Column Name="ExtendedPropertyID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExtendedPropertyName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_ExtendedProperty_oxite_ExtendedPropertyValue" Member="oxite_ExtendedPropertyValues" ThisKey="ExtendedPropertyID" OtherKey="ExtendedPropertyID" Type="oxite_ExtendedPropertyValue" />
+      <Association Name="oxite_ExtendedProperty_oxite_ExtendedPropertyScope" Member="oxite_ExtendedPropertyScopes" ThisKey="ExtendedPropertyID" OtherKey="ExtendedPropertyID" Type="oxite_ExtendedPropertyScope" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_ExtendedPropertyValue" Member="oxite_ExtendedPropertyValues">
+    <Type Name="oxite_ExtendedPropertyValue">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExtendedPropertyID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExtendedPropertyType" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ExtendedPropertyValue" Type="System.Xml.Linq.XElement" DbType="Xml NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="oxite_ExtendedProperty_oxite_ExtendedPropertyValue" Member="oxite_ExtendedProperty" ThisKey="ExtendedPropertyID" OtherKey="ExtendedPropertyID" Type="oxite_ExtendedProperty" IsForeignKey="true" />
+      <Association Name="oxite_Site_oxite_ExtendedPropertyValue" Member="oxite_Site" ThisKey="SiteID" OtherKey="SiteID" Type="oxite_Site" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_ExtendedPropertyScope" Member="oxite_ExtendedPropertyScopes">
+    <Type Name="oxite_ExtendedPropertyScope">
+      <Column Name="ExtendedPropertyID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExtendedPropertyScopeType" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExtendedPropertyScopeKey" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_ExtendedProperty_oxite_ExtendedPropertyScope" Member="oxite_ExtendedProperty" ThisKey="ExtendedPropertyID" OtherKey="ExtendedPropertyID" Type="oxite_ExtendedProperty" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

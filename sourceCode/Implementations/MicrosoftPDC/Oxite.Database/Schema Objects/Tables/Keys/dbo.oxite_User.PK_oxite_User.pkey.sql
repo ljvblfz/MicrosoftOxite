@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[oxite_User] ADD CONSTRAINT [PK_oxite_User] PRIMARY KEY CLUSTERED  ([UserID]) ON [PRIMARY]
+
+

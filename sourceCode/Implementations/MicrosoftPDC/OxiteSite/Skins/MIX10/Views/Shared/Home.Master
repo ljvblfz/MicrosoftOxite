@@ -1,0 +1,83 @@
+﻿<%@ Import Namespace="Oxite.Modules.CMS.Extensions"%>
+<%@ Import Namespace="Oxite.Modules.Blogs.Extensions"%>
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage<OxiteViewModel>" %>
+<%@ Import Namespace="Oxite.Extensions" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title><asp:ContentPlaceHolder ID="Title" runat="server"><%=Html.PageTitle() %></asp:ContentPlaceHolder></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Oxite" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <% Html.RenderFavIcon(); %>
+    <meta name="language" content="<%=Model.Site.LanguageDefault %>" />
+    <asp:ContentPlaceHolder ID="robots" runat="server"><meta name="robots" content="index,follow" /></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="MetaDescription" runat="server"><%=Html.PageDescription()%></asp:ContentPlaceHolder><%
+    Html.RenderOpenSearch(); %>
+    <asp:ContentPlaceHolder ID="SearchTags" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="HeadCustom" runat="server"></asp:ContentPlaceHolder>
+    <% Html.RenderPartialFromSkin("HeadCustomContents"); %>
+    <asp:ContentPlaceHolder ID="HeadCssFiles" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="HeadScripts" runat="server"></asp:ContentPlaceHolder>
+    </head>
+    <body id="homepage">
+        <% Html.RenderPartialFromSkin("Analytics"); %>    
+      <div class="container">  
+         <div id="header" class="clearfix">
+            <asp:ContentPlaceHolder ID="HeaderSiteName" runat="server"></asp:ContentPlaceHolder>
+            <% Html.RenderPartialFromSkin("Header"); %>
+	     </div>
+		<% Html.RenderPartialFromSkin("SiteNav"); %>
+	        <asp:ContentPlaceHolder ID="HeroBanner" runat="server"></asp:ContentPlaceHolder>
+	        <div id="content" class="clearfix">
+			    <div id="regcard">
+			        <h3>Register by Jan. 15<sup>th</sup> and save!</h3>
+			        <a href="/Registration" class="reg_home btn">Register</a>		        
+			    </div>		    
+		        <asp:ContentPlaceHolder ID="ContentHeader" runat="server">
+		            <%=Html.Content("Content") %>
+                    <div id="sessions" class="sessions">
+                        <% Html.RenderPartialFromSkin("FeaturedScheduleItemsList"); %>
+                        <p class="more sessions"><a href="/Sessions">More Sessions</a></p>
+
+                    </div>		        
+		        </asp:ContentPlaceHolder>                 		        
+             </div>             
+             <% Html.RenderPartialFromSkin("SideBar"); %>		        
+             <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+     </div>     
+</div>
+<% Html.RenderPartialFromSkin("Footer"); %>
+    <asp:ContentPlaceHolder ID="ScriptVariablesPre" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="Scripts" runat="server"></asp:ContentPlaceHolder>
+    <%Html.RenderScriptTag("base.js");
+    Html.RenderScriptTag("Sessions.js?ver=2");
+    Html.RenderScriptTag("jquery.autocomplete.js");
+    Html.RenderScriptTag("sessionbrowser.4.js"); %>
+    <script type="text/javascript">
+        featuredcontentslider.init({
+            id: "slides",  //id of main slider DIV
+            contentsource: ["inline", ""],  //Valid values: ["inline", ""] or ["ajax", "path_to_file"]
+            toc: "markup",  //Valid values: "#increment", "markup", ["label1", "label2", etc]
+            nextprev: ["", "Next"],  //labels for "prev" and "next" links. Set to "" to hide.
+            revealtype: "mouseover", //Behavior of pagination links to reveal the slides: "click" or "mouseover"
+            enablefade: [true, 0.1],  //[true/false, fadedegree]
+            autorotate: [true, 7000],  //[true/false, pausetime]
+            onChange: function(previndex, curindex) {  //event handler fired whenever script changes slide
+                //previndex holds index of last slide viewed b4 current (1=1st slide, 2nd=2nd etc)
+                //curindex holds index of currently shown slide (1=1st slide, 2nd=2nd etc)
+            }
+        })
+    </script>
+<script type="text/javascript">
+    var pcall = (("https:" == document.location.protocol) ? "https://" : "http://");
+    document.write(unescape("%3Cscript src=‘" + pcall + "anchor.tmlatn.com/roi/68.js’ type=‘text/javascript’%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {
+        pa_roiObj.checkRoi(pa_roiObj);
+    } catch (err) { }</script>
+    <asp:ContentPlaceHolder ID="ScriptVariablesPost" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>
+

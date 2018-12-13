@@ -1,0 +1,1686 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MvcBuildViews>false</MvcBuildViews>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F3B77E5-FD70-4C94-A8DE-503357FE7174}</ProjectGuid>
+    <ProjectTypeGuids>{603c0e0b-db56-11dc-be95-000d561079b0};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OxiteSite</RootNamespace>
+    <AssemblyName>OxiteSite</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MIX10|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MIX10</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC Beta\Assemblies\System.Web.Abstractions.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC RC\Assemblies\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC Beta\Assemblies\System.Web.Routing.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Modules\OxiteSite\Controllers\ScheduleItemController.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Extensions\HtmlHelperExtensions.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\OxiteSiteModule.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Controllers\PageController.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\ModelBinder\DateRangeAddressModelBinder.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Extensions\UrlHelperExtensions.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Filters\ScheduleItemsTagListActionFilter.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\ViewModels\TagListViewModel.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Controllers\UserController.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Models\UserRegistration.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Repositories\SqlServer\OxitePDC09.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OxitePDC09.dbml</DependentUpon>
+    </Content>
+    <Content Include="App_Code\Modules\OxiteSite\Repositories\SqlServer\SqlServerPDC09Repository.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Services\IPDC09Service.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Services\PDC09Service.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Filters\UserRegistrationActionFilter.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Filters\Last3HeadlinesActionFilter.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\ViewModels\Last3HeadlinesViewModel.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Controllers\RedirectionController.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Extensions\SpeakerExtensions.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Extensions\ScheduleItemExtensions.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\ViewModels\ColumnTag.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Extensions\FileExtensions.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Controllers\ReportsController.cs" />
+    <Content Include="App_Code\Modules\OxiteSite\Skinning\ConferenceSkinResolver.cs" />
+    <Compile Include="ConfigurationResolver.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Content Include="Plugins\Oxite\Twitter\TwitterPlugin.cs" />
+    <Content Include="Plugins\Oxite\AddThis\AddThisPlugin.cs" />
+    <Content Include="Plugins\Oxite\XboxLiveGamercard\XboxLiveGamercardPlugin.cs" />
+    <Content Include="Plugins\Oxite\SpamControl\SpamControlPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\RegistrationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Skins\Default\Styles\images\accept.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_grey.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_blue.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_red.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_toggle_minus.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_toggle_plus.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_toggle_plus_onoff.png" />
+    <Content Include="Skins\Default\Styles\images\bullet_toggle_minus_onoff.png" />
+    <Content Include="Skins\Default\Styles\images\delete.png" />
+    <Content Include="Skins\Default\Styles\images\famfamfam.gif" />
+    <Content Include="Skins\Default\Styles\images\gravatar.gif" />
+    <Content Include="Skins\Default\Styles\images\information.png" />
+    <Content Include="Skins\Default\Styles\images\oxite.png" />
+    <Content Include="Skins\Default\Styles\images\page_add.png" />
+    <Content Include="Skins\Default\Styles\images\page_delete.png" />
+    <Content Include="Skins\Default\Styles\images\page_edit.png" />
+    <Content Include="Skins\Default\Styles\images\tag_red.png" />
+    <Content Include="Skins\Default\Styles\base.css" />
+    <Content Include="Skins\Default\Scripts\base.js" />
+    <Content Include="Content\images\valid-rss.png" />
+    <Content Include="Content\images\valid-xhtml10-blue.png" />
+    <Content Include="Content\images\vcss-blue.gif" />
+    <Content Include="Skins\Default\Styles\yui.reset.2.6.0.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Skins\Admin\Views\Site\Dashboard.aspx" />
+    <Content Include="Skins\Admin\Views\Blog\Find.aspx" />
+    <Content Include="Skins\Admin\Views\Blog\ItemEdit.aspx" />
+    <Content Include="Skins\Admin\Views\Site\Item.aspx" />
+    <Content Include="Skins\Admin\Views\User\ChangePassword.aspx" />
+    <Content Include="Views\Page\Item.aspx" />
+    <Content Include="Skins\Admin\Views\Post\ItemAdd.aspx" />
+    <Content Include="Skins\Admin\Views\Post\ItemEdit.ascx" />
+    <Content Include="Views\Post\List.aspx" />
+    <Content Include="Views\Post\Atom.aspx" />
+    <Content Include="Views\Post\Item.aspx" />
+    <Content Include="Views\Post\Rss.aspx" />
+    <Content Include="Views\Post\ListByTag.aspx" />
+    <Content Include="Views\Shared\ArchiveBreadcrumb.ascx" />
+    <Content Include="Views\Shared\CommentCreatorInfo.ascx" />
+    <Content Include="Views\Shared\ArchivesByYear.ascx" />
+    <Content Include="Skins\Admin\Views\Post\ItemEditMetadata.ascx" />
+    <Content Include="Skins\Admin\Views\Post\ItemEdit.aspx" />
+    <Content Include="Views\Post\ListByArchive.aspx" />
+    <Content Include="Views\Shared\PostListMedium.ascx" />
+    <Content Include="Views\Utility\OpenSearch.aspx" />
+    <Content Include="Views\Comment\Rss.aspx" />
+    <Content Include="Views\Shared\Archives.ascx" />
+    <Content Include="Views\Shared\Comment.ascx" />
+    <Content Include="Views\Shared\CommentFormAnonymous.ascx" />
+    <Content Include="Views\Shared\CommentFormAuthenticated.ascx" />
+    <Content Include="Views\Post\Comments.ascx" />
+    <Content Include="Views\Pingback\IndexError.aspx" />
+    <Content Include="Views\Pingback\IndexSuccess.aspx" />
+    <Content Include="Views\Shared\Footer.ascx" />
+    <Content Include="Views\Shared\HeadCustomContents.ascx" />
+    <Content Include="Views\Shared\Header.ascx" />
+    <Content Include="Views\Shared\ManageComment.ascx" />
+    <Content Include="Views\Page\ManagePage.ascx" />
+    <Content Include="Views\Post\ManagePost.ascx" />
+    <Content Include="Views\Shared\NotFound.aspx" />
+    <Content Include="Views\Comment\Atom.aspx" />
+    <Content Include="Views\Utility\RobotsTxt.aspx" />
+    <Content Include="Views\Shared\Search.ascx" />
+    <Content Include="Views\Shared\SiteMapIndex.aspx" />
+    <Content Include="Views\Shared\SiteMap.aspx" />
+    <Content Include="Views\Tag\Cloud.aspx" />
+    <Content Include="Views\Trackback\Add.aspx" />
+    <Content Include="Views\User\SignIn.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LoginUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Oxite.Bing\Oxite.Bing.csproj">
+      <Project>{6E731028-11C4-4918-9C3C-09F3BD077522}</Project>
+      <Name>Oxite.Bing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oxite.Blogs\Oxite.Blogs.csproj">
+      <Project>{FDDD5FC8-4CD7-49AC-A1F8-16BA8F0359CD}</Project>
+      <Name>Oxite.Blogs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oxite.CMS\Oxite.CMS.csproj">
+      <Project>{9AAA42D3-8F6B-4EA0-B67A-0A8E4AC403EC}</Project>
+      <Name>Oxite.CMS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oxite.Conferences\Oxite.Conferences.csproj">
+      <Project>{AB169B00-83EE-4F00-BFA5-A1A4D976A8EA}</Project>
+      <Name>Oxite.Conferences</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oxite.LiveID\Oxite.LiveID.csproj">
+      <Project>{578008D6-6603-495D-9504-94E28E7394CE}</Project>
+      <Name>Oxite.LiveID</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oxite\Oxite.csproj">
+      <Project>{D54AF39D-CB43-4D32-A89D-D55EE924AB57}</Project>
+      <Name>Oxite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\icons\flame.ico" />
+    <Content Include="Content\images\flame.png" />
+    <Content Include="Content\icons\frog.ico" />
+    <Content Include="Content\images\frog.png" />
+    <Content Include="Content\icons\mushroom.ico" />
+    <Content Include="Content\images\mushroom.png" />
+    <Content Include="Skins\Default\Styles\images\add.png" />
+    <Content Include="Skins\Default\Styles\images\asterisk_yellow.png" />
+    <Content Include="Skins\Default\Styles\images\find.png" />
+    <Content Include="Skins\Default\Styles\images\plugin.png" />
+    <Content Include="Skins\Default\Styles\images\plugin_disabled.png" />
+    <Content Include="Skins\Admin\Views\Comment\ListForAdmin.aspx" />
+    <Content Include="Skins\Admin\Views\Page\ItemAdd.aspx" />
+    <Content Include="Skins\Admin\Views\Exhibitor\Edit.aspx" />
+    <Content Include="Skins\Admin\Views\Page\ItemEditButtons.ascx" />
+    <Content Include="Skins\Admin\Views\Post\ListWithDrafts.aspx" />
+    <Content Include="Views\Shared\CommentListSmall.ascx" />
+    <Content Include="Views\Shared\CommentListMedium.ascx" />
+    <Content Include="Views\Shared\PostListSmall.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\Site.Master" />
+    <Content Include="Views\Shared\SideBar.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\icons\flame.png" />
+    <Content Include="Content\icons\frog.png" />
+    <Content Include="Content\icons\mushroom.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Skins\Admin\Scripts\base.js" />
+    <Content Include="Skins\Admin\Styles\images\accept.png" />
+    <Content Include="Skins\Admin\Styles\images\add.png" />
+    <Content Include="Skins\Admin\Styles\images\admin.png" />
+    <Content Include="Skins\Admin\Styles\images\arrow_left.png" />
+    <Content Include="Skins\Admin\Styles\images\arrow_menu.gif" />
+    <Content Include="Skins\Admin\Styles\images\arrow_refresh.png" />
+    <Content Include="Skins\Admin\Styles\images\arrow_refresh_large.png" />
+    <Content Include="Skins\Admin\Styles\images\asterisk_yellow.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_blue.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_red.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_toggle_minus.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_toggle_minus_onoff.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_toggle_plus.png" />
+    <Content Include="Skins\Admin\Styles\images\bullet_toggle_plus_onoff.png" />
+    <Content Include="Skins\Admin\Styles\images\calendar.png" />
+    <Content Include="Skins\Admin\Styles\images\delete.png" />
+    <Content Include="Skins\Admin\Styles\images\exclamation.png" />
+    <Content Include="Skins\Admin\Styles\images\famfamfam.gif" />
+    <Content Include="Skins\Admin\Styles\images\feed.png" />
+    <Content Include="Skins\Admin\Styles\images\find.png" />
+    <Content Include="Skins\Admin\Styles\images\gravatar.gif" />
+    <Content Include="Skins\Admin\Styles\images\information.png" />
+    <Content Include="Skins\Admin\Styles\images\newspaper.png" />
+    <Content Include="Skins\Admin\Styles\images\oooohhhh.gif" />
+    <Content Include="Skins\Admin\Styles\images\oxite.png" />
+    <Content Include="Skins\Admin\Styles\images\oxite_logo.png" />
+    <Content Include="Skins\Admin\Styles\images\oxite_medium.png" />
+    <Content Include="Skins\Admin\Styles\images\page_add.png" />
+    <Content Include="Skins\Admin\Styles\images\page_delete.png" />
+    <Content Include="Skins\Admin\Styles\images\page_edit.png" />
+    <Content Include="Skins\Admin\Styles\images\page_files.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin_large.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin_disabled.png" />
+    <Content Include="Skins\Admin\Styles\images\tag_red.png" />
+    <Content Include="Skins\Admin\Styles\images\windows_search.png" />
+    <Content Include="Skins\Admin\Styles\jquery.css" />
+    <Content Include="Skins\Admin\Styles\base.css" />
+    <Content Include="Skins\Admin\Styles\yui.reset.2.6.0.css" />
+    <Content Include="Skins\Admin\Views\Shared\HeadCustomContents.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\Header.ascx" />
+    <Content Include="Skins\Default\Layers\Dark\Styles\base.css" />
+    <Content Include="Skins\Default\Layers\Dark\Styles\dark.css" />
+    <Content Include="Skins\Default\Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Skins\Default\Scripts\jquery-1.3.2.js" />
+    <Content Include="Skins\Default\Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Skins\Admin\Styles\images\disk.png" />
+    <Content Include="Skins\Default\Styles\images\page_files.png" />
+    <Content Include="Skins\Default\Styles\images\exclamation.png" />
+    <Content Include="Skins\Default\Styles\images\feed.png" />
+    <Content Include="Skins\Default\Styles\images\newspaper.png" />
+    <Content Include="Skins\Default\Styles\images\oxite_logo.png" />
+    <Content Include="Skins\Default\Styles\images\windows_search.png" />
+    <Content Include="Skins\Web.config" />
+    <Content Include="Views\Comment\AtomFeedElements.ascx" />
+    <Content Include="Views\Comment\AtomFeedEntry.ascx" />
+    <Content Include="Views\Comment\RssChannel.ascx" />
+    <Content Include="Views\Comment\RssChannelItem.ascx" />
+    <Content Include="Skins\Admin\Views\PostFile\ManageFile.ascx" />
+    <Content Include="Skins\Admin\Views\PostFile\ManageFiles.ascx" />
+    <Content Include="Skins\Admin\Views\PostFile\ListByPost.aspx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginInfo.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginEditSettings.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginEditCode.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginInfoError.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\ItemEdit.aspx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginDetails.ascx" />
+    <Content Include="Views\Post\AtomFeedElements.ascx" />
+    <Content Include="Views\Post\AtomFeedEntry.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\Menu.ascx" />
+    <Content Include="Views\Shared\CommentOnPost.ascx" />
+    <Content Include="Views\Shared\CommentOnComment.ascx" />
+    <Content Include="Views\Post\RssChannel.ascx" />
+    <Content Include="Views\Post\RssChannelItem.ascx" />
+    <Content Include="Skins\Admin\Views\Role\Find.aspx" />
+    <Content Include="Skins\Admin\Views\Role\ItemEdit.aspx" />
+    <Content Include="Skins\Admin\Views\Shared\SettingsMenu.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\QuickMenu.ascx" />
+    <Content Include="Skins\Admin\Views\Site\ManageUsers.aspx" />
+    <Content Include="Skins\Admin\Views\Site\ManageAreas.aspx" />
+    <Content Include="Skins\Admin\Views\Site\ManageSite.aspx" />
+    <Content Include="Skins\Admin\Views\User\Roles.aspx" />
+    <Content Include="Skins\Admin\Views\User\ItemAdd.aspx" />
+    <Content Include="Skins\Admin\Views\User\Find.aspx" />
+    <Content Include="Skins\Admin\Views\User\ItemEdit.aspx" />
+    <Content Include="Views\Utility\OpenSearchOSDX.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Plugins\Oxite\AddThis\images\addThis_16x16.png" />
+    <Content Include="Plugins\Oxite\AddThis\images\addThis_32x32.png" />
+    <Content Include="Plugins\Oxite\AddThis\Templates\AddThisButton.ascx" />
+    <Content Include="Plugins\Oxite\SpamControl\images\ham_32x32.png" />
+    <Content Include="Plugins\Oxite\Twitter\images\t_large.png" />
+    <Content Include="Plugins\Oxite\Twitter\Templates\PostCheckBox.ascx" />
+    <Content Include="Plugins\Oxite\XboxLiveGamercard\images\xfw_32x32.png" />
+    <Content Include="Plugins\Oxite\XboxLiveGamercard\Templates\Gamercard.ascx" />
+    <Content Include="Plugins\Web.config" />
+    <Content Include="Skins\Admin\Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Skins\Admin\Scripts\jquery-1.3.2.js" />
+    <Content Include="Skins\Admin\Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Skins\Admin\Scripts\markitup\jquery.markitup.js" />
+    <Content Include="Skins\Admin\Scripts\markitup\jquery.markitup.pack.js" />
+    <Content Include="Skins\Admin\Scripts\markitup\sets\default\set.js" />
+    <Content Include="Skins\Admin\Scripts\markitup\sets\html\set.js" />
+    <Content Include="Skins\Admin\Styles\images\arrow_down_bright.png" />
+    <Content Include="Skins\Admin\Styles\images\arrow_down_light.png" />
+    <Content Include="Skins\Admin\Styles\images\arrow_right.png" />
+    <Content Include="Skins\Admin\Styles\images\book.png" />
+    <Content Include="Skins\Admin\Styles\images\book_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\book_open.png" />
+    <Content Include="Skins\Admin\Styles\images\book_open_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\cog.png" />
+    <Content Include="Skins\Admin\Styles\images\cog_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\error.png" />
+    <Content Include="Skins\Admin\Styles\images\error_zoom_large.png" />
+    <Content Include="Skins\Admin\Styles\images\exclamation_zoom_large.png" />
+    <Content Include="Skins\Admin\Styles\images\house.png" />
+    <Content Include="Skins\Admin\Styles\images\house_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\lightbulb.png" />
+    <Content Include="Skins\Admin\Styles\images\lightbulb_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\page_edit_dim.png" />
+    <Content Include="Skins\Admin\Styles\images\page_white_stack.png" />
+    <Content Include="Skins\Admin\Styles\images\page_white_stack_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\page_white_text.png" />
+    <Content Include="Skins\Admin\Styles\images\page_white_text_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\pencil.png" />
+    <Content Include="Skins\Admin\Styles\images\pencil_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin_grey.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin_large_disabled.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin_large_error.png" />
+    <Content Include="Skins\Admin\Styles\images\plugin_large_warning.png" />
+    <Content Include="Skins\Admin\Styles\images\user.png" />
+    <Content Include="Skins\Admin\Styles\images\user_grey.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\bold.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\clean.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\image.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\italic.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\link.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\picture.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\preview.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\images\stroke.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\default\style.css" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\bold.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\clean.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\h1.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\h2.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\h3.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\h4.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\h5.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\h6.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\image.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\italic.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\link.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\list-bullet.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\list-item.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\list-numeric.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\paragraph.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\picture.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\preview.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\images\stroke.png" />
+    <Content Include="Skins\Admin\Styles\markitup\sets\html\style.css" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-container.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-bbcode.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-dotclear.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-html.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-json.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-markdown.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-textile.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-wiki.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor-xml.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\bg-editor.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\handle.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\menu.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\images\submenu.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\markitup\style.css" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\simple\images\handle.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\simple\images\menu.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\simple\images\submenu.png" />
+    <Content Include="Skins\Admin\Styles\markitup\skins\simple\style.css" />
+    <Content Include="Skins\Admin\Styles\markitup\templates\preview.html" />
+    <Content Include="Skins\Admin\Views\BlogML\Import.aspx" />
+    <Content Include="Skins\Admin\Views\Page\ItemEdit.ascx" />
+    <Content Include="Skins\Admin\Views\Exhibitor\EditContent.ascx" />
+    <Content Include="Skins\Admin\Views\Page\ItemEditMetadata.ascx" />
+    <Content Include="Skins\Admin\Views\Page\List.ascx" />
+    <Content Include="Skins\Admin\Views\Page\List.aspx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginInfoErrorSmall.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\PluginDetailsSmall.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\ManagePluginNotInstalled.ascx" />
+    <Content Include="Skins\Admin\Views\Plugin\List.aspx" />
+    <Content Include="Skins\Admin\Views\Plugin\ManagePlugin.ascx" />
+    <Content Include="Skins\Admin\Views\Post\ItemEditButtons.ascx" />
+    <Content Include="Skins\Admin\Views\Post\ItemEditContent.ascx" />
+    <Content Include="Skins\Admin\Views\Setup\AdminAccountSettings.aspx" />
+    <Content Include="Skins\Admin\Views\Setup\BasicSettings.aspx" />
+    <Content Include="Skins\Admin\Views\Setup\SetupComplete.aspx" />
+    <Content Include="Skins\Admin\Views\Setup\Storage.aspx" />
+    <Content Include="Skins\Admin\Views\Shared\Dialog.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\Dialog.aspx" />
+    <Content Include="Skins\Admin\Views\Plugin\List.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\Error.aspx" />
+    <Content Include="Skins\Admin\Views\Shared\NotFound.aspx" />
+    <Content Include="Skins\PDC09\Scripts\Blog.js" />
+    <Content Include="Skins\PDC09\Scripts\HeroBanner.js" />
+    <Content Include="Skins\PDC09\Scripts\jquery.autocomplete.js" />
+    <Content Include="Skins\PDC09\Scripts\jquery.qtip-1.0.0-rc3.js" />
+    <Content Include="Skins\PDC09\Scripts\base.js" />
+    <Content Include="Skins\PDC09\Scripts\PDCClassics.js" />
+    <Content Include="Skins\PDC09\Scripts\Sessions.js" />
+    <Content Include="Skins\PDC09\Scripts\SpeakerHover.js" />
+    <Content Include="Skins\PDC09\Scripts\Speakers.js" />
+    <Content Include="Skins\PDC09\Views\Shared\HeadCustomContents.ascx" />
+    <Content Include="Views\Post\ListByBlog.aspx" />
+    <Content Include="Views\Search\List.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\Devices\readme.txt" />
+    <Content Include="ClientBin\vp.xap" />
+    <Content Include="Content\icons\pdc.ico" />
+    <Content Include="Content\icons\pdc.png" />
+    <Content Include="Content\images\about.png" />
+    <Content Include="Content\images\about2.png" />
+    <Content Include="Content\images\bing.jpg" />
+    <Content Include="Content\images\bing_sml.jpg" />
+    <Content Include="Content\images\fontExample.png" />
+    <Content Include="Content\images\gravatar_anon.gif" />
+    <Content Include="Content\images\hero_0_0.jpg" />
+    <Content Include="Content\images\hero_1_0.png" />
+    <Content Include="Content\images\hero_2_0.png" />
+    <Content Include="Content\images\hero_full.jpg" />
+    <Content Include="Content\images\hero_pdc_classics.jpg" />
+    <Content Include="Content\images\hotels.jpg" />
+    <Content Include="Content\images\hotels\Biltmore.jpg" />
+    <Content Include="Content\images\hotels\Figueroa.jpg" />
+    <Content Include="Content\images\hotels\HiltonCheckers.jpg" />
+    <Content Include="Content\images\hotels\HolidayInnCityCenter.jpg" />
+    <Content Include="Content\images\hotels\Kawada.jpg" />
+    <Content Include="Content\images\hotels\KyotoGrand.jpg" />
+    <Content Include="Content\images\hotels\LAAthleticClub.jpg" />
+    <Content Include="Content\images\hotels\MarriottLADT.jpg" />
+    <Content Include="Content\images\hotels\MiyakoHotel.jpg" />
+    <Content Include="Content\images\hotels\OHotel.jpg" />
+    <Content Include="Content\images\hotels\Omni.jpg" />
+    <Content Include="Content\images\hotels\Sheraton.jpg" />
+    <Content Include="Content\images\hotels\WestinBonaventure.jpg" />
+    <Content Include="Content\images\hotels\WilshireGrand.jpg" />
+    <Content Include="Content\images\partneropportunities.png" />
+    <Content Include="Content\images\pdc09onCh9Button.png" />
+    <Content Include="Content\images\PDCClassic01PDC2000andXML.png" />
+    <Content Include="Content\images\PDCClassic01PDC2000andXML_large_ch9.png" />
+    <Content Include="Content\images\PDCClassicsPDC2001.png" />
+    <Content Include="Content\images\registration.png" />
+    <Content Include="Content\images\resultsby_logo_90x35.png" />
+    <Content Include="Content\images\resultsby_logo_90x35_binged.standard.gif" />
+    <Content Include="Content\images\sessionThumbnail.jpg" />
+    <Content Include="Content\images\somehotel.jpg" />
+    <Content Include="Content\images\speakers\lrg\Ade-Miller.jpg" />
+    <Content Include="Content\images\speakers\lrg\Andrew-Brust.jpg" />
+    <Content Include="Content\images\speakers\lrg\Brad-Calder.jpg" />
+    <Content Include="Content\images\speakers\lrg\Butler-Lampson.jpg" />
+    <Content Include="Content\images\speakers\lrg\Cameron-Skinner.jpg" />
+    <Content Include="Content\images\speakers\lrg\Chris-Auld.jpg" />
+    <Content Include="Content\images\speakers\lrg\Chris-Tullier.jpg" />
+    <Content Include="Content\images\speakers\lrg\Don-Demsak.jpg" />
+    <Content Include="Content\images\speakers\lrg\Herb-Sutter.jpg" />
+    <Content Include="Content\images\speakers\lrg\Ian-Griffiths.jpg" />
+    <Content Include="Content\images\speakers\lrg\Juval-Lowy.jpg" />
+    <Content Include="Content\images\speakers\lrg\Karen-Corby.jpg" />
+    <Content Include="Content\images\speakers\lrg\Kim-Cameron.jpg" />
+    <Content Include="Content\images\speakers\lrg\Michele-Leroux-Bustamante.jpg" />
+    <Content Include="Content\images\speakers\lrg\Richard-Ciapala.jpg" />
+    <Content Include="Content\images\speakers\lrg\Richard-Griffin.jpg" />
+    <Content Include="Content\images\speakers\lrg\Scott-Hanselman.jpg" />
+    <Content Include="Content\images\speakers\lrg\Stephen-Toub.jpg" />
+    <Content Include="Content\images\speakers\lrg\Steve-Marx.jpg" />
+    <Content Include="Content\images\speakers\lrg\Todd-Girvin.jpg" />
+    <Content Include="Content\images\speakers\lrg\Vittorio-Bertocci.jpg" />
+    <Content Include="Content\images\speakers\sml\Ade-Miller.jpg" />
+    <Content Include="Content\images\speakers\sml\Andrew-Brust.jpg" />
+    <Content Include="Content\images\speakers\sml\Brad-Calder.jpg" />
+    <Content Include="Content\images\speakers\sml\Butler-Lampson.jpg" />
+    <Content Include="Content\images\speakers\sml\Cameron-Skinner.jpg" />
+    <Content Include="Content\images\speakers\sml\Chris-Auld.jpg" />
+    <Content Include="Content\images\speakers\sml\Chris-Tullier.jpg" />
+    <Content Include="Content\images\speakers\sml\Don-Demsak.jpg" />
+    <Content Include="Content\images\speakers\sml\Herb-Sutter.jpg" />
+    <Content Include="Content\images\speakers\sml\Ian-Griffiths.jpg" />
+    <Content Include="Content\images\speakers\sml\Juval-Lowy.jpg" />
+    <Content Include="Content\images\speakers\sml\Karen-Corby.jpg" />
+    <Content Include="Content\images\speakers\sml\Kim-Cameron.jpg" />
+    <Content Include="Content\images\speakers\sml\Michele-Leroux-Bustamante.jpg" />
+    <Content Include="Content\images\speakers\sml\Richard-Ciapala.jpg" />
+    <Content Include="Content\images\speakers\sml\Richard-Griffin.jpg" />
+    <Content Include="Content\images\speakers\sml\Scott-Hanselman.jpg" />
+    <Content Include="Content\images\speakers\sml\Stephen-Toub.jpg" />
+    <Content Include="Content\images\speakers\sml\Steve-Marx.jpg" />
+    <Content Include="Content\images\speakers\sml\Todd-Girvin.jpg" />
+    <Content Include="Content\images\speakers\sml\Vittorio-Bertocci.jpg" />
+    <Content Include="Content\images\specialevents.png" />
+    <Content Include="Content\images\specialevents3.png" />
+    <Content Include="Content\images\specialevents4.png" />
+    <Content Include="Content\images\specialevents5.png" />
+    <Content Include="Content\images\specialevents6.png" />
+    <Content Include="Content\images\sponsors\CODEMagazine.png" />
+    <Content Include="Content\images\sponsors\codeProject.gif" />
+    <Content Include="Content\images\sponsors\TheCodeProject.jpg" />
+    <Content Include="Content\images\sponsors\codeProject.png" />
+    <Content Include="Content\images\sponsors\DevExpress.gif" />
+    <Content Include="Content\images\sponsors\Telerik.png" />
+    <Content Include="Content\images\sponsors\hp.gif" />
+    <Content Include="Content\images\sponsors\Infragistics.jpg" />
+    <Content Include="Content\images\sponsors\intel.gif" />
+    <Content Include="Content\images\sponsors\Syncfusion.png" />
+    <Content Include="Content\images\sponsors_devexpress.gif" />
+    <Content Include="Content\images\sponsors_hp.gif" />
+    <Content Include="Content\images\workshops.png" />
+    <Content Include="Content\images\workshopsandsessions.png" />
+    <Content Include="Content\images\workshopsandsessions2.png" />
+    <Content Include="Content\images\workshopsandsessions3.png" />
+    <Content Include="Content\images\workshopsandsessions4.png" />
+    <Content Include="Content\images\workshopsandsessions5.png" />
+    <Content Include="Content\images\workshopsandsessions6.png" />
+    <Content Include="Plugins\Oxite\SpamControl\images\flag_red.png" />
+    <Content Include="Plugins\Oxite\SpamControl\scripts\base.js" />
+    <Content Include="Plugins\Oxite\SpamControl\styles\base.css" />
+    <Content Include="Plugins\Oxite\SpamControl\Templates\MarkAsSpam.ascx" />
+    <Content Include="Skins\Admin\Views\Exhibitor\Add.aspx" />
+    <Content Include="Skins\Admin\Views\Exhibitor\Edit.ascx" />
+    <Content Include="Skins\Admin\Views\Exhibitor\List.ascx" />
+    <Content Include="Skins\Admin\Views\Exhibitor\List.aspx" />
+    <Content Include="Skins\Admin\Views\Page\ItemEdit.aspx" />
+    <Content Include="Skins\Admin\Views\Page\ItemEditContent.ascx" />
+    <Content Include="Skins\Admin\Views\Shared\EditContentItems.ascx" />
+    <Content Include="Skins\Admin\Views\ContentItem\GlobalContentEdit.aspx" />
+    <Content Include="Skins\Admin\Views\ContentItem\GlobalContentEdit.ascx" />
+    <Content Include="Skins\PDC09\Layers\PDCClassics\Views\Post\Item.aspx" />
+    <Content Include="Skins\PDC09\Layers\PDCClassics\Views\Shared\PostSummaryMedium.ascx" />
+    <Content Include="Skins\PDC09\Scripts\hotelmap.js" />
+    <Content Include="Skins\PDC09\Scripts\jquery-ui-1.7.2.custom.min.js" />
+    <Content Include="Skins\PDC09\Scripts\jquery.qtip-1.0.0-rc3.min.js" />
+    <Content Include="Skins\PDC09\Scripts\SessionBrowser.4.js" />
+    <Content Include="Skins\PDC09\Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Skins\PDC09\Scripts\jquery-1.3.2.js" />
+    <Content Include="Skins\PDC09\Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Skins\PDC09\Scripts\TwitterFeed.js" />
+    <Content Include="Skins\PDC09\Scripts\webtrends.js" />
+    <Content Include="Skins\PDC09\Styles\images\._bg_hero_bottom.gif" />
+    <Content Include="Skins\PDC09\Styles\images\accept.png" />
+    <Content Include="Skins\PDC09\Styles\images\bg_black.png" />
+    <Content Include="Skins\PDC09\Styles\images\bg_cta_button.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_cta_button_left.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_cta_button_right.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_flyout_arrow.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_footer.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_globalbox.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_globalbox_leftedge.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_hero.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_hero_bottom.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_hero_corner.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_hero_nav_active.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_logowires.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_minimizeall_w.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_register_top.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_saving.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_schedule_closed.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_schedule_off.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_schedule_on.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_selected_session.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_sharing.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_showtags.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_showtagsexpanded.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_tab_active.gif" />
+    <Content Include="Skins\PDC09\Styles\images\bg_tab_inactive.gif" />
+    <Content Include="Skins\PDC09\Styles\images\btn_close.gif" />
+    <Content Include="Skins\PDC09\Styles\images\btn_hero_back.gif" />
+    <Content Include="Skins\PDC09\Styles\images\btn_hero_next.gif" />
+    <Content Include="Skins\PDC09\Styles\images\btn_hero_page_off.png" />
+    <Content Include="Skins\PDC09\Styles\images\btn_hero_page_on.png" />
+    <Content Include="Skins\PDC09\Styles\images\btn_next.gif" />
+    <Content Include="Skins\PDC09\Styles\images\btn_next_grey.gif" />
+    <Content Include="Skins\PDC09\Styles\images\btn_prev.gif" />
+    <Content Include="Skins\PDC09\Styles\images\btn_prev_grey.gif" />
+    <Content Include="Skins\PDC09\Styles\images\btn_registerforpdc09.gif" />
+    <Content Include="Skins\PDC09\Styles\images\btn_register_now.gif" />
+    <Content Include="Skins\PDC09\Styles\images\btn_search.gif" />
+    <Content Include="Skins\PDC09\Styles\images\btn_signinnow.gif" />
+    <Content Include="Skins\PDC09\Styles\images\delete.png" />
+    <Content Include="Skins\PDC09\Styles\images\g_list_arrow.gif" />
+    <Content Include="Skins\PDC09\Styles\images\ico_ch9.gif" />
+    <Content Include="Skins\PDC09\Styles\images\ico_delicious.gif" />
+    <Content Include="Skins\PDC09\Styles\images\ico_digg.gif" />
+    <Content Include="Skins\PDC09\Styles\images\ico_email.gif" />
+    <Content Include="Skins\PDC09\Styles\images\ico_facebook.gif" />
+    <Content Include="Skins\PDC09\Styles\images\ico_flickr.gif" />
+    <Content Include="Skins\PDC09\Styles\images\ico_pdcblog.gif" />
+    <Content Include="Skins\PDC09\Styles\images\ico_rss.gif" />
+    <Content Include="Skins\PDC09\Styles\images\ico_rss_med.gif" />
+    <Content Include="Skins\PDC09\Styles\images\ico_twitter.gif" />
+    <Content Include="Skins\PDC09\Styles\images\indicator.gif" />
+    <Content Include="Skins\PDC09\Styles\images\logo_pdc09.gif" />
+    <Content Include="Skins\PDC09\Styles\images\oooohhhh.gif" />
+    <Content Include="Skins\PDC09\Styles\images\page_add.png" />
+    <Content Include="Skins\PDC09\Styles\images\page_delete.png" />
+    <Content Include="Skins\PDC09\Styles\images\page_edit.png" />
+    <Content Include="Skins\PDC09\Styles\images\page_files.png" />
+    <Content Include="Skins\PDC09\Styles\images\pdc.png" />
+    <Content Include="Skins\PDC09\Styles\jquery.autocomplete.css" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ListByDateRangeAndUser.aspx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ListByUser.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ListByUser.aspx" />
+    <Content Include="Skins\PDC09\Views\Page\Contact.aspx" />
+    <Content Include="Skins\PDC09\Views\Exhibitor\Exhibitors.aspx" />
+    <Content Include="Skins\PDC09\Views\Page\Home.aspx" />
+    <Content Include="Skins\PDC09\Views\Page\FeaturedScheduleItemsList.ascx" />
+    <Content Include="Skins\PDC09\Views\Page\List.aspx" />
+    <Content Include="Skins\PDC09\Views\Exhibitor\Sponsors.aspx" />
+    <Content Include="Skins\PDC09\Views\Post\ListByArchive.aspx" />
+    <Content Include="Skins\PDC09\Views\Post\ListByTag.aspx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\Atom.aspx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\AtomFeedElements.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\AtomFeedEntry.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\Comment.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\CommentCreatorInfo.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\CommentFormAnonymous.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\CommentFormAuthenticated.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\CommentListMedium.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\CommentOnPost.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\Comments.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\Item.aspx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ListByEventAndTag.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ListByEventAndTag.aspx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ManageComment.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\MyScheduleBrowser.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\MySessionBrowser.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\Rss.aspx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\RssChannel.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\RssChannelItem.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\SiteMap.aspx" />
+    <Content Include="Skins\PDC09\Views\Shared\Analytics.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\Comment.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\CommentFormAnonymous.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\CommentFormAuthenticated.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\ExhibitorList.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\PostShare.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\ScheduleItemAdd.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\ScheduleItemList.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ScheduleForThursday.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ScheduleForWednesday.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ScheduleForTuesday.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ListByDateRange.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ListByDateRange.aspx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ScheduleForMonday.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ScheduleItemTimeSlot.ascx" />
+    <Content Include="Skins\PDC09\Views\Page\Hotels.aspx" />
+    <Content Include="Skins\PDC09\Views\Post\Comments.ascx" />
+    <Content Include="Skins\PDC09\Views\Post\Item.aspx" />
+    <Content Include="Skins\PDC09\Views\Post\ListByBlog.aspx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ListByEvent.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ScheduleBrowser.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\ScheduleItem.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\SessionBrowser.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\ScheduleItemShare.ascx" />
+    <Content Include="Skins\PDC09\Views\Search\List.aspx" />
+    <Content Include="Skins\PDC09\Views\Shared\PostSummaryMedium.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\PostListMedium.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\ScheduleUserFilter.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\SiteMapIndex.aspx" />
+    <Content Include="Skins\PDC09\Views\Shared\ScheduleShare.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\SponsorList.ascx" />
+    <Content Include="Skins\PDC09\Views\Speaker\Item.aspx" />
+    <Content Include="Skins\PDC09\Views\Speaker\ListByEvent.ascx" />
+    <Content Include="Skins\PDC09\Views\Speaker\ListByEvent.aspx" />
+    <Content Include="Skins\PDC09\Views\Speaker\SiteMap.aspx" />
+    <Content Include="Skins\PDC09\Views\Speaker\Speaker.ascx" />
+    <Content Include="Skins\PDC09\Views\Speaker\SpeakerBrowser.ascx" />
+    <Content Include="Skins\PDC09\Views\Speaker\SpeakerItemList.ascx" />
+    <Content Include="Skins\PDC09\Views\User\Register.aspx" />
+    <Content Include="Skins\PDC09\Views\User\Schedule.aspx" />
+    <Content Include="Skins\PDC09\Views\User\SignIn.aspx" />
+    <Content Include="Skins\PDC09\Views\Page\Item.aspx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ListByEvent.aspx" />
+    <Content Include="Skins\PDC09\Views\Shared\CallToAction.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\Error.aspx" />
+    <Content Include="Skins\PDC09\Views\Shared\NotFound.aspx" />
+    <Content Include="Skins\PDC09\Views\Shared\SecondaryNav.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\WhatsHappening.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\ConnectLinks.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\TwitterFeed.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\Sponsors.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\Footer.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\SideBar.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\SiteNav.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\SiteSearchControl.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\Header.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\LoginUserControl.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\Site.Master" />
+    <Content Include="Skins\PDC09\Views\User\UserScheduleItemsList.ascx" />
+    <Content Include="Views\Page\SiteMap.aspx" />
+    <Content Include="Views\Search\SearchResults.ascx" />
+    <Content Include="w3c\Full_P3P_Policy.xml" />
+    <Content Include="w3c\p3p.xml" />
+    <None Include="App_Code\Modules\OxiteSite\Repositories\SqlServer\OxitePDC09.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OxitePDC09.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Browsers\Devices\Capability Documentation.url" />
+    <None Include="App_Browsers\Devices\EULA.rtf" />
+    <Content Include="App_Browsers\Devices\mobile.browser" />
+    <Content Include="App_Code\Modules\OxiteSite\Repositories\IRegistrationRepository.cs" />
+    <Content Include="browserInfo.aspx" />
+    <Content Include="ClientAccessPolicy.xml" />
+    <Content Include="Content\icons\mix10.ico" />
+    <Content Include="Content\icons\mix.ico" />
+    <Content Include="Content\images\cc\PDC_img_0.jpg" />
+    <Content Include="Content\images\cc\PDC_img_1.jpg" />
+    <Content Include="Content\images\cc\PDC_img_10.jpg" />
+    <Content Include="Content\images\cc\PDC_img_11.jpg" />
+    <Content Include="Content\images\cc\PDC_img_12.jpg" />
+    <Content Include="Content\images\cc\PDC_img_13.jpg" />
+    <Content Include="Content\images\cc\PDC_img_14.jpg" />
+    <Content Include="Content\images\cc\PDC_img_15.jpg" />
+    <Content Include="Content\images\cc\PDC_img_16.jpg" />
+    <Content Include="Content\images\cc\PDC_img_17.jpg" />
+    <Content Include="Content\images\cc\PDC_img_18.jpg" />
+    <Content Include="Content\images\cc\PDC_img_19.jpg" />
+    <Content Include="Content\images\cc\PDC_img_2.jpg" />
+    <Content Include="Content\images\cc\PDC_img_20.jpg" />
+    <Content Include="Content\images\cc\PDC_img_21.jpg" />
+    <Content Include="Content\images\cc\PDC_img_22.jpg" />
+    <Content Include="Content\images\cc\PDC_img_23.jpg" />
+    <Content Include="Content\images\cc\PDC_img_24.jpg" />
+    <Content Include="Content\images\cc\PDC_img_25.jpg" />
+    <Content Include="Content\images\cc\PDC_img_26.jpg" />
+    <Content Include="Content\images\cc\PDC_img_27.jpg" />
+    <Content Include="Content\images\cc\PDC_img_28.jpg" />
+    <Content Include="Content\images\cc\PDC_img_29.jpg" />
+    <Content Include="Content\images\cc\PDC_img_3.jpg" />
+    <Content Include="Content\images\cc\PDC_img_30.jpg" />
+    <Content Include="Content\images\cc\PDC_img_31.jpg" />
+    <Content Include="Content\images\cc\PDC_img_32.jpg" />
+    <Content Include="Content\images\cc\PDC_img_33.jpg" />
+    <Content Include="Content\images\cc\PDC_img_34.jpg" />
+    <Content Include="Content\images\cc\PDC_img_35.jpg" />
+    <Content Include="Content\images\cc\PDC_img_36.jpg" />
+    <Content Include="Content\images\cc\PDC_img_37.jpg" />
+    <Content Include="Content\images\cc\PDC_img_38.jpg" />
+    <Content Include="Content\images\cc\PDC_img_39.jpg" />
+    <Content Include="Content\images\cc\PDC_img_4.jpg" />
+    <Content Include="Content\images\cc\PDC_img_40.jpg" />
+    <Content Include="Content\images\cc\PDC_img_41.jpg" />
+    <Content Include="Content\images\cc\PDC_img_42.jpg" />
+    <Content Include="Content\images\cc\PDC_img_43.jpg" />
+    <Content Include="Content\images\cc\PDC_img_44.jpg" />
+    <Content Include="Content\images\cc\PDC_img_45.jpg" />
+    <Content Include="Content\images\cc\PDC_img_46.jpg" />
+    <Content Include="Content\images\cc\PDC_img_47.jpg" />
+    <Content Include="Content\images\cc\PDC_img_48.jpg" />
+    <Content Include="Content\images\cc\PDC_img_49.jpg" />
+    <Content Include="Content\images\cc\PDC_img_5.jpg" />
+    <Content Include="Content\images\cc\PDC_img_6.jpg" />
+    <Content Include="Content\images\cc\PDC_img_7.jpg" />
+    <Content Include="Content\images\cc\PDC_img_8.jpg" />
+    <Content Include="Content\images\cc\PDC_img_9.jpg" />
+    <Content Include="Content\images\creative\PDC09Bling_BeforeAfter_136.jpg" />
+    <Content Include="Content\images\creative\PDC09Bling_BeforeAfter_240.jpg" />
+    <Content Include="Content\images\creative\PDC09Bling_General_ThreadsConnected_136.jpg" />
+    <Content Include="Content\images\creative\PDC09Bling_General_ThreadsConnected_240.jpg" />
+    <Content Include="Content\images\creative\PDC09Bling_General_WhatsNext_136.jpg" />
+    <Content Include="Content\images\creative\PDC09Bling_General_WhatsNext_240.jpg" />
+    <Content Include="Content\images\creative\PDC09Bling_Speaker_TechGuy_240.jpg" />
+    <Content Include="Content\images\creative\PDC09Bling_Workshops_HandsDirty_136.jpg" />
+    <Content Include="Content\images\creative\PDC09Bling_Workshops_HandsDirty_240.jpg" />
+    <Content Include="Content\images\creative\PDC09_LargerHatSizePoster_25x32.jpg" />
+    <Content Include="Content\images\creative\PDC09_LargerHatSizePoster_25x32_thumb.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarA_1024x768.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarA_1280x720.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarA_1280x768.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarA_1280x960.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarA_1920x1080.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarA_1920x1200.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarA_320x192.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarA_800x480.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarB_1024x768.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarB_1280x720.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarB_1280x768.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarB_1280x960.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarB_1920x1080.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarB_1920x1200.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarB_320x192.jpg" />
+    <Content Include="Content\images\creative\PDC09_WallpaperCalendarB_800x480.jpg" />
+    <Content Include="Content\images\creative\WallpaperCalendarA_1920x1200.jpg" />
+    <Content Include="Content\images\creative\WallpaperCalendarB_1920x1200.jpg" />
+    <Content Include="Content\images\floorplan.gif" />
+    <Content Include="Content\images\floorplan_thumb.gif" />
+    <Content Include="Content\images\hotelroomone.jpg" />
+    <Content Include="Content\images\hotelroomone_thumb.jpg" />
+    <Content Include="Content\images\hotelroomthree.jpg" />
+    <Content Include="Content\images\hotelroomthree_thumb.jpg" />
+    <Content Include="Content\images\hotelroomtwo.jpg" />
+    <Content Include="Content\images\hotelroomtwo_thumb.jpg" />
+    <Content Include="Content\images\PDC09Bling_BeforeAfter_136.jpg" />
+    <Content Include="Content\images\PDC09Bling_BeforeAfter_240.jpg" />
+    <Content Include="Content\images\puzzleday.png" />
+    <Content Include="Content\images\sessionbrowser.jpg" />
+    <Content Include="Content\images\sponsors\acer.jpg" />
+    <Content Include="Content\images\sponsors\DrDobbs.jpg" />
+    <Content Include="Content\images\sponsors\SyncfusionInc.png" />
+    <Content Include="Content\images\sponsors\TelerikCorp.png" />
+    <Content Include="Content\images\sponsors\devconnections.jpg" />
+    <Content Include="Content\images\sponsors\DrDobbs.png" />
+    <Content Include="Content\images\sponsors\LakeQuincy.jpg" />
+    <Content Include="Content\images\sponsors\msdn.jpg" />
+    <Content Include="Content\images\sponsors\SDTimes.jpg" />
+    <Content Include="Content\images\sponsors\SearchWinDevelopmentcom.jpg" />
+    <Content Include="Content\images\sponsors\techweb.jpg" />
+    <Content Include="Content\images\sponsors\UptimeSafe.jpg" />
+    <Content Include="Content\images\thecommons-logo.jpg" />
+    <Content Include="Content\images\thecommonslogo.jpg" />
+    <Content Include="DataSources\Markers.xml" />
+    <Content Include="DataSources\Schedule.xml" />
+    <Content Include="DataSources\Settings.xml" />
+    <Content Include="DataSources\Streams.xml" />
+    <Content Include="DataSources\ThursdaySchedule.xml" />
+    <Content Include="DataSources\TuesdaySchedule.xml" />
+    <Content Include="DataSources\Twitter.xml" />
+    <Content Include="DataSources\WednesdaySchedule.xml" />
+    <Content Include="Images\GetSLPlayer.png" />
+    <Content Include="Images\SLInstallBkgnd.png" />
+    <Content Include="Scripts\Install\logger.js" />
+    <Content Include="Scripts\Install\math.uuid.js" />
+    <Content Include="Scripts\Install\Silverlight.logger.js" />
+    <Content Include="Scripts\Install\Silverlight.supportedUserAgent.js" />
+    <Content Include="Scripts\Install\SilverlightVersion.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\Silverlight.js" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\mix10.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\slide_back.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\Site.Master" />
+    <Content Include="Skins\MIX10\Scripts\jquery.autocomplete.js" />
+    <Content Include="Skins\MIX10\Scripts\webtrends.js" />
+    <Content Include="Skins\MIX10\Styles\images\bg_footer.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_header.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_schedulebox-off.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_schedulebox-on.gif" />
+    <Content Include="Skins\MIX10\Styles\images\btn_next.gif" />
+    <Content Include="Skins\MIX10\Styles\images\btn_next_grey.gif" />
+    <Content Include="Skins\MIX10\Styles\images\btn_prev.gif" />
+    <Content Include="Skins\MIX10\Styles\images\btn_prev_grey.gif" />
+    <Content Include="Skins\MIX10\Styles\images\btn_search.gif" />
+    <Content Include="Skins\MIX10\Styles\images\favicon.ico" />
+    <Content Include="Skins\MIX10\Styles\images\g_map.gif" />
+    <Content Include="Skins\MIX10\Styles\images\header.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ico_liveid.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ico_search.gif" />
+    <Content Include="Skins\MIX10\Styles\images\mix10.gif" />
+    <Content Include="Skins\MIX10\Styles\images\pdc_icon.png" />
+    <Content Include="Skins\MIX10\Styles\images\slide_back.gif" />
+    <Content Include="Skins\MIX10\Styles\images\spacer.gif" />
+    <Content Include="Skins\MIX10\Styles\img\accept.png" />
+    <Content Include="Skins\MIX10\Styles\img\AttendeeDirectory.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\bg_saving.gif" />
+    <Content Include="Skins\MIX10\Styles\img\delete.png" />
+    <Content Include="Skins\MIX10\Styles\img\ico_ch9.gif" />
+    <Content Include="Skins\MIX10\Styles\img\ico_delicious.gif" />
+    <Content Include="Skins\MIX10\Styles\img\ico_digg.gif" />
+    <Content Include="Skins\MIX10\Styles\img\ico_email.gif" />
+    <Content Include="Skins\MIX10\Styles\img\ico_facebook.gif" />
+    <Content Include="Skins\MIX10\Styles\img\ico_flickr.gif" />
+    <Content Include="Skins\MIX10\Styles\img\ico_pdcblog.gif" />
+    <Content Include="Skins\MIX10\Styles\img\ico_rss.gif" />
+    <Content Include="Skins\MIX10\Styles\img\ico_rss_med.gif" />
+    <Content Include="Skins\MIX10\Styles\img\ico_twitter.gif" />
+    <Content Include="Skins\MIX10\Styles\img\indicator.gif" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_300px.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_Directory.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_KeynoteLive.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Thumb_Guthrie2.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\oooohhhh.gif" />
+    <Content Include="Skins\MIX10\Styles\img\page_add.png" />
+    <Content Include="Skins\MIX10\Styles\img\page_delete.png" />
+    <Content Include="Skins\MIX10\Styles\img\page_edit.png" />
+    <Content Include="Skins\MIX10\Styles\img\page_files.png" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\BestWebDesignAgencies.png" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\C1Logo.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\codenamedallas.png" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\ie.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\lynda.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\makemagazine.gif" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\moo.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\searchwindevelopment.png" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\topseos.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\windows7.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\windowsphone.png" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\wirestone.png" />
+    <Content Include="Skins\MIX10\Styles\jquery.autocomplete.css" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\bg_footer.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\bg_header.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\bg_schedulebox-off.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\bg_schedulebox-on.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\btn_next.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\btn_next_grey.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\btn_prev.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\btn_prev_grey.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\btn_search.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\favicon.ico" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\g_map.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\header.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\ico_liveid.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\ico_search.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\mix10.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\pdc_icon.png" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\slide_back.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\images\spacer.gif" />
+    <Content Include="Skins\MIX10\Styles\Mobile\screen_blackberry.css" />
+    <Content Include="Skins\MIX10\Styles\Mobile\screen_iphone.css" />
+    <Content Include="Skins\MIX10\Styles\Mobile\screen_opera.css" />
+    <Content Include="Skins\MIX10\Styles\Mobile\screen_pocketIE6.css" />
+    <Content Include="Skins\MIX10\Styles\Mobile\screen_pocketIE7.css" />
+    <Content Include="Skins\MIX10\Styles\Mobile\screen_tables.css" />
+    <Content Include="Skins\MIX10\Styles\screen_blackberry.css" />
+    <Content Include="Skins\MIX10\Styles\screen_iphone.css" />
+    <Content Include="Skins\MIX10\Styles\screen_opera.css" />
+    <Content Include="Skins\MIX10\Styles\screen_pocketIE6.css" />
+    <Content Include="Skins\MIX10\Styles\screen_pocketIE7.css" />
+    <Content Include="Skins\MIX10\Styles\screen_tables.css" />
+    <Content Include="Skins\MIX10\Views\Page\Channel9Videos.ascx" />
+    <Content Include="Skins\MIX10\Views\Page\Home.aspx" />
+    <Content Include="Skins\MIX10\Views\Page\List.aspx" />
+    <Content Include="Skins\MIX10\Views\Page\Mobile\Contact.aspx" />
+    <Content Include="Skins\MIX10\Views\Page\Mobile\Home.aspx" />
+    <Content Include="Skins\MIX10\Views\Page\Mobile\Item.aspx" />
+    <Content Include="Skins\MIX10\Views\Page\Mobile\Maps.aspx" />
+    <Content Include="Skins\MIX10\Views\Post\Comments.ascx" />
+    <Content Include="Skins\MIX10\Views\Post\ListByArchive.aspx" />
+    <Content Include="Skins\MIX10\Views\Post\Mobile\Item.aspx" />
+    <Content Include="Skins\MIX10\Views\Post\Mobile\ListByBlog.aspx" />
+    <Content Include="Skins\MIX10\Views\Post\Mobile\ListByTag.aspx" />
+    <Content Include="Skins\MIX10\Views\Reports\Summary.ascx" />
+    <Content Include="Skins\MIX10\Views\Reports\Summary.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Atom.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\AtomFeedElements.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\AtomFeedEntry.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Comment.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\CommentCreatorInfo.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\CommentFormAnonymous.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\CommentFormAuthenticated.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\CommentListMedium.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Comments.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Ics.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\IcsFeedElements.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\IcsFeedEntry.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Item.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ItemIcs.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ItemJson.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ItemJson.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ItemXml.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ItemXml.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByDateRange.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByDateRangeAndUser.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByDateRangeAndUser.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByEvent.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByEventAndTag.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByEventJson.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByEventWithVideo.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByEventWithVideo.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByEventXml.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByUser.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ManageComment.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\Item.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ItemBrowser.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ListByDateRange.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ListByDateRange.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ListByDateRangeAndUser.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ListByDateRangeAndUser.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ListByEvent.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ListByEvent.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ListByEventAndTag.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ListByEventAndTag.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ListByUser.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ListByUser.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\MyScheduleBrowser.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\MySessionBrowser.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ScheduleBrowserM.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ScheduleForMondayM.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ScheduleForThursdayM.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ScheduleForTuesdayM.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ScheduleForWednesdayM.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Mobile\ScheduleItemTimeSlot.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\MyScheduleBrowser.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\MyScheduleForMonday.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\MyScheduleForThursday.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\MyScheduleForTuesday.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\MyScheduleForWednesday.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\MySessionBrowser.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Rss.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\RssChannel.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\RssChannelItem.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\Sign.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\SignFeedElements.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\SignFeedEntry.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\SiteMap.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\VideoBrowser.ascx" />
+    <Content Include="Skins\MIX10\Views\Search\List.aspx" />
+    <Content Include="Skins\MIX10\Views\Search\Mobile\List.aspx" />
+    <Content Include="Skins\MIX10\Views\Search\Mobile\SearchResults.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Analytics.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\CallToAction.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Comment.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\CommentFormAnonymous.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\CommentFormAuthenticated.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\ConnectLinks.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Download.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\ExhibitorList.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\Error.aspx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\Footer.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\HeadCustomContents.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\Header.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\LoginUserControl.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\NotFound.aspx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\PostListMedium.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\PostSummaryMedium.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\ScheduleItem.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\ScheduleItemAdd.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\ScheduleItemList.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\SessionBrowser.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\SiteNav.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\PostListMedium.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\ScheduleItemAdd.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\ScheduleShare.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\SecondaryNav.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\SiteMapIndex.aspx" />
+    <Content Include="Skins\MIX10\Views\Shared\SiteSearchControl.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\SponsorList.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\TwitterFeed.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\VideoArea.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\ScheduleItemList.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Sync.Master" />
+    <None Include="ClientBin\Mix2010.xap" />
+    <Content Include="Skins\MIX10\Views\Shared\Mobile\Site.Master" />
+    <None Include="Skins\MIX10\Styles\images\ozzie.psd" />
+    <None Include="Web.config.debug" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\bg_footer.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\bg_header.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\bg_schedulebox-off.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\bg_schedulebox-on.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\btn_next.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\btn_next_grey.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\btn_prev.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\btn_prev_grey.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\btn_search.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\favicon.ico" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\g_map.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\header.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\ico_liveid.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\ico_search.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\pdc_icon.png" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\images\spacer.gif" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\screen_blackberry.css" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\screen_iphone.css" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\screen_opera.css" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\screen_pocketIE6.css" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\screen_pocketIE7.css" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Styles\screen_tables.css" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Page\Contact.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Page\Home.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Page\Item.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Page\Maps.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Post\Item.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Post\ListByBlog.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Post\ListByTag.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\Item.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ItemBrowser.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ListByDateRange.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ListByDateRange.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ListByDateRangeAndUser.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ListByDateRangeAndUser.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ListByEvent.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ListByEvent.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ListByEventAndTag.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ListByEventAndTag.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ListByUser.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ListByUser.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\MyScheduleBrowser.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\MySessionBrowser.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ScheduleBrowserM.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ScheduleForMondayM.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ScheduleForThursdayM.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ScheduleForTuesdayM.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ScheduleForWednesdayM.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\ScheduleItem\ScheduleItemTimeSlot.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Search\List.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Search\SearchResults.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\Error.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\Footer.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\HeadCustomContents.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\Header.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\LoginUserControl.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\NotFound.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\PostListMedium.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\PostSummaryMedium.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\ScheduleItem.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\ScheduleItemAdd.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\ScheduleItemList.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\SessionBrowser.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Shared\SiteNav.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Speaker\Item.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Speaker\ListByEvent.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Speaker\ListByEvent.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Speaker\Speaker.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Speaker\SpeakerBrowser.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\Speaker\SpeakerItemList.ascx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\User\Register.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\User\Schedule.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\User\SignIn.aspx" />
+    <Content Include="Skins\MIX10\Devices\Mobile\Views\User\UserScheduleItemsList.ascx" />
+    <Content Include="Skins\MIX10\Styles\ie_8.css" />
+    <Content Include="Skins\MIX10\Styles\img\icon-print.gif" />
+    <Content Include="Skins\MIX10\Styles\img\Mix10_art.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_Keynote.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_LAXParty.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_Phone.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Thumb_Keynote.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Thumb_LAXParty.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Thumb_Phone.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\bing.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\Codeproject.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\Cynergy.png" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\devconnections.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\devexpress.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\electricrain.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\Falafel.png" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\hp_logo_lg_HP Blue.png" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\hp_logo_med_HP Blue.png" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\hp_logo_min_HP Blue.png" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\identitymine.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\Infragistics.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\microsofttranslator.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\oreilly.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\ProductionHub.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\productionhub.png" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\telerik.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\vsm.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\WebsiteSpark.png" />
+    <Content Include="Skins\MIX10\Styles\img\Sponsors\WindowsAzure.jpg" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByUserPrintable.aspx" />
+    <Content Include="Skins\MIX10\Masters\entry.html" />
+    <Content Include="Skins\MIX10\Masters\generalpage.html" />
+    <Content Include="Skins\MIX10\Masters\index.html" />
+    <Content Include="Skins\MIX10\Masters\registration.html" />
+    <Content Include="Skins\MIX10\Masters\schedule.html" />
+    <Content Include="Skins\MIX10\Masters\session.html" />
+    <Content Include="Skins\MIX10\Scripts\base.js" />
+    <Content Include="Skins\MIX10\Scripts\Blog.js" />
+    <Content Include="Skins\MIX10\Scripts\contentslider.js" />
+    <Content Include="Skins\MIX10\Scripts\images\lightbox-blank.gif" />
+    <Content Include="Skins\MIX10\Scripts\images\lightbox-btn-close.gif" />
+    <Content Include="Skins\MIX10\Scripts\images\lightbox-btn-next.gif" />
+    <Content Include="Skins\MIX10\Scripts\images\lightbox-btn-prev.gif" />
+    <Content Include="Skins\MIX10\Scripts\images\lightbox-ico-loading.gif" />
+    <Content Include="Skins\MIX10\Scripts\jquery.lightbox-0.5.js" />
+    <Content Include="Skins\MIX10\Scripts\jquery.lightbox-0.5.min.js" />
+    <Content Include="Skins\MIX10\Scripts\jquery.lightbox-0.5.pack.js" />
+    <Content Include="Skins\MIX10\Scripts\js\jquery.js" />
+    <Content Include="Skins\MIX10\Scripts\SessionBrowser.4.js" />
+    <Content Include="Skins\MIX10\Scripts\Sessions.js" />
+    <Content Include="Skins\MIX10\Scripts\Speakers.js" />
+    <Content Include="Skins\MIX10\Scripts\tabcontent.js" />
+    <Content Include="Skins\MIX10\Styles\printable.css" />
+    <Content Include="Skins\MIX10\Styles\grid.css" />
+    <Content Include="Skins\MIX10\Styles\ie.css" />
+    <Content Include="Skins\MIX10\Styles\img\bg-button.gif" />
+    <Content Include="Skins\MIX10\Styles\img\bg-regcard.gif" />
+    <Content Include="Skins\MIX10\Styles\img\bg-rule.png" />
+    <Content Include="Skins\MIX10\Styles\img\border-bottom.png" />
+    <Content Include="Skins\MIX10\Styles\img\btn_close.gif" />
+    <Content Include="Skins\MIX10\Styles\img\bullet.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\bullet.png" />
+    <Content Include="Skins\MIX10\Styles\img\cback.gif" />
+    <Content Include="Skins\MIX10\Styles\img\Circle_back.gif" />
+    <Content Include="Skins\MIX10\Styles\img\dev-express.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\ex1.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\facebook.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\flickr.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\footerback.gif" />
+    <Content Include="Skins\MIX10\Styles\img\footer_back.gif" />
+    <Content Include="Skins\MIX10\Styles\img\fpo-casino.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\gravatar_anon.gif" />
+    <Content Include="Skins\MIX10\Styles\img\head_back.gif" />
+    <Content Include="Skins\MIX10\Styles\img\home_top.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\hp.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\icon-comment.png" />
+    <Content Include="Skins\MIX10\Styles\img\icon-dropdown.gif" />
+    <Content Include="Skins\MIX10\Styles\img\li.gif" />
+    <Content Include="Skins\MIX10\Styles\img\lightbox-blank.gif" />
+    <Content Include="Skins\MIX10\Styles\img\lightbox-btn-close.gif" />
+    <Content Include="Skins\MIX10\Styles\img\lightbox-btn-next.gif" />
+    <Content Include="Skins\MIX10\Styles\img\lightbox-btn-prev.gif" />
+    <Content Include="Skins\MIX10\Styles\img\lightbox-ico-loading.gif" />
+    <Content Include="Skins\MIX10\Styles\img\loading.gif" />
+    <Content Include="Skins\MIX10\Styles\img\location.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\logo.png" />
+    <Content Include="Skins\MIX10\Styles\img\logo_footer.png" />
+    <Content Include="Skins\MIX10\Styles\img\mail.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_10KBanner_260x60.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_BeInspired.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_Buxton.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_DJ.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_Guthrie.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_Mandalay.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_Mandalay3.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_OpenCall.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Mix10_LoveFest_blk_240.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Mix10_LoveFest_brn_240.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Mix10_LoveTheWeb_blk_240.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Mix10_LoveTheWeb_grn_240.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Mix10_SeeYou_blk_240.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Mix10_SeeYou_grn_240.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Thumb_Buxton.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Thumb_DJ.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Thumb_Guthrie.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Thumb_Inspired.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Thumb_Mandalay.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Thumb_Mandalay3.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Thumb_OpenCall.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Mix10_Vote_blk_240.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Mix10_Vote_brn_240.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\Mix10_Vote_grn_240.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\nav_back.png" />
+    <Content Include="Skins\MIX10\Styles\img\nav_border.png" />
+    <Content Include="Skins\MIX10\Styles\img\pag_back.png" />
+    <Content Include="Skins\MIX10\Styles\img\register_btn_home.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\right_search.gif" />
+    <Content Include="Skins\MIX10\Styles\img\rss.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\search.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\searchbutton.gif" />
+    <Content Include="Skins\MIX10\Styles\img\searchSprite.png" />
+    <Content Include="Skins\MIX10\Styles\img\search_border.png" />
+    <Content Include="Skins\MIX10\Styles\img\selectbox.png" />
+    <Content Include="Skins\MIX10\Styles\img\session_home_back.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\showme_back.png" />
+    <Content Include="Skins\MIX10\Styles\img\side_sub.png" />
+    <Content Include="Skins\MIX10\Styles\img\signin.gif" />
+    <Content Include="Skins\MIX10\Styles\img\slide1.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\slide1_thumb.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\slide2.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\slide2_thumb.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\slide3.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\slide3_thumb.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\slide4.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\slide4_thumb.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\slide_back.gif" />
+    <Content Include="Skins\MIX10\Styles\img\twitter.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\valid-xhtml10-blue.png" />
+    <Content Include="Skins\MIX10\Styles\jquery.lightbox-0.5.css" />
+    <Content Include="Skins\MIX10\Styles\print.css" />
+    <Content Include="Skins\MIX10\Styles\screen.css" />
+    <Content Include="Skins\MIX10\Styles\style.css" />
+    <Content Include="Skins\MIX10\Styles\style_backup.css" />
+    <Content Include="Skins\MIX10\Views\Exhibitor\Exhibitors.aspx" />
+    <Content Include="Skins\MIX10\Views\Exhibitor\Sponsors.aspx" />
+    <Content Include="Skins\MIX10\Views\Page\Contact.aspx" />
+    <Content Include="Skins\MIX10\Views\Page\Art.aspx" />
+    <Content Include="Skins\MIX10\Views\Page\FeaturedScheduleItemsList.ascx" />
+    <Content Include="Skins\MIX10\Views\Page\Hotels.aspx" />
+    <Content Include="Skins\MIX10\Views\Page\Item.aspx" />
+    <Content Include="Skins\MIX10\Views\Page\Workshops.aspx" />
+    <Content Include="Skins\MIX10\Views\Post\Item.aspx" />
+    <Content Include="Skins\MIX10\Views\Post\ListByBlog.aspx" />
+    <Content Include="Skins\MIX10\Views\Post\ListByTag.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\CommentOnPost.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByEventAndTag.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByEventAndWorkshops.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByUser.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ScheduleForSunday.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByDateRange.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ListByEvent.aspx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ScheduleBrowser.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ScheduleForMonday.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ScheduleForTuesday.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ScheduleForWednesday.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\ScheduleItemTimeSlot.ascx" />
+    <Content Include="Skins\MIX10\Views\ScheduleItem\SessionBrowser.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Error.aspx" />
+    <Content Include="Skins\MIX10\Views\Shared\Footer.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\HeadCustomContents.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Header.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\HeroArea.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\LoginUserControl.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\News.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\NotFound.aspx" />
+    <Content Include="Skins\MIX10\Views\Shared\PostShare.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\PostSummaryMedium.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\ScheduleItem.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\ScheduleItemShare.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\ScheduleUserFilter.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\SideBar.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\SiteNav.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Social.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\Sponsors.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\VideoHero.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\VideoList.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\VideoPlayer.ascx" />
+    <Content Include="Skins\MIX10\Views\Shared\WhatsHappening.ascx" />
+    <Content Include="Skins\MIX10\Views\Speaker\Item.aspx" />
+    <Content Include="Skins\MIX10\Views\Speaker\ItemJson.ascx" />
+    <Content Include="Skins\MIX10\Views\Speaker\ItemJson.aspx" />
+    <Content Include="Skins\MIX10\Views\Speaker\ItemXml.ascx" />
+    <Content Include="Skins\MIX10\Views\Speaker\ItemXml.aspx" />
+    <Content Include="Skins\MIX10\Views\Speaker\ListByEvent.ascx" />
+    <Content Include="Skins\MIX10\Views\Speaker\ListByEvent.aspx" />
+    <Content Include="Skins\MIX10\Views\Speaker\ListByEventJson.aspx" />
+    <Content Include="Skins\MIX10\Views\Speaker\ListByEventXml.aspx" />
+    <Content Include="Skins\MIX10\Views\Speaker\Mobile\Item.aspx" />
+    <Content Include="Skins\MIX10\Views\Speaker\Mobile\ListByEvent.ascx" />
+    <Content Include="Skins\MIX10\Views\Speaker\Mobile\ListByEvent.aspx" />
+    <Content Include="Skins\MIX10\Views\Speaker\Mobile\Speaker.ascx" />
+    <Content Include="Skins\MIX10\Views\Speaker\Mobile\SpeakerBrowser.ascx" />
+    <Content Include="Skins\MIX10\Views\Speaker\Mobile\SpeakerItemList.ascx" />
+    <Content Include="Skins\MIX10\Views\Speaker\SiteMap.aspx" />
+    <Content Include="Skins\MIX10\Views\Speaker\Speaker.ascx" />
+    <Content Include="Skins\MIX10\Views\Speaker\SpeakerBrowser.ascx" />
+    <Content Include="Skins\MIX10\Views\Speaker\SpeakerItemList.ascx" />
+    <Content Include="Skins\MIX10\Views\User\GetToken.aspx" />
+    <Content Include="Skins\MIX10\Views\User\Mobile\Register.aspx" />
+    <Content Include="Skins\MIX10\Views\User\Mobile\Schedule.aspx" />
+    <Content Include="Skins\MIX10\Views\User\Mobile\SignIn.aspx" />
+    <Content Include="Skins\MIX10\Views\User\Mobile\UserScheduleItemsList.ascx" />
+    <Content Include="Skins\MIX10\Views\User\Register.aspx" />
+    <Content Include="Skins\MIX10\Views\User\Schedule.aspx" />
+    <Content Include="Skins\MIX10\Views\User\SignIn.aspx" />
+    <Content Include="Skins\MIX10\Views\User\Token.aspx" />
+    <Content Include="Skins\MIX10\Views\User\UserScheduleItemsList.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\bg_footer.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\bg_header.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\bg_schedulebox-off.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\bg_schedulebox-on.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\btn_next.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\btn_next_grey.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\btn_prev.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\btn_prev_grey.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\btn_search.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\favicon.ico" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\g_map.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\header.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\ico_liveid.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\ico_search.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\pdc_icon.png" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\images\spacer.gif" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\screen_blackberry.css" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\screen_iphone.css" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\screen_opera.css" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\screen_pocketIE6.css" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\screen_pocketIE7.css" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Styles\screen_tables.css" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Page\Contact.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Page\Home.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Page\Item.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Page\Maps.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Post\Item.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Post\ListByBlog.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Post\ListByTag.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\Item.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ItemBrowser.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ListByDateRange.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ListByDateRange.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ListByDateRangeAndUser.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ListByDateRangeAndUser.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ListByEvent.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ListByEvent.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ListByEventAndTag.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ListByEventAndTag.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ListByUser.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ListByUser.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\MyScheduleBrowser.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\MySessionBrowser.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ScheduleBrowser.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ScheduleForMonday.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ScheduleForThursday.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ScheduleForTuesday.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ScheduleForWednesday.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\ScheduleItem\ScheduleItemTimeSlot.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Search\List.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Search\SearchResults.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\Error.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\Footer.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\HeadCustomContents.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\Header.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\LoginUserControl.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\NotFound.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\PostListMedium.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\PostSummaryMedium.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\ScheduleItem.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\ScheduleItemAdd.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\ScheduleItemList.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\SessionBrowser.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\SiteNav.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Speaker\Item.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Speaker\ListByEvent.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Speaker\ListByEvent.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Speaker\Speaker.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Speaker\SpeakerBrowser.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Speaker\SpeakerItemList.ascx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\User\Register.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\User\Schedule.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\User\SignIn.aspx" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\User\UserScheduleItemsList.ascx" />
+    <None Include="App_Code\Modules\OxiteSite\Repositories\SqlServer\OxitePDC09.dbml.layout">
+      <DependentUpon>OxitePDC09.dbml</DependentUpon>
+    </None>
+    <None Include="Content\SquaredMAC.ttf" />
+    <None Include="Content\SquaredPC.otf" />
+    <Content Include="Skins\MIX10\Views\Shared\Site.Master" />
+    <Content Include="Skins\MIX10\Views\Shared\Home.Master" />
+    <Content Include="Skins\MIX10\Views\Shared\Session.Master" />
+    <None Include="Skins\PDC09\Styles\images\ozzie.psd" />
+    <None Include="Skins\PDC09\Styles\players\VideoPlayer2009_03_27.xap" />
+    <Content Include="Skins\PDC09\Scripts\partners.js" />
+    <Content Include="Skins\PDC09\Styles\images\20x20.gif" />
+    <Content Include="Skins\PDC09\Styles\images\20x20.png" />
+    <Content Include="Skins\PDC09\Styles\images\footer.gif" />
+    <Content Include="Skins\PDC09\Styles\images\ozzie.jpg" />
+    <Content Include="Skins\PDC09\Styles\images\ozzie_day2.jpg" />
+    <Content Include="Skins\PDC09\Styles\images\player.jpg" />
+    <Content Include="Skins\PDC09\Styles\images\scottgu.jpg" />
+    <Content Include="Skins\PDC09\Styles\players\Microsoft.SilverlightMediaFramework.PDC.xap" />
+    <Content Include="Skins\PDC09\Styles\players\Smooth.xap" />
+    <Content Include="Skins\PDC09\Styles\screen.css" />
+    <Content Include="Skins\PDC09\Views\Page\Channel9Videos.ascx" />
+    <Content Include="Skins\PDC09\Views\Page\Partners.aspx" />
+    <Content Include="Skins\PDC09\Views\Reports\Summary.aspx" />
+    <Content Include="Skins\PDC09\Views\Reports\Summary.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\VideoBrowser.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ListByEventWithVideo.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ListByEventWithVideo.aspx" />
+    <Content Include="Skins\PDC09\Views\Shared\VideoList.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\VideoHero.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\HeroArea.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\MyScheduleForWednesday.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\MyScheduleForTuesday.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\MyScheduleForThursday.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\MyScheduleForMonday.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ListByDateRangeAndUser.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\Home.Master" />
+    <Content Include="Skins\PDC09\Views\Shared\Session.Master" />
+    <None Include="switch.bat" />
+    <None Include="Web References\RegistrationService\pdc09service.wsdl" />
+    <Content Include="Skins\PDC09\Devices\Mobile\Views\Shared\Site.Master" />
+    <Content Include="Skins\PDC09\Styles\images\DefaultPlayerBackground.png" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\Ics.aspx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\IcsFeedElements.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\IcsFeedEntry.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\ItemIcs.aspx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\Sign.aspx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\SignFeedElements.ascx" />
+    <Content Include="Skins\PDC09\Views\ScheduleItem\SignFeedEntry.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\Download.ascx" />
+    <Content Include="Skins\PDC09\Views\Shared\VideoPlayer.ascx" />
+    <Content Include="test.html" />
+    <Content Include="web.config" />
+    <None Include="Web References\RegistrationService\pdc09service.disco" />
+    <None Include="Web References\RegistrationService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="web.config.MIX10" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://www.ustechsregister.com/pdc09service/pdc09service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RegistrationService\</RelPath>
+      <UpdateFromURL>https://www.ustechsregister.com/pdc09service/pdc09service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>OxiteSite_RegistrationService_PDC09Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientBin\players\Microsoft.SilverlightMediaFramework.PDC.xap" />
+    <Content Include="ClientBin\players\Smooth.xap" />
+    <Content Include="ClientBin\players\SmoothWithTime.xap" />
+    <Content Include="ClientBin\players\VideoPlayer2009_03_27.xap" />
+    <Content Include="Scripts\Reform.js" />
+    <Content Include="Skins\MIX10\Styles\images\._bg_hero_bottom.gif" />
+    <Content Include="Skins\MIX10\Styles\images\20x20.gif" />
+    <Content Include="Skins\MIX10\Styles\images\20x20.png" />
+    <Content Include="Skins\MIX10\Styles\images\accept.png" />
+    <Content Include="Skins\MIX10\Styles\images\bg_black.png" />
+    <Content Include="Skins\MIX10\Styles\images\bg_cta_button.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_cta_button_left.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_cta_button_right.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_flyout_arrow.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_globalbox.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_globalbox_leftedge.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_hero.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_hero_bottom.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_hero_corner.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_hero_nav_active.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_logowires.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_minimizeall_w.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_register_top.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_saving.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_schedule_closed.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_schedule_off.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_schedule_on.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_selected_session.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_sharing.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_showtags.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_showtagsexpanded.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_tab_active.gif" />
+    <Content Include="Skins\MIX10\Styles\images\bg_tab_inactive.gif" />
+    <Content Include="Skins\MIX10\Styles\images\btn_close.gif" />
+    <Content Include="Skins\MIX10\Styles\images\btn_hero_back.gif" />
+    <Content Include="Skins\MIX10\Styles\images\btn_hero_next.gif" />
+    <Content Include="Skins\MIX10\Styles\images\btn_hero_page_off.png" />
+    <Content Include="Skins\MIX10\Styles\images\btn_hero_page_on.png" />
+    <Content Include="Skins\MIX10\Styles\images\btn_registerforpdc09.gif" />
+    <Content Include="Skins\MIX10\Styles\images\btn_register_now.gif" />
+    <Content Include="Skins\MIX10\Styles\images\btn_signinnow.gif" />
+    <Content Include="Skins\MIX10\Styles\images\DefaultPlayerBackground.png" />
+    <Content Include="Skins\MIX10\Styles\images\delete.png" />
+    <Content Include="Skins\MIX10\Styles\images\footer.gif" />
+    <Content Include="Skins\MIX10\Styles\images\g_list_arrow.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ico_ch9.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ico_delicious.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ico_digg.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ico_email.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ico_facebook.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ico_flickr.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ico_pdcblog.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ico_rss.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ico_rss_med.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ico_twitter.gif" />
+    <Content Include="Skins\MIX10\Styles\images\indicator.gif" />
+    <Content Include="Skins\MIX10\Styles\images\logo_pdc09.gif" />
+    <Content Include="Skins\MIX10\Styles\images\oooohhhh.gif" />
+    <Content Include="Skins\MIX10\Styles\images\ozzie.jpg" />
+    <Content Include="Skins\MIX10\Styles\images\ozzie_day2.jpg" />
+    <Content Include="Skins\MIX10\Styles\images\page_add.png" />
+    <Content Include="Skins\MIX10\Styles\images\page_delete.png" />
+    <Content Include="Skins\MIX10\Styles\images\page_edit.png" />
+    <Content Include="Skins\MIX10\Styles\images\page_files.png" />
+    <Content Include="Skins\MIX10\Styles\images\pdc.png" />
+    <Content Include="Skins\MIX10\Styles\images\player.jpg" />
+    <Content Include="Skins\MIX10\Styles\images\scottgu.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\channel9_banner.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\channel9_banner_2.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\channel9_thumb.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\CharlieKindelThumb_320.png" />
+    <Content Include="Skins\MIX10\Styles\img\CharlieKindelThumb_512.png" />
+    <Content Include="Skins\MIX10\Styles\img\CharlieKindelThumb_85.png" />
+    <Content Include="Skins\MIX10\Styles\img\CL10.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\CL13.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\CL24.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\DS05.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\EX06.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\EX14.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\FT07.jpg" />
+    <Content Include="Skins\MIX10\Styles\img\MIX10_Banner_Compelling.jpg" />
+    <Content Include="SplashScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Skins\MIX10\Scripts\css\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>30914</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://microsoftpdc-int.com</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>"$(ProjectDir)switch.bat" "$(ProjectDir)web.config.$(ConfigurationName)" "$(ProjectDir)web.config"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

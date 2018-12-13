@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Oxite.Database" Class="OxiteMembershipDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Oxite.Database;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.oxite_User" Member="oxite_Users">
+    <Type Name="oxite_User">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="HashedEmail" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultLanguageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_User_oxite_PageRoleUserRelationship" Member="oxite_PageRoleUserRelationships" ThisKey="UserID" OtherKey="UserID" Type="oxite_PageRoleUserRelationship" />
+      <Association Name="oxite_User_oxite_PostRoleUserRelationship" Member="oxite_PostRoleUserRelationships" ThisKey="UserID" OtherKey="UserID" Type="oxite_PostRoleUserRelationship" />
+      <Association Name="oxite_User_oxite_SiteRoleUserRelationship" Member="oxite_SiteRoleUserRelationships" ThisKey="UserID" OtherKey="UserID" Type="oxite_SiteRoleUserRelationship" />
+      <Association Name="oxite_User_oxite_UserModuleData" Member="oxite_UserModuleDatas" ThisKey="UserID" OtherKey="UserID" Type="oxite_UserModuleData" />
+      <Association Name="oxite_Language_oxite_User" Member="oxite_Language" ThisKey="DefaultLanguageID" OtherKey="LanguageID" Type="oxite_Language" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Role" Member="oxite_Roles">
+    <Type Name="oxite_Role">
+      <Column Name="GroupRoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Role_oxite_Role" Member="oxite_Roles" ThisKey="RoleID" OtherKey="GroupRoleID" Type="oxite_Role" />
+      <Association Name="oxite_Role_oxite_PageRoleUserRelationship" Member="oxite_PageRoleUserRelationships" ThisKey="RoleID" OtherKey="RoleID" Type="oxite_PageRoleUserRelationship" />
+      <Association Name="oxite_Role_oxite_PostRoleUserRelationship" Member="oxite_PostRoleUserRelationships" ThisKey="RoleID" OtherKey="RoleID" Type="oxite_PostRoleUserRelationship" />
+      <Association Name="oxite_Role_oxite_SiteRoleUserRelationship" Member="oxite_SiteRoleUserRelationships" ThisKey="RoleID" OtherKey="RoleID" Type="oxite_SiteRoleUserRelationship" />
+      <Association Name="oxite_Role_oxite_Role" Member="oxite_Role1" ThisKey="GroupRoleID" OtherKey="RoleID" Type="oxite_Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_PageRoleUserRelationship" Member="oxite_PageRoleUserRelationships">
+    <Type Name="oxite_PageRoleUserRelationship">
+      <Column Name="PageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_Role_oxite_PageRoleUserRelationship" Member="oxite_Role" ThisKey="RoleID" OtherKey="RoleID" Type="oxite_Role" IsForeignKey="true" />
+      <Association Name="oxite_User_oxite_PageRoleUserRelationship" Member="oxite_User" ThisKey="UserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_PostRoleUserRelationship" Member="oxite_PostRoleUserRelationships">
+    <Type Name="oxite_PostRoleUserRelationship">
+      <Column Name="PostID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_Role_oxite_PostRoleUserRelationship" Member="oxite_Role" ThisKey="RoleID" OtherKey="RoleID" Type="oxite_Role" IsForeignKey="true" />
+      <Association Name="oxite_User_oxite_PostRoleUserRelationship" Member="oxite_User" ThisKey="UserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_SiteRoleUserRelationship" Member="oxite_SiteRoleUserRelationships">
+    <Type Name="oxite_SiteRoleUserRelationship">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_Role_oxite_SiteRoleUserRelationship" Member="oxite_Role" ThisKey="RoleID" OtherKey="RoleID" Type="oxite_Role" IsForeignKey="true" />
+      <Association Name="oxite_User_oxite_SiteRoleUserRelationship" Member="oxite_User" ThisKey="UserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_UserModuleData" Member="oxite_UserModuleDatas">
+    <Type Name="oxite_UserModuleData">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ModuleName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Data" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_User_oxite_UserModuleData" Member="oxite_User" ThisKey="UserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Language" Member="oxite_Languages">
+    <Type Name="oxite_Language">
+      <Column Name="LanguageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageDisplayName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Language_oxite_User" Member="oxite_Users" ThisKey="LanguageID" OtherKey="DefaultLanguageID" Type="oxite_User" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="OxiteTags">
+  <DataContextMoniker Name="/OxiteTagsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c824e0b6-cc65-4f59-8cad-1c2bd6113d71" absoluteBounds="0.5, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/OxiteTagsDataContext/oxite_Tag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2fb9749a-0295-46ab-82d7-f6aa79c06712" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.20242346379207 : 2.07859537760417); (1.20242346379207 : 2.32859537760417); (1.81174684745593 : 2.32859537760417); (1.81174684745593 : 2.07859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteTagsDataContext/oxite_Tag/oxite_Tag_oxite_Tag" />
+      <nodes>
+        <classShapeMoniker Id="c824e0b6-cc65-4f59-8cad-1c2bd6113d71" />
+        <classShapeMoniker Id="c824e0b6-cc65-4f59-8cad-1c2bd6113d71" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

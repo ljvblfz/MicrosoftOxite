@@ -1,0 +1,2231 @@
+﻿body {
+    font-size:62.5%;
+}
+body, body.dyn label.forCheckbox {
+    font-family:"Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;
+}
+h1, h2, label, legend {
+    font-family:Georgia, "Times New Roman", Times, serif;
+    font-style:italic;
+}
+label, legend {
+    font-style:normal;
+}
+
+/* WIZARD HEADER CONTROL 
+----------------------------------------------------------*/
+.wizardHeader
+{
+}
+
+.wizardStep
+{
+    -moz-border-radius-bottomleft:0.3em;
+    -moz-border-radius-bottomright:0.3em;
+    -moz-border-radius-topleft:0.3em;
+    -moz-border-radius-topright:0.3em;
+    border:1px solid;
+    padding:0.417em 0.417em 0.417em 20px;
+    float: left;
+    background-color: Blue;
+    width: 13%;
+    font-size: 1.4em;
+}
+
+.finishedStep
+{
+    background-color: Lime;
+}
+
+.currentStep
+{
+    background-color: Maroon;
+}
+
+.wizardStepConnector
+{
+    float:left;
+    width: 20px;
+    background-color: Yellow;
+    width: 50px;
+}
+
+.wizardStepConnector finishedConnector
+{
+    background-color: Orange;
+}
+
+/* SOME BASIC BASES
+----------------------------------------------------------*/
+a,
+a:link,
+a:visited {
+    text-decoration:none;
+}
+a:active,
+a:hover {
+    text-decoration:underline;
+}
+em {
+    font-style:italic;
+}
+strong {
+    font-weight:bold;
+}
+textarea {
+    overflow:auto;
+}
+input.text,
+textarea {
+    border:1px solid;
+    padding:3px;
+}
+
+/* ICON BUTTONS
+----------------------------------------------------------*/
+input.ibutton,
+a.ibutton {
+    outline:none;
+}
+input.ibutton,
+a.ibutton img,
+img.ibutton,
+img.ui-datepicker-trigger {
+    background:none;
+    border:none;
+    padding:2px;
+}
+img.ui-datepicker-trigger {
+    margin-bottom:-5px;
+}
+input:hover.ibutton,
+a:hover.ibutton img,
+img:hover.ui-datepicker-trigger {
+    background:none;
+    border:1px solid;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    padding:1px;
+}
+input.large.ibutton,
+a.large.ibutton img {
+    padding:4px;
+}
+input:hover.large.ibutton,
+a:hover.large.ibutton img {
+    border-width:3px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    border-style:solid;
+    padding:1px;
+}
+input.ibutton.remove,
+a.ibutton.remove img {
+    border-color:#E6554B;
+}
+input.ibutton.edit,
+a.ibutton.edit img {
+    border-color:#F7DF62;
+}
+input.ibutton.files,
+a.ibutton.files img {
+    border-color:#989898;
+}
+input.ibutton.add,
+a.ibutton.add img {
+    border-color:#87B960;
+}
+input.ibutton.reload,
+a.ibutton.reload img {
+    border-color:#8bc785;
+}
+input.ibutton.approve,
+a.ibutton.approve img {
+    border-color:#7CBB65;
+}
+input.ibutton.pluginEnable,
+a.ibutton.pluginEnable img {
+    border-color:#68bC5B;
+}
+input.ibutton.pluginDisable,
+a.ibutton.pluginDisable img {
+    border-color:#BBB;
+}
+img:hover.ui-datepicker-trigger {
+    border-color:#FFBD79;
+}
+.admin.buttons {
+    text-align:right;
+}
+.admin.manage.buttons {
+    float:right;
+}
+.admin.buttons form {
+    display:inline;
+    margin:0;
+    padding:0;
+}
+.admin.buttons form fieldset {
+    display:inline;
+    margin:0 0 -4px;
+}
+
+/* CHECKBOX LABEL "BUTTONS"
+----------------------------------------------------------*/
+body.dyn label.forCheckbox {
+    border:1px solid;
+    -moz-border-radius:.3em;
+    -webkit-border-radius:.3em;
+    border-radius:.3em;
+    padding:.417em .417em .417em 20px;
+}
+body.dyn input.checkbox.withLabel {
+    margin-right:-18px;
+    position:relative;
+    vertical-align:-.1em;
+}
+body.dyn label.forCheckbox {
+    display:inline;
+    line-height:2.3em;
+}
+body.dyn input.checkbox.withLabel {
+    margin-left:5px;
+    margin-right:-21px;
+}
+body.dyn label.radio {
+    margin-right:5px;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1 {
+    font-size:3.6em;
+}
+h2 {
+    font-size:2.5em;
+    line-height:1em;
+    margin-bottom:.8em;
+}
+h3 {
+    font-size:1.6em;
+    line-height:1em;
+    margin-bottom:.312em;
+}
+h4 {
+    font-size:1.4em;
+    margin-bottom:.357em;
+}
+h5, h6, div.content {
+    font-size:1.2em;
+}
+h4 span,
+h5 span,
+h6 span {
+    font-style:normal;
+}
+
+/* PRIMARY LAYOUT ELEMENTS
+Width: 1204; Column Width: 48
+
+   |    18|    17|    16|    15|    14|    13|    12|    11|    10|     9|     8|     7|     6|     5|     4|     3|     2
+--------------------------------------------------------------------------------------------------------------------------
+.5g|  0.83|  0.88|  0.94|  1.00|  1.07|  1.16|  1.26|  1.37|  1.52|  1.69|  1.91|  2.19|  2.58|  3.13|  3.97|  5.43|  8.62
+ 18|100.00|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --
+ 17| 94.35|100.00|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --
+ 16| 88.70| 94.01|100.00|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --
+ 15| 83.06| 88.03| 93.63|100.00|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --
+ 14| 77.41| 82.04| 87.27| 93.20|100.00|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --
+ 13| 71.76| 76.06| 80.90| 86.40| 92.70|100.00|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --
+ 12| 66.11| 70.07| 74.53| 79.60| 85.41| 92.13|100.00|    --|    --|    --|    --|    --|    --|    --|    --|    --|    --
+ 11| 60.47| 64.08| 68.16| 72.80| 78.11| 84.26| 91.46|100.00|    --|    --|    --|    --|    --|    --|    --|    --|    --
+ 10| 54.82| 58.10| 61.80| 66.00| 70.82| 76.39| 82.91| 90.66|100.00|    --|    --|    --|    --|    --|    --|    --|    --
+  9| 49.17| 52.11| 55.43| 59.20| 63.52| 68.52| 74.37| 81.32| 89.70|100.00|    --|    --|    --|    --|    --|    --|    --
+  8| 43.52| 46.13| 49.06| 52.40| 56.22| 60.65| 65.83| 71.98| 79.39| 88.51|100.00|    --|    --|    --|    --|    --|    --
+  7| 37.87| 40.14| 42.70| 45.60| 48.93| 52.78| 57.29| 62.64| 69.09| 77.03| 87.02|100.00|    --|    --|    --|    --|    --
+  6| 32.23| 34.15| 36.33| 38.80| 41.63| 44.91| 48.74| 53.30| 58.79| 65.54| 74.05| 85.09|100.00|    --|    --|    --|    --
+  5| 26.58| 28.17| 29.96| 32.00| 34.33| 37.04| 40.20| 43.96| 48.48| 54.05| 61.07| 70.18| 82.47|100.00|    --|    --|    --
+  4| 20.93| 22.18| 23.60| 25.20| 27.04| 29.17| 31.66| 34.62| 38.18| 42.57| 48.09| 55.26| 64.95| 78.75|100.00|    --|    --
+  3| 15.28| 16.20| 17.23| 18.40| 19.74| 21.30| 23.12| 25.27| 27.88| 31.08| 35.11| 40.35| 47.42| 57.50| 73.02|100.00|    --
+  2|  9.63| 10.21| 10.86| 11.60| 12.45| 13.43| 14.57| 15.93| 17.58| 19.59| 22.14| 25.44| 29.90| 36.25| 46.03| 63.04|100.00
+  1|  3.99|  4.23|  4.49|  4.80|  5.15|  5.56|  6.03|  6.59|  7.27|  8.11|  9.16| 10.53| 12.37| 15.00| 19.05| 26.09| 41.38
+--------------------------------------------------------------------------------------------------------------------------
+   |    18|    17|    16|    15|    14|    13|    12|    11|    10|     9|     8|     7|     6|     5|     4|     3|     2
+
+----------------------------------------------------------------------------------------*/
+body {
+    min-width:74em;
+    padding:0 20px;
+}
+body#preview {
+    min-width:inherit;
+    padding:0;
+}
+#page {
+    max-width:120.4em;
+    margin:0 auto 1em;
+    min-width:74em;
+}
+#header {
+    padding:.83% 0;
+}
+#main {
+    clear:both;
+    padding:3em 0;
+}
+#footer {
+    height:2em;
+}
+.sections {
+    clear:both;
+    margin:1.76% 0 0 0;
+    overflow:hidden;
+}
+.sections .sections {
+    margin:0;
+}
+.sections .primary {
+    display:inline;
+    float:left;
+    width:66.11%;
+}
+.sections .secondary {
+    display:inline;
+    float:right;
+    width:32.23%;
+}
+
+/* HEADER
+----------------------------------------------------------*/
+#header h1 {
+    font-size:inherit;
+}
+
+/* FOOTER
+----------------------------------------------------------*/
+#footer .powered {
+    float:right;
+    text-transform:lowercase;
+}
+#footer .credits {
+    float:left;
+}
+#footer .credits a {
+    margin:.5em .5em 0 0;
+    display:block;
+    float:left;
+}
+#footer .credits a#famfamfam {
+    background:url(images/famfamfam.gif) no-repeat 0 0;
+    height:16px;
+    width:13px;
+    overflow:hidden;
+    outline:none;
+    text-indent:-9999em;
+}
+#footer .credits a:hover#famfamfam {
+    background-position:0 -16px;
+}
+#footer .powered span,
+#footer .powered a {
+    display:block;
+    float:left;
+}
+#footer .powered span {
+    margin:6px 0 0;
+}
+#footer .powered a {
+    background:url(images/oxite_logo.png) no-repeat 0 0;
+    height:20px;
+    width:40px;
+    margin:0 0 0 .5em;
+    overflow:auto;
+    outline:none;
+    text-indent:-9999em;
+}
+#footer .powered a:hover {
+    background-position:0 -20px;
+    border:none;
+    color:#fff;
+}
+
+/* POST LIST(S)
+----------------------------------------------------------*/
+ul.posts.medium li {
+    margin:.1em 0 2.8em;
+    padding:0;
+    list-style-type:none;
+}
+ul.posts.medium li.last {
+    margin-bottom:0;
+}
+ul.posts.small li {
+    padding-top:.2em;
+    padding-bottom:.3em;
+    list-style-type:none;
+}
+ul.posts p {
+    margin:.9em 0;
+}
+ul.posts h2.title {
+    width:74%;
+    margin:0 0 .15em 5px;
+    line-height:1.2em;
+}
+ul.posts.small span.title {
+    font-weight:bold;
+}
+
+ul.posts .posted,
+ul.posts .more,
+ul.posts.small .comments {
+    font-size:88%;
+}
+ul.posts.small .comments {
+    font-style:italic;
+}
+ul.posts.medium .posted,
+ul.posts.small .info {
+    margin:.3em 3px 0 0;
+    text-align:right;
+}
+ul.posts.medium .posted {
+    border-bottom:3px solid;
+    margin-top:-2em;
+}
+ul.posts.small .info {
+    margin:0;
+}
+ul.posts .more {
+    margin:1em 0 0 5px;
+    white-space:nowrap;
+}
+ul.posts .content {
+    clear:both;
+    padding:1.1em 0 0 5px;
+    margin-top:0;
+}
+
+/* COMMENT LIST(S)
+----------------------------------------------------------*/
+ul.comments.small
+{
+    margin:0;    
+}
+ul.comments.small li {
+    padding:.2em 5px .3em;
+    list-style-type:none;
+}
+ul.comments.small p {
+    margin:.9em 0;
+}
+ul.comments.small span.name {
+    font-weight:bold;
+    font-size:90%;
+}
+
+ul.comments.small .when {
+    font-size:88%;
+    font-style:italic;
+}
+ul.comments.small .post {
+    font-weight:bold;
+    font-style:italic;
+    margin:.4em 0 0;
+}
+ul.comments.small .post,
+ul.comments.small .text {
+    padding:0;
+}
+body.dyn ul.comments.small .post,
+body.dyn ul.comments.small .text {
+    display:none;
+}
+body.dyn ul.comments.small .active .post,
+body.dyn ul.comments.small .active .text {
+    display:block;
+}
+
+body.dyn ul.comments.small li {
+    cursor:pointer;
+    padding:.1em .2ex .2em 2ex;
+    background-image:url(images/bullet_toggle_plus_onoff.png);
+    background-repeat:no-repeat;
+    background-position:-2px -26px;
+    margin:0 -2ex;
+}
+body.dyn ul.comments.small li.hover {
+    background-position:-2px 5px;
+}
+body.dyn ul.comments.small li.active {
+    background-image:url(images/bullet_toggle_minus_onoff.png);
+    background-position:-691px 5px;
+}
+body.dyn ul.comments.small li.active.hover {
+    background-position:-2px 5px;
+}
+
+ul.comments.medium {
+    margin:0;
+    color:#555;
+    overflow:auto;
+}
+ul.comments.medium li 
+{
+    list-style-type:none;
+    margin:0 -1.2em .8em;
+    padding:1.2em 1.2em .4em;
+    overflow:auto;
+    position:relative;
+}
+ul.comments.medium li.first {
+    margin-top:.25em;
+}
+ul.comments.medium li.last {
+    margin-bottom:0;
+}
+ul.comments.medium .contents {
+    overflow:auto;
+}
+ul.comments.medium li .name {
+    width:100ex;
+    margin:0 0 .25em;
+}
+ul.comments.medium li .name,
+ul.comments.medium li .name .gravatar {
+    float:left;
+}
+ul.comments.medium li .name p {
+    padding:0 0 0 2ex;
+    margin:0;
+    overflow:auto;
+    white-space:nowrap;
+}
+ul.comments.medium li .text {
+    clear:both;
+    overflow:auto;
+    margin-left:70px;
+}
+
+/* COMMENT STATE
+----------------------------------------------------------*/
+ul.comments .comment.pendingapproval .state {
+    float:right;
+    display:block;
+    text-indent:-9999px;
+    width:16px;
+    overflow:auto;
+    background:url(images/asterisk_yellow.png) no-repeat 0 50%;
+    margin-right:5px;
+}
+
+
+/* ENTRY
+----------------------------------------------------------*/
+/*.post,
+form.search.main {
+    padding:0 5px;
+}*/
+form.search.main fieldset {
+    text-align:center;
+    margin:0 0 .6em;
+}
+body.dyn form.search.main label,
+body.dyn form.search.main input.button {
+    display:none;
+}
+.post .gravatar {
+    float:left;
+    margin:0 8px 8px 0;
+}
+.post .metadata {
+    padding:2px 5px 2px 0;
+    clear:both;
+    margin:0 0 5px;
+    font-size:90%;
+    overflow:auto;
+}
+.post .metadata .posted {
+    margin:0;
+    float:right;
+}
+
+/* TAGS
+----------------------------------------------------------*/
+ul.tags {
+    display:inline;
+    margin:0;
+}
+.posts ul.tags li {
+    padding:0 0 0 16px;
+    background-position:0 0;
+}
+ul.tags li {
+    padding:0 0 0 17px;
+    list-style-type:none;
+    margin:0;
+    display:inline;
+    background:url(images/bullet_grey.png) no-repeat 1px 1px;
+}
+ul.tags li.first {
+    padding:0;
+    background-image:none;
+}
+
+/* PAGER
+----------------------------------------------------------*/
+.pageState {
+    margin:0 0 0.6em;
+    font-style:italic;
+    text-align:right;
+}
+.pager {
+    height:2.2em;
+    margin-top:1.6em;
+}
+.pager a {
+    padding:.4em 1ex;
+    border:1px solid #D8DFE4;
+    margin:0 0 0 6px;
+    display:block;
+    float:right;
+}
+.pager a:hover {
+    text-decoration:none;
+    background-color:#F5F7F8;
+}
+
+/* POST COMMENTS
+----------------------------------------------------------*/
+#comments,
+#comments form#comment {
+    margin:1.6em 0 0;
+    padding:1.6em 0 0;
+    border-top:1px solid #F0F0F0;
+    position:relative;
+}
+#comments .status {
+    position:absolute;
+    top:2.5em;
+    right:5px;
+    text-align:right;
+    z-index:42;
+}
+#comments .status.empty {
+    position:static;
+}
+#comments .status h3 {
+    margin-top:0;
+}
+#comments form#comment {
+    clear:both;
+    overflow:auto;
+}
+#comments form.user fieldset {
+    float:none;
+}
+#comments form.user .gravatar {
+    margin:0 23px 8px 30px;
+}
+#comments fieldset {
+    float:left;
+}
+#comments fieldset legend,
+body.dyn .post #comments fieldset legend,
+body.dyn #comments form fieldset .name label,
+body.dyn #comments form fieldset .email label,
+body.dyn #comments form fieldset .url label,
+body.dyn #comments form fieldset.comment label {
+    display:none;
+}
+body.dyn #comments form .comment .subscribe label {
+    display:inline;
+}
+#comments fieldset label,
+#comments fieldset .help,
+body.dyn .post #comments fieldset label,
+body.dyn .post #comments fieldset .help {
+    display:block;
+}
+#comments fieldset .remember,
+#comments fieldset .subscribe {
+    padding:0 2ex 0 0;
+}
+#comments fieldset .remember,
+#comments fieldset .subscribe,
+#comments fieldset .remember label,
+#comments fieldset .subscribe label,
+body.dyn #comments fieldset .remember label,
+body.dyn #comments fieldset .subscribe label {
+    display:inline;
+}
+#comments fieldset span {
+    font-size:82%;
+    font-style:italic;
+    display:block;
+    padding:.2em 0 0 .7ex;    
+}
+#comments fieldset input.text {
+    width:90%;
+}
+#comments fieldset textarea {
+    width:99%;
+    height:22em;
+    margin:0 0 .5em;
+}
+#comments fieldset textarea.authed {
+    width:99.3%;
+}
+#comments fieldset.info {
+    width:40%;
+}
+#comments fieldset.comment {
+    width:60%;
+}
+#comments form.user fieldset.comment {
+    width:auto;
+}
+#comments fieldset.info div {
+    margin:0 0 1em;
+}
+#comments fieldset.info div.submit {
+    margin-top:1em;
+}
+#comments form.user fieldset div.submit {
+    margin:.5em 0 0;
+}
+#comments fieldset.info #comment_grav {
+    margin:0 0 .2em;
+    overflow:auto;
+    float:left;
+}
+#comments fieldset.info .gravatarhelp {
+    overflow:auto;
+    padding:0 0 0 1.5ex;
+}
+#comments fieldset.info .name {
+    clear:left;
+}
+#comments fieldset .help,
+body.dyn .post #comments fieldset .help {
+    display:none;
+}
+
+/* ARCHIVES
+----------------------------------------------------------*/
+.archives h3 {
+    margin-bottom:0;
+}
+.archives ul
+{
+    margin:0;
+}
+.archives li {
+    list-style-type:none;
+}
+.archives ul.yearList li {
+    margin:.6em 0 0;
+    background:url(images/bullet_toggle_minus_onoff.png) no-repeat -9999px 0;
+}
+.archives ul.archiveMonthList li
+{
+    margin:.2em 0;
+}
+.archives ul.archiveMonthList li.first {
+    margin-top:0;
+}
+.archives ul.archiveMonthList li.last {
+    margin-bottom:0;
+}
+.archives ul.yearList li.previous h4 span
+{
+    display:none;
+}
+body.dyn .archives ul.yearList li.previous h4 span
+{
+    display:inline;
+}
+body.dyn .archives ul.yearList li h4,
+body.dyn .archives ul.yearList li ul
+{
+    margin:.2em .2ex;
+}
+body.dyn .archives ul.yearList li.previous {
+    cursor:pointer;
+    padding:.1em .2ex .2em 2ex;
+    background:url(images/bullet_toggle_plus_onoff.png) no-repeat 0 -25px;
+    margin:0 -2ex;
+}
+body.dyn .archives ul.yearList li.previous.hover {
+    background-position:0 6px;
+}
+body.dyn .archives ul.yearList li.previous.open {
+    background:url(images/bullet_toggle_minus_onoff.png) no-repeat -689px 6px;
+}
+body.dyn .archives ul.yearList li.previous.open.hover {
+    background-position:0 6px;
+}
+body.dyn .archives ul.yearList li.previous ul {
+    display:none;
+}
+
+/* TASKS
+----------------------------------------------------------*/
+.tasks h3 {
+    margin-bottom:0;
+}
+.tasks ul
+{
+    margin:0;
+}
+.tasks li {
+    list-style-type:none;
+}
+.tasks ul li
+{
+    margin:.2em 0;
+}
+.tasks ul li.first {
+    margin-top:0;
+}
+.tasks ul li.last {
+    margin-bottom:0;
+}
+
+
+/* LOGIN FORM
+----------------------------------------------------------*/
+form.login div {
+    margin:0 0 1em 5px;
+}
+form.login div.submit {
+    margin-bottom:0;
+}
+form.login label {
+    display:block;
+}
+form.login .remember label {
+    display:inline;
+}
+form.login input.text {
+    width:42ex;
+}
+
+/* SEARCH FORM
+----------------------------------------------------------*/
+.secondary .sub.search {
+    margin:0;
+}
+.secondary .sub.search form#search {
+    margin:.4em 0;
+}
+.secondary .sub.search form#search input.text {
+    width:97%;
+}
+body.dyn form#search label,
+body.dyn form#search input.button {
+    display:none;
+}
+form#search input.button {
+    text-transform:uppercase;
+    margin:0 0 0 .2ex;
+    width:10ex;
+}
+div#windowsSearch {
+    position:relative;
+}
+.windowsSearch {
+    background:url(images/windows_search.png) no-repeat 0 0;
+    padding:0 0 0 20px;
+    position:absolute;
+    right:8px;
+}
+
+/* SEARCH
+----------------------------------------------------------*/
+.search .results {
+    float:right;
+}
+.search form#search {
+    margin:0 0 1em;
+}
+.search form#search label {
+    display:none;
+}
+.search form#search input.text {
+    width:30ex;
+}
+.search .criteria {
+    font-size:90%;
+    color:#777;
+}
+.noresult {
+    text-align:center;
+}
+
+/* FLAGS
+----------------------------------------------------------*/
+.flags {
+    float:left;
+    margin:0 10px 0 0;
+}
+.flags form {
+    padding:0;
+    margin:0;
+}
+.flags form.flag {
+    position:relative;
+    border:none;
+}
+.flags form.flag label {
+    background-color:#222;
+    color:#aaa;
+    font-size:1.1em;
+    padding:3px 6px;
+    position:absolute;
+    top:0;
+    left:24px;
+    white-space:nowrap;
+    display:none;
+}
+.flags form.flag label.show {
+    display:block;
+}
+.flagged {
+    overflow:auto;
+}
+.flagged.remove {
+    display:none;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear {
+    clear:both;
+}
+
+.error {
+    color:#ff0000;
+}
+
+#pageTitle {
+    float:left;
+}
+
+#logindisplay {
+    float:right;
+    margin:1.75em 0;
+}
+
+#logindisplay a {
+    text-transform:lowercase;
+}
+
+#logindisplay span.username {
+	font-weight:bold;
+}
+
+.input-validation-error {
+    border:1px solid;
+}
+
+.validation-summary-errors {
+    font-weight:bold;
+}
+
+.tagCloud {
+    text-align:center;
+}
+
+.tagCloud li {
+    list-style:none;
+    display:inline;
+}
+
+.tagCloud li a {
+    white-space:nowrap;
+    line-height:1.2em;
+}
+
+.tagCloud .t1 {
+	 font-weight:100;
+	 font-size: 0.8em;
+}
+
+.tagCloud .t2 {
+	font-weight:200;
+	font-size: 1.0em;
+}
+
+.tagCloud .t3 {
+	font-weight:300;
+	font-size:1.1em;
+}
+
+.tagCloud .t4 {
+	font-weight:600;
+	font-size:1.3em;
+}
+
+.tagCloud .t5 {
+	font-weight:700;
+	font-size:1.5em;
+}
+
+.tagCloud .t6 {
+	font-weight:800;
+	font-size:1.7em;
+}
+
+.tagCloud .t7 {
+	font-weight:900;
+	font-size:1.9em;
+}
+
+/* VALIDATION MESSAGES
+----------------------------------------------------------*/
+.field-validation-error {
+    display:block;
+}
+
+/* MESSAGES
+----------------------------------------------------------*/
+.message,
+.validation-summary-errors {
+    -moz-border-radius:.2em;
+    -webkit-border-radius:.2em;
+    border-radius:.2em;
+    font-size:1.5em;
+    line-height:1.6em;
+    padding:.5em 1em .5em 30px;
+}
+.message {
+    background:#F4F4F4 url(images/newspaper.png) no-repeat .5em .76em;
+    border:1px solid #EAEAEA;
+    color:#B7B7B7;
+}
+.message.info {
+    background:#E3EFF9 url(images/information.png) no-repeat .5em .76em;
+    border-color:#96B1CE;
+    color:#344F88;
+}
+.message.warning {
+    background:#FAEB9E url(images/error.png) no-repeat .5em .76em;
+    border-color:#F5D852;
+    color:#B88C36;
+}
+.message.error,
+.validation-summary-errors {
+    background:#FDCEC1 url(images/exclamation.png) no-repeat .5em .76em;
+    border-color:#ED5C35;
+    color:#BF4329;
+}
+.message.loading {
+    background:url(images/oooohhhh.gif) no-repeat 50% 50%;
+    background-color:#FCF8F0;
+    background-color:rgba(252, 248, 240, .9);
+    border:0;
+    padding:0 10px;
+    margin-left:-10px;
+}
+
+/* DIALOGS
+----------------------------------------------------------*/
+#dialog {
+    background:#F4F4F4;
+    border:3px solid #96B1CE;
+    -moz-border-radius:.333em;
+    -webkit-border-radius:.333em;
+    border-radius:.333em;
+    font-size:1.5em;
+    line-height:1.6em;
+    margin:0 auto;
+    padding:1em;
+    text-align:center;
+    width:42.67em;
+}
+#dialog .warning {
+    background:#FAEB9E;
+    border-color:#F5D852;
+}
+#dialog .error {
+    background:#FDCEC1;
+    border-color:#ED5C35;
+}
+#dialog p {
+    margin-bottom:.667em;
+}
+#dialog form {
+    display:inline;
+    padding:0 .667em;
+}
+
+/* LIGHTBOX
+----------------------------------------------------------*/
+#lightbox {
+    background-color:#FCF8F0;
+    background-color:rgba(255, 255, 255, .7);
+    width:100%;
+    z-index:999;
+}
+#lightbox * {
+    z-index:1000;
+}
+
+/* TOGGLE
+----------------------------------------------------------*/
+.toggle {
+    cursor:pointer;
+}
+.toggle {
+    background:url(images/bullet_toggle_plus.png) no-repeat 100% 50%;
+    padding-right:18px;
+}
+.toggle.on {
+    background-image:url(images/bullet_toggle_minus.png);
+}
+
+/* COLORS
+----------------------------------------------------------*/
+html {
+    background:#FCF8F0;
+    color:#251818;
+}
+a,
+a:link,
+ul.menu.admin li a,
+ul.menu li a:hover,
+#logindisplay a:hover,
+#logindisplay .logout a:hover {
+    color:#ED500C;
+}
+ul.menu li a,
+#comments fieldset span,
+form.login label,
+.pageState {
+    color:#727272;
+}
+#logindisplay a,
+#footer .powered {
+    color:#b8b8b8;
+}
+#header h1 a,
+#header h1 a:hover,
+ul.menu li.selected a,
+ul.menu li.selected a:hover,
+form.login .remember label,
+form.plugin label,
+form#siteSettings {
+    color:#251818;
+}
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span,
+input.hinted,
+textarea.hinted,
+.posts .more,
+.posts .posted,
+#logindisplay .logout a {
+    color:#8d8d8d;
+}
+.post .metadata {
+    color:#777;
+}
+
+#main,
+ul.posts.medium .posted {
+    border-color:#f0f0f0;
+}
+
+#logindisplay {
+    color:#727272;
+}
+#logindisplay .login {
+    color:#e0e0e0;
+}
+#logindisplay .logout {
+    color:#d3d3d3;
+}
+
+input.text,
+textarea,
+input.text.active,
+textarea.active {
+    background-color:#fff;
+    border-color:#f0f0f0;
+}
+input.text.hinted,
+textarea.hinted {
+    background-color:#fdfdfd;
+    color:#727272;
+}
+
+body.dyn ul.comments.medium img.gravatar {
+    border-color:#FFF;
+    color:#FFF;
+}
+body.dyn ul.comments.medium li.comment.hover img.gravatar {
+    border-color:#F7F7F7;
+    color:#F7F7F7;
+}
+
+.highlight {
+    /*todo: (nheskew) - or anyone. make use of this class. this is set on an element with an id that matches an fragment id in the URI (e.g. #someElement) */
+}
+
+#comments fieldset .help {
+    color:#AD5454;
+}
+
+#comments fieldset .field-validation-error,
+.field-validation-error {
+    color:#BF4329;
+}
+
+/* DASHBOARD
+----------------------------------------------------------*/
+#dashboard ul {
+    overflow:auto;
+    width:100%;
+    margin:0;
+}
+#dashboard ul .more {
+    font-size:1.1em;
+    text-align:right;
+    text-transform:lowercase;
+}
+#dashboard li {
+    float:left;
+    margin:.84%;
+    margin-top:0;
+    width:49.16%;
+}
+#dashboard li#recentPosts,
+#dashboard li#stats,
+#dashboard li#news {
+    margin-right:0;
+}
+#dashboard li#recentComments,
+#dashboard li#recentTrackbacks,
+#dashboard li#feedback {
+    margin-left:0;
+}
+#dashboard li#feedback,
+#dashboard li#news {
+    margin-top:0;
+}
+
+/* BUTTONS
+----------------------------------------------------------*/
+
+
+/* ENTRY EDIT
+----------------------------------------------------------*/
+body.itemedit .pageContent,
+body.itemedit .pageContent {
+    margin-top:2em;
+}
+body.itemadd fieldset,
+body.itemedit fieldset {
+    margin-bottom:1em;
+}
+body.itemadd fieldset.publish,
+body.itemedit fieldset.publish {
+    margin-bottom:1.6em;
+    margin-top:1.1em;
+}
+body.itemadd label,
+body.itemedit label {
+    margin-top:.833em;
+}
+body.itemadd .secondary input.text,
+body.itemedit .secondary input.text {
+    width:97.94%;
+}
+body.itemadd label.toggle,
+body.itemedit label.toggle {
+    background-position:100% 100%;
+    display:inline-block;
+}
+body.itemadd .url input.text,
+body.itemedit .url input.text {
+    border:1px dashed #E2DDD7;
+    font-size:1em;
+    width:auto;
+}
+body.dyn.itemadd fieldset.excerpt textarea,
+body.dyn.itemedit fieldset.excerpt textarea {
+    display:none;
+}
+body.dyn.itemadd fieldset.excerpt textarea.hasValue,
+body.dyn.itemedit fieldset.excerpt textarea.hasValue {
+    display:inherit;
+}
+body.itemadd .publish label.date,
+body.itemedit .publish label.date {
+    display:inline;
+    margin-right:5px;
+}
+body.itemadd .publish input.text,
+body.itemedit .publish input.text {
+    width:auto;
+}
+
+/* FORM
+----------------------------------------------------------*/
+form input, form textarea {
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    font-size:1.2em;
+}
+form div.buttons {
+    margin:1em 0 0;
+}
+form label,
+form legend {
+    display:block;
+    font-size:1.4em;
+    margin-bottom:.25em;
+}
+body.dyn fieldset.checkbox label {
+    padding-right:0.5em;
+}
+body.dyn fieldset.checkbox label.forCheckbox {
+    line-height:2.43em;
+    padding-right:0.417em;
+}
+form .hint {
+    font-size:88%;
+    font-style:italic;
+    display:block;
+}
+form.plugin input.text {
+    width:24ex;
+}
+form input.button,
+form button {
+    padding:.167em .417em;
+}
+form input.button.submit {
+    font-weight:bold;
+}
+
+/* SITE SETTINGS
+----------------------------------------------------------*/
+body.dyn form#siteSettings span.hint.icons {
+    display:inline;
+}
+body.dyn form#siteSettings span.hint.icons img {
+    cursor:pointer;
+    border:1px solid;
+    vertical-align:-.5em;
+    padding:1px;
+}
+body.dyn form#siteSettings span.hint.icons span {
+    display:none;
+}
+form#siteSettings button.cancel {
+    margin:0 0 0 5px;
+}
+
+/* BLOG MANAGER
+----------------------------------------------------------*/
+form#blog {
+    margin:1.6em 0;
+}
+form#blog .add,
+form#blog .find,
+form#blog .buttons {
+    padding-left:20px;
+}
+form#blog .add {
+    background:url(images/add.png) no-repeat 0 50%;
+}
+form#blog .find {
+    margin-top:1.8em;
+    background:url(images/find.png) no-repeat 0 0;
+}
+ul.blogs {
+    margin:0 0 0 16px;
+}
+ul.blogs li {
+    padding:0 0 0 20px;
+    margin:0;
+    list-style-type:none;
+    background:url(images/bullet_grey.png) no-repeat 4px 3px;
+}
+
+/* USER MANAGER
+----------------------------------------------------------*/
+form#user {
+    margin:1.6em 0;
+}
+form#user .add,
+form#user .find,
+form#user .buttons {
+    padding-left:20px;
+}
+form#user .add {
+    background:url(images/add.png) no-repeat 0 50%;
+}
+form#user .find {
+    margin-top:1.8em;
+    background:url(images/find.png) no-repeat 0 0;
+}
+ul.users {
+    margin:0 0 0 16px;
+}
+ul.users li {
+    padding:0 0 0 20px;
+    margin:0;
+    list-style-type:none;
+    background:url(images/bullet_grey.png) no-repeat 4px 3px;
+}
+
+/* ROLE MANAGER
+----------------------------------------------------------*/
+form#role {
+    margin:1.6em 0;
+}
+form#role .add,
+form#role .find,
+form#role .buttons {
+    padding-left:20px;
+}
+form#role .add {
+    background:url(images/add.png) no-repeat 0 50%;
+}
+form#role .find {
+    margin-top:1.8em;
+    background:url(images/find.png) no-repeat 0 0;
+}
+ul.roles {
+    margin:0 0 0 16px;
+}
+ul.roles li {
+    padding:0 0 0 20px;
+    margin:0;
+    list-style-type:none;
+    background:url(images/bullet_grey.png) no-repeat 4px 3px;
+}
+
+/* FILE MANAGER
+----------------------------------------------------------*/
+body.dyn form.addFile label {
+    display:none;
+}
+body.dyn form.addFile div {
+    display:inline;
+}
+body.dyn form.addFile div.buttons {
+    display:block;
+}
+body.dyn form.addFile #existingFileUrl {
+    width:40%;
+}
+body.dyn form.addFile #fileTypeName,
+body.dyn form.addFile #existingFileTypeName {
+    width:20%;
+}
+body.dyn form.addFile #existingFileMimeType,
+body.dyn form.addFile #existingFileSizeInBytes {
+    width:10%;
+}
+form.addFile fieldset {
+    margin:1.5em 0 0;
+    padding:0 0 0 5px;
+}
+form.addFile legend {
+    font-size:125%;
+    font-weight:bold;
+    margin:0;
+}
+form.addFile h3 {
+    font-size:100%;
+    padding:0 0 0 5px;
+}
+
+.manageFile {
+    margin:1em 0 0;
+}
+body.dyn .manageFile {
+    height:1.2em;
+    clear:both;
+}
+body.dyn .manageFile fieldset {
+    display:inline;
+    float:left;
+}
+body.dyn .manageFile fieldset.fileInfo {
+    width:82.2%;
+    margin-left:1%;
+}
+body.dyn .manageFile label {
+    display:none;
+}
+body.dyn .manageFile input.fileUrl {
+    width:47%;
+}
+body.dyn .manageFile input.fileTypeName {
+    width:24%;
+}
+body.dyn .manageFile input.fileMimeType {
+    width:17.3%;
+}
+body.dyn .manageFile input.fileSizeInBytes {
+    width:6%;
+}
+
+/* PLUGINS
+----------------------------------------------------------*/
+/* just scoped to plugins for now but should be made global */
+.plugin .breadcrumb {
+}
+/* end: previous comment */
+.plugin.list h2 {
+    float:left;
+}
+.plugin.list #refreshPlugins {
+    background-color:inherit;
+    background-position:0 .25em;
+    border:0;
+    float:right;
+    font-size:1.2em;
+    padding:0 0 0 1.93%;
+    width:30.38%;
+}
+.plugin.list #refreshPlugins input.ibutton {
+    vertical-align:-.35em;
+}
+.plugin.list .ibutton.reload.plugins {
+    margin:-.6em 0 0 .6em;
+}
+.plugin.list ul.tab.links,
+.plugin.list ul.tabs {
+    clear:both;
+}
+a.plugin.button {
+    font-size:1.2em;
+    font-weight:bold;
+    outline:none;
+    padding:0 0 0 20px;
+}
+a.add.plugin.button {
+    background:url(images/add.png) no-repeat 0 50%;
+}
+a.breadcrumb.plugin.button {
+    background:url(images/arrow_left.png) no-repeat 0 50%;
+}
+ul.plugins {
+    overflow:auto;
+}
+ul.plugins li {
+    display:inline;
+    float:left;
+    list-style-type:none;
+    margin:0 1.66% 1.66% 0;
+    position:relative;
+    width:32.23%;
+}
+ul.plugins li.end {
+    float:right;
+    margin-right:0;
+    width:32.22%;
+}
+.plugin.info {
+    background:#FFF;
+    border:3px solid;
+    -moz-border-radius:.5em;
+    -webkit-border-radius:.5em;
+    border-radius:.5em;
+    display:block;
+    outline:none;
+    overflow:auto;
+    padding:6px;
+    position:relative;
+}
+div.plugin.info {
+    height:25em;
+    overflow:hidden;
+}
+body.itemedit .plugin.info,
+body.editnotinstalled .plugin.info {
+    height:inherit;
+}
+.plugin.info span,
+div.plugin .metadata {
+    display:block;
+}
+.plugin.info .icon,
+div.plugin .icon {
+    float:left;
+    height:32px;
+    width:40px;
+}
+.plugin.info .name {
+    font-size:1.4em;
+    margin-top:.714em;
+}
+.plugins a.metadata {
+    display:block;
+    font-size:1.4em;
+    margin-bottom:.385em;
+}
+.plugin.info .metadata {
+    font-size:1.2em;
+}
+.plugin.info .description,
+.plugin.info table.metadata,
+.plugin.info .error {
+    clear:both;
+    padding-top:.833em;
+}
+.plugin.info .metadata th {
+    color:#626262;
+    padding-right:.833em;
+}
+.plugin.info .metadata th,
+.plugin.info .metadata td {
+    padding-bottom:.417em;
+}
+.plugin.info .metadata .last th,
+.plugin.info .metadata .last td {
+    padding-bottom:0;
+}
+.plugin.info .default {
+    font-style:italic;
+}
+.plugin.info .warning.message {
+    background:url(images/error_zoom_large.png) no-repeat 50% 50%;
+    background-color:#FAEB9E;
+    background-color:rgba(250, 235, 158, .9);
+    border:0;
+    color:#323232;
+    font-size:1.4em;
+    height:15.3em;
+    left:4px;
+    padding:0 1em;
+    position:absolute;
+    right:4px;
+    text-align:center;
+    top:48px;
+}
+.plugin.info.error .warning.message {
+    background-color:#FDCEC1;
+    background-color:rgba(253, 206, 193, .9);
+    background-image:url(images/exclamation_zoom_large.png);
+}
+.plugin.info.notInstalled .warning.message {
+    background-color:#FFF;
+    background-color:rgba(255, 255, 255, .9);
+}
+.plugin.info .message form {
+    margin:1em 0;
+    text-align:center;
+}
+.plugin.info .message form input {
+    font-size:1em;
+}
+body.itemedit .plugin.info,
+body.editnotinstalled .plugin.info {
+    margin-top:2.2em;
+}
+body.itemedit .plugin.info .description,
+body.editnotinstalled .plugin.info .description,
+.plugin.info.error .metadata {
+    padding-top:.417em;
+}
+body.itemedit .plugin.info .icon,
+body.itemedit .plugin.info .name,
+body.editnotinstalled .plugin.info .icon,
+body.editnotinstalled .plugin.info .name {
+    display:none;
+}
+
+.managePlugin {
+    bottom:1px;
+    overflow:auto;
+    position:absolute;
+    width:97.5%;
+}
+.managePlugin form,
+.managePlugin .ibutton {
+    float:left;
+    margin:0 .385em 0 0;
+}
+.managePlugin form .ibutton {
+    float:none;
+    margin:0;
+}
+.managePlugin form.uninstallPlugin,
+.managePlugin form.installPlugin {
+    float:right;
+    margin:0 0 0 .385em;
+}
+
+body.plugin.itemedit h3 img,
+body.plugin.editnotinstalled h3 img {
+    padding-right:.313em;
+    vertical-align:-8px;
+}
+body.plugin.itemedit form li,
+body.plugin.editnotinstalled form li {
+    overflow:auto;
+}
+body.plugin.itemedit form li li,
+body.plugin.editnotinstalled form li li {
+    overflow:inherit;
+}
+body.plugin.itemedit fieldset.hasWidth,
+body.plugin.editnotinstalled fieldset.hasWidth {
+    margin-right:1em;
+}
+body.plugin.itemedit fieldset fieldset,
+body.plugin.editnotinstalled fieldset fieldset {
+    display:inline;
+    margin-bottom:1em;
+    width:99.5%;
+}
+body.plugin.itemedit div.actions a,
+body.plugin.editnotinstalled div.actions a {
+    font-size:1.2em;
+}
+#editSettings {
+    overflow:auto;
+    padding-bottom:4em;
+}
+body.dyn ul.tab.panes #editSettings {
+    overflow:inherit;
+    padding-bottom:0;
+}
+#editSettings .enabled {
+    display:inline;
+    float:right;
+    margin-top:.5em;
+}
+#editSettings ul.settings {
+    margin:1em 0 .5em;
+}
+#editSettings li {
+    margin-top:2em;
+}
+#editSettings li fieldset.checkbox {
+    margin-top:2.3em;
+}
+#editSettings .enabled input {
+    vertical-align:-.2em;
+}
+#editSettings li.first {
+    margin-top:0;
+}
+#editSettings .textbox input {
+    width:100%;
+}
+#editSettings fieldset.textbox.error input {
+    /*color:#251818;*/
+    background-color:#FDCEC1;
+    background-color:rgba(253, 206, 193, .9);
+    /*border-color:#ED5C35;*/
+}
+#editCode {
+    clear:both;
+}
+#editCode textarea {
+    padding:.751%;
+    width:98.2%;
+}
+
+/* SOME ADMIN STUFF
+----------------------------------------------------------*/
+.sub.admin.manage ul {
+    margin:0;
+}
+.sub.admin.manage ul li {
+    list-style-type:none;
+    margin:.2em 0;
+}
+
+/* COLORS
+----------------------------------------------------------*/
+#dashboard ul#data h3,
+ul#pluginCategories h3,
+#siteSettings h3,
+#dashboard ul#settings h3 {
+    border-color:#f0f0f0;
+}
+.post .metadata.admin input.text.hinted,
+.post .metadata.admin input.text.active {
+    border-color:#FFF;
+}
+input.text,
+textarea {
+    background-color:#FFF;
+    border-color:#9D9187;
+}
+body.dyn form#siteSettings span.hint.icons img {
+    border-color:#FFF;
+}
+body.dyn form#siteSettings span.hint.icons img.hover {
+    border-color:#FFC901;
+}
+body.dyn form#siteSettings span.hint.icons img.selected {
+    border-color:#62B957;
+}
+
+#dashboard .highlight h3 {
+    border-color:#dc2525 !important;
+}
+.plugin.info {
+    color:#251818;
+}
+.plugin.info,
+body.dyn label.forCheckbox {
+    border-color:#55B355;
+}
+.plugin.info,
+body.dyn label.forCheckbox {
+    background:#CAEACA;
+}
+.plugin.info.notInstalled,
+.plugin.info.disabled,
+body.dyn label.forCheckbox.disabled {
+    border-color:#AAA;
+}
+.plugin.info.disabled,
+body.dyn label.forCheckbox.disabled {
+    background:#EEE;
+}
+.plugins .plugin.info.disabled {
+    color:#666;
+}
+.plugins .plugin.info.disabled a {
+    color:#EF9C77;
+}
+.plugin.info.disabled .icon img {
+    opacity:.3;
+}
+.plugins .plugin.info.disabled .metadata th {
+    color:#838383;
+}
+.plugin.info.error {
+    color:#251818;
+}
+.plugin.info.error {
+    border-color:#ED5C35;
+}
+.plugin.info.error {
+    background:#FDCEC1;
+}
+.plugin.info.warning {
+    border-color:#F5D852;
+}
+.plugin.info.warning {
+    background:#FAEB9E;
+}
+.plugin.info.notInstalled {
+    background:#FFF;
+}
+a.plugin.info .version {
+    color:#777;
+}
+
+/* admin menu - 
+    w/JS -> quick menu == dropdown, settings menu (top-level) == open left, settings menu (submenu) == dropdown
+    w/out JS -> quick menu == inline, settings menu (top-level) == inline, settings menu (submenu) == ...probably stacked below top-level */
+#menucontainer {
+    clear:right;
+    float:right;
+    height:4em;
+    position:relative;
+    width:100%;
+}
+#adminMenu {
+    height:3em;
+    margin:0;
+    padding:1.5em;
+    position:absolute;
+    right:-1.5em;
+    top:-.75em;
+    width:100%;
+    z-index:99;
+}
+#adminMenu #quickMenu,
+#adminMenu #settingsMenu {
+    display:inline;
+    float:right;
+}
+#adminMenu ul {
+    margin:0;
+}
+#adminMenu li {
+    list-style-type:none;
+    margin:0;
+}
+#adminMenu li.hasList {
+    background-image:url(images/arrow_menu.gif);
+    background-position:2px 2.5em;
+    background-repeat:no-repeat;
+}
+#adminMenu li.hasList:hover {
+    background-image:none;
+}
+#adminMenu a {
+    color:#FCF8F0;
+    font-size:1.3em;
+    font-weight:bold;
+    height:1.5em;
+    line-height:1.4em;
+    outline:none;
+    padding:.25em .5em;
+}
+#adminMenu ul ul a {
+    padding:.25em 1em .25em .64em;
+}
+#adminMenu ul ul li.first a {
+    padding-top:.5em;
+}
+#adminMenu ul ul li.last a {
+    padding-bottom:.5em;
+}
+#adminMenu h3 a {
+    font-size:.82em;
+}
+#adminMenu #quickMenu {
+    width:16.11%;
+}
+#adminMenu #quickMenu li {
+    background:#ED500C;
+    display:none;
+}
+#adminMenu #quickMenu li.last {
+    -moz-border-radius-bottomright:1em;
+    -webkit-border-bottom-right-radius:1em;
+    border-bottom-right-radius:1em;
+}
+#adminMenu #quickMenu li.first {
+    background-image:url(images/arrow_down_light.png);
+    background-repeat:no-repeat;
+    background-position:96% 51%;
+    -moz-border-radius-topright:1em;
+    -webkit-border-top-right-radius:1em;
+    border-top-right-radius:1em;
+    color:#FCF8F0;
+    font-size:1.3em;
+    font-weight:bold;
+    height:1.5408em;
+    line-height:1.5408em;
+    padding:.3846em 5.43%;
+    display:block;
+}
+#adminMenu #quickMenu li a {
+    padding:.3846em 5.43%;
+}
+#adminMenu #quickMenu:hover li {
+    display:block;
+}
+#adminMenu #quickMenu:hover li.first {
+    background-image:url(images/arrow_down_bright.png);
+}
+#adminMenu #quickMenu a {
+    color:#FCF8F0;
+    display:block;
+}
+#adminMenu #settingsMenu {
+    background:#6A5B4D;
+}
+#adminMenu #settingsMenu {
+    -moz-border-radius-topleft:1em;
+    -webkit-border-top-left-radius:1em;
+    border-top-left-radius:1em;
+    padding:0 .83% 0 0;
+    width:83.06%;
+}
+#adminMenu #settingsMenu h3 {
+    font-weight:normal;
+    margin:0;
+}
+#adminMenu #settingsMenu h3 a {
+    display:block;
+    float:none;
+    height:1.5408em;
+    line-height:1.5408em;
+    padding:.3846em 0;
+}
+#adminMenu #settingsMenu li {
+    float:left;
+    padding:0;
+    position:relative;
+    width:13.6%;
+}
+#adminMenu #settingsMenu li.first {
+    border:none;
+    display:inline;
+    padding-left:0;
+}
+#adminMenu #settingsMenu ul {
+    left:0;
+    position:absolute;
+}
+#adminMenu #settingsMenu ul li,
+#adminMenu #settingsMenu ul li.first,
+#adminMenu #settingsMenu:hover ul li {
+    background:#9D9187;
+    border:none;
+    display:none;
+    float:none;
+    margin:0;
+    padding:0;
+}
+#adminMenu #settingsMenu ul li.first {
+    border-top:2px solid #8c8178;
+}
+#adminMenu #settingsMenu ul li.last {
+    -moz-border-radius-bottomright:.5em;
+    -moz-border-radius-bottomleft:.5em;
+    -webkit-border-bottom-right-radius:.5em;
+    -webkit-border-bottom-left-radius:.5em;
+    border-bottom-right-radius:.5em;
+    border-bottom-left-radius:.5em;
+}
+#adminMenu #settingsMenu ul li.first a {
+    background-image:url(images/arrow_menu.gif);
+    background-position:2px -34px;
+    background-repeat:no-repeat;
+    margin-top:-2px;
+}
+#adminMenu #settingsMenu li:hover ul li {
+    display:block;
+}
+#adminMenu #settingsMenu ul li,
+#adminMenu #settingsMenu ul li.first {
+    width:100%;
+}
+#adminMenu #settingsMenu ul li a {
+    display:block;
+    white-space:nowrap;
+}
+
+#adminMenu #settingsMenu h3 a {
+    background:no-repeat 0 50%;
+    padding-left:22px;
+}
+#adminMenu #settingsMenu #dashboard h3 a {
+    background:url(images/house_grey.png) no-repeat 5px 50%;
+    padding-left:24px;
+}
+#adminMenu #settingsMenu #dashboard:hover h3 a {
+    background-image:url(images/house.png);
+}
+#adminMenu #settingsMenu #managePostsMenu h3 a {
+    background-image:url(images/pencil_grey.png);
+}
+#adminMenu #settingsMenu #managePostsMenu:hover h3 a {
+    background-image:url(images/pencil.png);
+}
+#adminMenu #settingsMenu #managePagesMenu h3 a {
+    background-image:url(images/page_white_text_grey.png);
+}
+#adminMenu #settingsMenu #managePagesMenu:hover h3 a {
+    background-image:url(images/page_white_text.png);
+}
+#adminMenu #settingsMenu #manageBlogsMenu h3 a {
+    background-image:url(images/book_open_grey.png);
+}
+#adminMenu #settingsMenu #manageBlogsMenu:hover h3 a {
+    background-image:url(images/book_open.png);
+}
+#adminMenu #settingsMenu #manageUsersMenu h3 a {
+    background-image:url(images/user_grey.png);
+}
+#adminMenu #settingsMenu #manageUsersMenu:hover h3 a {
+    background-image:url(images/user.png);
+}
+#adminMenu #settingsMenu #managePluginsMenu h3 a {
+    background-image:url(images/plugin_grey.png);
+}
+#adminMenu #settingsMenu #managePluginsMenu:hover h3 a {
+    background-image:url(images/plugin.png);
+}
+#adminMenu #settingsMenu #manageSettingsMenu h3 a {
+    background-image:url(images/cog_grey.png);
+}
+#adminMenu #settingsMenu #manageSettingsMenu:hover h3 a {
+    background-image:url(images/cog.png);
+}
+
+/* TABSET
+----------------------------------------------------------*/
+ul.tab.links {
+    padding:.4em 0 1.9em .9em;
+}
+ul.tab.links li {
+    border-right:1px solid #E2DDD7;
+    display:inline;
+    float:left;
+    font-size:1.3em;
+    font-weight:bold;
+    height:1.4em;
+    line-height:1.14em;
+    margin:0;
+    padding:0 13px;
+}
+ul.tab.links li a {
+    color:#6A5B4D;
+}
+ul.tab.links li.active a,
+ul.tab.links li a:hover {
+    color:#ED500C;
+}
+ul.tab.links li.last {
+    border-right:0;
+}
+body.dyn ul.tab.panes li {
+    display:none;
+}
+body.dyn ul.tab.panes li li {
+    display:inherit;
+}
+body.dyn ul.tab.panes li.active {
+    display:block;
+}
+body.dyn ul.tab.panes h3.used {
+    display:none;
+}
+body.dyn ul.tabs {
+    border-bottom:1px solid #9D9187;
+    height:2.2em;
+    z-index:0;
+}
+body.dyn ul.tab.panes h3,
+body.dyn ul.tabs li {
+    background:#FCF8F0;
+    bottom:-4px;
+    border:1px solid #E2DDD7;
+    border-left:0;
+    border-bottom-color:#9D9187;
+    border-top:0;
+    color:#6A5B4D;
+    cursor:pointer;
+    display:inline;
+    float:left;
+    font-size:1.3em;
+    font-weight:bold;
+    height:1.4em;
+    line-height:1.14em;
+    margin:0;
+    padding:0 13px;
+    position:relative;
+    z-index:1;
+}
+body.dyn ul.tabs li.hover {
+    color:#ED500C;
+}
+body.dyn ul.tab.panes h3,
+body.dyn ul.tabs li.first {
+    border-left:0;
+    padding-left:0;
+}
+body.dyn ul.tab.panes h3 {
+    border:0;
+    color:#ED500C;
+    height:1.73em;
+    margin-left:22px;
+}
+body.dyn ul.tabs li.filler {
+    cursor:default;
+    padding:0 4px;
+}
+body.dyn ul.tabs li.filler.first {
+    border-left:0;
+}
+body.dyn ul.tabs li.filler.last {
+    border-right:0;
+}
+body.dyn ul.tabs li.active {
+    border-bottom-color:#FCF8F0;
+    border-right:0;
+    color:#ED500C;
+    margin-left:-3px;
+    margin-right:-3px;
+    padding-left:16px;
+    padding-right:16px;
+}
+body.dyn ul.tabs li.first.active {
+    margin-left:0;
+    padding-left:0;
+}
+body.dyn ul.tabs li.afterActive {
+    border-left:1px solid #9D9187;
+    -moz-border-radius-bottomleft:.385em;
+    -webkit-border-bottom-left-radius:.385em;
+    border-bottom-left-radius:.385em;
+    z-index:2;
+}
+body.dyn ul.tabs li.beforeActive {
+    border-right:1px solid #9D9187;
+    -moz-border-radius-bottomright:.385em;
+    -webkit-border-bottom-right-radius:.385em;
+    border-bottom-right-radius:.385em;
+    z-index:2;
+}
+body.dyn ul.tab.panes .pane {
+    clear:both;
+    padding-top:1em;
+}
+
+body.plugin.itemedit div.actions,
+body.plugin.editnotinstalled div.actions {
+    margin:0;
+    padding:1em 0 0;
+}
+.admin form h4 {
+    background:#E2DDD7;
+    -moz-border-radius-topright:.357em;
+    -moz-border-radius-topleft:.357em;
+    -webkit-border-top-right-radius:.357em;
+    -webkit-border-top-left-radius:.357em;
+    border-bottom-right-radius:.357em;
+    border-bottom-left-radius:.357em;
+    color:#6A5B4D;
+    clear:both;
+    font-weight:bold;
+    margin:.64em 0;
+    padding:.143em .357em;
+}
+#editSettings fieldset.checkbox.hasWidth {
+    margin-top:.9em;
+}
+#editSettings .validation-summary-errors,
+#editCode .error.message {
+    margin:0 0 .667em;
+}
+#editSettings .validation-summary-errors li {
+    margin-top:inherit;
+}
+#editCode .error.message span {
+    display:block;
+}
+#editCode .error.message .description {
+    font-size:.7em;
+    line-height:1.6em;
+    margin-top:1em;
+}
+
+/* CONTENT (CMS)
+----------------------------------------------------------*/
+.contentItems li {
+    margin-bottom:1.5em;
+}
+.contentItems li li {
+    margin-bottom:0;
+}
+.contentItems label {
+    margin-top:1em;
+}
+body.globalcontentedit textarea {
+    width:99.4%;
+}

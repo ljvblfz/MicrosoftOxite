@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://www.ustechsregister.com/pdc09service/pdc09service.asmx?wsdl" docRef="https://www.ustechsregister.com/pdc09service/pdc09service.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://www.ustechsregister.com/pdc09service/pdc09service.asmx" xmlns:q1="http://ustechsregister.com/" binding="q1:PDC09ServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://www.ustechsregister.com/pdc09service/pdc09service.asmx" xmlns:q2="http://ustechsregister.com/" binding="q2:PDC09ServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

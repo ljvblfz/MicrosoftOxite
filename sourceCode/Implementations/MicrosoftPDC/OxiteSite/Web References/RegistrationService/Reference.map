@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://www.ustechsregister.com/pdc09service/pdc09service.asmx?wsdl" filename="pdc09service.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="https://www.ustechsregister.com/pdc09service/pdc09service.asmx?disco" filename="pdc09service.disco" />
+  </Results>
+</DiscoveryClientResultsFile>

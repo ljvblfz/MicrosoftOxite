@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Oxite.Database" Class="OxiteTagsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Oxite.Database;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.oxite_Tag" Member="oxite_Tags">
+    <Type Name="oxite_Tag">
+      <Column Name="ParentTagID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TagID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TagName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Tag_oxite_Tag" Member="oxite_Tags" ThisKey="TagID" OtherKey="ParentTagID" Type="oxite_Tag" />
+      <Association Name="oxite_Tag_oxite_Tag" Member="oxite_Tag1" ThisKey="ParentTagID" OtherKey="TagID" Type="oxite_Tag" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

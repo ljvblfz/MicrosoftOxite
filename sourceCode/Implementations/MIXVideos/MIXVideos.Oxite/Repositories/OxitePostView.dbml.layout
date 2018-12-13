@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="OxitePostView">
+  <DataContextMoniker Name="/OxitePostViewDataContext" />
+  <nestedChildShapes>
+    <classShape Id="738156b1-d97a-414c-a82e-87fa2cb55ee1" absoluteBounds="3.25, 0.5, 2, 1.7708968098958333">
+      <DataClassMoniker Name="/OxitePostViewDataContext/oxite_PostView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3eefff8-c220-4992-8319-91ba1f40326d" absoluteBounds="3.265, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2e5655e4-bd8b-437e-b002-5e97cca92e8d" absoluteBounds="0.5, 0.875, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/OxitePostViewDataContext/oxite_PostViewType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60df4211-2881-495f-adb3-6169f449d137" absoluteBounds="0.515, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.47199625651042); (3.25 : 1.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OxitePostViewDataContext/oxite_PostViewType/oxite_PostViewType_oxite_PostView" />
+      <nodes>
+        <classShapeMoniker Id="2e5655e4-bd8b-437e-b002-5e97cca92e8d" />
+        <classShapeMoniker Id="738156b1-d97a-414c-a82e-87fa2cb55ee1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,120 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite", "Oxite\Oxite.csproj", "{D54AF39D-CB43-4D32-A89D-D55EE924AB57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite.LinqToSqlDataProvider", "Oxite.LinqToSqlDataProvider\Oxite.LinqToSqlDataProvider.csproj", "{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}"
+EndProject
+Project("{A9ACE9BB-CECE-4E62-9AA4-C7E7C5BD2124}") = "Oxite.Database", "Oxite.Database\Oxite.Database.dbproj", "{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OxiteSite", "OxiteSite\OxiteSite.csproj", "{9F3B77E5-FD70-4C94-A8DE-503357FE7174}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Oxite.Plugins", "Oxite.Plugins", "{37E723F1-8C07-43C8-AF13-50F1B2DBFE55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite.Core", "Oxite.Core\Oxite.Core.csproj", "{6AA4D713-CC13-4C73-9DF5-582F03FC8E5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oxite.Tests", "Oxite.Tests\Oxite.Tests.csproj", "{42978282-8A22-4069-BF5A-A3F66AE63F5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Oxite.Plugins\Messages\Messages.csproj", "{28D644F0-84AC-489A-80FE-7973A0C6ED48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trackbacks", "Oxite.Plugins\Trackbacks\Trackbacks.csproj", "{91D69091-A3C9-4284-9522-F75F088299E4}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs04.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Oxite.LinqToSqlDataProvider\\Oxite.LinqToSqlDataProvider.csproj
+		SccProjectName1 = Oxite.LinqToSqlDataProvider
+		SccLocalPath1 = Oxite.LinqToSqlDataProvider
+		SccProjectUniqueName2 = Oxite\\Oxite.csproj
+		SccProjectName2 = Oxite
+		SccLocalPath2 = Oxite
+		SccProjectUniqueName3 = Oxite.Database\\Oxite.Database.dbproj
+		SccProjectName3 = Oxite.Database
+		SccLocalPath3 = Oxite.Database
+		SccProjectUniqueName4 = OxiteSite\\OxiteSite.csproj
+		SccProjectName4 = OxiteSite
+		SccLocalPath4 = OxiteSite
+		SccProjectUniqueName5 = Oxite.Core\\Oxite.Core.csproj
+		SccProjectName5 = Oxite.Core
+		SccLocalPath5 = Oxite.Core
+		SccProjectUniqueName6 = Oxite.Tests\\Oxite.Tests.csproj
+		SccProjectName6 = Oxite.Tests
+		SccLocalPath6 = Oxite.Tests
+		SccProjectUniqueName7 = Oxite.Plugins\\Messages\\Messages.csproj
+		SccProjectTopLevelParentUniqueName7 = ErikPorter.com.sln
+		SccProjectName7 = Oxite.Plugins/Messages
+		SccLocalPath7 = Oxite.Plugins\\Messages
+		SccProjectUniqueName8 = Oxite.Plugins\\Trackbacks\\Trackbacks.csproj
+		SccProjectTopLevelParentUniqueName8 = ErikPorter.com.sln
+		SccProjectName8 = Oxite.Plugins/Trackbacks
+		SccLocalPath8 = Oxite.Plugins\\Trackbacks
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Default|Any CPU = Default|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D54AF39D-CB43-4D32-A89D-D55EE924AB57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB60F32A-5C0A-45FB-80E2-7D4A7B9EFFE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Debug|Any CPU.ActiveCfg = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Debug|Any CPU.Build.0 = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Debug|Any CPU.Deploy.0 = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Default|Any CPU.ActiveCfg = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Default|Any CPU.Build.0 = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Default|Any CPU.Deploy.0 = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Release|Any CPU.ActiveCfg = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Release|Any CPU.Build.0 = Default|Any CPU
+		{AB46017D-6A0A-48E2-8E27-FE2E73BEFAC4}.Release|Any CPU.Deploy.0 = Default|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3B77E5-FD70-4C94-A8DE-503357FE7174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA4D713-CC13-4C73-9DF5-582F03FC8E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA4D713-CC13-4C73-9DF5-582F03FC8E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA4D713-CC13-4C73-9DF5-582F03FC8E5D}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA4D713-CC13-4C73-9DF5-582F03FC8E5D}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{6AA4D713-CC13-4C73-9DF5-582F03FC8E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA4D713-CC13-4C73-9DF5-582F03FC8E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42978282-8A22-4069-BF5A-A3F66AE63F5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42978282-8A22-4069-BF5A-A3F66AE63F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42978282-8A22-4069-BF5A-A3F66AE63F5C}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{42978282-8A22-4069-BF5A-A3F66AE63F5C}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{42978282-8A22-4069-BF5A-A3F66AE63F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42978282-8A22-4069-BF5A-A3F66AE63F5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D644F0-84AC-489A-80FE-7973A0C6ED48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D644F0-84AC-489A-80FE-7973A0C6ED48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D644F0-84AC-489A-80FE-7973A0C6ED48}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D644F0-84AC-489A-80FE-7973A0C6ED48}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{28D644F0-84AC-489A-80FE-7973A0C6ED48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D644F0-84AC-489A-80FE-7973A0C6ED48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91D69091-A3C9-4284-9522-F75F088299E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91D69091-A3C9-4284-9522-F75F088299E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91D69091-A3C9-4284-9522-F75F088299E4}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{91D69091-A3C9-4284-9522-F75F088299E4}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{91D69091-A3C9-4284-9522-F75F088299E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91D69091-A3C9-4284-9522-F75F088299E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{28D644F0-84AC-489A-80FE-7973A0C6ED48} = {37E723F1-8C07-43C8-AF13-50F1B2DBFE55}
+		{91D69091-A3C9-4284-9522-F75F088299E4} = {37E723F1-8C07-43C8-AF13-50F1B2DBFE55}
+	EndGlobalSection
+EndGlobal

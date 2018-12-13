@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D54AF39D-CB43-4D32-A89D-D55EE924AB57}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oxite</RootNamespace>
+    <AssemblyName>Oxite</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackgroundServices\BackgroundServiceBase.cs" />
+    <Compile Include="BackgroundServices\BackgroundServiceExecutor.cs" />
+    <Compile Include="BackgroundServices\BackgroundServicesExecutor.cs" />
+    <Compile Include="BackgroundServices\IBackgroundService.cs" />
+    <Compile Include="BackgroundServices\SendMessages.cs" />
+    <Compile Include="BackgroundServices\SendTrackbacks.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Infrastructure\FileEngineResult.cs" />
+    <Compile Include="Infrastructure\FilterRegistryItem.cs" />
+    <Compile Include="Infrastructure\FilterRegistry.cs" />
+    <Compile Include="Infrastructure\FilterRegistryContext.cs" />
+    <Compile Include="Infrastructure\ControllerActionFilterCriteria.cs" />
+    <Compile Include="Infrastructure\DataFormatFilterCriteria.cs" />
+    <Compile Include="Infrastructure\IConditionalSkinResolver.cs" />
+    <Compile Include="Infrastructure\IFilterCriteria.cs" />
+    <Compile Include="Infrastructure\IFilterRegistry.cs" />
+    <Compile Include="Infrastructure\IOxiteViewEngine.cs" />
+    <Compile Include="Infrastructure\IRegisterFilters.cs" />
+    <Compile Include="Infrastructure\AppSettingsHelper.cs" />
+    <Compile Include="Infrastructure\IBootStrapperTask.cs" />
+    <Compile Include="Infrastructure\IFormsAuthentication.cs" />
+    <Compile Include="Infrastructure\IRouteModifier.cs" />
+    <Compile Include="Infrastructure\ISkinResolver.cs" />
+    <Compile Include="Infrastructure\SkinResolverContext.cs" />
+    <Compile Include="Infrastructure\ISkinResolverRegistry.cs" />
+    <Compile Include="Infrastructure\ResponseInsert.cs" />
+    <Compile Include="Infrastructure\ResponseFilter.cs" />
+    <Compile Include="Infrastructure\ResponseInsertMode.cs" />
+    <Compile Include="Models\AdminDashboardPageContainer.cs" />
+    <Compile Include="Models\AdminRole.cs" />
+    <Compile Include="Models\ArchiveContainer.cs" />
+    <Compile Include="Models\ArchiveData.cs" />
+    <Compile Include="Models\Area.cs" />
+    <Compile Include="Models\AreaSearchCriteria.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\EntityBase.cs" />
+    <Compile Include="Models\EntityState.cs" />
+    <Compile Include="Models\Extensions\CommentExtensions.cs" />
+    <Compile Include="Models\Extensions\INamedEntityExtensions.cs" />
+    <Compile Include="Models\Extensions\PostBaseExtensions.cs" />
+    <Compile Include="Models\Extensions\TagExtensions.cs" />
+    <Compile Include="Models\Extensions\UserBaseExtensions.cs" />
+    <Compile Include="Models\File.cs" />
+    <Compile Include="Models\FileAddress.cs" />
+    <Compile Include="Models\FileContentInput.cs" />
+    <Compile Include="Models\FileInput.cs" />
+    <Compile Include="Models\FormsAuthenticationWrapper.cs" />
+    <Compile Include="Models\HomePageContainer.cs" />
+    <Compile Include="Models\INamedEntity.cs" />
+    <Compile Include="Models\IPageOfList.cs" />
+    <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\LazyList.cs" />
+    <Compile Include="Models\MessageOutbound.cs" />
+    <Compile Include="Models\NamedEntity.cs" />
+    <Compile Include="Models\NotFoundPageContainer.cs" />
+    <Compile Include="Models\Page.cs" />
+    <Compile Include="Models\PageOfList.cs" />
+    <Compile Include="Models\ParentAndChild.cs" />
+    <Compile Include="Models\Phrase.cs" />
+    <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\PostAddress.cs" />
+    <Compile Include="Models\PostBase.cs" />
+    <Compile Include="Models\PostSubscription.cs" />
+    <Compile Include="Models\ResourceFile.cs" />
+    <Compile Include="Models\ResourceString.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\RoleBase.cs" />
+    <Compile Include="Models\SearchCriteria.cs" />
+    <Compile Include="Models\SearchPageContainer.cs" />
+    <Compile Include="Models\SignInPageContainer.cs" />
+    <Compile Include="Models\Site.cs" />
+    <Compile Include="Models\Tag.cs" />
+    <Compile Include="Models\TagCloudPageContainer.cs" />
+    <Compile Include="Models\Trackback.cs" />
+    <Compile Include="Models\TrackbackOutbound.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserBase.cs" />
+    <Compile Include="Infrastructure\OxiteControllerFactory.cs" />
+    <Compile Include="Infrastructure\IRegisterModelBinders.cs" />
+    <Compile Include="Infrastructure\IRegisterRoutes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Infrastructure\IRegularExpressions.cs" />
+    <Compile Include="Infrastructure\RegularExpressions.cs" />
+    <Compile Include="Repositories\IAreaRepository.cs" />
+    <Compile Include="Repositories\ILanguageRepository.cs" />
+    <Compile Include="Repositories\ILocalizationRepository.cs" />
+    <Compile Include="Repositories\IMessageOutboundRepository.cs" />
+    <Compile Include="Repositories\IPageRepository.cs" />
+    <Compile Include="Repositories\IBackgroundServiceRepository.cs" />
+    <Compile Include="Repositories\IPostRepository.cs" />
+    <Compile Include="Repositories\ISiteRepository.cs" />
+    <Compile Include="Repositories\ITagRepository.cs" />
+    <Compile Include="Repositories\ITrackbackOutboundRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Infrastructure\AbsolutePathHelper.cs" />
+    <Compile Include="Routing\RouteCollectionExtensions.cs" />
+    <Compile Include="Services\IAreaService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ILanguageService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ILocalizationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\IMessageOutboundService.cs" />
+    <Compile Include="Services\IPageService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\IBackgroundServiceService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\IPostService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\IQueryableExtensions.cs" />
+    <Compile Include="Services\ISearchService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ISiteService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ISpamFilterService.cs" />
+    <Compile Include="Services\ITagService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ITrackbackOutboundService.cs" />
+    <Compile Include="Services\IUserService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\SpamFilterContext.cs" />
+    <Compile Include="Validation\IValidationService.cs" />
+    <Compile Include="Validation\IValidator.cs" />
+    <Compile Include="Validation\ValidationError.cs" />
+    <Compile Include="Validation\ValidationErrorCollection.cs" />
+    <Compile Include="Validation\ValidationException.cs" />
+    <Compile Include="Validation\ValidationService.cs" />
+    <Compile Include="Validation\ValidationState.cs" />
+    <Compile Include="Validation\ValidationStateDictionary.cs" />
+    <Compile Include="Infrastructure\Visitor.cs" />
+    <Compile Include="ViewModels\AdminDataViewModel.cs" />
+    <Compile Include="ViewModels\ArchiveViewModel.cs" />
+    <Compile Include="ViewModels\AreaListViewModel.cs" />
+    <Compile Include="ViewModels\ExceptionOxiteModel.cs" />
+    <Compile Include="ViewModels\Extensions\UserViewModelExtensions.cs" />
+    <Compile Include="ViewModels\OxiteModel.cs" />
+    <Compile Include="ViewModels\OxiteModelItem.cs" />
+    <Compile Include="ViewModels\OxiteModelList.cs" />
+    <Compile Include="ViewModels\OxiteModelPartial.cs" />
+    <Compile Include="ViewModels\PageListViewModel.cs" />
+    <Compile Include="ViewModels\PlayerViewModel.cs" />
+    <Compile Include="ViewModels\SiteViewModel.cs" />
+    <Compile Include="ViewModels\TagCloudViewModel.cs" />
+    <Compile Include="ViewModels\TrackbackViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

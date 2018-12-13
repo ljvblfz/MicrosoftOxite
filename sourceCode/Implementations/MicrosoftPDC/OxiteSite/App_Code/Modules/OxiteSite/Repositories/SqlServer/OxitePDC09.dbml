@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Oxite.Database" Class="OxitePDC09DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Oxite.Database;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.pdc09_UserRegistration" Member="pdc09_UserRegistrations">
+    <Type Name="pdc09_UserRegistration">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IsRegistered" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastCheckDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_User_pdc09_UserRegistration" Member="oxite_User" ThisKey="UserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_User" Member="oxite_Users">
+    <Type Name="oxite_User">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="HashedEmail" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultLanguageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_User_pdc09_UserRegistration" Member="pdc09_UserRegistration" ThisKey="UserID" OtherKey="UserID" Type="pdc09_UserRegistration" Cardinality="One" />
+      <Association Name="oxite_User_oxite_UserModuleData" Member="oxite_UserModuleDatas" ThisKey="UserID" OtherKey="UserID" Type="oxite_UserModuleData" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_UserModuleData" Member="oxite_UserModuleDatas">
+    <Type Name="oxite_UserModuleData">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ModuleName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Data" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_User_oxite_UserModuleData" Member="oxite_User" ThisKey="UserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

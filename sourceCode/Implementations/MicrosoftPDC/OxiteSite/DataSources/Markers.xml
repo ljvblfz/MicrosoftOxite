@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Markers>
+    <MarkerCollection name="PDC">
+	    <Marker Text="PDC Marker" Time="00:03:00" />
+	    <Marker Text="PDC Marker Marker PDC Marker Marker" Time="00:20:20" />
+	    <Marker Text="PDC Marker Marker PDC Marker Marker PDC Marker Marker" Time="00:57:00" />
+		<Marker Text="PDC Marker Marker PDC Marker Marker PDC Marker Marker" Time="19:57:00" />
+    </MarkerCollection>
+    <MarkerCollection name="Channel 9">
+        <Marker Text="Channel9 Marker" Time="01:15:00" />
+        <Marker Text="Channel9 Marker Marker" Time="01:27:00" />
+        <Marker Text="Channel9 Marker Marker Marker" Time="01:49:00" />
+    </MarkerCollection>
+</Markers>

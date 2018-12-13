@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Oxite.MIXVideos" EntityNamespace="MIXVideos.Oxite.Repositories" ContextNamespace="MIXVideos.Oxite.Repositories" Class="OxitePostViewDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Oxite.MIXVideos;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.oxite_PostView" Member="oxite_PostViews">
+    <Type Name="oxite_PostView">
+      <Column Name="PostID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PostViewTypeID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PostViewID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PostViewCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PostViewDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_PostViewType_oxite_PostView" Member="oxite_PostViewType" ThisKey="PostViewTypeID" OtherKey="PostViewTypeID" Type="oxite_PostViewType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_PostViewType" Member="oxite_PostViewTypes">
+    <Type Name="oxite_PostViewType">
+      <Column Name="PostViewTypeID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PostViewTypeName" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_PostViewType_oxite_PostView" Member="oxite_PostViews" ThisKey="PostViewTypeID" OtherKey="PostViewTypeID" Type="oxite_PostView" />
+    </Type>
+  </Table>
+</Database>

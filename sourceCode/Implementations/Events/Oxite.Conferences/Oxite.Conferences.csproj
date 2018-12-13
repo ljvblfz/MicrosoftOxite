@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB169B00-83EE-4F00-BFA5-A1A4D976A8EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oxite.Modules.Conferences</RootNamespace>
+    <AssemblyName>Oxite.Conferences</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConferencesModule.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\ExhibitorController.cs" />
+    <Compile Include="Controllers\SpeakerController.cs" />
+    <Compile Include="Controllers\ScheduleItemController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Extensions\CommentInputExtensions.cs" />
+    <Compile Include="Models\Extensions\ExhibitorExtensions.cs" />
+    <Compile Include="Extensions\HtmlHelperExtensions.cs" />
+    <Compile Include="Extensions\ScheduleItemExtensions.cs" />
+    <Compile Include="Extensions\UrlHelperExtensions.cs" />
+    <Compile Include="Infrastructure\AbsolutePathHelper.cs" />
+    <Compile Include="ModelBinders\ScheduleItemCommentAddressModelBinder.cs" />
+    <Compile Include="ModelBinders\SpeakerAddressModelBinder.cs" />
+    <Compile Include="ModelBinders\ScheduleItemAddressModelBinder.cs" />
+    <Compile Include="ModelBinders\EventAddressModelBinder.cs" />
+    <Compile Include="ModelBinders\ScheduleItemFilterCriteriaModelBinder.cs" />
+    <Compile Include="ModelBinders\SpeakerFilterCriteriaModelBinder.cs" />
+    <Compile Include="Models\Exhibitor.cs" />
+    <Compile Include="Models\Extensions\ScheduleItemExtensions.cs" />
+    <Compile Include="Models\Extensions\ScheduleItemTagExtensions.cs" />
+    <Compile Include="Models\PluginProxies\ScheduleItemSmallReadOnly.cs" />
+    <Compile Include="Models\ScheduleItemSubscription.cs" />
+    <Compile Include="Models\ScheduleItemCommentShell.cs" />
+    <Compile Include="Models\ScheduleItemCommentAddress.cs" />
+    <Compile Include="Models\ScheduleItemCommentSmall.cs" />
+    <Compile Include="Models\ScheduleItemSmall.cs" />
+    <Compile Include="Models\ScheduleItemComment.cs" />
+    <Compile Include="Models\ScheduleItemUser.cs" />
+    <Compile Include="Models\TimeslotDescription.cs" />
+    <Compile Include="Models\DateRangeAddress.cs" />
+    <Compile Include="Models\PagedFilterCriteria.cs" />
+    <Compile Include="Models\ScheduleItemTag.cs" />
+    <Compile Include="Models\SpeakerAddress.cs" />
+    <Compile Include="Models\SpeakerFilterCriteria.cs" />
+    <Compile Include="Models\ScheduleItemAddress.cs" />
+    <Compile Include="Models\EventAddress.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\ScheduleItem.cs" />
+    <Compile Include="Models\ScheduleItemFilterCriteria.cs" />
+    <Compile Include="Models\Speaker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IConferencesCommentRepository.cs" />
+    <Compile Include="Repositories\IExhibitorRepository.cs" />
+    <Compile Include="Repositories\ISpeakerRepository.cs" />
+    <Compile Include="Repositories\IScheduleItemRepository.cs" />
+    <Compile Include="Repositories\IEventRepository.cs" />
+    <Compile Include="Repositories\IUserScheduleRepository.cs" />
+    <Compile Include="Repositories\SqlServer\SqlServerConferencesCommentRepository.cs" />
+    <Compile Include="Repositories\SqlServer\SqlServerExhibitorRepository.cs" />
+    <Compile Include="Repositories\SqlServer\SqlServerSpeakerRepository.cs" />
+    <Compile Include="Repositories\SqlServer\OxiteConferences.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OxiteConferences.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\SqlServer\SqlServerEventRepository.cs" />
+    <Compile Include="Repositories\SqlServer\SqlServerScheduleItemRepository.cs" />
+    <Compile Include="Repositories\SqlServer\SqlServerUserScheduleRepository.cs" />
+    <Compile Include="Routing\EventConstraint.cs" />
+    <Compile Include="Routing\IsScheduleItemFilterCriteriaConstraint.cs" />
+    <Compile Include="Routing\IsSpeakerFilterCriteriaConstraint.cs" />
+    <Compile Include="Services\ConferencesCommentService.cs" />
+    <Compile Include="Services\EventService.cs" />
+    <Compile Include="Services\ExhibitorService.cs" />
+    <Compile Include="Services\IConferencesCommentService.cs" />
+    <Compile Include="Services\IExhibitorService.cs" />
+    <Compile Include="Services\ISpeakerService.cs" />
+    <Compile Include="Services\IScheduleItemService.cs" />
+    <Compile Include="Services\IEventService.cs" />
+    <Compile Include="Services\IUserScheduleService.cs" />
+    <Compile Include="Services\ScheduleItemService.cs" />
+    <Compile Include="Services\SpeakerService.cs" />
+    <Compile Include="Services\UserScheduleService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Oxite.Blogs\Oxite.Blogs.csproj">
+      <Project>{FDDD5FC8-4CD7-49AC-A1F8-16BA8F0359CD}</Project>
+      <Name>Oxite.Blogs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oxite\Oxite.csproj">
+      <Project>{D54AF39D-CB43-4D32-A89D-D55EE924AB57}</Project>
+      <Name>Oxite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Repositories\SqlServer\OxiteConferences.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OxiteConferences.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Filters\IcsResultActionFilter.cs" />
+    <Compile Include="Filters\JsonResultActionFilter.cs" />
+    <Compile Include="Filters\SignResultActionFilter.cs" />
+    <Compile Include="Filters\XmlResultActionFilter.cs" />
+    <Compile Include="ModelBinders\ExhibitorInputModelBinder.cs" />
+    <Compile Include="Models\ExhibitorFilterCriteria.cs" />
+    <Compile Include="Models\ExhibitorInput.cs" />
+    <Compile Include="Models\Extensions\ScheduleItemUserExtensions.cs" />
+    <Compile Include="Repositories\IConferencesFileRepository.cs" />
+    <Compile Include="Repositories\SqlServer\SqlServerConferencesFileRepository.cs" />
+    <Compile Include="Results\IcsResult.cs" />
+    <Compile Include="Results\JsonViewResult.cs" />
+    <Compile Include="Results\XmlResult.cs" />
+    <Compile Include="Services\ConferencesFileService.cs" />
+    <Compile Include="Services\IConferencesFileService.cs" />
+    <None Include="Repositories\SqlServer\OxiteConferences.dbml.layout">
+      <DependentUpon>OxiteConferences.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

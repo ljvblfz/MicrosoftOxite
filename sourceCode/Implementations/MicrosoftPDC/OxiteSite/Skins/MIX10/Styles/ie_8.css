@@ -1,0 +1,9 @@
+/* Translator */
+
+#MicrosoftTranslatorWidget div div {
+	filter: none !important;
+}
+
+#MicrosoftTranslatorToolbar div {
+	filter: none !important;
+}

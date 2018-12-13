@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="OxiteComments">
+  <DataContextMoniker Name="/OxiteCommentsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="044240ef-6c87-4739-9f02-4aba2130ad85" absoluteBounds="3.5, 2.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/OxiteCommentsDataContext/oxite_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="130be8d3-2d80-4850-abad-2548080f650a" absoluteBounds="3.5149999999999997, 3.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4021d13-bd90-43c8-aaee-44fe812efa54" absoluteBounds="6.625, 2.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/OxiteCommentsDataContext/oxite_Language" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d66db853-28e3-45a6-a9b4-165230bb43f3" absoluteBounds="6.64, 3.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.625 : 3.56814697265625); (5.5 : 3.56814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteCommentsDataContext/oxite_Language/oxite_Language_oxite_User" />
+      <nodes>
+        <classShapeMoniker Id="d4021d13-bd90-43c8-aaee-44fe812efa54" />
+        <classShapeMoniker Id="044240ef-6c87-4739-9f02-4aba2130ad85" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="eccd8a3c-ca17-4c44-bff9-99060b01253d" absoluteBounds="0.5, 0.5, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/OxiteCommentsDataContext/oxite_Comment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7502838-9e46-4de4-a783-c6d41d71b8f6" absoluteBounds="0.515, 0.96, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.20923076923077 : 4.00160970052083); (1.20923076923077 : 4.25160970052083); (1.80461538461538 : 4.25160970052083); (1.80461538461538 : 4.00160970052083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteCommentsDataContext/oxite_Comment/oxite_Comment_oxite_Comment" />
+      <nodes>
+        <classShapeMoniker Id="eccd8a3c-ca17-4c44-bff9-99060b01253d" />
+        <classShapeMoniker Id="eccd8a3c-ca17-4c44-bff9-99060b01253d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.625 : 2.875); (7.625 : 2.50804718880208); (4.58333333333333 : 2.50804718880208 : JumpStart); (4.41666666666667 : 2.50804718880208 : JumpEnd); (2.5 : 2.50804718880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OxiteCommentsDataContext/oxite_Language/oxite_Language_oxite_Comment" />
+      <nodes>
+        <classShapeMoniker Id="d4021d13-bd90-43c8-aaee-44fe812efa54" />
+        <classShapeMoniker Id="eccd8a3c-ca17-4c44-bff9-99060b01253d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 3.43830485026042); (2.5 : 3.43830485026042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OxiteCommentsDataContext/oxite_User/oxite_User_oxite_Comment" />
+      <nodes>
+        <classShapeMoniker Id="044240ef-6c87-4739-9f02-4aba2130ad85" />
+        <classShapeMoniker Id="eccd8a3c-ca17-4c44-bff9-99060b01253d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6f3ff348-f786-4b44-ac68-4f8bce43ac2c" absoluteBounds="3.5, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/OxiteCommentsDataContext/oxite_Subscription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f349b391-a969-4501-8aee-fdbb6d9af56f" absoluteBounds="3.515, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 2.875); (4.5 : 2.07859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OxiteCommentsDataContext/oxite_User/oxite_User_oxite_Subscription" />
+      <nodes>
+        <classShapeMoniker Id="044240ef-6c87-4739-9f02-4aba2130ad85" />
+        <classShapeMoniker Id="6f3ff348-f786-4b44-ac68-4f8bce43ac2c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

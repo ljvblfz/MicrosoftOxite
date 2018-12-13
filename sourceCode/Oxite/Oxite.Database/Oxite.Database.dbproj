@@ -1,0 +1,788 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>Oxite.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ab46017d-6a0a-48e2-8e27-fe2e73befac4}</ProjectGuid>
+    <ShowWizard>True</ShowWizard>
+    <OutputType>Database</OutputType>
+    <DBProduct>SQL Server 2005</DBProduct>
+    <RootPath>
+    </RootPath>
+    <ArithAbort>False</ArithAbort>
+    <NumericRoundAbort>False</NumericRoundAbort>
+    <AnsiNulls>False</AnsiNulls>
+    <ConcatNullYieldsNull>False</ConcatNullYieldsNull>
+    <AnsiPadding>False</AnsiPadding>
+    <AnsiWarnings>False</AnsiWarnings>
+    <QuotedIdentifier>False</QuotedIdentifier>
+    <DefaultSchemaForUnqualifiedObjects>dbo</DefaultSchemaForUnqualifiedObjects>
+    <EnableFullTextSearch>False</EnableFullTextSearch>
+    <EnableCLRIntegration>False</EnableCLRIntegration>
+    <AutoUpdateStatisticsAsynchronously>True</AutoUpdateStatisticsAsynchronously>
+    <AutoUpdateStatistics>True</AutoUpdateStatistics>
+    <AutoShrink>False</AutoShrink>
+    <AutoCreateStatistics>True</AutoCreateStatistics>
+    <AutoClose>False</AutoClose>
+    <DefaultCursor>LOCAL</DefaultCursor>
+    <CloseCursorOnCommitEnabled>False</CloseCursorOnCommitEnabled>
+    <DatabaseState>ONLINE</DatabaseState>
+    <DatabaseAccess>MULTI_USER</DatabaseAccess>
+    <UpdateOptions>READ_WRITE</UpdateOptions>
+    <Parameterization>SIMPLE</Parameterization>
+    <Recovery>FULL</Recovery>
+    <PageVerify>NONE</PageVerify>
+    <TornPageDetection>False</TornPageDetection>
+    <AllowSnapshotIsolation>False</AllowSnapshotIsolation>
+    <ReadCommittedSnapshot>False</ReadCommittedSnapshot>
+    <AnsiNullDefault>True</AnsiNullDefault>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFileStructure>BySchemaType</DefaultFileStructure>
+    <DatabaseChaining>False</DatabaseChaining>
+    <EnableServiceBroker>False</EnableServiceBroker>
+    <RecursiveTriggersEnabled>False</RecursiveTriggersEnabled>
+    <Trustworthy>False</Trustworthy>
+    <IncludeSchemaNameInFilename>True</IncludeSchemaNameInFilename>
+    <DoNotUseAlterAssemblyStatementsToUpdateCLRTypes>False</DoNotUseAlterAssemblyStatementsToUpdateCLRTypes>
+    <ProjectVersion>2.0</ProjectVersion>
+    <DefaultDataPath>Undefined</DefaultDataPath>
+    <DefaultSchema>dbo</DefaultSchema>
+    <BuildVersion>9.0.30729.1</BuildVersion>
+    <RootNamespace>Oxite.Database</RootNamespace>
+    <FileGroups>
+      <FileGroupDefinitionCollection Version="1" xmlns="">
+        <FileGroups>
+          <FileGroupDefinition Name="PRIMARY" UpdatabilityOption="ReadWrite" IsDefault="True" CreationSucceed="False">
+            <Files>
+              <DatabaseFileDefinition LogicalName="PrimaryFileName" FileType="Primary">
+                <PhysicalName>%24(PrimaryFilePhysicalName)</PhysicalName>
+                <Size Number="3" SizeType="MB" />
+                <MaxSize Number="3" SizeType="MB" />
+                <FileGrowth Number="1" SizeType="MB" />
+                <EnableAutoGrowth>True</EnableAutoGrowth>
+                <UseDefaultMinSizeOnServer>True</UseDefaultMinSizeOnServer>
+                <UseDefaultAutoGrowthOnServer>True</UseDefaultAutoGrowthOnServer>
+                <Offline>False</Offline>
+              </DatabaseFileDefinition>
+            </Files>
+          </FileGroupDefinition>
+        </FileGroups>
+        <LogFiles>
+          <DatabaseFileDefinition LogicalName="PrimaryLogFileName" FileType="PrimaryLog">
+            <PhysicalName>%24(PrimaryLogFilePhysicalName)</PhysicalName>
+            <Size Number="3" SizeType="MB" />
+            <MaxSize Number="3" SizeType="MB" />
+            <FileGrowth Number="1" SizeType="MB" />
+            <EnableAutoGrowth>True</EnableAutoGrowth>
+            <UseDefaultMinSizeOnServer>True</UseDefaultMinSizeOnServer>
+            <UseDefaultAutoGrowthOnServer>True</UseDefaultAutoGrowthOnServer>
+            <Offline>False</Offline>
+          </DatabaseFileDefinition>
+        </LogFiles>
+      </FileGroupDefinitionCollection>
+    </FileGroups>
+    <PreviousProjectVersion>2</PreviousProjectVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.\sql\</OutputPath>
+    <AutoGenerateBuildScriptName>False</AutoGenerateBuildScriptName>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>
+    </TargetDatabase>
+    <DeploymentCollationPreference>ChangeTargetDBCollation</DeploymentCollationPreference>
+    <AlwaysCreateNewDatabase>false</AlwaysCreateNewDatabase>
+    <GenerateDropsIfNotInProject>False</GenerateDropsIfNotInProject>
+    <BlockIncrementalDeploymentIfDataLoss>True</BlockIncrementalDeploymentIfDataLoss>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <PerformDatabaseBackup>False</PerformDatabaseBackup>
+    <SingleUserMode>False</SingleUserMode>
+    <UseFuzzyMatchForColumns>False</UseFuzzyMatchForColumns>
+    <SuppressWarnings>
+    </SuppressWarnings>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\TeamData\Microsoft.VisualStudio.TeamSystem.Data.Tasks.targets" />
+  <PropertyGroup>
+    <FilegroupSetVariables>
+      <Variable Name="PrimaryFileName" Value="$(TargetDatabase)_mdf" />
+      <Variable Name="PrimaryLogFileName" Value="$(TargetDatabase)_ldf" />
+      <Variable Name="PrimaryFilePhysicalName" Value="$(DefaultDataPath)$(TargetDatabase).mdf" />
+      <Variable Name="PrimaryLogFilePhysicalName" Value="$(DefaultDataPath)$(TargetDatabase)_log.ldf" />
+    </FilegroupSetVariables>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Schema Objects" />
+    <Folder Include="Schema Objects\Assemblies" />
+    <Folder Include="Schema Objects\Database Triggers" />
+    <Folder Include="Schema Objects\Functions" />
+    <Folder Include="Schema Objects\Security" />
+    <Folder Include="Schema Objects\Security\Roles" />
+    <Folder Include="Schema Objects\Security\Roles\Application Roles" />
+    <Folder Include="Schema Objects\Security\Roles\Database Roles" />
+    <Folder Include="Schema Objects\Security\Schemas" />
+    <Folder Include="Schema Objects\Security\Users" />
+    <Folder Include="Schema Objects\Service Broker" />
+    <Folder Include="Schema Objects\Service Broker\Contracts" />
+    <Folder Include="Schema Objects\Service Broker\Event Notifications" />
+    <Folder Include="Schema Objects\Service Broker\Message Types" />
+    <Folder Include="Schema Objects\Service Broker\Queues" />
+    <Folder Include="Schema Objects\Service Broker\Remote Service Binding" />
+    <Folder Include="Schema Objects\Service Broker\Routes" />
+    <Folder Include="Schema Objects\Service Broker\Services" />
+    <Folder Include="Schema Objects\Storage" />
+    <Folder Include="Schema Objects\Storage\Full Text Catalogs" />
+    <Folder Include="Schema Objects\Storage\Partition Functions" />
+    <Folder Include="Schema Objects\Storage\Partition Schemes" />
+    <Folder Include="Schema Objects\Stored Procedures" />
+    <Folder Include="Schema Objects\Synonyms" />
+    <Folder Include="Schema Objects\Tables" />
+    <Folder Include="Schema Objects\Tables\Constraints" />
+    <Folder Include="Schema Objects\Tables\Indexes" />
+    <Folder Include="Schema Objects\Tables\Keys" />
+    <Folder Include="Schema Objects\Tables\Statistics" />
+    <Folder Include="Schema Objects\Tables\Triggers" />
+    <Folder Include="Schema Objects\Types" />
+    <Folder Include="Schema Objects\Types\User defined Data Types" />
+    <Folder Include="Schema Objects\Types\User defined Types CLR" />
+    <Folder Include="Schema Objects\Types\XML Schema Collections" />
+    <Folder Include="Schema Objects\Views" />
+    <Folder Include="Schema Objects\Views\Indexes" />
+    <Folder Include="Schema Objects\Views\Statistics" />
+    <Folder Include="Schema Objects\Views\Triggers" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Data Generation Plans" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql">
+      <SubType>Code</SubType>
+    </PreDeploy>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql">
+      <SubType>Code</SubType>
+    </PostDeploy>
+    <NotInBuild Include="Scripts\Post-Deployment\DatabaseObjectOptions.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\DefaultValuesBlogs.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\DefaultValuesLanguages.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\DefaultValuesPages.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\DefaultValuesPosts.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\DefaultValuesPostViewTypes.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\DefaultValuesSites.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\DefaultValuesSitesRolesUsers.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\DefaultValuesUsers.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\DefaultValuesUsersRoles.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\Permissions.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\RoleMemberships.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\RulesAndDefaults.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Post-Deployment\Signatures.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Pre-Deployment\CustomErrors.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Pre-Deployment\EncryptionKeysAndCertificates.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Pre-Deployment\LinkedServers.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\Pre-Deployment\Logins.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="Scripts\ScriptsIgnoredOnImport.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schema Objects\Tables\Constraints\dbo.oxite_Blogs_Blog.DF_oxite_Blogs_Blog_CommentingDisabled.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Constraints\dbo.oxite_Blogs_Post.DF_oxite_Blogs_Post_CommentingDisabled.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Constraints\dbo.oxite_Blogs_Post.DF_oxite_Blogs_Post_PostID.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Constraints\dbo.oxite_Blogs_Trackback.DF_oxite_Blogs_Trackback_TrackbackID.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Constraints\dbo.oxite_File.DF_oxite_File_TypeName.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Constraints\dbo.oxite_Site.DF_oxite_Site_HasMultipleBlogs.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Constraints\dbo.oxite_Site.DF_oxite_Site_RouteUrlPrefix.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Constraints\dbo.oxite_Site.DF_oxite_Site_ServiceRetryCountDefault.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Constraints\dbo.oxite_Tag.DF_oxite_Tag_TagID.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Constraints\dbo.oxite_User.DF_oxite_User_UserID.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Blogs_Blog.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Blogs_BlogRoleUserRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Blogs_Post.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Blogs_PostCommentRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Blogs_PostFileRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Blogs_PostRoleUserRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Blogs_PostSubscriptionRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Blogs_PostTagRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Blogs_PostView.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Blogs_PostViewType.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Blogs_Trackback.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_CMS_ContentItem.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_CMS_Page.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_CMS_PageContentItemRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_CMS_PageRoleUserRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Comment.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Conferences_Event.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Conferences_ScheduleItem.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Conferences_ScheduleItemCommentRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Conferences_ScheduleItemFileRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Conferences_ScheduleItemFlag.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Conferences_ScheduleItemSpeakerRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Conferences_ScheduleItemSubscriptionRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Conferences_ScheduleItemTagRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Conferences_ScheduleItemUserRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Conferences_ScheduleTimeSlot.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Conferences_Speaker.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Conferences_UserSchedule.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_ExtendedProperty.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_ExtendedPropertyScope.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_ExtendedPropertyValue.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_File.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Language.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_MessageOutbound.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Plugin.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_PluginSequence.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_SearchResult.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Site.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_SiteRedirect.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_SiteRoleUserRelationship.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_TrackbackOutbound.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Role.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_StringResource.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_StringResourceVersion.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Subscription.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_Tag.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_User.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_UserLanguage.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\dbo.oxite_UserModuleData.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Indexes\dbo.oxite_Blogs_Post.IX_oxite_Blogs_Post_PublishedDate.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Indexes\dbo.oxite_Blogs_Post.IX_oxite_Blogs_Post_Slug_PostID.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Indexes\dbo.oxite_Blogs_PostView.IX_oxite_Blogs_PostView_PostID.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Indexes\dbo.oxite_Blogs_PostView.IX_oxite_Blogs_PostView_PostViewTypeID.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Indexes\dbo.oxite_Comment.IX_oxite_Comment_CreatedDate.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Indexes\dbo.oxite_File.IX_oxite_File_TypeName.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Indexes\dbo.oxite_Site.IX_oxite_Site_SiteName.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_Blog.FK_oxite_Blogs_Blog_oxite_Site.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_Blog.IX_oxite_Blogs_Blog_BlogName_SiteID.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_Blog.PK_oxite_Blogs_Blog.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_BlogRoleUserRelationship.FK_oxite_Blogs_BlogRoleUserRelationship_oxite_Blogs_Blog.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_BlogRoleUserRelationship.FK_oxite_Blogs_BlogRoleUserRelationship_oxite_Role.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_BlogRoleUserRelationship.FK_oxite_Blogs_BlogRoleUserRelationship_oxite_User.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_BlogRoleUserRelationship.PK_oxite_Blogs_BlogRoleUserRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_Post.FK_oxite_Blogs_Post_oxite_Blogs_Blog.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_Post.FK_oxite_Blogs_Post_oxite_User.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_Post.PK_oxite_Blogs_Post.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostCommentRelationship.FK_oxite_Blogs_PostCommentRelationship_oxite_Blogs_Post.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostCommentRelationship.FK_oxite_Blogs_PostCommentRelationship_oxite_Comment.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostCommentRelationship.IX_oxite_Blogs_PostCommentRelationship_Slug_PostID.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostCommentRelationship.PK_oxite_Blogs_PostCommentRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostFileRelationship.FK_oxite_Blogs_PostFileRelationship_oxite_Blogs_Post.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostFileRelationship.FK_oxite_Blogs_PostFileRelationship_oxite_File.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostFileRelationship.PK_oxite_Blogs_PostFileRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostRoleUserRelationship.FK_oxite_Blogs_PostRoleUserRelationship_oxite_Blogs_Post.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostRoleUserRelationship.FK_oxite_Blogs_PostRoleUserRelationship_oxite_Role.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostRoleUserRelationship.FK_oxite_Blogs_PostRoleUserRelationship_oxite_User.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostRoleUserRelationship.PK_oxite_Blogs_PostRoleUserRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostSubscriptionRelationship.FK_oxite_Blogs_PostSubscriptionRelationship_oxite_Blogs_Post.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostSubscriptionRelationship.FK_oxite_Blogs_PostSubscriptionRelationship_oxite_Subscription.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostSubscriptionRelationship.PK_oxite_Blogs_PostSubscriptionRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostTagRelationship.FK_oxite_Blogs_PostTagRelationship_oxite_Blogs_Post.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostTagRelationship.FK_oxite_Blogs_PostTagRelationship_oxite_Tag.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostTagRelationship.PK_oxite_Blogs_PostTagRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostView.FK_oxite_Blogs_PostView_oxite_Blogs_Post.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostView.FK_oxite_Blogs_PostView_oxite_Blogs_PostViewType.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostView.PK_oxite_Blogs_PostView.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostViewType.IX_oxite_Blogs_PostViewType_PostViewTypeName.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_PostViewType.PK_oxite_Blogs_PostViewType.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_Trackback.FK_oxite_Blogs_Trackback_oxite_Blogs_Post.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Blogs_Trackback.PK_oxite_Blogs_Trackback.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_ContentItem.FK_oxite_CMS_ContentItem_oxite_CMS_Page.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_ContentItem.FK_oxite_CMS_ContentItem_oxite_User.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_ContentItem.IX_oxite_CMS_ContentItem_ContentItemName_Version_PageID_SiteID.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_ContentItem.PK_oxite_CMS_ContentItem.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_Page.FK_oxite_CMS_Page_oxite_Site.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_Page.IX_oxite_CMS_Page_Slug.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_Page.PK_oxite_CMS_Page.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_PageContentItemRelationship.FK_oxite_CMS_PageContentItemRelationship_oxite_CMS_ContentItem.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_PageContentItemRelationship.FK_oxite_CMS_PageContentItemRelationship_oxite_CMS_Page.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_PageContentItemRelationship.PK_oxite_CMS_PageContentItemRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_PageRoleUserRelationship.FK_oxite_CMS_PageRoleUserRelationship_oxite_CMS_Page.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_PageRoleUserRelationship.FK_oxite_CMS_PageRoleUserRelationship_oxite_Role.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_PageRoleUserRelationship.FK_oxite_CMS_PageRoleUserRelationship_oxite_User.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_CMS_PageRoleUserRelationship.PK_oxite_CMS_PageRoleUserRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Comment.FK_oxite_Comment_oxite_Comment.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Comment.FK_oxite_Comment_oxite_Language.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Comment.FK_oxite_Comment_oxite_User.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Comment.PK_oxite_Comment.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_Event.PK_oxite_Conferences_Event.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItem.FK_oxite_Conferences_ScheduleItem_oxite_Conferences_Event.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItem.PK_oxite_Conferences_ScheduleItem.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemCommentRelationship.FK_oxite_Conferences_ScheduleItemCommentRelationship_oxite_Comment.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemCommentRelationship.FK_oxite_Conferences_ScheduleItemCommentRelationship_oxite_Conferences_ScheduleItem.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemCommentRelationship.IX_oxite_Conferences_ScheduleItemCommentRelationship_Slug_ScheduleItemID.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemCommentRelationship.PK_oxite_Conferences_ScheduleItemCommentRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemFileRelationship.FK_oxite_Conferences_ScheduleItemFileRelationship_oxite_Conferences_ScheduleItem.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemFileRelationship.PK_oxite_Conferences_ScheduleItemFileRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemFlag.FK_oxite_Conferences_ScheduleItemFlag_oxite_Conferences_ScheduleItem.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemFlag.PK_oxite_Conferences_ScheduleItemFlag.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemSpeakerRelationship.FK_oxite_Conferences_ScheduleItemSpeakerRelationship_oxite_Conferences_ScheduleItem.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemSpeakerRelationship.FK_oxite_Conferences_ScheduleItemSpeakerRelationship_oxite_Conferences_Speaker.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemSpeakerRelationship.PK_oxite_Conferences_ScheduleItemSpeakerRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemSubscriptionRelationship.FK_oxite_Conferences_ScheduleItemSubscriptionRelationship_oxite_Conferences_ScheduleItem.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemSubscriptionRelationship.FK_oxite_Conferences_ScheduleItemSubscriptionRelationship_oxite_Subscription.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemSubscriptionRelationship.PK_oxite_Conferences_ScheduleItemSubscriptionRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemTagRelationship.FK_oxite_Conferences_ScheduleItemTagRelationship_oxite_Conferences_ScheduleItem.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemTagRelationship.FK_oxite_Conferences_ScheduleItemTagRelationship_oxite_Tag.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemTagRelationship.PK_oxite_Conferences_ScheduleItemTagRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemUserRelationship.FK_oxite_Conferences_ScheduleItemUserRelationship_oxite_Conferences_ScheduleItem.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleItemUserRelationship.PK_oxite_Conferences_ScheduleItemUserRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleTimeSlot.FK_oxite_Conferences_ScheduleTimeSlot_oxite_Conferences_Event.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_ScheduleTimeSlot.PK_oxite_Conferences_ScheduleTimeSlot.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_Speaker.IX_oxite_Conferences_Speaker_SpeakerName.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_Speaker.PK_oxite_Conferences_Speaker.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Conferences_UserSchedule.PK_oxite_Conferences_UserSchedule.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_ExtendedProperty.PK_oxite_ExtendedProperty.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_ExtendedPropertyScope.FK_oxite_ExtendedPropertyScope_oxite_ExtendedProperty.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_ExtendedPropertyScope.PK_oxite_ExtendedPropertyScope.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_ExtendedPropertyValue.FK_oxite_ExtendedPropertyValue_oxite_ExtendedProperty.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_ExtendedPropertyValue.FK_oxite_ExtendedPropertyValue_oxite_Site.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_ExtendedPropertyValue.PK_oxite_ExtendedPropertyValue.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_File.PK_oxite_File.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Language.PK_oxite_Language.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_MessageOutbound.PK_oxite_MessageOutbound.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Plugin.FK_oxite_Plugin_oxite_Site.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Plugin.PK_oxite_Plugin.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_PluginSequence.FK_oxite_PluginSequence_oxite_Plugin.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_PluginSequence.PK_oxite_PluginSequence.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_SearchResult.PK_oxite_SearchResult.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Site.PK_oxite_Site.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_SiteRedirect.FK_oxite_SiteRedirect_oxite_Site.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_SiteRedirect.PK_oxite_SiteRedirect.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_SiteRoleUserRelationship.FK_oxite_SiteRoleUserRelationship_oxite_Role.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_SiteRoleUserRelationship.FK_oxite_SiteRoleUserRelationship_oxite_Site.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_SiteRoleUserRelationship.FK_oxite_SiteRoleUserRelationship_oxite_User.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_SiteRoleUserRelationship.PK_oxite_SiteRoleUserRelationship.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Subscription.FK_oxite_Subscription_oxite_User.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Tag.FK_oxite_Tag_oxite_Tag.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_TrackbackOutbound.PK_oxite_TrackbackOutbound.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_User.FK_oxite_User_oxite_Language.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_User.IX_oxite_User_Username.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Role.FK_oxite_Role_oxite_Role.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Role.IX_oxite_RoleName.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Role.PK_oxite_Role.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_StringResource.PK_oxite_StringResource.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_StringResourceVersion.FK_oxite_StringResourceVersion_oxite_StringResource.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_StringResourceVersion.PK_oxite_StringResourceVersion.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Subscription.PK_oxite_Subscription.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_Tag.PK_oxite_Tag.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_User.IX_oxite_Username.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_User.PK_oxite_User.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_UserLanguage.FK_oxite_UserLanguage_oxite_Language.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_UserLanguage.FK_oxite_UserLanguage_oxite_User.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_UserLanguage.PK_oxite_UserLanguage.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_UserModuleData.FK_oxite_UserModuleData_oxite_User.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Tables\Keys\dbo.oxite_UserModuleData.PK_oxite_UserModuleData.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+  </ItemGroup>
+</Project>

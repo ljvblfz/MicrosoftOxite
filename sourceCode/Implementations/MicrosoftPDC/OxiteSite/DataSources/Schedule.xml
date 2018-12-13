@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schedule>
+    <ScheduleItem TimeSlot="NOW" Title="Day 1 Welcome" Description="Jritz and Mswanson" />
+    <ScheduleItem TimeSlot="NEXT" Title="Something Awesome" Description="really" />
+    <ScheduleItem TimeSlot="LATER" Title="Other Awesome Stuff" Description="trust me" />
+</Schedule>

@@ -1,0 +1,80 @@
+<%@ Import Namespace="Oxite.Modules.Blogs.Extensions"%>
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage<OxiteViewModel>" %>
+<%@ Import Namespace="Oxite.Extensions"
+%><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title><asp:ContentPlaceHolder ID="Title" runat="server"><%=Html.PageTitle() %></asp:ContentPlaceHolder></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Oxite" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <%
+    Html.RenderFavIcon(); %>
+    <meta name="language" content="<%=Model.Site.LanguageDefault %>" />
+    <asp:ContentPlaceHolder ID="robots" runat="server"><meta name="robots" content="index,follow" /></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="MetaDescription" runat="server"><%=Html.PageDescription()%></asp:ContentPlaceHolder><%
+    Html.RenderOpenSearch(); %>
+    <asp:ContentPlaceHolder ID="SearchTags" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="HeadCustom" runat="server"></asp:ContentPlaceHolder><%
+    Html.RenderPartialFromSkin("HeadCustomContents"); %><asp:ContentPlaceHolder ID="HeadCssFiles" runat="server"></asp:ContentPlaceHolder><link href="http://widgets.twimg.com/j/1/widget.css" type="text/css" rel="stylesheet" /><asp:ContentPlaceHolder ID="HeadScripts" runat="server"></asp:ContentPlaceHolder>
+    <%Html.RenderScriptTag("http://video.microsoftpdc.com/Scripts/Install/Silverlight.logger.js?version=1");
+      Html.RenderScriptTag("http://video.microsoftpdc.com/Scripts/Install/SilverlightVersion.js?version=1"); %>
+    <script type="text/javascript">
+        // Configure logging parameters
+        SLS.appName = "PDC";
+        SLS.appVersion = "10.0";
+        // Required Silverlight version
+        SLS.hqPlayerSlVersion = "3.0.40818.0";
+
+        // Use this section to configure messages
+        var PromptInstall = "<div class='SLInstallDiv'><p class='SLInstallHeader'><span style='font-size: 24px; line-height: 60px;'>Welcome to the </span><br />PDC09 Player!</p><p class='SLInstallMainText'>Install Microsoft Silverlight to view the PDC09 <br />conference live in streaming video.</p><p>Click the button below to install <br />Microsoft Silverlight 3</p><a href='#' onclick='javascript:InstallClicked()' class='SLInstallButton'></a></div>";
+
+        var PromptFinishInstall = "<div class='SLInstallDiv'><p class='SLInstallHeader'><span style='font-size: 24px; line-height: 60px;'>Welcome to the </span><br />PDC09 Player!</p><p class='SLInstallMainText'>Thank you for choosing to upgrade to <br />Microsoft Silverlight 3.</p><p>Please refresh your browser when installation <br />is complete.</p></div>";
+
+        var PromptRestart = "<div class='SLInstallDiv'><p class='SLInstallHeader'><span style='font-size: 24px; line-height: 60px;'>Welcome to the </span><br />PDC09 Player!</p><p class='SLInstallMainText'>Please restart your browser.</p></div>";
+
+        var PromptUpgrade = "<div class='SLInstallDiv'><p class='SLInstallHeader'><span style='font-size: 24px; line-height: 60px;'>Welcome to the </span><br />PDC09 Player!</p><p class='SLInstallMainText'>You need to install Microsoft Silverlight to view <br />the PDC09 conference live in streaming video.</p><p>Click the button below to install <br />Microsoft Silverlight 3</p><a href='#' onclick='javascript:UpgradeClicked()' class='SLInstallButton'></a></div>";
+
+        var PromptFinishUpgrade = "<div class='SLInstallDiv'><p class='SLInstallHeader'><span style='font-size: 24px; line-height: 60px;'>Welcome to the </span><br />PDC09 Player!</p><p class='SLInstallMainText'>Thank you for choosing to upgrade <br />to Microsoft Silverlight 3.</p><p>Please restart your browser when the installation <br />is complete.</p></div>";
+
+        var PromptNotSupported = "<div class='SLInstallDiv'><p class='SLInstallHeader'><span style='font-size: 24px; line-height: 60px;'>Welcome to the </span><br />PDC09 Player!</p><p class='SLInstallMainText'>Microsoft Silverlight not available for your platform/device</p></div>";
+
+        // Popup alert that this browser is not officially supported but might work (Chrome)
+        var WarningNotSupported = "<p class='SLInstallHeader'><span style='font-size: 24px; line-height: 60px;'>Welcome to the </span><br />PDC09 Player!</p><p class='SLInstallMainText'>Your current browser is not officially supported, <br />but you may proceed if you wish.</p>";
+
+        var SLInstallStylesheet = "<style type='text/css'>.SLInstallButton {display: inline-block; background: transparent url('/Images/GetSLPlayer.png') no-repeat; height: 57px; width: 336px; position: absolute; top: 233px; left: 280px;} .SLInstallButton:hover {background-position: left -57px;} .SLInstallDiv { padding-left: 40px; height: 367px; width: 805px; background: transparent url('/Images/SLInstallBkgnd.png') no-repeat; position: relative;}.SLInstallDiv p.SLInstallHeader { font: bold 36px/10px Arial, sans-serif; color: #fffefe; padding-top: 20px; } .SLInstallDiv p { color: #fffefe; font-size: 9pt; } p.SLInstallMainText{ color: #e0883c; font-size: 11pt; }</style>";
+        $(function() {
+            $("head").append(SLInstallStylesheet);
+        });
+    </script>
+    
+    </head>
+<body class="livehome <%=Html.BodyClass(ViewContext.RouteData.Values["pagePath"] as string, ViewContext.RouteData.Values["scheduleItemType"] as string, ViewContext.RouteData.Values["blogName"] as string) %>">
+    <script type="text/javascript">/*<![CDATA[*/document.body.className += (document.body.className.length > 0 ? ' ' : '') + 'dyn';//]]></script><%
+	Html.RenderPartialFromSkin("Analytics"); %>
+	<div id="interface">
+		<div id="header"><asp:ContentPlaceHolder ID="HeaderSiteName" runat="server"><div id="siteName"><%=Html.Link("Microsoft PDC09", Url.Home()) %></div></asp:ContentPlaceHolder><%
+            Html.RenderPartialFromSkin("Header"); %>
+		</div>
+		<div id="contentarea">
+		    <div id="navigation"><%
+                Html.RenderPartialFromSkin("SiteNav");
+                Html.RenderPartialFromSkin("SecondaryNav"); %>
+            </div>
+    			<div id="content"><asp:ContentPlaceHolder ID="HeroBanner" runat="server" />
+				<div id="primary"><asp:ContentPlaceHolder ID="ContentHeader" runat="server" />
+				    <asp:ContentPlaceHolder id="MainContent" runat="server"></asp:ContentPlaceHolder>
+				</div>
+			    <div id="sidebar"><%
+                    Html.RenderPartialFromSkin("SideBar"); %>
+			    </div>
+			</div>
+            <div id="footer"><%
+                Html.RenderPartialFromSkin("Footer"); %>
+		    </div>
+		</div>
+	</div>
+    <%=Html.TrackbackBlock() %>
+    <asp:ContentPlaceHolder ID="ScriptVariablesPre" runat="server"></asp:ContentPlaceHolder><asp:ContentPlaceHolder ID="Scripts" runat="server"></asp:ContentPlaceHolder><asp:ContentPlaceHolder ID="ScriptVariablesPost" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

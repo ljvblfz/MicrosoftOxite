@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+	<Parameters>
+		<Parameter Name="RetryInterval" Value="00:00:10" />
+		<Parameter Name="RetryDuration" Value="00:01:00" />
+        
+		<Parameter Name="IsTwitterVisible" Value="True" />
+		<Parameter Name="IsNewsVisible" Value="True" />
+		<Parameter Name="IsScheduleVisible" Value="True" />
+		<Parameter Name="IsTabControlVisible" Value="True" />
+
+        <Parameter Name="UseSmeConfig" Value="True" />
+
+        <Parameter Name="LivePositionRange" Value="00:00:30" />
+        <Parameter Name="HighDefinitionBitrate" Value="3450000" />
+	</Parameters>
+	
+	<DataSources>
+		<DataSource Name="SettingsSource" Url="http://live.ch9.ms/DataSources/Settings.xml" Interval="00:00:10" />
+		<DataSource Name="TwitterSource" Url="http://live.ch9.ms/DataSources/Twitter.xml" Interval="00:00:10" />
+        <DataSource Name="NewsSource" Url="http://microsoftpdc.com/WhatsHappening/RSS" Interval="00:00:10" />
+        <DataSource Name="ScheduleSource" Url="http://live.ch9.ms/DataSources/Schedule.xml" Interval="00:00:10" />
+		<DataSource Name="MarkerSource" Url="http://live.ch9.ms/DataSources/Markers.xml" Interval="00:00:10" />
+		<DataSource Name="StreamSource" Url="http://live.ch9.ms/DataSources/Streams.xml" Interval="00:00:10" />
+	</DataSources>
+</Settings>

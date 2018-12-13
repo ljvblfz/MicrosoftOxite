@@ -1,0 +1,6 @@
+<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<OxiteModelPartial<Post>>" %>
+<%@ Import Namespace="Oxite.Extensions" %>
+<%@ Import Namespace="Oxite.Models.Extensions" %><%
+    string postUrl = Url.AbsolutePath(Url.Post(Model.PartialModel)).CleanForQueryString();
+    string postTitle = Model.PartialModel.Title.CleanForQueryString(); %>
+<h4 class="share"><%=Model.RootModel.Localize("Share") %>:</h4><ul class="share"><li class="first shout"><a href="http://dotnetshoutout.com/Submit?url=<%=postUrl %>&amp;title=<%=postTitle %>" title="Dot Net Shoutout">Dot Net Shoutout</a></li><li class="digg"><a href="http://digg.com/submit?phase=2&amp;url=<%=postUrl %>&amp;title=<%=postTitle %>" title="Digg">Digg</a></li><li class="facebook"><a href="http://www.facebook.com/sharer.php?u=<%=postUrl %>&amp;t=<%=postTitle %>" title="Facebook">Facebook</a></li><li class="friendfeed"><a href="http://friendfeed.com/share?url=<%=postUrl %>&amp;title=<%=postTitle %>" title="FriendFeed">FriendFeed</a></li><li class="last twitter"><a href="http://twitter.com/home?status=<%=string.Format("MIX%20Video:%20{0}%20(via%20%23{1})", Url.CompressUrl(postUrl), Model.PartialModel.Area.Name.ToLower()) %>" title="Twitter">Twitter</a></li></ul>

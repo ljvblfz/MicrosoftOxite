@@ -1,0 +1,20 @@
+<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/Skins/Admin/Views/Shared/Site.Master"
+    Inherits="System.Web.Mvc.ViewMasterPage<OxiteViewModel>" %>
+
+<%@ Import Namespace="Oxite.Extensions" %>
+<%@ Import Namespace="Oxite.Modules.Setup.Extensions" %>
+<asp:Content ContentPlaceHolderID="Title" runat="server">
+    <asp:ContentPlaceHolder ID="Title" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="ContentHeader" runat="server">
+    <%=Html.WizardHeader(new List<string>() {"Site Type", "Storage", "Admin Settings", "Basic Site Settings", "Module Selection", "Setup Complete"}) %>
+    <asp:ContentPlaceHolder ID="ContentHeader" runat="server" />
+</asp:Content>
+<asp:Content ContentPlaceHolderID="MainContent" runat="server">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+</asp:Content>
+<asp:Content ContentPlaceHolderID="Scripts" runat="server">
+    <asp:ContentPlaceHolder ID="Scripts" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

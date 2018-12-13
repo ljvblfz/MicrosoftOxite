@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[oxite_Post] ADD CONSTRAINT [PK_oxite_Post] PRIMARY KEY CLUSTERED  ([PostID]) ON [PRIMARY]
+
+

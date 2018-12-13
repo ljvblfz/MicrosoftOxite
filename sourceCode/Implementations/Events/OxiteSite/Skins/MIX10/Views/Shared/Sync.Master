@@ -1,0 +1,42 @@
+﻿<%@ Import Namespace="Oxite.Modules.CMS.Extensions"%>
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage<OxiteViewModel>" %>
+<%@ Import Namespace="Oxite.Extensions" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title><asp:ContentPlaceHolder ID="Title" runat="server"><%=Html.PageTitle() %></asp:ContentPlaceHolder></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Oxite" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <% Html.RenderFavIcon(); %>
+    <meta name="language" content="<%=Model.Site.LanguageDefault %>" />
+    <asp:ContentPlaceHolder ID="robots" runat="server"><meta name="robots" content="index,follow" /></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="MetaDescription" runat="server"><%=Html.PageDescription()%></asp:ContentPlaceHolder><%
+    Html.RenderOpenSearch(); %>
+    <asp:ContentPlaceHolder ID="SearchTags" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="HeadCustom" runat="server"></asp:ContentPlaceHolder>
+    <%     Html.RenderScriptTag("http://ajax.microsoft.com/ajax/jQuery/jquery-1.3.2.js", "http://ajax.microsoft.com/ajax/jQuery/jquery-1.3.2.min.js");
+ %>
+<style type="text/css">
+    html, body {
+	    height: 100%;
+	    overflow: hidden;
+    }
+    body {
+	    padding: 0;
+	    margin: 0;
+    }
+    #silverlightControlHost {
+	    height: 100%;
+	    text-align:center;
+    }
+    </style>
+    </head>
+<asp:ContentPlaceHolder ID="bodyTag" runat="server">
+    <body>
+</asp:ContentPlaceHolder>      
+      <% Html.RenderPartialFromSkin("Analytics"); %>    
+<asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+    </body>
+</html>
+

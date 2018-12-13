@@ -1,0 +1,117 @@
+﻿html {
+    background-color:#181818;
+    color:#FFF;
+}
+a,
+a:link,
+ul.menu.admin li a,
+ul.menu li a:hover,
+#logindisplay a:hover,
+#logindisplay .logout a:hover {
+    color:#dc2525;
+}
+ul.menu li a,
+#comments fieldset span,
+form.login label,
+.pageState {
+    color:#727272;
+}
+#logindisplay a,
+#footer .powered {
+    color:#474747;
+}
+#header h1 a,
+#header h1 a:hover,
+ul.menu li.selected a,
+ul.menu li.selected a:hover,
+form.login .remember label,
+form.plugin label,
+form#siteSettings {
+    color:#FFF;
+}
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span,
+input.hinted,
+textarea.hinted,
+.posts .more,
+.posts .posted,
+#logindisplay .logout a {
+    color:#8d8d8d;
+}
+.post .metadata {
+    color:#777;
+}
+
+#main,
+ul.posts.medium .posted {
+    border-color:#333333;
+}
+
+#logindisplay {
+    color:#727272;
+}
+#logindisplay .login {
+    color:#e0e0e0;
+}
+#logindisplay .logout {
+    color:#d3d3d3;
+}
+
+input.text,
+textarea,
+input.text.active,
+textarea.active {
+    background-color:#fff;
+    border-color:#0B0B0B;
+}
+input.text.hinted,
+textarea.hinted {
+    background-color:#fdfdfd;
+    color:#727272;
+}
+
+form input.button,
+form button,
+.post input.submit.button,
+.post button {
+    border-color:#e0e0e0;
+    color:#373737;
+    background-color:#ebebeb;
+}
+form input:hover.button,
+form button:hover,
+.post input:hover.submit.button,
+.post button:hover {
+    color:#373737;
+    background-color:#e0e0e0;
+    border-color:#d3d3d3;
+}
+
+body.dyn ul.comments.medium img.gravatar {
+    border-color:#FFF;
+    color:#FFF;
+}
+body.dyn ul.comments.medium li.comment.hover img.gravatar {
+    border-color:#F7F7F7;
+    color:#F7F7F7;
+}
+
+.highlight {
+    /*todo: (nheskew) - or anyone. make use of this class. this is set on an element with an id that matches an fragment id in the URI (e.g. #someElement) */
+}
+
+li.hover {
+    background-color:#F7F7F7;
+}
+
+#comments fieldset .help {
+    color:#AD5454;
+}
+
+#comments fieldset .field-validation-error,
+.field-validation-error {
+    color:#BF4329;
+}

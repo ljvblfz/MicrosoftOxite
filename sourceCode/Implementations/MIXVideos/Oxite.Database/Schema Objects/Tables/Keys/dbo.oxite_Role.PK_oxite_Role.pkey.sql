@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[oxite_Role] ADD CONSTRAINT [PK_oxite_Role] PRIMARY KEY CLUSTERED  ([RoleID]) ON [PRIMARY]
+
+

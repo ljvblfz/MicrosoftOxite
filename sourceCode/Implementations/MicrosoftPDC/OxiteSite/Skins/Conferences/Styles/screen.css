@@ -1,0 +1,1091 @@
+/* Globals
+--------------------------*/
+* { margin:0;padding:0;text-decoration:none;list-style:none;}
+body { font-family:  Arial, Helvetica, sans-serif; font-size:12px; color:#666;}
+h2, h3, h4 { color:#333; }
+p, table { margin-bottom:1.2em; }
+a { text-decoration:none; color:#60789c;}
+a:visited { color:#60789c;}
+a:hover { text-decoration:underline;}
+img { border:0;}
+sup { font-size:9px; position:relative; top:-.7em; vertical-align:0; }
+.date { color: #999; }
+.wait { cursor: wait; }
+.clear { clear: both; line-height: 0; }
+.bgimage { background-repeat:no-repeat; display:block; text-indent:-9999px; }
+.hidden {display:none;}
+
+/* Main Containers
+--------------------------*/
+body { margin:0; padding:0; }
+#interface {width: 1024px; margin: auto;} 
+#header { height:129px; width: 1024px; position:relative; }
+#navigation { width:140px; padding:0 15px 0 0; float:left;}
+#content { width:589px; padding:0 15px 20px 0; margin: 0 10px 0 0; float:left; border:solid #b8b2ae; border-width: 1px 1px 0 0;}
+#sidebar { width:185px; float:left; border-left:1px solid #b8b2ae; position:relative; left:-11px; padding:0 0 0 15px;}
+#footer { clear:both; }
+#siteName a { background:url(images/logo_pdc09.gif) no-repeat; display:block; height:37px; outline:none; text-indent:-9999em; width:146px; }
+
+/* Header
+--------------------------*/
+#header { position:relative;  left: -173px; padding-left:173px; height:130px; background: url("images/bg_logowires.gif") top left no-repeat;}
+#header #siteName { position:absolute; top: 74px; left:326px; margin-top:0; }
+
+#globals { position:absolute; top:0px; right:0px; width:1024px; height:56px; background: url("images/bg_globalbox.gif") top right no-repeat; }
+#globals div { font-size: 10px; color: #938984; }
+#globals div a { color: #df8536;}
+#globals #userinfo { position:absolute; top:0px; right:490px; height:46px; padding: 0 0 0 100px; background:#f5f5f5 url("images/bg_globalbox_leftedge.gif") top left no-repeat;}
+#globals #userinfo div { background:#FFF;  margin: 9px 0 0 0px; height:19px;padding:3px 2px 0 2px; display:inline-block;}
+#globals #search { position:absolute; top: 9px; right: 210px; }
+#globals #search fieldset { border: none; }
+#globals label { display:none;}
+#globals input.text { border:1px solid #d1d1d1; background:#FFF; width:129px; height:20px; float:left; padding:3px 4px 0; } 
+
+
+/* Navigation
+-----------------------------*/
+#primarynav ul { position:relative; z-index:2000; width:120px; margin:0 0 0 10px;padding:0;}
+#primarynav ul a { display:block; width:100%; height:100%; outline:none; padding: 5px; font-size: 12px; text-decoration:none; background:#e0e0e0;color:#706360; display:block; text-transform: uppercase;  }
+#primarynav ul li { display:block; list-style:none; list-style-image:none; margin:0 0 5px; position:relative; }
+#primarynav ul ul { width: 125px; margin:0;}
+#primarynav ul.secondary { display:block; padding-left: 5px; margin:5px 0 0 10px; }
+#primarynav ul.secondary li { margin:0; padding:0;overflow:hidden;}
+#primarynav ul.secondary li a { display:block; background:#FFF; text-transform:none; padding-bottom:0px;  }
+#primarynav ul.secondary li a:hover { text-decoration:underline;}
+/*#primarynav ul li.primary:hover ul.secondary { display:block; position:absolute; top:0; left: 130px; z-index:4000; }
+  #primarynav ul li.primary:hover ul.secondary li { background:#7d706d;} */
+
+
+/* For default styles dictated by the body class */
+body.registration #primarynav ul li#navregistration a,
+body.hotels #primarynav ul li#navregistration a,
+body.maps #primarynav ul li#navregistration a,
+body.about #primarynav ul li#navabout a,
+body.pdcclassics #primarynav ul li#navabout a,
+body.art #primarynav ul li#navabout a,
+body.workshopsandsessions #primarynav ul li#navworkshopssessions a,
+body.scheduleitem #primarynav ul li#navworkshopssessions a,
+body.workshops #primarynav ul li#navworkshopssessions a,
+body.specialevents #primarynav ul li#navworkshopssessions a,
+body.speaker #primarynav ul li#navworkshopssessions a,
+body.behindthescenes #primarynav ul li#navblog a,
+body.whatshappening #primarynav ul li#navblog a,
+body.partneropportunities #primarynav ul li#navsponsorsexhibitors a,
+body.sponsors #primarynav ul li#navsponsorsexhibitors a,
+body.exhibitors #primarynav ul li#navsponsorsexhibitors a { color:#FFF; background:#df8536;}
+
+body.registration #primarynav ul li#navregistration ul.secondary,
+body.hotels #primarynav ul li#navregistration ul.secondary,
+body.maps #primarynav ul li#navregistration ul.secondary,
+body.about #primarynav ul li#navabout ul.secondary,
+body.art #primarynav ul li#navabout ul.secondary,
+body.pdcclassics #primarynav ul li#navabout ul.secondary,
+body.workshopsandsessions #primarynav ul li#navworkshopssessions ul.secondary,
+body.scheduleitem #primarynav ul li#navworkshopssessions ul.secondary,
+body.workshops #primarynav ul li#navworkshopssessions ul.secondary,
+body.specialevents #primarynav ul li#navworkshopssessions ul.secondary,
+body.speaker #primarynav ul li#navworkshopssessions ul.secondary,
+body.behindthescenes #primarynav ul li#navblog ul.secondary,
+body.whatshappening #primarynav ul li#navblog ul.secondary,
+body.partneropportunities #primarynav ul li#navsponsorsexhibitors ul.secondary,
+body.sponsors #primarynav ul li#navsponsorsexhibitors ul.secondary,
+body.exhibitors #primarynav ul li#navsponsorsexhibitors ul.secondary { background: transparent; display:block; margin:5px 0 0 10px;}
+
+body.registration #primarynav ul li#navregistration ul.secondary a,
+body.hotels #primarynav ul li#navregistration ul.secondary a,
+body.maps #primarynav ul li#navregistration ul.secondary a,
+body.about #primarynav ul li#navabout ul.secondary a,
+body.art #primarynav ul li#navabout ul.secondary a,
+body.pdcclassics #primarynav ul li#navabout ul.secondary a,
+body.workshopsandsessions #primarynav ul li#navworkshopssessions ul.secondary a,
+body.scheduleitem #primarynav ul li#navworkshopssessions ul.secondary a,
+body.workshops #primarynav ul li#navworkshopssessions ul.secondary a,
+body.specialevents #primarynav ul li#navworkshopssessions ul.secondary a,
+body.speaker #primarynav ul li#navworkshopssessions ul.secondary a,
+body.behindthescenes #primarynav ul li#navblog ul.secondary a,
+body.whatshappening #primarynav ul li#navblog ul.secondary a,
+body.partneropportunities #primarynav ul li#navsponsorsexhibitors ul.secondary a,
+body.sponsors #primarynav ul li#navsponsorsexhibitors ul.secondary a,
+body.exhibitors #primarynav ul li#navsponsorsexhibitors ul.secondary a { color:#df8536; padding:0; background:transparent; }
+
+body.registration #primarynav ul li#navregistration:hover ul.secondary,
+body.hotels #primarynav ul li#navregistration:hover ul.secondary,
+body.maps #primarynav ul li#navregistration:hover ul.secondary,
+body.about #primarynav ul li#navabout:hover ul.secondary,
+body.art #primarynav ul li#navabout:hover ul.secondary,
+body.pdcclassics #primarynav ul li#navabout:hover ul.secondary,
+body.workshopsandsessions #primarynav ul li#navworkshopssessions:hover ul.secondary,
+body.scheduleitem #primarynav ul li#navworkshopssessions:hover ul.secondary,
+body.workshops #primarynav ul li#navworkshopssessions:hover ul.secondary,
+body.specialevents #primarynav ul li#navworkshopssessions:hover ul.secondary,
+body.speaker #primarynav ul li#navworkshopssessions:hover ul.secondary,
+body.behindthescenes #primarynav ul li#navblog:hover ul.secondary,
+body.whatshappening #primarynav ul li#navblog:hover ul.secondary,
+body.partneropportunities #primarynav ul li#navsponsorsexhibitors:hover ul.secondary,
+body.sponsors #primarynav ul li#navsponsorsexhibitors:hover ul.secondary,
+body.exhibitors #primarynav ul li#navsponsorsexhibitors:hover ul.secondary { display:block; position:relative; top:0;left:0;}
+
+body.registration #primarynav ul li#navregistration:hover ul.secondary li a,
+body.hotels #primarynav ul li#navregistration:hover ul.secondary li a,
+body.maps #primarynav ul li#navregistration:hover ul.secondary li a,
+body.about #primarynav ul li#navabout:hover ul.secondary li a,
+body.art #primarynav ul li#navabout:hover ul.secondary li a,
+body.pdcclassics #primarynav ul li#navabout:hover ul.secondary li a,
+body.workshopsandsessions #primarynav ul li#navworkshopssessions:hover ul.secondary li a,
+body.scheduleitem #primarynav ul li#navworkshopssessions:hover ul.secondary li a,
+body.workshops #primarynav ul li#navworkshopssessions:hover ul.secondary li a,
+body.specialevents #primarynav ul li#navworkshopssessions:hover ul.secondary li a,
+body.speaker #primarynav ul li#navworkshopssessions:hover ul.secondary li a,
+body.behindthescenes #primarynav ul li#navblog:hover ul.secondary li a,
+body.whatshappening #primarynav ul li#navblog:hover ul.secondary li a,
+body.partneropportunities #primarynav ul li#navsponsorsexhibitors:hover ul.secondary li a,
+body.sponsors #primarynav ul li#navsponsorsexhibitors:hover ul.secondary li a,
+body.exhibitors #primarynav ul li#navsponsorsexhibitors:hover ul.secondary li a { background: #FFF;}
+
+body.hotels a#navhotels,
+body.maps a#navmaps,
+body.art a#navart,
+body.pdcclassics a#navpdcclassics,
+body.workshops a#navworkshops,
+body.specialevents a#navspecialevents,
+body.session a#navsessions,
+body.video a#navvideos,
+body.schedule a#navschedule,
+body.speaker a#navspeakers,
+body.partneropportunities a#navpartneropportunities,
+body.exhibitors a#navexhibitors,
+body.behindthescenes a#navbehindthescenes,
+body.whatshappening a#navwhatshappening,
+body.news a#navnews { text-decoration:underline; }
+
+
+/* Content Globals
+--------------------------*/
+h1 { font-size:24px; margin:10px 0; font-weight:normal;}
+h2 { font-size:22px; margin:10px 0; font-weight:normal;}
+#hero h2 { margin:0 0 10px; }
+#hero img { float:left; padding:4px 13px 15px 0;}
+#hero a img { float:none; padding:0 0 0 2px; }
+#hero ul { float:left; }
+#hero { overflow:hidden; width:604px; }
+#primary { clear:left; }
+h3 { font-size: 18px; font-weight:normal; margin:0 0 5px 0;}
+h4 { font-weight:normal; }
+p { line-height:140%;}
+ul { margin:0 0 1.2em; }
+ul ul { margin:1.2em 0 0 0; }
+ul li { list-style:circle url("images/g_list_arrow.gif"); margin:0 0 1.2em 20px; line-height:130%;}
+ul.linklist {}
+a {}
+img.pullout { float:right; margin:0 0 20px 20px;}
+.contentitem { clear:both; margin-bottom:20px;}
+.contentitem img { float:left; padding:0 20px 20px 0; }
+#windowsSearch { float:right; }
+
+
+/* Sidebar
+--------------------------*/
+#sidebar div.bucket { margin-bottom:20px;}
+
+#sidebar #cta { background:#88a7d7 url("images/bg_register_top.gif") top left no-repeat; padding:10px 10px 6px; }
+#sidebar #cta h3, #sidebar #cta p { color:#FFF;} 
+#sidebar #cta img { padding-bottom:10px; }
+#sidebar #cta a.button { display:inline-block; background:url("images/bg_cta_button_right.gif") top right no-repeat; height:20px; padding: 2px 20px 7px 0; text-transform: uppercase; color:#FFF;}
+#sidebar #cta a.button span { background: url("images/bg_cta_button_left.gif") 0 50% no-repeat;padding: 0 0 0 20px; }
+
+#sidebar h3 { font-size: 18px; color: #b8b2ae; font-weight:normal; margin: 0 0 5px 0;}
+#sidebar p, #sidebar li { font-size: 11px; color: #928a84; }
+#sidebar li { list-style:none; list-style-image:none; margin:0; }
+#sidebar a { font-size: 11px; color: #60789c; text-decoration: none; }
+#sidebar a:hover { text-decoration: underline; }
+#sidebar p.timestamp { font-size: 10px; color: #c4bfbb; }
+#sidebar #subnav a { font-size: 12px; color: #928a84; text-decoration: none; }
+#sidebar #subnav a:hover { text-decoration: underline; }
+
+body.registration #sidebar #cta { display:none; }
+
+/* Footer
+--------------------------*/
+#footer { width:1177px; position:relative; left: -172px; padding: 20px 0 20px 0px;  height:110px; background:url("images/bg_footer.gif") top left no-repeat;}
+#footer ul { position:absolute; left:315px; top:37px; width: 440px;}
+#footer ul.credits {top:60px;}
+#footer ul li { display: inline; font-size: 90%; margin:0; padding: 0 10px; border-left: 1px solid #ccc; }
+#footer ul li:first-child { border: 0; }
+#footer ul li a { text-decoration:none;}
+#footer p { position:absolute; left:315px; top:75px; width:360px; font-size: 9px; color: #d5d0cc; margin-bottom:20px; }
+
+/* Home Hero Banner
+-----------------------------*/
+#hero { }
+#herobanner img { padding:0 15px 50px 0;}
+#herobanner { margin-bottom:15px; overflow:hidden; width: 604px; height: 288px; position: relative; background:#f7f5f3 url("images/bg_hero_bottom.gif") bottom left no-repeat; z-index: 0; }
+.heroenabled div.herosection { position: absolute; display:inline-block; top: 0; left: 0px; width: 604px; height: 261px; }
+
+.heroenabled .herotype1 { background:#f7f5f3;}
+.heroenabled .herotype1 img { float:left;}
+.heroenabled .herotype1 h4 {  font-size: 24px; color:#363636; margin-bottom:7px; padding-top:4px; }
+.heroenabled .herotype1 .heropage { width:569px; }
+#content .heroenabled .herotype1 p { font-size: 12px; color:#363636; }
+
+.heroenabled .herotype2 .heropage { width: 576px; }
+.heroenabled .herotype2 .heropage div { width: 287px; float:left; position:relative; height: 227px; margin-right: 1px; }
+#content #hero .heroenabled .herotype2 .heropage div img { padding:0px;}
+.heroenabled .herotype2 .heropage div p { padding: 0px 10px; font-size:12px;}
+.heroenabled .herotype2 .heropage div h4 { padding: 0px 10px; font-size:16px; margin-bottom: 7px; }
+.heroenabled .herotype2 .heropage .top { position:absolute; left:0px; bottom: 100px; z-index:50; padding:0; height: 147px; margin-right:0; }
+.heroenabled .herotype2 .heropage .top * { position:absolute; left:0; bottom:0; margin-right:0; }
+#herobanner.heroenabled .herotype2 .heropage .top img { padding: 0; }
+.heroenabled .herotype2 .heropage .bottom { position:absolute; left:0px; top: 134px;z-index:50; padding:0; height:96px;}
+.heroenabled .herosection { overflow: hidden;}
+.heropage { position: absolute; left: 15px; }
+
+.pagnav { position: absolute; top: 0; width: 14px; height: 129px; padding-top: 133px; text-align: center; cursor: pointer; background: #eee;  }
+#content #hero .pagnav img { padding: 0 0 0 3px;}
+#content #hero .paginactive img { display:none;}
+.pagnavback { margin-right: 1px; left: 0; background:#59504b url("images/bg_hero_corner.gif") bottom left no-repeat; color:#FFF; border-right:1px solid #DBD7D3;  }
+.pagnavnext { margin-left: 1px; right: 0; background:#59504b; color:#FFF; border-left:1px solid #DBD7D3;}
+.heroenabled .pagination { position: absolute; top: 10px; right: 20px; display: inline-block;  padding: 2px 6px; font-size: 11px; font-weight: normal; cursor: pointer;z-index:2000; }
+.heroenabled .paginactive { cursor: auto; }
+
+#content .heroenabled h3.herosection { background:none; position: relative; top: 266px; left: 120px; margin: 0 6px 0 10px; display: inline;  font-size: 14px; color:#b8b2ae; font-weight: normal; cursor: pointer; padding-left:10px; }
+#content .heroenabled h3.heroactive { color:#df8536; cursor: auto; background:url("images/bg_hero_nav_active.gif") 0px 3px no-repeat; }
+.pagination span { cursor: pointer; width:10px; height:10px; display:block; float:left; background:url("images/btn_hero_page_off.gif") top left no-repeat;}
+.pagination span span { display:none;}
+.pagination span.pageactive { cursor: auto; background: #eee;background:url("images/btn_hero_page_on.gif") top left no-repeat; }
+
+body.dyn .herosection { display:none; }
+body.dyn .first.herosection { display:inherit; }
+
+/* Session Browser
+-----------------------------*/
+#browser { width:589px; }
+
+#tabs { border-bottom:1px solid #b8b2ae; height:21px; } /*margin-bottom:7px; */
+#tabs a.tab { background: url("images/bg_tab_inactive.gif") top left no-repeat; width:99px; height:18px;display:block; float:left; text-transform:uppercase; color:#FFF; text-decoration:none; padding: 4px 0 0 15px; margin-right:5px; font-weight:bold;}
+body.schedule #tabs a#scheduletab,
+body.sessions #tabs a#sessionstab,
+body.videos #tabs a#videostab { background-image: url("images/bg_tab_active.gif");}
+
+div#tabs span#sharemyschedulelabel { float: right; cursor: pointer; color: #60789c; }
+
+div.controlbar { background:#e4e1de; margin:0 0 15px; overflow:hidden; padding:7px; }
+div.controlbar input#filter { border:1px solid #d1d1d1; width:135px; height:16px; margin:0 0 0 8px;  padding:3px; font-size:12px; color:#3b3b3b;}
+div.controlbar input { float:left; }
+div.controlbar #filters { float:left; margin: 11px 0 0 25px; font-size:11px; text-transform:lowercase; }
+input.search.button { background:url(images/btn_search.gif); border:0; display:block; float:left; height:25px; margin-left:7px;  padding:0 0 0 61px; text-indent:-9999px; width:61px; }
+input.search.button:hover { background-position:0 -25px; }
+input.search.button:active { background-position:0 -50px; }
+
+div.controlbar input.filter { border:0; background:transparent; float:none; }
+div.controlbar ol li { display: inline-block; padding: 0px 2px 0px 5px; border-left: 1px solid #666; }
+div.controlbar ol li.first { border:0; padding-left:8px; }
+div.controlbar label.expandcollapse { float: right; }
+
+#browser #currentTag { float:right; margin:7px 7px 0 0; }
+#browser #currentTag a.closebutton { float:right; margin:2px 0 0 2px; }
+.current.tag { font-weight:bold; }
+.current.tag a { outline:none; }
+
+div.showtags { background: #f5f5f5 url(images/bg_showtags.gif) no-repeat right; color: #938984; font-size: 11px; text-align: right; padding: 3px 32px; cursor: pointer; position:relative; top:-15px; }
+div.showtagsexpanded { background-image: url(images/bg_showtagsexpanded.gif); }
+body.dyn #sessiontags { display:none; position:relative; top:-15px; }
+#sessiontags { background: #f5f5f5; overflow: hidden; }
+#sessiontags h2 { color: #60789c; font-size: 18px; line-height:.8em; margin:0 0 15px 15px; }
+#sessiontags ul { width: 100%; }
+#sessiontags ul li.span1 {width:300px}
+#sessiontags ul li.span2 {width:600px}
+#sessiontags ul li { float: left; width: 175px; margin:0 0 5px 15px; list-style: none; }
+#sessiontags br { clear: left; }
+
+a.closebutton { background:url(images/btn_close.gif) no-repeat 0 0; border:0; cursor:default; display:block; float:left; height:12px; outline:none; padding:0; text-indent:-9999px; width:13px; }
+a.closebutton:hover { background-position:0 -12px; }
+a.closebutton:active { background-position:0 -24px; }
+#sessiontags a.closebutton { margin:3px 0 7px 14px; }
+
+#schedulegrid { }
+#schedulegrid div.controlbar a.active { font-weight:bold;}
+
+#schedule { overflow:hidden; }
+#schedule div.timeslot { margin-top: 5px; }
+#schedule div.timeslot h3 { display: block; width: 137px; padding: 3px; font-size: 12px;  color:#5e5954; float:left;}
+#schedule div.timeslot div.timeslotdesc { display: inline-block; width: 436px; padding: 5px; background:#f7f7f7; color:#3b3b3b;}
+#schedule div.hassessions div.timeslotdesc { color:#DF8536; font-weight: bold; }
+#schedule div.timeslotdesc span.sessionlabel { line-height:16px; }
+
+body.dyn.schedule .session,
+body.dyn.schedule .seminar,
+body.dyn.schedule .workshop { display: none; }
+#content #schedulegrid .scheduleItems { margin:0; }
+#content #schedulegrid .seminar,
+#content #schedulegrid .session,
+#content #schedulegrid .workshop { margin:7px 0 8px; }
+#schedulegrid div.enabled li.added,
+#schedulegrid div.showall li.seminar,
+#schedulegrid div.showall li.session,
+#schedulegrid div.showall li.workshop { display: block; }
+#schedulegrid span.slottoggle { background: url(images/bg_schedule_closed.gif) no-repeat scroll right top; cursor: pointer; float: right; padding:1px 20px 2px 0; }
+#schedulegrid span.slottoggle.shown { background-image: url(images/bg_minimizeall_w.gif); }
+#schedulegrid span.shown {  }
+
+div#sharemyschedule { float: left; clear: left; padding: 10px 0; }
+div#sharemyschedule h4 { font-weight: bold; font-size: 13px; }
+div#content div#sharemyschedule form label { display: inline; }
+input#schedulesharing { display: block; }
+
+div#sharemyschedulepopup { padding: 5px; }
+div#sharemyschedulepopup input#makeschedulepublic { vertical-align: middle; }
+div#sharemyschedulepopup label { font-weight: bold; padding:5px; }
+div#sharemyschedulepopup label span { vertical-align: middle; }
+div#sharemyschedulepopup strong { font-weight: normal; padding: 4px 4px 4px 0; margin-top: 4px; margin-left:4px;}
+div#sharemyschedulepopup input#scheduleurlinput { display: inline-block; width: 160px; background: #fff; border: 1px solid #aaa; padding: 4px; margin-top: 4px; color: #aaa; font-size: 11px; }
+
+
+#schedulegrid div.controlbar ol
+{
+    margin-top: 5px;
+    float:left;    
+}
+
+#schedulegrid div.controlbar ol.userFilter { float:right;}
+
+.userFilter { margin-top:5px; }
+.userFilter a.active { font-weight:bold; }
+    
+/* Pagination
+-----------------------------*/
+.paging { text-align: center; }
+#content .paging li { display:inline; margin:5px; padding:0 2px; text-transform: lowercase; }
+.paging a { display: inline-block; font-size: 12px; color: #5f779c; margin:5px 2px; text-decoration: none; }
+.paging a:hover { text-decoration: underline; }
+#content .paging .selected { cursor:default; display: inline-block; font-size: 12px; color: #fff; padding: 2px 4px; margin: 3px 1px; background: #df8536; font-weight: bold; }
+.paging .prev a { padding-left: 11px; background: url(images/btn_prev.gif) no-repeat; }
+.paging .next a { padding-right: 11px; background: url(images/btn_next.gif) right no-repeat; }
+#content .paging .prev { margin-right:0; }
+#content .paging .next { margin-left:0; }
+#content .paging .prev.selected { background: inherit; color: inherit; margin-right:6px; padding-left: 11px; background: url(images/btn_prev_grey.gif) no-repeat 0 50%; }
+#content .paging .next.selected { background: inherit; color: inherit; margin-left:6px; padding-right: 11px; background: url(images/btn_next_grey.gif) no-repeat 100% 50%; }
+
+/* Individual Sessions, default
+-----------------------------*/
+#resultSpeakerTemplate { display: none; }
+body.schedule .sessions { padding-left:3px; }
+.sessions .info.message { padding:15px; }
+.sessions .added { position:relative; left:-30px; padding-left:35px; background: url("images/bg_selected_session.gif") top left no-repeat;}
+.sessions .added input.addremove { color: #df8536;  background-image: url("images/bg_schedule_on.gif");}
+
+#content .scheduleItems li { margin:7px 0 8px; list-style:none; list-style-image:none; line-height:inherit; padding: 7px 0 7px 5px; }
+#content .scheduleItems li.odd { background:#fafafa; }
+#content .scheduleItems li.first { margin-top:0; }
+#content .scheduleItems li .speaker { font-weight:bold; }
+#content .scheduleItems li .overview { }
+#content .scheduleItems li .overview input { float: right; cursor: auto; color:#8d827f; }
+#content .scheduleItems li input { width:175px; }
+#content .scheduleItems li input.remove {  cursor:pointer; border:0px; height:17px; color: #df8536; background:transparent url("images/bg_schedule_on.gif") top right no-repeat; text-transform:uppercase; padding-right: 20px; }
+#content .scheduleItems li input.add { cursor:pointer; border:0px; height:17px; background:transparent url("images/bg_schedule_off.gif") top right no-repeat; text-transform:uppercase; padding-right: 20px;}
+#content .scheduleItems li input.saving { border:0px; height:17px; color: #8d827f; background: transparent url("images/bg_saving.gif") top right no-repeat;text-transform:uppercase; padding-right: 20px; }
+#content .scheduleItems li .overview h3 {  font-size: 18px; font-weight: normal; margin: 0; padding: 0;}
+#content .scheduleItems li .overview p {  font-size: 12px; color: #727272; margin: 0; padding: 0;}
+#content .scheduleItems li .details { margin-top: 5px; }
+#content .scheduleItems li .details img.scheduleItem { width: 100px; border: 1px solid #666; display:block; margin: 0 10px 10px 0; float: left; }
+#content .scheduleItems li .details .content { border-top:1px solid #F1F3F3; margin: 0; }
+#content .scheduleItems li .details .content p { margin: 0 0 1em 0; font-size: 12px;  }
+#content .scheduleItems li .details .content p.abstract { margin:1em 0; font-size: 12px; color: #727272; }
+#content .scheduleItems li .details .itemsidebar { background:#f1f3f3; width: 150px; margin: 0 0 10px 10px; float: right; font-size: 12px; }
+#content .scheduleItems li .details .itemsidebar .share { padding: 5px; font-size: 11px; color: #707070; border-bottom: 1px solid #fff; }
+#content .scheduleItems li .details .itemsidebar .comments { padding: 5px; font-size: 11px; color: #707070; border-bottom: 1px solid #fff; }
+
+/* Individual Sessions, my sessions
+-----------------------------*/
+.mysessions .session { background:#CCC; border-top:1px solid #333;}
+
+/* Session Permalink
+-----------------------------*/
+body.scheduleitem #content .more { margin:0; }
+body.scheduleitem #content .more li { list-style:none; list-style-image:none; margin-left:0; }
+
+/* Speakers
+-----------------------------*/
+#content .speakers li { margin:15px 0 0; list-style:none; list-style-image:none; line-height:inherit; }
+#content .speakers li.first { margin-top:0; }
+#content .speakers li img { float:left; margin:0 12px 15px 0; }
+
+/* Speaker 
+----------------------------*/
+.speaker p.bio { min-height:130px; }
+.speaker p img { margin-right: 20px; padding:0px; float:left; border: solid 1px #B8B2AE; }
+
+/* Blog Nav
+----------------------------*/
+#blognav { padding: 10px 0 0 15px;}
+#blognav h4 { color:#7d706d; font-weight:normal; padding-top:10px; font-size: 18px;}
+
+
+/* Blog
+-----------------------------*/
+#content ul.posts li { list-style-image: none; line-height: normal; list-style-type: none; margin: 10px 0 30px 0; clear: left; }
+#content ul.posts li h2 { margin:0px; }
+#content ul.posts li .posted { margin-bottom:15px; }
+#content ul.posts li img { float: left; margin-right: 15px; }
+#content .post .content object
+{
+    margin-bottom:8px;
+}
+
+img.bloghero { float: left; margin: 0 16px 6px 0; }
+a.back { font-size: 10px; }
+
+#content .post .metadata { margin-bottom:15px; }
+#content .post .more { margin:0; }
+#content .post .more li { list-style:none; list-style-image:none; margin-left:0; }
+
+.comments h3 { display: inline-block; margin-right: 40px; }
+.comments .comment { border-top: 1px solid #f1f1f1; margin-top: 10px; }
+.comments p.comment { border:0; }
+.comments .comment p { margin: 0; }
+.comments .comment .commenttext { margin-top: 14px;}
+.comments .comment .commenttext p { margin: 1em 0; }
+.gravatar { float: left; margin: 0 16px 6px 0; }
+
+form#addcomment { margin-top: 20px; }
+form#addcomment fieldset#commenterinfo { float: left; width: 212px; border: 0; }
+form#addcomment fieldset#commenterfield { float: right; width: 260px; }
+form#addcomment #commenterbuttons { float: left; width: 212px; padding-left: 80px; }
+.gravatar { width: 65px; font-size: 10px; }
+.gravatar a { display: block; }
+
+/* PAGER
+----------------------------------------------------------*/
+.pageState {
+    margin:0 0 0.6em;
+    font-style:italic;
+    text-align:right;
+}
+.pager {
+    height:2.2em;
+    margin-top:1.6em;
+}
+.pager a {
+    padding:.4em 1ex;
+    border:1px solid #D8DFE4;
+    margin:0 0 0 6px;
+    display:block;
+    float:right;
+}
+.pager a:hover {
+    text-decoration:none;
+    background-color:#F5F7F8;
+}
+
+
+/* What's Happening
+----------------------------*/
+#whatshappening span.date { display:block; font-size:10px;}
+#whatshappening a.rss { background:url(images/ico_rss_med.gif) no-repeat; display:inline-block; height:11px; overflow:hidden; padding-left:11px; width:0; }
+
+
+/* Connect with PDC
+-----------------------------*/
+#connect ul { margin: 5px 0;}
+#connect ul li { list-style:none; list-style-image:none; margin:0; }
+#connect a, #connect a:hover { display:block; height:20px; }
+a.rss { background: url("images/ico_rss.gif") top left no-repeat; padding-left:20px; }
+a.blog { background: url("images/pdc.png") top left no-repeat; padding-left:20px; }
+a.twitter { background: url("images/ico_twitter.gif") top left no-repeat; padding-left:20px; }
+a.facebook { background: url("images/ico_facebook.gif") top left no-repeat; padding-left:20px; }
+a.flickr { background: url("images/ico_flickr.gif") top left no-repeat; padding-left:20px; }
+a.list { background: url("images/ico_email.gif") top left no-repeat; padding-left:20px; }
+a.delicious { background: url("images/ico_delicious.gif") top left no-repeat; padding-left:20px; }
+a.digg { background: url("images/ico_digg.gif") top left no-repeat; padding-left:20px; }
+a.pdc2008 { background: url("images/ico_ch9.gif") top left no-repeat; padding-left:20px; }
+
+
+/* Twitterfeed
+-----------------------------*/
+#twitter ul { margin: 10px 0; }
+#twitter ul li { margin: 8px 0; }
+#twitter ul li p { margin: 0 0 2px 0; }
+#twitter .twtr-hd, #twitter .twtr-ft, #twitter .twtr-avatar { display: none; }
+#twitter .twtr-tweet-wrap { padding: 6px 0; }
+#twitter .twtr-tweet-text { margin-left: 0; }
+#twitter .twtr-widget .twtr-tweet { border: none; }
+
+
+/* Form fields
+------------------------------*/
+#content form label { display: block; color: #727272; font-size:12px; margin:10px 0 2px 0;}
+#content form label.forCheckbox { display: inline; }
+#content form input.text { border:1px solid #d1d1d1; background:#FFF; width:190px; height:20px; padding:3px 4px 0; } 
+#content form textarea { font-family: Arial, Helvetica, Sans-Serif; border:1px solid #d1d1d1; background:#FFF; width:260px; height:200px; } 
+#content form .blank { font-style: italic; color: #b8b2ae; } 
+#content form label.radio { display:inline;}
+#content form fieldset { border:0; margin:15px 0; }
+#content form fieldset p { margin-bottom:3px;}
+#content form fieldset p.error { color: #f00; }
+
+/* Lightbox
+-------------------------------*/
+#lightbox { position:fixed; top:0;left:0;width:100%; height:100%; background:url("images/bg_black.png") top left repeat; display:none;}
+#lightboxcontent { position:fixed; width:600px; height:300px; margin: 100px 200px; background:#CCC;}
+
+
+/* Sharing Links
+-----------------------------*/
+#content .share {  }
+#content .share div { border: 0; float: left; margin: 0; }
+body.dyn #content .share div { float: none; }
+#content .share ul { float:left; }
+body.dyn .share ul { display: none; float: none; margin-top: inherit; }
+#content .share ul li { list-style: none; margin: 2px 0 4px 8px; list-style-image: none; }
+body.dyn .share { position: relative; }
+body.dyn .share div { background: url("images/bg_sharing.gif") no-repeat 40px; cursor: pointer; }
+body.dyn .share ul { position: absolute; z-index: 5; top: 24px; left: 42px; width:72px; padding: 7px; background: #F1F3F3; border: 1px solid #FFF; border-top: 0; }
+body.dyn.scheduleitem .share ul { left:39px; top:16px; }
+body.dyn.post .share ul { left:39px; top:16px; }
+
+body.dyn #content .share ul li { font-size: 10px; margin: 2px 0 7px 0; padding:0; }
+body.dyn #content .share ul li.last { margin-bottom: 2px; }
+body.dyn.blog #content .shareactive ul { top: 14px; left: 41px; }
+
+/* Registration Page
+------------------------------*/
+body.registration #eventinfo { float:left; width:275px;}
+body.registration #eventpricing { float:right; width:300px;}
+body.registration thead td { font-weight:bold; }
+body.registration table td { padding:0 0 2px 0; width:263px; }
+body.registration dl { margin-bottom:1em; overflow:hidden; }
+body.registration dl dt { clear:left; float:left; font-weight:bold; width:30%; }
+body.registration dl dd { float:left; margin-left:10px; width:50%; }
+body.registration #hero a img { float:left; padding:0 0 0 2px; }
+#hero a.register { background-image:url(images/btn_register_now.gif); float:left; height:27px; width:132px; }
+
+/* Hotels Page 
+------------------------------*/
+#content #primary .hotel p { clear:none;}
+body.hotels #content thead { font-weight:bold; }
+body.hotels #content thead td { vertical-align:bottom; }
+body.hotels #content td { padding:0 7px 15px 0; vertical-align:top; }
+
+/* Workshops Page 
+------------------------------*/
+body.workshops #content td { padding:0 1% 0 0; vertical-align:top; width:200px; }
+body.workshops #content table.schedule { font-weight:bold; }
+body.workshops #content tr.break { font-weight:normal; }
+
+/* Special Events
+-------------------------------*/
+body.specialevents .event { overflow:auto; margin:4px 0 11px; }
+body.specialevents .event img { float:left; }
+body.specialevents #content .event h3,
+body.specialevents .event p { margin-left:263px; margin-top:-4px; }
+body.specialevents .event .info { font-size:18px; }
+
+/* Workshops + Sessions
+-------------------------------*/
+body.workshopsandsessions .event { overflow:auto; margin:4px 0 11px; }
+body.workshopsandsessions .event img { float:left; }
+body.workshopsandsessions #content .event h3,
+body.workshopsandsessions .event p { margin-left:263px; margin-top:-4px; }
+body.workshopsandsessions .event .info { font-size:18px; }
+
+/* Maps Page
+-------------------------------*/
+.map img { float:left; padding: 0 20px 20px 0;}
+.map { clear:both; margin-bottom: 20px;}
+
+/* PDC Classics Page
+-------------------------------*/
+
+body.pdcclassics img.videoPreview
+{
+    width:160px;
+    margin-left: -180px;
+}
+
+body.pdcclassics ul.posts li.post div.body
+{
+    margin-left: 180px;
+}
+
+/* Partner Opportunities Page
+-------------------------------*/
+body.partneropportunities dl { margin-bottom:1em; overflow:hidden; }
+body.partneropportunities dl dt { clear:left; float:left; font-weight:bold; width:10%; }
+body.partneropportunities dl dd { float:left; margin-left:10px; width:50%; }
+
+
+/* Partner Expo Page
+-------------------------------*/
+table#partnerexpo { width:100%; border-collapse: collapse; }
+table#partnerexpo td { padding: 5px;}
+table#partnerexpo tr.oddrow { background:#EFEFEF;}
+table#partnerexpo thead { background:#CCC;}
+
+/* Videos Page
+-------------------------------*/
+table#videolist { width:100%; border-collapse: collapse; }
+table#videolist td { padding: 5px;}
+table#videolist tr.oddrow { background:#EFEFEF;}
+table#videolist thead { background:#CCC;}
+table#videolist th { padding:4px;text-align:left;}
+ body.exhibitors div.Gold,
+ body.exhibitors div.Silver,
+ body.exhibitors div.Platinum {background: #F6F6F6;padding:5px;margin-left:-5px;}
+ 
+body.exhibitors div.Exhibitor,
+ body.exhibitors div.Gold,
+ body.exhibitors div.Silver,
+ body.exhibitors div.Platinum {margin-bottom:10px;}
+ 
+body.exhibitors div.Gold p,
+body.exhibitors div.Silver p,
+body.exhibitors div.Platinum p,
+ body.exhibitors div.Exhibitor p {margin-bottom: 0px;}
+ 
+body.exhibitors p.booth {font-style:italic; font-weight:bold;}
+body.exhibitors h3 {margin-bottom:2px;}
+
+/* Event Sponsors Page
+--------------------------------*/
+body.sponsors #content h2 { padding-right:11px; }
+body.sponsors #content img { float:left; margin:0 15px 15px 0; }
+body.sponsors #content p,
+body.sponsors #content h4 { clear:both; }
+
+/* About Page
+--------------------------------*/
+body.about table.upcomingevents {margin-top: 1.2em;}
+body.about table.upcomingevents td {padding-right:11px;}
+body.about table.upcomingevents tr {vertical-align:top;}
+
+
+/* Workshops Page
+--------------------------------*/
+.workshopindex { width:125px; float:left; margin: 0 10px 30px 0;}
+.workshopindex h4 { color:#363636; font-weight: normal; margin: 0 0 5px 0;}
+body.workshops #content h1 { clear:both;}
+
+/* Page Management Buttons
+--------------------------------*/
+/* ICON BUTTONS
+----------------------------------------------------------*/
+a.ibutton {
+    outline:none;
+}
+input.ibutton,
+a.ibutton img {
+    background:none;
+    border:none;
+    padding:2px;
+}
+input:hover.ibutton,
+a:hover.ibutton img { background:none; border:1px solid; padding:1px; }
+input.ibutton.remove, a.ibutton.remove img { border-color:#E6554B; }
+input.ibutton.edit,
+a.ibutton.edit img { border-color:#F7DF62; }
+input.ibutton.files, a.ibutton.files img {  border-color:#989898; }
+input.ibutton.add, a.ibutton.add img { border-color:#87B960; }
+input.ibutton.approve, a.ibutton.approve img { border-color:#7CBB65; } .admin.buttons { text-align:right; }
+.admin.manage.buttons { float:right; }
+#content .admin.manage.buttons { margin-right:-10px; }
+.admin.buttons form { display:inline; margin:0; padding:0; }
+#content .admin.buttons form fieldset, .admin.buttons form fieldset { display:inline; margin:0 0 -3px; }
+
+/* Hotel Map */
+.MSVE_Dashboard_V6 #MSVE_obliqueNotification, #MSVE_threeDNotification, #MSVE_threeDUpdatedNotification { visibility:hidden; }
+.VEAPI_Pushpin { text-decoration: none; }
+.pinStyle { color: #FFFFFF; cursor: pointer; font-family: Arial; font-size: 12px; font-style: normal; font-variant: normal; font-weight: bold; height: 30px; line-height: 180%; position: relative; text-align: center; top: -15px; width: 25px; }
+.pinStyle.circle { height: 16px; top: -8px; width: 16px; }
+.pinStyle img { padding: 0; }
+.pinStyle .text { color: #FFFFFF !important; position: relative; top: 2px; }
+.pinStyle a { color: #000 !important; text-decoration: none; }
+.map { border: 1px solid #B8B2AE; height: 330px; position: relative; width: 589px; }
+
+/* Hotel Page */
+body.hotels #hotelList .hotelListing
+{
+    padding:5px;
+    margin:5px;
+    overflow:auto;
+}
+body.hotels .preview
+{
+    float:left;
+    padding-right:20px;
+}
+body.hotels .info
+{
+    margin-left:279px;
+}
+body.hotels .name
+{
+    font-weight:bold;
+}
+body.hotels .info p
+{
+    margin-bottom:0px;
+}
+body.hotels ul#hotelList li p
+{
+    margin-bottom:0px;
+}
+body.hotels .ero .ero-body 
+{
+    width:300px;
+}
+.ero .ero-previewArea .info
+{
+    margin:0px;    
+}
+.ero .ero-previewArea .info p
+{
+    margin-bottom:0px;
+    padding:0 12px 5px 0;
+}
+.ero .ero-previewArea .name
+{
+    display:none;
+}
+
+
+/* Loading Message
+---------------------------------*/
+.message.loading { background:url(images/oooohhhh.gif) no-repeat 50% 50%; background-color:#FFF; background-color:rgba(255, 255, 255, .9); border:0; padding:0 10px; margin-left:-10px; }
+
+/* For TinyMCE
+---------------------------------*/
+body#tinymce { padding:15px; }
+
+
+/*Privacy Page
+---------------------------------*/
+body.privacy .lastUpdated
+{
+    font-size:xx-small;
+    font-style:italic;
+    text-align:right;
+}
+
+
+/* COMMENTS
+----------------------------------------------------------*/
+ul.comments.medium {
+    border:0;
+    margin:0;
+    color:#555;
+    overflow:hidden;
+}
+ul.comments.medium li 
+{
+    list-style-type:none;
+    margin:15px 0 0;
+    overflow:hidden;
+}
+ul.comments.medium li.first {
+    margin-top:0;
+}
+ul.comments.medium li.last {
+    margin-bottom:0;
+}
+ul.comments.medium .contents {
+    overflow:hidden;
+}
+ul.comments.medium li .name {
+    width:100ex;
+    margin:0 0 10px;
+}
+ul.comments.medium li .name .gravatar {
+    float:left;
+}
+ul.comments.medium li .name p {
+    margin:0;
+    white-space:nowrap;
+}
+ul.comments.medium li .name p,
+ul.comments.medium li .text {
+    padding:4px 0 0 80px;
+}
+
+
+
+/* POST COMMENTS
+----------------------------------------------------------*/
+#comments,
+form#comment {
+    padding:15px 0 0;
+    position:relative;
+}
+#comments li form#comment {
+    border-bottom:1px solid #F0F0F0;
+    border-top:none;
+    margin:0 0 1.6em;
+    padding:1.6em 0;
+}
+form#comment .replyingto {
+    margin:0 0 1.3em;
+}
+#comments .status {
+    overflow:hidden;
+}
+#comments .status.empty {
+    position:static;
+}
+#comments .status h3 {
+    float:left;
+    margin:0 0 7px;
+}
+#comments .status div {
+    float:left;
+    margin:4px 0 0 7px;
+}
+
+/* COMMENT FORM
+----------------------------------------------------------*/
+form#comment {
+    clear:both;
+    overflow:hidden;
+}
+form#comment.user fieldset {
+    float:none;
+}
+form#comment label {
+    display:inline;
+}
+form#comment .remember label,
+form#comment .subscribe label {
+    vertical-align:1px;
+}
+form#comment fieldset {
+    float:left;
+}
+body.dyn form#comment .comment .subscribe label {
+    display:inline;
+}
+form#comment fieldset .help,
+body.dyn .post form#comment fieldset .help {
+    display:block;
+}
+form#comment fieldset .remember,
+form#comment fieldset .subscribe {
+    padding:0 2ex 0 0;
+}
+form#comment fieldset .remember,
+form#comment fieldset .subscribe,
+form#comment fieldset .remember label,
+form#comment fieldset .subscribe label,
+body.dyn form#comment fieldset .remember label,
+body.dyn form#comment fieldset .subscribe label {
+    display:inline;
+}
+form#comment fieldset span {
+    font-size:82%;
+    font-style:italic;
+    display:block;
+    padding:.2em 0 0;    
+}
+form#comment fieldset input.text {
+    width:90%;
+}
+form#comment fieldset textarea {
+    width:97%;
+    font-size:13px;
+    height:20em;
+    margin:0;
+    padding:3px 4px;
+}
+form#comment fieldset textarea.authed {
+    width:98%;
+}
+form#comment fieldset.info {
+    width:45%;
+}
+form#comment fieldset.comment {
+    width:55%;
+}
+form#comment.user fieldset.comment {
+    margin:0;
+    width:auto;
+}
+form#comment.user textarea {
+    margin-bottom:15px;
+}
+form#comment fieldset.info div {
+    margin:0 0 1em;
+}
+form#comment fieldset.info div.submit {
+    margin-top:1em;
+}
+form#comment.user fieldset div.submit {
+    margin-top:15px;
+}
+form#comment fieldset.info #comment_grav {
+    margin:0 0 .2em;
+    overflow:hidden;
+    float:left;
+}
+form#comment fieldset.info .gravatarhelp {
+    padding:0 0 0 80px;
+}
+form#comment fieldset.info .name {
+    clear:left;
+    float:none;
+    margin:0 0 1em;
+    width:auto;
+}
+form#comment fieldset .help,
+body.dyn .post form#comment fieldset .help {
+    display:none;
+}
+form#comment fieldset input.text {
+    font-size:12px;
+    margin-left:0;
+    overflow:inherit;
+}
+
+/*-----Blog Bling page ----*/
+ul.blogBling,
+ul.desktopBling {
+    overflow:auto;
+}
+
+ul.blogBling li.banner,
+ul.desktopBling li.desktop
+{
+    float:left;
+    list-style:none;
+    padding-right:20px;
+}
+
+a.allSessions { float:right; }
+
+/*Search Results
+---------------------------------*/
+.searchResultsWrapper
+{
+	float:right;
+}
+
+.searchResults
+{
+	display:inline-block;
+	font-family:Verdana;
+	font-size:11px; 
+	color:#555;
+}
+
+.searchResults p
+{
+	float:left;
+	padding-top:10px;
+	margin-top:5px;
+	margin-right:6px;
+}
+
+.searchResults img
+{
+	margin-top:6px;	
+}
+
+/*----------------new home page css ---------------*/
+#closingWrapper{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333;
+	width:805px;
+	height:367px;
+	border-right:1px solid #ddd;
+	border-top:1px solid #ddd;
+	line-height:24px;
+}
+
+#closingWrapper a{
+	color:#60789C;
+	text-decoration:none;
+}
+
+#closingWrapper ul{
+	margin:-8px 0 0 100px;
+	list-style:none;
+}
+
+#closingWrapper ul li{
+}
+
+#mainContentWindow{
+	width:790px;
+	height:342px;
+	background:#999;
+	float:left;
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+	padding:0;
+	background-image:url('images/end_of_conference.jpg');
+	background-position:right;
+	background-repeat:no-repeat;
+}
+
+#mainContent{
+	margin:160px 0 0 260px;
+	padding:0 10px 10px 10px;
+	width:auto;
+}
+
+#mainContent h2{
+	margin:0 0 5px 0 ;
+	padding:6px 0 0 0;
+	font-weight:normal;
+	letter-spacing:normal;
+	font-size:20px;
+	line-height:26px;
+}
+
+#mainContent h5{
+	margin:0;
+	padding:0 0 13px 0;
+	font-weight:normal;
+	letter-spacing:normal;
+	font-size:14px;
+	line-height:normal;
+}
+
+.vertBar{
+	background:#59504b;
+	width:13px;
+	height:342px;
+	float:left;
+	color:#59504b;
+}
+
+body.livehome #content .scheduleItems li .details img.scheduleItem { width: 120px; border: 1px solid #666; display:block; margin: 0 10px 10px 0; float: left; }
+
+
+body.livehome #content .scheduleItems li
+{
+    padding:7px 0 7px 0;
+    float:left;
+}
+
+body.livehome #content, body.videopage #content
+{
+    width:807px;
+    border-width:0px;
+}
+
+body.livehome #primary
+{
+    float:left;
+    width:597px;
+}
+
+body.livehome #sidebar
+{
+    left:10px;
+    border-left:0px;
+    padding-right:6px;
+}
+
+body.livehome #primary, body.livehome #sidebar
+{
+    padding-top:20px;
+}
+
+table#videolist tr.smooth td a {font-weight:bold}

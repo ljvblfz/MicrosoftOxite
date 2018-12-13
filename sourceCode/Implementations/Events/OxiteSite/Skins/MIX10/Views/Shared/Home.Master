@@ -1,0 +1,160 @@
+﻿<%@ Import Namespace="Oxite.Modules.CMS.Extensions"%>
+<%@ Import Namespace="Oxite.Modules.Blogs.Extensions"%>
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage<OxiteViewModel>" %>
+<%@ Import Namespace="Oxite.Extensions" %><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<%
+    bool showVideoPlayer = false;  %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Microsoft MIX10: Designers &amp; Developers Las Vegas March 15-17</title>    <!-- <asp:ContentPlaceHolder ID="Title" runat="server"></asp:ContentPlaceHolder> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Oxite" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    <% Html.RenderFavIcon(); %>
+    <meta name="language" content="<%=Model.Site.LanguageDefault %>" />
+    <asp:ContentPlaceHolder ID="robots" runat="server"><meta name="robots" content="index,follow" /></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="MetaDescription" runat="server"><%=Html.PageDescription()%></asp:ContentPlaceHolder><%
+    Html.RenderOpenSearch(); %><asp:ContentPlaceHolder ID="SearchTags" runat="server"></asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="HeadCustom" runat="server"></asp:ContentPlaceHolder><% Html.RenderPartialFromSkin("HeadCustomContents"); %>
+    <asp:ContentPlaceHolder ID="HeadCssFiles" runat="server"></asp:ContentPlaceHolder>
+    <% if (showVideoPlayer)
+       { %>
+    <asp:ContentPlaceHolder ID="HeadScriptsVideo" runat="server"></asp:ContentPlaceHolder>
+    <%}
+       else
+       { %>
+    <asp:ContentPlaceHolder ID="HeadScriptsNoVideo" runat="server"></asp:ContentPlaceHolder>       
+    <% } %>
+    </head>
+    <% if (showVideoPlayer)
+       { %>
+    <asp:ContentPlaceHolder ID="bodyTagVideo" runat="server">
+<body id="homepage"></asp:ContentPlaceHolder>
+    <%}
+       else
+       { %>
+    <asp:ContentPlaceHolder ID="bodyTagNoVideo" runat="server">
+<body id="homepage"></asp:ContentPlaceHolder>
+    <% } %>
+        <% Html.RenderPartialFromSkin("Analytics"); %>    
+      <div class="container">  
+         <div id="header" class="clearfix">
+            <asp:ContentPlaceHolder ID="HeaderSiteName" runat="server"></asp:ContentPlaceHolder>
+            <% Html.RenderPartialFromSkin("Header"); %>
+	     </div>
+		<% Html.RenderPartialFromSkin("SiteNav"); %>
+    <% if (showVideoPlayer)
+       { %>
+	        <asp:ContentPlaceHolder ID="VideoPlayer" runat="server"></asp:ContentPlaceHolder>
+    <%}
+       else
+       { %>
+	        <asp:ContentPlaceHolder ID="HeroBanner" runat="server"></asp:ContentPlaceHolder>
+    <% } %>
+	        <div id="content" class="clearfix">
+		        <asp:ContentPlaceHolder ID="ContentHeader" runat="server">
+		            <%=Html.Content("Content") %>
+		            <div class="sessions">        
+                        <ul class="scheduleItems medium">
+                            <li class="seminar first">
+                                <div class="overview">
+                                    <h3><a href="/MIX10/Sessions/CL13">Overview of the Windows Phone 7 Series Application Platform</a></h3>
+                                    <p class="speaker"><a href="/Speakers/Charlie-Kindel">Charlie Kindel</a></p>
+                                </div>
+                                <div class="details">
+                                    <div class="content">
+                                        <p class="abstract"><img src="/Skins/MIX10/Styles/img/CL13.jpg" alt="Overview of the Windows Phone 7 Series Application Platform with Charlie Kindel" class="scheduleItem" />The new Windows Phone is coming! Get a high-level overview of the new application platform and a complete picture of the developer story. Learn about the developer tools, the application frameworks, the support for Silverlight, and the support for XNA.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="seminar odd">
+                                <div class="overview">
+                                    <h3><a href="/MIX10/Sessions/EX06">10 Ways to Attack a Design Problem and Come Out&nbsp;Winning</a></h3>
+                                    <p class="speaker"><a href="/Speakers/Robby-Ingebretsen">Robby Ingebretsen</a></p>
+                                </div>
+                                <div class="details">
+                                    <div class="content">
+                                        <p class="abstract"><img src="/Skins/MIX10/Styles/img/EX06.jpg" class="scheduleItem">See the design process in action as we walk through the creation of two (or three) apps from beginning to end. We’ll start with design requirements and talk about finding inspiration. We’ll show you how we created and documented the design through comps and wireframes. Finally, we’ll even take a look at unique coding techniques that allowed us to realize the vision. If you’re interested in the design process and want to see it in action, don’t miss this talk!</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="seminar">
+                                <div class="overview">
+                                    <h3><a href="/MIX10/Sessions/CL10">Stepping Outside the Browser with Microsoft Silverlight 4</a></h3>
+                                    <p class="speaker"><a href="/Speakers/Ashish-Shetty">Ashish Shetty</a></p>
+                                </div>
+                                <div class="details">
+                                    <div class="content">
+                                        <p class="abstract"><img src="/Skins/MIX10/Styles/img/CL10.jpg" alt="Stepping Outside the Browser with Microsoft Silverlight 4 with Ashish Shetty" class="scheduleItem" />
+                                        You can do a lot with a Silverlight 3 out-of-browser application - so what more do you need? Maybe file system access, the ability to host HTML content, the ability to customize the application chrome, greater control over the out-of-browser window, notifications, access to local components and the ability to playback rights protected media? If so, then this is the session for you to come find out about the new Silverlight 4 out-of -browser features and see some of the amazing things you can do with those features.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="seminar odd">
+                                <div class="overview">
+                                    <h3><a href="/MIX10/Sessions/DS05">Total Experience Design</a></h3>
+                                    <p class="speaker"><a href="/Speakers/Paul-Dawson">Paul Dawson</a></p>
+                                </div>
+                                <div class="details">
+                                    <div class="content">
+                                        <p class="abstract"><img src="/Skins/MIX10/Styles/img/DS05.jpg" alt="Total Experience Design with Paul Dawson" class="scheduleItem" />Your Mission: We need great creative ideas, we need them implemented, and we need to make customers love them, all in the space of six months. You have zero budget. Go! Under huge pressure to innovate, how do you get people to buy in to your ideas and then actually get them done? How do you avoid getting side-tracked by blue-sky thinking whilst delivering a project to time and budget yet still realize the ambitions we set in that blue-sky thinking? How do you even justify doing 'something different' or focusing on Experience in the first place? See how to get Experience-based innovation going, how to get it to flourish, how to define its success factors and measure the "Return on Experience".</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="seminar">
+                                <div class="overview">
+                                    <h3><a href="/MIX10/Sessions/EX14">Understanding the Model-View-ViewModel Pattern</a></h3>
+                                    <p class="speaker"><a href="/Speakers/Laurent-Bugnion">Laurent Bugnion</a></p>
+                                </div>
+                                <div class="details">
+                                    <div class="content">
+                                        <p class="abstract"><img src="/Skins/MIX10/Styles/img/EX14.jpg" alt="Understanding the Model-View-ViewModel Pattern with Laurent Bugnion" class="scheduleItem" />The Model-View-ViewModel pattern (also called MVVM) is a hot topic in today's Silverlight and WPF world. This pattern facilitates modern development techniques such as separation of concerns (decoupling), unit testing and test driven development, work with modern tools such as Microsoft Visual Studio 2010, Microsoft Expression Blend and more. In this session, Laurent (a user and promoter of MVVM since 2006) introduces this pattern to you with many demos. We talk about the basic components of a modern Microsoft Silverlight or Windows Presentation Foundation (WPF) application, and of additional helpers that will make your life as a developer much easier.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="seminar odd">
+                                <div class="overview">
+                                    <h3><a href="/MIX10/Sessions/FT07">Beyond File | New Company: From Cheesy Sample to Social Platform</a></h3>
+                                    <p class="speaker"><a href="/Speakers/Scott-Hanselman">Scott Hanselman</a></p>
+                                </div>
+                                <div class="details">
+                                    <div class="content">
+                                        <p class="abstract"><img src="/Skins/MIX10/Styles/img/FT07.jpg" alt="Beyond File | New Company: From Cheesy Sample to Social Platform with Scott Hanselman" class="scheduleItem" />The web has changed and there's a new way of thinking about your applications. You can't just write some HTML and CSS anymore and expect to be the next Twitter. Hear how to make your site socially relevant in the new decade (the '10s?) This session includes everything from Microsoft ASP.NET MVC2, to Windows Communication Foundation (WCF) and OData, JSON services and blog flair, microformats, and leverage ASP.NET and Microsoft Silverlight to create rich user experiences. Let's stop messing around and start changing the world. Or at least giving Nerds a place to eat dinner.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="seminar">
+                                <div class="overview">
+                                    <h3><a href="/MIX10/Sessions/CL24">The Microsoft Silverlight Analytics Framework</a></h3>
+                                    <p class="speaker"><a href="/Speakers/Michael-Scherotter">Michael Scherotter</a>, <a href="/Speakers/Alfonso-Corretti">Alfonso Corretti</a></p>
+                                </div>
+                                <div class="details">
+                                    <div class="content">
+                                        <p class="abstract"><img src="/Skins/MIX10/Styles/img/CL24.jpg" alt="The Microsoft Silverlight Analytics Framework with Michael Scherotter and Alfonso Corretti" class="scheduleItem" />Come hear about the Microsoft Silverlight Analytics Framework, which is a new extensible framework for integrating web analytics into Silverlight applications. See how it addresses the challenge of tracking out-of-browser and offline application and supporting multiple analytics services simultaneously. Learn how to use Expression Blend to visually instrument designs and do A/B testing. Also learn how to use components built by a number of analytics and control vendors in Web, video and rich client scenarios.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+		        </asp:ContentPlaceHolder>                 		        
+             </div>             
+             <% Html.RenderPartialFromSkin("SideBar"); %>		        
+             <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+     </div>     
+<% Html.RenderPartialFromSkin("Footer"); %>
+    <asp:ContentPlaceHolder ID="ScriptVariablesPre" runat="server"></asp:ContentPlaceHolder>
+    <%Html.RenderScriptTag("base.js");
+    Html.RenderScriptTag("Sessions.js?ver=2");
+    Html.RenderScriptTag("jquery.autocomplete.js");
+    Html.RenderScriptTag("SessionBrowser.4.js?rev=04152010"); %>
+    <% if (showVideoPlayer)
+       { %>
+    <asp:ContentPlaceHolder ID="ScriptsVideo" runat="server"></asp:ContentPlaceHolder>
+    <%}
+       else
+       { %>
+    <asp:ContentPlaceHolder ID="ScriptsNoVideo" runat="server"></asp:ContentPlaceHolder>
+    <% } %>
+    <asp:ContentPlaceHolder ID="ScriptVariablesPost" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>
+

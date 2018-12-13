@@ -1,0 +1,153 @@
+<TwitterDataModel RateLimitCount="150" RateLimitStartTime="2009-11-11T14:21:48-06:00" ErrorMessage="" SearchTerm="pdc09" LastId="5626860354" LastUpdate="2009-11-11T13:22:03.1612808-06:00" IconSource="{x:Null}" State="Active" xmlns="clr-namespace:archivist;assembly=archivist" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<TwitterDataModel.Tweets>
+		<TweetCollection SearchTerm="{x:Null}" LastId="{x:Null}" LastUpdate="0001-01-01">
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="gusfraser" TweetDate="2009-11-11T13:20:06-06:00" Status="Making lists of &quot;stuff&quot; to pack for #PDC09... leaving on Friday to get some LA sunshine!" TweetID="5626860354" Image="http://a3.twimg.com/profile_images/339615925/piper_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="ShayFan" TweetDate="2009-11-11T13:03:27-06:00" Status="Check it out! RT @HPCheer: Win a Touchsmart at #PDC09; RT/RSVP http://bit.ly/yZeZa and #HPatPDC. Be sure to say hi to the team and @AFinnie!" TweetID="5626510029" Image="http://a1.twimg.com/profile_images/118847234/Capture_normal.JPG" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="lvanlowe" TweetDate="2009-11-11T13:02:14-06:00" Status="@devhammer  I will be there getting to LA on Sunday #PDC09" TweetID="5626485235" Image="http://a1.twimg.com/profile_images/198797850/Listening_to_Music_01_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="HPCheer" TweetDate="2009-11-11T13:00:37-06:00" Status="Win a Touchsmart at #PDC09; RT/RSVP http://bit.ly/yZeZa and #HPatPDC. Be sure to say hi to the team and @AFinnie!" TweetID="5626448526" Image="http://a1.twimg.com/profile_images/428415410/hplogo_AFinnie_normal.JPG" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="bishop3000" TweetDate="2009-11-11T12:54:31-06:00" Status="Кто на PDC09?: Всего 5 дней назад жаловался, что начудил и могу не ус... http://bit.ly/3Jnxi2" TweetID="5626304604" Image="http://s.twimg.com/a/1257465343/images/default_profile_2_normal.png" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="Alec_Wasserman" TweetDate="2009-11-11T12:51:21-06:00" Status="RT @Office: Office &amp; SharePoint 2010 offer developers more than ever. PDC09 will not disappoint! #pdc09" TweetID="5626230314" Image="http://a3.twimg.com/profile_images/421275819/ROXBB6_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="kiselman" TweetDate="2009-11-11T12:51:13-06:00" Status="RT @Office: Office &amp; SharePoint 2010 offer developers more than ever. PDC09 will not disappoint! #pdc09" TweetID="5626227103" Image="http://a3.twimg.com/profile_images/202039071/misha_jap_park_normal.JPG" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="T4G_SharePoint" TweetDate="2009-11-11T12:47:43-06:00" Status="planning my schedule for #pdc09 next week - so much to see, so little time" TweetID="5626145736" Image="http://a1.twimg.com/profile_images/394598542/T4G_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="FYeomans" TweetDate="2009-11-11T12:47:42-06:00" Status="planning my schedule for #pdc09 next week - so much to see, so little time" TweetID="5626145672" Image="http://a1.twimg.com/profile_images/20234942/007_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="rwandering" TweetDate="2009-11-11T12:45:11-06:00" Status="@samiq: re: WinMo 7 bits at PDC09: I certainly hope we see some bits there." TweetID="5626085198" Image="http://a3.twimg.com/profile_images/70066753/rski2_normal.png" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="twvt_oc" TweetDate="2009-11-11T12:45:03-06:00" Status="Check out &quot;PDC09 Tweet Up&quot; on Nov 16th. RSVP at http://twvt.us/pdc09tweetup #PDC09Tweet #twvt" TweetID="5626081891" Image="http://a3.twimg.com/profile_images/383068005/p_normal.png" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="StuartPreston" TweetDate="2009-11-11T12:43:44-06:00" Status="Really looking forward to #PDC09 next week, will be hanging around the VS ALM booth a lot by the look of things." TweetID="5626050925" Image="http://a3.twimg.com/profile_images/517422831/stuphoto2_normal.png" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="akarcher" TweetDate="2009-11-11T12:39:29-06:00" Status="RT @PDC09   Tweetup location - FREE drinks at the Veranda Bar, Figueroa Hotel after the VS doc, Nov 16 at 7:30pm. http://bit.ly/2dsveD" TweetID="5625949746" Image="http://a3.twimg.com/profile_images/414910625/twitterProfilePhoto_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="amyrc" TweetDate="2009-11-11T12:36:53-06:00" Status="Tweetup location - FREE drinks at the Veranda Bar, Figueroa Hotel after the VS doc, Nov 16 at 7:30pm. http://bit.ly/2dsveD #PDC09" TweetID="5625888432" Image="http://a3.twimg.com/profile_images/508161319/twitterProfilePhoto_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="ddoomen" TweetDate="2009-11-11T12:35:34-06:00" Status="Packing my suitcase for the #pdc09. Also looking forward to Vegas" TweetID="5625857515" Image="http://a3.twimg.com/profile_images/422509049/twitterProfilePhoto_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="UndergroundPDC" TweetDate="2009-11-11T12:34:53-06:00" Status="RT @PDC09   Tweetup location - FREE drinks at the Veranda Bar, Figueroa Hotel after the VS doc, Nov 16 at 7:30pm. http://bit.ly/2dsveD" TweetID="5625840706" Image="http://a3.twimg.com/profile_images/499810231/ugIcon_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="msftkitchen" TweetDate="2009-11-11T12:33:20-06:00" Status="Join me at &quot;PDC09 Tweet Up&quot; on Nov 16th. RSVP at http://twvt.us/pdc09tweetup #PDC09Tweet #twvt" TweetID="5625804068" Image="http://a1.twimg.com/profile_images/456998298/twitter_normal.png" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="llangit" TweetDate="2009-11-11T12:32:37-06:00" Status="RT @PDC09   Tweetup location - FREE drinks at the Veranda Bar, Figueroa Hotel after the VS doc, Nov 16 at 7:30pm. http://bit.ly/2dsveD" TweetID="5625786637" Image="http://a1.twimg.com/profile_images/125258306/meRed_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="Imixe" TweetDate="2009-11-11T12:30:47-06:00" Status="RT @PDC09: Tweetup location - FREE drinks at the Veranda Bar, Figueroa Hotel after the VS doc, Nov 16 at 7:30pm.  http://bit.ly/2dsveD  / SI" TweetID="5625741777" Image="http://a3.twimg.com/profile_images/480867843/IMG_0109_normal.JPG" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="Imixe" TweetDate="2009-11-11T12:30:20-06:00" Status="RT @PDC09: Tweetup location - FREE drinks at the Veranda Bar, Figueroa Hotel after the VS doc, Nov 16 at 7:30pm.  http://bit.ly/2dsveD" TweetID="5625730756" Image="http://a3.twimg.com/profile_images/480867843/IMG_0109_normal.JPG" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="PDC09" TweetDate="2009-11-11T12:23:19-06:00" Status="Tweetup location - FREE drinks at the Veranda Bar, Figueroa Hotel after the VS doc, Nov 16 at 7:30pm.  http://bit.ly/2dsveD" TweetID="5625563145" Image="http://a1.twimg.com/profile_images/422317018/MDE-069_Twitter-Userpic_IR1d-sml_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="gduncan411" TweetDate="2009-11-11T12:08:54-06:00" Status="“The Devil’s Field Guide to the PDC – Eight tips toward a better PDC experience&quot; http://bit.ly/1Ldwh5 #pdc09" TweetID="5625215856" Image="http://a3.twimg.com/profile_images/79948435/IMG_2984_-_Small_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="ShayFan" TweetDate="2009-11-11T12:04:49-06:00" Status="@RobboModemMan Hard to believe #PDC09 is less than a week away! Hope you stop by #HPatPDC too! http://bit.ly/yZeZa" TweetID="5625117176" Image="http://a1.twimg.com/profile_images/118847234/Capture_normal.JPG" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="ShayFan" TweetDate="2009-11-11T12:02:38-06:00" Status="Thx 4 the RT @Johnna92 @troyfarrell @carolynishis @lifeonprint @leannegip @timothymcgrath hope to see you at the #PDC09 #HPatPDC tweetup!" TweetID="5625064537" Image="http://a1.twimg.com/profile_images/118847234/Capture_normal.JPG" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="sillygloop" TweetDate="2009-11-11T12:01:13-06:00" Status="RT @shanselman: Got fun Computer Trivia? Share here and it will be on stage at PDC09! Format as Q&amp;A: http://bit.ly/RkOx3" TweetID="5625029474" Image="http://a3.twimg.com/profile_images/494485331/OnABreakTakenByBala_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="jkuemerle" TweetDate="2009-11-11T11:55:55-06:00" Status="Getting my demos together since I'll be the booth babe for @PreEmptive at #PDC09. Too bad I cut my hair." TweetID="5624899658" Image="http://a3.twimg.com/profile_images/302759753/joe_kuemerle_small_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="JasonCampbell" TweetDate="2009-11-11T11:54-06:00" Status="Holding a big party during #pdc09 this yr &amp; your code to register at http://undergroundatpdc.com/ is csrnwi hurry! #silverlight" TweetID="5624853580" Image="http://a3.twimg.com/profile_images/61418883/me_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="TommyLee" TweetDate="2009-11-11T11:48:40-06:00" Status="@damonpayne Yes, we will have a live stream of the keynotes at #PDC09." TweetID="5624726610" Image="http://a3.twimg.com/profile_images/77329549/gravatar-thomas_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="dmakogon" TweetDate="2009-11-11T11:47:22-06:00" Status="Join me at &quot;PDC09 Tweet Up&quot; on Nov 16th. RSVP at http://twvt.us/pdc09tweetup #PDC09Tweet #twvt" TweetID="5624694922" Image="http://a3.twimg.com/profile_images/117882049/FacebookProfile-David_normal.jpg" />
+			<Tweet BadWord="{x:Null}" TweetStatus="Unapproved" Username="shanselman" TweetDate="2009-11-11T11:46:42-06:00" Status="Got fun Computer Trivia? Share here and it will be on stage at PDC09! Format as Q&amp;A: http://bit.ly/RkOx3" TweetID="5624679291" Image="http://a3.twimg.com/profile_images/495468683/image_normal.jpg" />
+		</TweetCollection>
+	</TwitterDataModel.Tweets>
+	<TwitterDataModel.Users>
+		<UserCollection />
+	</TwitterDataModel.Users>
+	<TwitterDataModel.ChartList>
+		<DataItem Name="{x:Null}" Date="2009-11-11" Count="96" />
+		<DataItem Name="{x:Null}" Date="2009-11-10" Count="169" />
+		<DataItem Name="{x:Null}" Date="2009-11-09" Count="122" />
+		<DataItem Name="{x:Null}" Date="2009-11-08" Count="31" />
+		<DataItem Name="{x:Null}" Date="2009-11-07" Count="17" />
+		<DataItem Name="{x:Null}" Date="2009-11-06" Count="72" />
+		<DataItem Name="{x:Null}" Date="2009-11-05" Count="66" />
+		<DataItem Name="{x:Null}" Date="2009-11-04" Count="64" />
+		<DataItem Name="{x:Null}" Date="2009-11-03" Count="57" />
+		<DataItem Name="{x:Null}" Date="2009-11-02" Count="46" />
+	</TwitterDataModel.ChartList>
+	<TwitterDataModel.PieList>
+		<DataItem Name="PDC09" Date="0001-01-01" Count="34" />
+		<DataItem Name="amyrc" Date="0001-01-01" Count="21" />
+		<DataItem Name="larsw" Date="0001-01-01" Count="17" />
+		<DataItem Name="jguadagno" Date="0001-01-01" Count="11" />
+		<DataItem Name="ShayFan" Date="0001-01-01" Count="10" />
+		<DataItem Name="jnine" Date="0001-01-01" Count="10" />
+		<DataItem Name="rsringeri" Date="0001-01-01" Count="9" />
+		<DataItem Name="AFinnie" Date="0001-01-01" Count="8" />
+		<DataItem Name="KodefuGuru" Date="0001-01-01" Count="8" />
+		<DataItem Name="llangit" Date="0001-01-01" Count="7" />
+		<DataItem Name="Anyware" Date="0001-01-01" Count="7" />
+		<DataItem Name="akcoder" Date="0001-01-01" Count="7" />
+		<DataItem Name="Costall" Date="0001-01-01" Count="7" />
+		<DataItem Name="ddoomen" Date="0001-01-01" Count="6" />
+		<DataItem Name="prebynski" Date="0001-01-01" Count="6" />
+		<DataItem Name="johnnystock" Date="0001-01-01" Count="6" />
+		<DataItem Name="dfinke" Date="0001-01-01" Count="6" />
+		<DataItem Name="OakParkGirl" Date="0001-01-01" Count="6" />
+		<DataItem Name="tomconte" Date="0001-01-01" Count="6" />
+		<DataItem Name="lvanlowe" Date="0001-01-01" Count="5" />
+		<DataItem Name="TommyLee" Date="0001-01-01" Count="5" />
+		<DataItem Name="ravinar" Date="0001-01-01" Count="5" />
+		<DataItem Name="samiq" Date="0001-01-01" Count="5" />
+		<DataItem Name="timjroberts" Date="0001-01-01" Count="5" />
+		<DataItem Name="gusfraser" Date="0001-01-01" Count="4" />
+		<DataItem Name="justamused" Date="0001-01-01" Count="4" />
+		<DataItem Name="HPCheer" Date="0001-01-01" Count="4" />
+		<DataItem Name="Imixe" Date="0001-01-01" Count="4" />
+		<DataItem Name="JasonCampbell" Date="0001-01-01" Count="4" />
+		<DataItem Name="OReillyUG" Date="0001-01-01" Count="4" />
+		<DataItem Name="lacuenca" Date="0001-01-01" Count="4" />
+		<DataItem Name="cgosimon" Date="0001-01-01" Count="4" />
+		<DataItem Name="Kosmatos" Date="0001-01-01" Count="4" />
+		<DataItem Name="lifeonprint" Date="0001-01-01" Count="4" />
+		<DataItem Name="jldavid" Date="0001-01-01" Count="4" />
+		<DataItem Name="carolynishis" Date="0001-01-01" Count="4" />
+		<DataItem Name="jsenior" Date="0001-01-01" Count="4" />
+		<DataItem Name="imhassan" Date="0001-01-01" Count="4" />
+		<DataItem Name="cwoodruff" Date="0001-01-01" Count="4" />
+		<DataItem Name="timsneath" Date="0001-01-01" Count="4" />
+		<DataItem Name="bjorn_eriksen" Date="0001-01-01" Count="4" />
+		<DataItem Name="rickmolloy" Date="0001-01-01" Count="4" />
+		<DataItem Name="DaveDev" Date="0001-01-01" Count="4" />
+		<DataItem Name="timheuer" Date="0001-01-01" Count="4" />
+		<DataItem Name="kiselman" Date="0001-01-01" Count="3" />
+		<DataItem Name="jkuemerle" Date="0001-01-01" Count="3" />
+		<DataItem Name="RobboModemMan" Date="0001-01-01" Count="3" />
+		<DataItem Name="Techno_Cat" Date="0001-01-01" Count="3" />
+		<DataItem Name="kurtbrockett" Date="0001-01-01" Count="3" />
+		<DataItem Name="rickasaurus" Date="0001-01-01" Count="3" />
+		<DataItem Name="rwwilden" Date="0001-01-01" Count="3" />
+		<DataItem Name="RyanCAtWork" Date="0001-01-01" Count="3" />
+		<DataItem Name="vincentdesmet" Date="0001-01-01" Count="3" />
+		<DataItem Name="woan" Date="0001-01-01" Count="3" />
+		<DataItem Name="Ritzy" Date="0001-01-01" Count="3" />
+		<DataItem Name="wlodin" Date="0001-01-01" Count="3" />
+		<DataItem Name="jeffcertain" Date="0001-01-01" Count="3" />
+		<DataItem Name="TuneUp4Windows" Date="0001-01-01" Count="3" />
+		<DataItem Name="victorgaudioso" Date="0001-01-01" Count="3" />
+		<DataItem Name="aashishnegi" Date="0001-01-01" Count="3" />
+		<DataItem Name="chrishayuk" Date="0001-01-01" Count="3" />
+		<DataItem Name="Systim" Date="0001-01-01" Count="3" />
+		<DataItem Name="Jaxidian" Date="0001-01-01" Count="3" />
+		<DataItem Name="m_rosenberg" Date="0001-01-01" Count="3" />
+		<DataItem Name="T4G_SharePoint" Date="0001-01-01" Count="2" />
+		<DataItem Name="FYeomans" Date="0001-01-01" Count="2" />
+		<DataItem Name="StuartPreston" Date="0001-01-01" Count="2" />
+		<DataItem Name="msftkitchen" Date="0001-01-01" Count="2" />
+		<DataItem Name="shanselman" Date="0001-01-01" Count="2" />
+		<DataItem Name="Pete_Brown" Date="0001-01-01" Count="2" />
+		<DataItem Name="damonpayne" Date="0001-01-01" Count="2" />
+		<DataItem Name="purplelover04" Date="0001-01-01" Count="2" />
+		<DataItem Name="leannegip" Date="0001-01-01" Count="2" />
+		<DataItem Name="will_robertson" Date="0001-01-01" Count="2" />
+		<DataItem Name="sweetp926" Date="0001-01-01" Count="2" />
+		<DataItem Name="boneil" Date="0001-01-01" Count="2" />
+		<DataItem Name="troyfarrell" Date="0001-01-01" Count="2" />
+		<DataItem Name="_jwJung" Date="0001-01-01" Count="2" />
+		<DataItem Name="lmoroney" Date="0001-01-01" Count="2" />
+		<DataItem Name="brian_henderson" Date="0001-01-01" Count="2" />
+		<DataItem Name="81megs" Date="0001-01-01" Count="2" />
+		<DataItem Name="EricLigman" Date="0001-01-01" Count="2" />
+		<DataItem Name="BobcatRidge" Date="0001-01-01" Count="2" />
+		<DataItem Name="davidyack" Date="0001-01-01" Count="2" />
+		<DataItem Name="mwinkle" Date="0001-01-01" Count="2" />
+		<DataItem Name="BuciboLebo" Date="0001-01-01" Count="2" />
+		<DataItem Name="bertcraven" Date="0001-01-01" Count="2" />
+		<DataItem Name="ShayLevy" Date="0001-01-01" Count="2" />
+		<DataItem Name="donbox" Date="0001-01-01" Count="2" />
+		<DataItem Name="bsubra" Date="0001-01-01" Count="2" />
+		<DataItem Name="OffBeatMammal" Date="0001-01-01" Count="2" />
+		<DataItem Name="clemensv" Date="0001-01-01" Count="2" />
+		<DataItem Name="ythos" Date="0001-01-01" Count="2" />
+		<DataItem Name="mxrss" Date="0001-01-01" Count="2" />
+		<DataItem Name="WadeWegner" Date="0001-01-01" Count="2" />
+		<DataItem Name="emsieja" Date="0001-01-01" Count="2" />
+		<DataItem Name="lazycoder" Date="0001-01-01" Count="2" />
+		<DataItem Name="robzelt" Date="0001-01-01" Count="2" />
+		<DataItem Name="chrisntr" Date="0001-01-01" Count="2" />
+		<DataItem Name="Gervercom" Date="0001-01-01" Count="2" />
+	</TwitterDataModel.PieList>
+</TwitterDataModel>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="OxiteMessages">
+  <DataContextMoniker Name="/OxiteMessagesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="92176cac-4f57-4ecb-971f-6ddc88bf3468" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/OxiteMessagesDataContext/oxite_MessageOutbound" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0605e903-ea1d-483b-8334-b0d6b86e66bf" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

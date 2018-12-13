@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[oxite_Tag] ADD CONSTRAINT [PK_oxite_Tag] PRIMARY KEY CLUSTERED  ([TagID]) ON [PRIMARY]
+
+

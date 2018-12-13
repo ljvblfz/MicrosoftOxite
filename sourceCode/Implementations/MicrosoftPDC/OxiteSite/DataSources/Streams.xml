@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Streams>
+	<Stream Name="PDC" Priority="1" IsEnabled="True" Uri="http://ispss.istreamplanet.com/live.isml/manifest" />
+	<Stream Name="Channel 9" Priority="2" IsEnabled="True" Uri="http://streams.pdc09.vertigo.com/keynote.isml/Manifest" />
+</Streams>

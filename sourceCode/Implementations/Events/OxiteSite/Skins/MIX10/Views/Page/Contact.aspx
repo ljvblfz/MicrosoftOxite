@@ -1,0 +1,50 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewPage<OxiteViewModelItems<string>>" MasterPageFile="../Shared/Site.master" %>
+<%@ Import Namespace="Oxite.Modules.CMS.Extensions"%>
+<%@ Import Namespace="Oxite.Models.Extensions"%>
+<%@ Import Namespace="Oxite.Extensions"%>
+<asp:Content ContentPlaceHolderID="bodyTag" runat="server" ><body id="contactus"></asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentHeader" runat="server">
+    <div id="content">
+    <h1><%=Model.Localize("Contact Us") %></h1>
+    <%=Html.Content("Intro") %>
+    <% if (Model.Items.Count() > 0)
+       {  %>    
+    <p>Thank you for your feedback, it has been sent along to the Microsoft MIX team.</p>
+    <% }
+       else
+       {%>
+    <form method="post" id="contactUs" action="" class="contactUs">
+        <p><%=Model.Localize("ContactUsHelp",
+                                            "Please use the form below to send us any comments or questions you have.")%></p>
+        <%=Html.ValidationSummary()%>
+        <fieldset class="subject">
+            <label for="contact_subject"><%=Model.Localize("Subject")%></label>
+            <%=Html.TextBox("subject", Request["subject"], new {id = "contact_subject", @class = "text"})%>
+        </fieldset>
+        <fieldset class="email">
+            <label for="contact_email"><%=Model.Localize("Email")%></label>
+            <%=Html.TextBox("email", Request["email"], new {id = "contact_email", @class = "text"})%>
+            <%=Html.ValidationMessage("ContactForm.Email", "Valid email required to submit feedback.")%>
+            <%=Html.ValidationMessage("UserBase.Email", "Invalid email.")%>
+        </fieldset>
+        <fieldset class="message">
+            <label for="contact_message"><%=Model.Localize("Message")%></label>
+            <%=Html.TextArea("message", Request["message"], new {id = "contact_message", @class = "text"})%>
+        </fieldset>
+        <fieldset class="submit">
+            <input type="submit" value="<%=Model.Localize("SendFeedbackButton", "Send Feedback")%>" id="contact_submit" class="submit button" />
+        </fieldset>
+    </form>
+    <%
+       }
+        %>
+</div>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Title" runat="server">
+    <%=Html.PageTitle(Model.Localize("Contact Us"))%>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="Scripts" runat="server"><%
+    Html.RenderScriptTag("base.js"); %>
+</asp:Content>

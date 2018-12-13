@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Oxite.Database" Class="OxiteCommentsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Oxite.Database;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.oxite_User" Member="oxite_Users">
+    <Type Name="oxite_User">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="HashedEmail" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultLanguageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_User_oxite_Comment" Member="oxite_Comments" ThisKey="UserID" OtherKey="CreatorUserID" Type="oxite_Comment" />
+      <Association Name="oxite_User_oxite_Subscription" Member="oxite_Subscriptions" ThisKey="UserID" OtherKey="UserID" Type="oxite_Subscription" />
+      <Association Name="oxite_Language_oxite_User" Member="oxite_Language" ThisKey="DefaultLanguageID" OtherKey="LanguageID" Type="oxite_Language" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Language" Member="oxite_Languages">
+    <Type Name="oxite_Language">
+      <Column Name="LanguageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageDisplayName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Language_oxite_User" Member="oxite_Users" ThisKey="LanguageID" OtherKey="DefaultLanguageID" Type="oxite_User" />
+      <Association Name="oxite_Language_oxite_Comment" Member="oxite_Comments" ThisKey="LanguageID" OtherKey="LanguageID" Type="oxite_Comment" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Comment" Member="oxite_Comments">
+    <Type Name="oxite_Comment">
+      <Column Name="ParentCommentID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CommentID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatorEmail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreatorHashedEmail" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatorUrl" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="LanguageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorIP" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UserAgent" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_Comment_oxite_Comment" Member="oxite_Comments" ThisKey="CommentID" OtherKey="ParentCommentID" Type="oxite_Comment" />
+      <Association Name="oxite_Comment_oxite_Comment" Member="oxite_Comment1" ThisKey="ParentCommentID" OtherKey="CommentID" Type="oxite_Comment" IsForeignKey="true" />
+      <Association Name="oxite_Language_oxite_Comment" Member="oxite_Language" ThisKey="LanguageID" OtherKey="LanguageID" Type="oxite_Language" IsForeignKey="true" />
+      <Association Name="oxite_User_oxite_Comment" Member="oxite_User" ThisKey="CreatorUserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_Subscription" Member="oxite_Subscriptions">
+    <Type Name="oxite_Subscription">
+      <Column Name="SubscriptionID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserEmail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="oxite_User_oxite_Subscription" Member="oxite_User" ThisKey="UserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

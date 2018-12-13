@@ -1,0 +1,61 @@
+﻿* { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; }
+
+body { font-size: 10px; font-family: Arial, Helvetica, Sans-Serif; color: #000; margin: 0 0 0 10px; padding-top: 0; }
+a { color: #5f779c; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a img { border: 0; }
+
+table#grid { margin: 0 auto; width: 95%; }
+
+div#header { position: relative; }
+div#header h1 { display: inline-block; width: 220px; height: 32px; margin-bottom: 10px;  }
+div#header ul#toplinks { position: absolute; top: 0; right: 0; }
+div#header ul#toplinks li { list-style: none; margin-top: 4px; text-align: right; }
+div#header ul#toplinks li a { color: #666; font-size: 9px; }
+div#header ul#toplinks li a img { margin-left: 4px; }
+
+tr#nav td { width: 1%; border-bottom: 1px solid #7d706d; padding: 0 5px 3px 5px; }
+tr#nav td.active { border: 1px solid; border-top-width: 0; border-color: #fff #7d706d #fff #7d706d; }
+tr#nav td.first { border-left-color: #fff; padding-left: 0; }
+tr#nav td.last { width: auto; }
+tr#nav td a { text-transform: uppercase; font-size: 10.5px; font-weight: bold; color: #7d706d; }
+tr#nav td.active a { color: #df8536; }
+
+tr#subnav td { height: 14px; padding: 2px 0; border-bottom: 1px solid #7d706d; }
+tr#subnav ul { margin: 0 auto; width: 96%; clear: left; height: 18px; }
+tr#subnav ul li { display: inline; float: left; padding: 3px 10px 3px 0; list-style: none; }
+tr#subnav ul li a { font-size: 10px; color: #df8536; }
+tr#subnav ul li.active a { text-decoration: underline; font-weight: bold; }
+
+
+table#schedule td { padding: 3px 10px 3px 0; border-bottom: 1px solid #7d706d; }
+table#schedule td.time { font-size: 8px; width: 74px; vertical-align: middle; }
+table#schedule td.desc { font-size: 11px; font-weight: bold; }
+table#schedule td.desc span { font-size: 10px; font-weight: normal; }
+table#schedule td.pagination { font-size: 8px; border: 0; }
+
+div#footer { width: 97.5%; padding-bottom: 30px; margin-top: 30px; background: url(images/bg_footer.gif) bottom right no-repeat; }
+div#footer ul { width: 97.5%; margin: 0 0 0 auto; padding: 0; }
+div#footer ul li { display: inline; border-right: 1px solid #7d706d; margin: 0; padding: 0 3px; }
+div#footer ul li.first { padding-left: 0; }
+div#footer ul li.last { border: 0; }
+
+
+/* POCKET IE STYLES
+-----------------------------*/
+@media not all 
+{
+
+div#header ul#toplinks { position: inherit; margin: 0; padding: 0;}
+div#header ul#toplinks li { display: inline; list-style: none; margin-top: 4px; }
+div#header ul#toplinks li a { color: #666; font-size: 9px; }
+div#header ul#toplinks li a img { margin: 0 10px 0 4px; }
+
+div#navigation { position: inherit; border: 0; margin-top: 4px; }
+div#navigation ul { position: inherit; margin: 0; padding: 0; }
+div#navigation ul li { padding-bottom: 0; }
+div#navigation ul li.active { border: 0; }
+
+div#subnav ul li { padding: 0 10px 0 0; }
+
+}

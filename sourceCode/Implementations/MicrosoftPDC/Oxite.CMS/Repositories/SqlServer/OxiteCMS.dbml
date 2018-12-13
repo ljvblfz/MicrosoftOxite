@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Oxite.Database" Class="OxiteCMSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Oxite.Database;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.oxite_CMS_PageRoleUserRelationship" Member="oxite_CMS_PageRoleUserRelationships">
+    <Type Name="oxite_CMS_PageRoleUserRelationship">
+      <Column Name="PageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="oxite_CMS_Page_oxite_CMS_PageRoleUserRelationship" Member="oxite_CMS_Page" ThisKey="PageID" OtherKey="PageID" Type="oxite_CMS_Page" IsForeignKey="true" />
+      <Association Name="oxite_User_oxite_CMS_PageRoleUserRelationship" Member="oxite_User" ThisKey="UserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_CMS_Page" Member="oxite_CMS_Pages">
+    <Type Name="oxite_CMS_Page">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TemplateName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Slug" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PublishedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="oxite_CMS_Page_oxite_CMS_PageRoleUserRelationship" Member="oxite_CMS_PageRoleUserRelationships" ThisKey="PageID" OtherKey="PageID" Type="oxite_CMS_PageRoleUserRelationship" />
+      <Association Name="oxite_CMS_Page_oxite_CMS_ContentItem" Member="oxite_CMS_ContentItems" ThisKey="PageID" OtherKey="PageID" Type="oxite_CMS_ContentItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_User" Member="oxite_Users">
+    <Type Name="oxite_User">
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="HashedEmail" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultLanguageID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="oxite_User_oxite_CMS_PageRoleUserRelationship" Member="oxite_CMS_PageRoleUserRelationships" ThisKey="UserID" OtherKey="UserID" Type="oxite_CMS_PageRoleUserRelationship" />
+      <Association Name="oxite_User_oxite_CMS_ContentItem" Member="oxite_CMS_ContentItems" ThisKey="UserID" OtherKey="CreatorUserID" Type="oxite_CMS_ContentItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.oxite_CMS_ContentItem" Member="oxite_CMS_ContentItems">
+    <Type Name="oxite_CMS_ContentItem">
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PageID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ContentItemID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ContentItemName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContentItemDisplayName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Body" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Version" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PublishedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="oxite_CMS_Page_oxite_CMS_ContentItem" Member="oxite_CMS_Page" ThisKey="PageID" OtherKey="PageID" Type="oxite_CMS_Page" IsForeignKey="true" />
+      <Association Name="oxite_User_oxite_CMS_ContentItem" Member="oxite_User" ThisKey="CreatorUserID" OtherKey="UserID" Type="oxite_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

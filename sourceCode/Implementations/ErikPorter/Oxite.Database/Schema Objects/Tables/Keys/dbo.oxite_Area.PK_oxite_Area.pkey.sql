@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[oxite_Area] ADD CONSTRAINT [PK_oxite_Area] PRIMARY KEY CLUSTERED  ([AreaID]) ON [PRIMARY]
+
+

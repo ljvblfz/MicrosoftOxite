@@ -1,0 +1,63 @@
+﻿//  --------------------------------
+//  Copyright (c) Microsoft Corporation. All rights reserved.
+//  This source code is made available under the terms of the Microsoft Public License (Ms-PL)
+//  http://www.codeplex.com/oxite/license
+//  ---------------------------------
+using System.Web.Mvc;
+using Oxite.Infrastructure;
+using Oxite.Tests.Fakes;
+using Xunit;
+
+namespace Oxite.Tests.Filters
+{
+    public class FilterRegistryTests
+    {
+        private FilterRegistryContext GetFakeContext()
+        {
+            return new FilterRegistryContext(new ControllerContext(), new FakeActionDescriptor());
+        }
+
+        [Fact]
+        public void AddThenGetMatchesOneFilterOfOneType()
+        {
+            FakeUnityContainer container = new FakeUnityContainer();
+
+            container.Add(new FakeActionFilter());
+
+            FilterRegistry registry = new FilterRegistry(container);
+
+            registry.Add(new[] { new FakeFilterCriteria() { IsMatch = true }}, typeof(FakeActionFilter));
+
+            FilterInfo filters = registry.GetFilters(this.GetFakeContext());
+
+            Assert.Equal(1, filters.ActionFilters.Count);
+            Assert.IsType<FakeActionFilter>(filters.ActionFilters[0]);
+            Assert.Equal(0, filters.AuthorizationFilters.Count);
+            Assert.Equal(0, filters.ExceptionFilters.Count);
+            Assert.Equal(0, filters.ResultFilters.Count);
+        }
+
+        [Fact]
+        public void AddThenGetMatchesOneFilterOfMultipleTypes()
+        {
+            FakeUnityContainer container = new FakeUnityContainer();
+
+            container.Add(new FakeMultiFilter());
+
+            FilterRegistry registry = new FilterRegistry(container);
+
+            registry.Add(new[] { new FakeFilterCriteria() { IsMatch = true } }, typeof(FakeMultiFilter));
+
+            FilterInfo filters = registry.GetFilters(this.GetFakeContext());
+
+            Assert.Equal(1, filters.ActionFilters.Count);
+            Assert.IsType<FakeMultiFilter>(filters.ActionFilters[0]);
+            Assert.Equal(1, filters.AuthorizationFilters.Count);
+            Assert.IsType<FakeMultiFilter>(filters.AuthorizationFilters[0]);
+            Assert.Equal(1, filters.ExceptionFilters.Count);
+            Assert.IsType<FakeMultiFilter>(filters.ExceptionFilters[0]);
+            Assert.Equal(1, filters.ResultFilters.Count);
+            Assert.IsType<FakeMultiFilter>(filters.ResultFilters[0]);
+        }
+    }
+}

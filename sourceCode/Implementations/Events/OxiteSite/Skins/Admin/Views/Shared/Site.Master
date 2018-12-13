@@ -1,0 +1,31 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.Mvc.ViewMasterPage<OxiteViewModel>" %>
+<%@ Import Namespace="Oxite.Extensions"
+%><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><asp:ContentPlaceHolder ID="Title" runat="server"><%=Html.PageTitle() %></asp:ContentPlaceHolder></title>
+    <meta name="generator" content="Oxite" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <%
+    Html.RenderFavIcon(); %>
+    <meta name="language" content="<%=Model.Site.LanguageDefault %>" />
+    <meta name="robots" content="index,follow" />
+    <asp:ContentPlaceHolder ID="MetaDescription" runat="server"><%=Html.PageDescription()%></asp:ContentPlaceHolder><%
+    Html.RenderOpenSearch(); %>
+    <asp:ContentPlaceHolder ID="HeadCustom" runat="server"></asp:ContentPlaceHolder><%
+    Html.RenderPartialFromSkin("HeadCustomContents"); %><asp:ContentPlaceHolder ID="HeadCssFiles" runat="server"></asp:ContentPlaceHolder><asp:ContentPlaceHolder ID="HeadScripts" runat="server"></asp:ContentPlaceHolder></head>
+    <body class="<%=Html.PageClassification() %>">
+    <script type="text/javascript">/*<![CDATA[*/document.body.className += (document.body.className.length > 0 ? ' ' : '') + 'dyn';//]]></script>
+    <div id="page">
+        <div id="header"><%
+            Html.RenderPartialFromSkin("Header"); %>
+        </div>
+        <div id="main"><asp:ContentPlaceHolder ID="ContentHeader" runat="server" /><asp:ContentPlaceHolder ID="MainContent" runat="server" />        </div>
+        <div id="footer"><%
+            Html.RenderPartialFromSkin("Footer"); %>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="ScriptVariablesPre" runat="server"></asp:ContentPlaceHolder><asp:ContentPlaceHolder ID="Scripts" runat="server"></asp:ContentPlaceHolder><asp:ContentPlaceHolder ID="ScriptVariablesPost" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

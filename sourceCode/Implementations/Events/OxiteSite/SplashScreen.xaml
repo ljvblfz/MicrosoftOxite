@@ -1,0 +1,78 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/client/2007"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="#FF000000"
+    Height="406" Width="940">
+
+	<Canvas x:Name="LayoutRoot">
+		<TextBlock Canvas.Left="375" Canvas.Top="189" FontSize="18.667" Foreground="#FFFFFFFF" Text="Starting the Video..." />
+		<Canvas x:Name="Radar" Width="36" Height="36" Canvas.Left="450" Canvas.Top="146" RenderTransformOrigin="0.5,0.5" Canvas.ZIndex="71">
+			<Canvas.Triggers>
+				<EventTrigger RoutedEvent="Canvas.Loaded">
+					<BeginStoryboard>
+						<Storyboard x:Name="LoadingAnimation" BeginTime="0:0:0.3" RepeatBehavior="Forever">
+							<DoubleAnimation Storyboard.TargetName="Radar" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.5" />
+							<DoubleAnimation Storyboard.TargetName="A" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.00" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="B" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.05" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="C" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.10" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="D" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.15" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="E" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.20" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="F" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.25" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="G" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.30" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="H" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.35" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="I" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.40" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="J" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.45" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="K" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.50" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="L" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.55" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="M" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.60" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="N" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.65" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="O" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.70" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="P" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.75" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="Q" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.80" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="R" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.85" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="S" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.90" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="T" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:0.95" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="U" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:1.00" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="V" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:1.05" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="W" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:1.10" Duration="0:0:1.2" RepeatBehavior="Forever" />
+							<DoubleAnimation Storyboard.TargetName="X" Storyboard.TargetProperty="Opacity" From="1" To="0.2" BeginTime="0:0:1.15" Duration="0:0:1.2" RepeatBehavior="Forever" />
+						</Storyboard>
+					</BeginStoryboard>
+				</EventTrigger>
+			</Canvas.Triggers>
+			
+			<Canvas.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform Y="0"/>
+				</TransformGroup>
+			</Canvas.RenderTransform>
+			
+			<Ellipse x:Name="A" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="16.75" Canvas.Top="0" />
+			<Ellipse x:Name="B" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="21.087" Canvas.Top="0.57" />
+			<Ellipse x:Name="C" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="25.126" Canvas.Top="2.244" />
+			<Ellipse x:Name="D" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="28.595" Canvas.Top="4.906" />
+			<Ellipse x:Name="E" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="31.256" Canvas.Top="8.375" />
+			<Ellipse x:Name="F" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="32.929" Canvas.Top="12.415" />
+			<Ellipse x:Name="G" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="33.5" Canvas.Top="16.75" />
+			<Ellipse x:Name="H" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="32.93" Canvas.Top="21.084" />
+			<Ellipse x:Name="I" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="31.257" Canvas.Top="25.125" />
+			<Ellipse x:Name="J" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="28.594" Canvas.Top="28.594" />
+			<Ellipse x:Name="K" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="25.126" Canvas.Top="31.256" />
+			<Ellipse x:Name="L" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="21.086" Canvas.Top="32.93" />
+			<Ellipse x:Name="M" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="16.75" Canvas.Top="33.5" />
+			<Ellipse x:Name="N" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="12.416" Canvas.Top="32.93" />
+			<Ellipse x:Name="O" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="8.376" Canvas.Top="31.257" />
+			<Ellipse x:Name="P" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="4.906" Canvas.Top="28.594" />
+			<Ellipse x:Name="Q" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="2.245" Canvas.Top="25.125" />
+			<Ellipse x:Name="R" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="0.571" Canvas.Top="21.085" />
+			<Ellipse x:Name="S" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="0" Canvas.Top="16.75" />
+			<Ellipse x:Name="T" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="0.572" Canvas.Top="12.414" />
+			<Ellipse x:Name="U" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="2.245" Canvas.Top="8.375" />
+			<Ellipse x:Name="V" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="4.907" Canvas.Top="4.906" />
+			<Ellipse x:Name="W" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="8.375" Canvas.Top="2.244" />
+			<Ellipse x:Name="X" Width="2.5" Height="2.5" Fill="#FFF" Opacity="0.2" Canvas.Left="12.415" Canvas.Top="0.571" />
+		</Canvas>
+	</Canvas>
+</Canvas>
