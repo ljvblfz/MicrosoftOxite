@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "231337",
+    "ThreadId": "68030",
+    "Html": "<p>Hi</p>\r\n<p>We are 7 months after the last release - will be another one?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2009-09-04T17:49:01.443-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "231364",
+    "ThreadId": "68030",
+    "Html": "<p>Yup, there will be another!&nbsp; :)&nbsp; This is still (for the most post) a spare time project so we can't devote a ton of time to it (just some evenings).&nbsp; We're starting to get some outside contributions, but we have a lot to do.&nbsp; We took a step back after that last release to figure out what would take Oxite to the next level and decided it would be worth the way to build out a great platform so that's what we're doing.&nbsp; Lame answer, but the wait will be worth it.&nbsp; Promise.&nbsp; :)</p>\r\n<p>You should definitely take a look at our latest checkins to see where we're going for the next release.</p>",
+    "PostedDate": "2009-09-04T20:50:08.873-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

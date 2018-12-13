@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "230018",
+    "ThreadId": "67675",
+    "Html": "<p>There are some bugs in this area and if they were fixed I think the current code would be pretty usable. &nbsp;</p>\r\n<p>Whenever I click &quot;Edit User&quot; in the hopes of changing the Admin password I get this:</p>\r\n<p><strong style=\"font-family:Verdana;font-weight:bold;color:black;margin-top:-5px\">Exception Details:&nbsp;</strong>System.NullReferenceException: Object reference not set to an instance of an object.</p>\r\n<p><br><strong style=\"font-family:Verdana;font-weight:bold;color:black;margin-top:-5px\">Source Error:</strong>&nbsp;<br></p>\r\n<table border=0 width=\"100%\" bgcolor=\"#ffffcc\">\r\n<tbody>\r\n<tr>\r\n<td><code>\r\n<pre style=\"font-family:'Lucida Console';font-size:0.9em\">Line 2:  &lt;%@ Import Namespace=&quot;Oxite.Modules.Membership.Extensions&quot;%&gt;\r\nLine 3:  &lt;%@ Import Namespace=&quot;Oxite.Extensions&quot; %&gt;&lt;%\r\n<span style=\"color:red\">Line 4:      if (Model.GetUser().IsAuthenticated)\r\n</span>Line 5:      { %&gt;\r\nLine 6:  &lt;%=string.Format(Model.Localize(&quot;WelcomeUserMessageFormat&quot;, &quot;Welcome, {0}!&quot;), string.Format(&quot;&lt;span class=\\&quot;username\\&quot;&gt;{0}&lt;/span&gt;&quot;, Html.Encode(Model.GetUser().DisplayName))) %&gt;</pre>\r\n</code></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p><br><strong style=\"font-family:Verdana;font-weight:bold;color:black;margin-top:-5px\">Source File:&nbsp;</strong>c:\\inetpub\\wwwroot\\OxiteDev\\Views\\Shared\\LoginUserControl.ascx<strong style=\"font-family:Verdana;font-weight:bold;color:black;margin-top:-5px\">&nbsp;&nbsp;&nbsp; Line:&nbsp;</strong>4</p>\r\n<p>&nbsp;</p>\r\n<p>Otherwise it looks really good</p>",
+    "PostedDate": "2009-09-01T22:25:11.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "230019",
+    "ThreadId": "67675",
+    "Html": "<p>Thanks!&nbsp; You'll be pleased to know that user management is our next feature we're working on stabilizing.&nbsp; :)</p>",
+    "PostedDate": "2009-09-01T22:27:09.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

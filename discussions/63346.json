@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "215392",
+    "ThreadId": "63346",
+    "Html": "<p><span style=\"font-size:x-small\">\r\n<p>There was a update error, for null plugin path , on admin.. site this mainly just because of missing markup code. pasted below the code that needs to be put into skins/admin/views/site/item.aspx</p>\r\n<p>&nbsp;\r\n<p><span style=\"color:#a31515\">\r\n<div style=\"color:Black;background-color:White\">\r\n<pre> <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">div</span><span style=\"color:Blue\">&gt;</span><span style=\"background-color:Yellow\">&lt;%=</span>Html.TextBox(&quot;pluginsPath&quot;, m =&gt; m.Item.PluginsPath, &quot;Plugins Path&quot;, new { size = 60, @class = &quot;text&quot; })<span style=\"background-color:Yellow\">%&gt;</span><span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">div</span><span style=\"color:Blue\">&gt;</span>\r\n</pre>\r\n</div>\r\n</span></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size:x-small;color:#0000ff\"><span style=\"color:#a31515\">I placed this on line 19, but it could go on any line.</span></span></p>\r\n<p>&nbsp;</p>\r\n<p>in&nbsp;<span style=\"font-size:x-small;color:#0000ff\">&lt;font size=&quot;2&quot; color=&quot;#0000ff&quot;&gt;\r\n<p>public</p>\r\n&lt;/font&gt;</span></p>\r\n<p><span style=\"font-size:x-small;color:#0000ff\">class</span><span style=\"font-size:x-small\"> </span><span style=\"font-size:x-small;color:#2b91af\">SiteValidator</span><span style=\"font-size:x-small\"> : </span><span style=\"font-size:x-small;color:#2b91af\">ValidatorBase</span><span style=\"font-size:x-small\">&lt;</span><span style=\"font-size:x-small;color:#2b91af\">Site</span><span style=\"font-size:x-small\">&gt;</span></p>\r\n<p><span style=\"font-size:x-small\">&nbsp;Oxite\\Validation\\SiteValidator.cs</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size:x-small;color:#0000ff\">&nbsp;There is also a missing check for null of empty.</span></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>            <span style=\"color:Blue\">if</span> (<span style=\"color:Blue\">string</span>.IsNullOrEmpty(input.PluginsPath))\r\n            {\r\n                validationState.Errors.Add(CreateValidationError(input.PluginsPath, <span style=\"color:#A31515\">&quot;PluginPath&quot;</span>, <span style=\"color:#A31515\">&quot;PluginPath.RequiredError&quot;</span>, <span style=\"color:#A31515\">&quot;PluginPath is not set.&quot;</span>));\r\n            }\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size:x-small;color:#0000ff\">&nbsp;There is also another bug that i can't seem to track down as everything seems to be working correctly and that is updating this information to the database... i don't know if this is just my system or what... but when clicking on edit it goes through all the validation process then the update.. but i am unable to find out why it does not send this information to the database... if anyone who knows whats up here please let me know..</span></p>\r\n<p><span style=\"font-size:x-small;color:#0000ff\">Ive also not had a chance to look at caching yet.. but will try and work out what is wrong... well looked at it but could not work out what was wrong... though, the caching works find on the blog posts it seems so going to compare them and try and work out how the system works :0 </span></p>\r\n<p>&nbsp;</p>\r\n</p>\r\n</span></p>",
+    "PostedDate": "2009-07-23T10:31:32.27-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "215421",
+    "ThreadId": "63346",
+    "Html": "<p>ok Edit!</p>\r\n<p>&nbsp;</p>\r\n<p>I was wrong, it IS&nbsp;updating to the database!</p>\r\n<p>&nbsp;</p>\r\n<p>But there seems to be problem... with&nbsp;the getSite in the sitecontroller not updating correctlly with the current database information... seems to be a caching problem i think... from quickly looking at it... but ive still not learnt how that works... willl try and get around to working out how it alll work</p>\r\n<p>\r\n<p><span style=\"font-size:x-small\">site = siteService.GetSite(</span><span style=\"font-size:x-small\">)</span></p>\r\n<p>&nbsp;</p>\r\n</p>\r\n<p><span style=\"color:blue\">&nbsp;</span></p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-07-23T11:13:16.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "215424",
+    "ThreadId": "63346",
+    "Html": "<p>Yes, caching is currently not flushing.&nbsp; I have that on my task list to fix soon, just been too busy.&nbsp; For now, just restart the app and it will get latest from the database.</p>",
+    "PostedDate": "2009-07-23T11:16:41.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

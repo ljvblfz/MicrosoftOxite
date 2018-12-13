@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "163238",
+    "ThreadId": "48896",
+    "Html": "Posting here as I am not sure if it's an issue as such.  Is it possible to add a checkbox in the admin area so that the admin area is either <br>\r\n<ol>\r\n    <li>running off a defined skin - not default </li>\r\n    <li>running off the default style. </li>\r\n</ol>\r\n<p>Obviously the default skin would need to exist but would mean skin authors can concentrate on the front end and not concern themselves with the admin area should they not want to?</p>\r\n",
+    "PostedDate": "2009-03-01T12:13:08.917-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164407",
+    "ThreadId": "48896",
+    "Html": "Thanks for the suggestion, we think it's a good one.  Rather than a setting, what we'll probably do is separate out the styles for the admin into a separate admin.css or something along those lines so you can just copy that file into your skin if you don't want to skin the admin and it will stay with its current look, but you can change it if you want to later.\r\n",
+    "PostedDate": "2009-03-04T09:47:26.623-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

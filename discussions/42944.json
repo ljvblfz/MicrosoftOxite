@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "142720",
+    "ThreadId": "42944",
+    "Html": "in posts.can't input chinese in tags \r\n",
+    "PostedDate": "2008-12-23T16:43:01.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "142757",
+    "ThreadId": "42944",
+    "Html": "因为web.config文件 validation节点的 IsTag的正则过滤了。 \r\n",
+    "PostedDate": "2008-12-23T21:43:08.417-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "146177",
+    "ThreadId": "42944",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"http://www.codeplex.com/oxite/WorkItem/View.aspx?WorkItemId=6911\">here</a> to go to the work item and continue the discussion.",
+    "PostedDate": "2009-01-11T21:00:52.447-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

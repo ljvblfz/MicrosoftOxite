@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "140434",
+    "ThreadId": "42285",
+    "Html": "<p>Using the User table for the anonymous user Name and Email fields would save storage space and avoid dozens of extra tables over time.<span>&nbsp; </span>Three existing tables can be eliminated: MessageToAnonymous, CommentAnonymous and SubscriptionAnonymous.<span>&nbsp; </span>Future tables like AnonymousLanguage can be avoided.</p>\r\n<p>The anonymous user's DisplayName would be optional.&nbsp; Their password could be auto-generated and their email address could be inserted as the unique username.</p>\r\n<p>Currently, to make a City or PostalCode a required field for all posts, we’d have to update multiple table where the anonymous name and email was saved.<span>&nbsp; </span>The alternative of adding a table called Anonymous would add unnecessary redundancy with the User table.<span>&nbsp; </span>Reports that show the email of contributors currently require hitting multiple tables.<span>&nbsp; </span>Querying one table called User for all names will make coding simple.</p>\r\n<p>If an anonymous user submits an existing email address, Oxite could display the message “<em>This email address has been used previously.&nbsp; If you wish to validate, click to send yourself an email.</em>”<span>&nbsp; </span>This verification message would not need to be displayed if the anonymous user is using a browser with a cookie relating them to their previous post. <span>&nbsp;&nbsp;</span>If the user chooses not to validate and an existing email is found, create a new User row.</p>\r\n<p>It’s great to support the ability to make a post without creating a full account, or to start selecting areas of interest or build a commerce order before entering a profile.<span>&nbsp; </span>Using the User table for these anonymous cases will allow subsequent registration to occur without moving relations from an Anonymous table to a User table.<span>&nbsp; </span>After posting an item, the anonymous user could see the message “<em>Thanks, please enter a username and password if you'd like to recall and edit your post during return visits.</em>”</p>\r\n<p>A remaining question is how would managing anonymous users in the User table sync with the MVC Membership project?<span> &nbsp; </span>There’s already an aspnet_Users.<strong>IsAnonymous</strong> field in this AspNetDB database.&nbsp; AspNetDB is used by MVC Storefront, so managing anonymous users in a similar manner may already be supported.</p>\r\n",
+    "PostedDate": "2008-12-14T14:32:45.313-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140440",
+    "ThreadId": "42285",
+    "Html": "I agree that MessageToAnonymous, CommentAnonymous and SubscriptionAnonymous smell like duplication. There seems to be some code duplication around it, but the model doesn't seem to be quite so simple - see for instance interface IPostRepository<br>\r\n<br>\r\n&nbsp; void AddComment(IComment comment, ICommentAnonymous commentAnonymous, ISubscription subscription, ISubscriptionAnonymous subscriptionAnonymous);&quot;<br>\r\n<br>\r\nSo sometime you need both of these? I wish there were docs on how it worked...<br>\r\n<br>\r\n",
+    "PostedDate": "2008-12-14T15:24:44.74-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

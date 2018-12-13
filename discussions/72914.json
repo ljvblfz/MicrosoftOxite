@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "249074",
+    "ThreadId": "72914",
+    "Html": "<p>when submitting a comment to a post I get:</p>\r\n<p><span>\r\n<h2><em>Bad Anti-Forgery Token</em></h2>\r\n</span> <span style=\"font-family:Arial,Helvetica,Geneva,SunSans-Regular,sans-serif\"> <strong> Description: </strong>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. <br><br> <strong> Exception Details: </strong>System.Web.Mvc.HttpAntiForgeryException: Bad Anti-Forgery Token</span></p>\r\n<p><span style=\"font-family:Arial,Helvetica,Geneva,SunSans-Regular,sans-serif\">From the </span><span style=\"font-family:Arial,Helvetica,Geneva,SunSans-Regular,sans-serif\">Oxite.Mvc\\ActionFilters\\AntiForgeryAuthorizationFilter.cs</span></p>\r\n<p><span style=\"font-family:Arial,Helvetica,Geneva,SunSans-Regular,sans-serif\">I'm using the released version of Oxite not the latest source. </span></p>\r\n<p><span style=\"font-family:Arial,Helvetica,Geneva,SunSans-Regular,sans-serif\">Where should i look? <br></span></p>",
+    "PostedDate": "2009-10-23T10:51:52.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "184227",
+    "ThreadId": "54644",
+    "Html": "Hi,<br>\r\n<br>\r\nWhen publishing from Live Writer to Oxite I ge the follwing exception:<br>\r\n<br>\r\nThe value '20090425T17:09:00' cannot be parsed as the type 'DateTime'.<br>\r\n<br>\r\nThe line this happens on is here:<br>\r\n<br>\r\n<span style=\"color:#0000ff;font-size:13px\"><span style=\"color:#0000ff;font-size:13px\">\r\n<p>case</p>\r\n</span>\r\n<p>&nbsp;</p>\r\n</span>\r\n<p><span style=\"font-size:13px\"> </span><span style=\"color:#2b91af;font-size:13px\">XmlRpcProtocol</span><span style=\"font-size:13px\">.DateTime:\r\n<p>&nbsp;</p>\r\n<p>returnValue = </p>\r\n</span></p>\r\n<p><span style=\"color:#2b91af;font-size:13px\">Convert</span><span style=\"font-size:13px\">.ChangeType(reader.ReadElementContentAsDateTime(),targetType);\r\n<p>&nbsp;</p>\r\n</span></p>\r\n<br>\r\nIn :<span style=\"font-size:13px\">\r\n<p>&nbsp;</p>\r\n</span>\r\n<p><span style=\"color:#0000ff;font-size:13px\">public</span><span style=\"font-size:13px\"> </span><span style=\"color:#0000ff;font-size:13px\">static</span><span style=\"font-size:13px\"> </span><span style=\"color:#0000ff;font-size:13px\">object</span><span style=\"font-size:13px\"> Deserialize(</span><span style=\"color:#2b91af;font-size:13px\">XmlDictionaryReader</span><span style=\"font-size:13px\"> reader, </span><span style=\"color:#2b91af;font-size:13px\">Type</span><span style=\"font-size:13px\"> targetType)<br>\r\n<br>\r\nAny Ideas?<br>\r\n<br>\r\nThanks,<br>\r\n<br>\r\nMike\r\n<p>&nbsp;</p>\r\n</span></p>\r\n",
+    "PostedDate": "2009-04-27T13:51:13.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184596",
+    "ThreadId": "54644",
+    "Html": "What culture is your OS set to?  Live Writer must be sending a date that the XmlRpc stuff can't read.  Haven't seen this one before.  :(\r\n",
+    "PostedDate": "2009-04-28T09:58:04.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184653",
+    "ThreadId": "54644",
+    "Html": "After a bit of fiddeling I can see that the message from Live Writer is sending the dates as follows:<br>\r\n<br>\r\n<span lang=EN-GB>\r\n<p>&lt;member&gt;<br>\r\n&lt;name&gt;dateCreated&lt;/name&gt;<br>\r\n&lt;value&gt;<br>\r\n&lt;dateTime.iso8601&gt;20090428T18:37:00&lt;/dateTime.iso8601&gt;<br>\r\n&lt;/value&gt;<br>\r\n&lt;/member&gt;<br>\r\n&lt;member&gt;<br>\r\n&lt;name&gt;date_created_gmt&lt;/name&gt;<br>\r\n&lt;value&gt;<br>\r\n&lt;dateTime.iso8601&gt;20090428T18:37:00&lt;/dateTime.iso8601&gt;<br>\r\n&lt;/value&gt;<br>\r\n&lt;/member&gt;<br>\r\n<br>\r\nAs far as I can tell this os ok but DateTime.Parse etc does not take dates like this. The expected format should be allong these lines:<br>\r\n<br>\r\n2008-11-01T19:35:00.0000000Z </p>\r\n</span>\r\n",
+    "PostedDate": "2009-04-28T12:03:57.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184656",
+    "ThreadId": "54644",
+    "Html": "Any chance you can try changing your culture or date formatting on your machine to see if Live Writer is picking it up wrong or something?\r\n",
+    "PostedDate": "2009-04-28T12:14:09.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184680",
+    "ThreadId": "54644",
+    "Html": "<p style=\"margin:0cm 0cm 10pt\"><span style=\"font-family:calibri\">A useful article! :<br>\r\n<br>\r\n</span><a href=\"http://blog.stevex.net/index.php/parsing-dates-and-times-in-net/\"><span style=\"font-family:calibri\">http://blog.stevex.net/index.php/parsing-dates-and-times-in-net/</span></a><br>\r\n<br>\r\n<span style=\"font-family:calibri\">I have gone for a belts and braces approach in the code:</span></p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';color:blue;font-size:10pt\">case</span><span style=\"font-family:'courier new';font-size:10pt\"> <span style=\"color:#2b91af\">XmlRpcProtocol</span>.DateTime:</span></p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';font-size:10pt\">                        </span></p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';color:blue;font-size:10pt\">string</span><span style=\"font-family:'courier new';font-size:10pt\"> dateString = reader.ReadElementContentAsString();</span></p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';font-size:10pt\"> </span></p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';color:blue;font-size:10pt\">string</span><span style=\"font-family:'courier new';font-size:10pt\">[] formats = <span style=\"color:blue\">new</span> <span style=\"color:blue\">string</span>[] { <span style=\"color:#a31515\">&quot;r&quot;</span>, <span style=\"color:#a31515\">&quot;s&quot;</span>, <span style=\"color:#a31515\">&quot;u&quot;</span>, <span style=\"color:#a31515\">&quot;yyyyMMddTHHmmss&quot;</span>, <span style=\"color:#a31515\">&quot;yyyyMMddTHH:mm:ss&quot;</span>, <span style=\"color:#a31515\">&quot;yyyy-MM-ddTHH:mm:ss&quot;</span> };</span></p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';font-size:10pt\">                        </span></p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';color:#2b91af;font-size:10pt\">DateTime</span><span style=\"font-family:'courier new';font-size:10pt\"> dt = <span style=\"color:#2b91af\">DateTime</span>.ParseExact(dateString, formats,</span></p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';font-size:10pt\">   <span style=\"color:#2b91af\">CultureInfo</span>.InvariantCulture, <span style=\"color:#2b91af\">DateTimeStyles</span>.AdjustToUniversal);</span></p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';font-size:10pt\"> </span></p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';font-size:10pt\">returnValue = <span style=\"color:#2b91af\">Convert</span>.ChangeType(dt, targetType);</span></p>\r\n<p style=\"margin:0cm 0cm 10pt\"><span style=\"line-height:115%;font-family:'courier new';color:blue;font-size:10pt\">break</span><span style=\"line-height:115%;font-family:'courier new';font-size:10pt\">;</span></p>\r\n<p style=\"margin:0cm 0cm 10pt\"><span style=\"line-height:115%;font-family:'courier new';font-size:10pt\">All works for now so I will publish this to my host.</span></p>\r\n",
+    "PostedDate": "2009-04-28T12:57:00.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184724",
+    "ThreadId": "54644",
+    "Html": "Cool, glad you got it.  Sampy came to the same conclusion just a few minutes before we saw your post.  We'll make sure this change gets in there for the next release.  Thanks!\r\n",
+    "PostedDate": "2009-04-28T14:36:18.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

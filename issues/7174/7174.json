@@ -1,0 +1,91 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-02-26T10:55:25.863-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "After running setup for first time, Oxite crashes with exception - screenshot attached shows site after this failure...\n \nValue cannot be null or empty.\nParameter name: url \nDescription: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. \n \nException Details: System.ArgumentException: Value cannot be null or empty.\nParameter name: url\n \nSource Error: \n \n \nLine 148:            ((OxiteApplication)HttpContext.ApplicationInstance).ReloadSite();\nLine 149:\nLine 150:            return Redirect(Url.AppPath(Url.ManageSite()));\nLine 151:        }\nLine 152:    }\n \n \nSource File: E:\\oxite\\Oxite\\Oxite.Mvc\\Controllers\\SiteController.cs    Line: 150 \n \nStack Trace: \n \n \n[ArgumentException: Value cannot be null or empty.\nParameter name: url]\n   System.Web.Mvc.Controller.Redirect(String url) +198\n   Oxite.Mvc.Controllers.SiteController.SaveItem(Site siteInput, User userInput, FormCollection form) in E:\\oxite\\Oxite\\Oxite.Mvc\\Controllers\\SiteController.cs:150\n   lambda_method(ExecutionScope , ControllerBase , Object[] ) +150\n   System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters) +251\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters) +31\n   System.Web.Mvc.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7() +88\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) +534\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) +534\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) +534\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) +534\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) +534\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters) +312\n   System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName) +782\n   System.Web.Mvc.Controller.ExecuteCore() +154\n   System.Web.Mvc.MvcHandler.ProcessRequest(HttpContextBase httpContext) +162\n   System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +599\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171",
+    "LastUpdatedDate": "2013-05-16T03:38:04.04-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-02-26T02:34:55.077-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Oxite exceptions on first redirect after admin setup",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7174
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1753,
+      "FileName": "oxite.png",
+      "DownloadUrl": ".\\1753"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Forgot to add... Windows 7, SQL Server 2009, IIS7, have tried Pipeline and Classic (same in both), have tried using SQL to create default setup, and form with only password aded.\r\n\r\n",
+      "PostedDate": "2009-02-26T02:35:56.293-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Weird.  Can't repro at the moment.  From your screenshot though it looks like everything is working after you go back to the homepage.\r\n\r\nCan you debug and dig deeper and see what isn't returning a value?",
+      "PostedDate": "2009-02-26T03:11:58.703-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "After going back to homepage, none of the links work - they all stay on the same page\r\n\r\n",
+      "PostedDate": "2009-02-26T03:15:36.92-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "IN effect the site is a dead site, it has kicked the bucket, it is no more, it has gone to play with the angels - no sign in, no home, nada ...",
+      "PostedDate": "2009-02-26T03:16:25.637-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Just had a brain spark - uninstalled everything MVC, and reinstalled all ... works after that ... no idea why",
+      "PostedDate": "2009-02-26T03:55:48.09-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Ah, you probably had the original RC of MVC installed instead of the RC Refresh.  A routing change was made between those two versions.  That would cause the issues you were seeing.  Glad you got it figured out.",
+      "PostedDate": "2009-02-26T10:55:17.283-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-02-26T10:55:25.863-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:10.78-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:04.04-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

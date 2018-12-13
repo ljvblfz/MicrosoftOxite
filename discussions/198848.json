@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "407447",
+    "ThreadId": "198848",
+    "Html": "<p>Hello all.&nbsp; I am trying out oxite and I ran in to an issue right off the bat.&nbsp; I was hoping that you guys could help me out and let me know what i need to do to fix this.&nbsp; I followed the instructions at <a href=\"http://www.codeplex.com/wikipage?ProjectName=oxite&title=gettingstarted&referringTitle=Home\">http://www.codeplex.com/wikipage?ProjectName=oxite&amp;title=gettingstarted&amp;referringTitle=Home</a>&nbsp;and I get an error when I run the project.&nbsp; Here is the error:<span>&nbsp; </span><span style=\"font-family:Arial, Helvetica, Geneva, SunSans-Regular, sans-serif\"><strong>Description: </strong>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. <br><br><strong>Exception Details: </strong>System.Data.SqlClient.SqlException: Cannot open database &quot;Oxite.Database&quot; requested by the login. The login failed.<br>Login failed for user 'Desktop\\User'.</span></p>\r\n<h1>Server Error in '/' Application. \r\n<hr size=1>\r\n</h1>\r\n<h2><em>Cannot open database &quot;Oxite.Database&quot; requested by the login. The login failed.<br>Login failed for user 'Desktop\\User'.</em></h2>\r\n<p><span style=\"font-family:Arial, Helvetica, Geneva, SunSans-Regular, sans-serif\"><strong>Description: </strong>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. <br><br><strong>Exception Details: </strong>System.Data.SqlClient.SqlException: Cannot open database &quot;Oxite.Database&quot; requested by the login. The login failed.<br>Login failed for user 'Desktop\\User'.</span></p>\r\n<p>Now I can view the tables in the database via Visual Web Developer 2008 express, but as you see,&nbsp;my asp.net pages&nbsp;cannot access the database, but I have no clue how to fix it.&nbsp; Any thoughts?</p>",
+    "PostedDate": "2010-02-25T20:39:26.437-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "407605",
+    "ThreadId": "198848",
+    "Html": "<p>This isn't really an Oxite issue at this point and just a &quot;connecting to sql server from .net&quot; problem.&nbsp; Could be a lot of things.&nbsp; What's your connection string look like (minus any passwords)?</p>\r\n<p>Also though, be aware that there is no future development of Oxite being done.&nbsp; The two main contributors (Nathan Heskew and myself) moved to another team working on an extensible CMS platform called Orchard in November.&nbsp; <a href=\"http://orchardproject.net\">http://orchardproject.net</a></p>",
+    "PostedDate": "2010-02-25T22:14:53.98-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "408291",
+    "ThreadId": "198848",
+    "Html": "<p>Okay, sounds good.&nbsp; I guess I will just check that one out then... so&nbsp;disregard the question.&nbsp; BTW, why did you guys switch to orchard?&nbsp;</p>",
+    "PostedDate": "2010-02-26T04:37:16.367-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "409678",
+    "ThreadId": "198848",
+    "Html": "<p>Oxite was a side project.&nbsp; Joining the Orchard team lets us work on about the same thing full time.</p>",
+    "PostedDate": "2010-02-26T10:21:16.437-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "410392",
+    "ThreadId": "198848",
+    "Html": "<p>Did you run the SQL create script to create the Oxite.Database in your SQL Server Express? &nbsp;I have done that and gotten past the error you are getting. &nbsp;I'm having an issue with it looking for the plugins table in the database. &nbsp;I ran the one main SQL create script, but when I tried to run the second and third upgrade SQL scripts, they fail. &nbsp;Apparently the sql scripts are not 100% contiguous.</p>",
+    "PostedDate": "2010-02-26T15:50:34.76-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "410414",
+    "ThreadId": "198848",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>ErikPorter wrote:</strong><br>\r\n<p>Oxite was a side project.&nbsp; Joining the Orchard team lets us work on about the same thing full time.</p>\r\n</blockquote>\r\n<p>&nbsp;Erik,</p>\r\n<p>Thats pretty sweet you guys get to work on it full time.&nbsp; Seems like a dream job.&nbsp; I was looking at Orchard site and it looks pretty cool.&nbsp; Your FAQ says that there is not a full release yet.&nbsp; Any thoughts as to when that will be?</p>",
+    "PostedDate": "2010-02-26T18:34:24.693-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "412392",
+    "ThreadId": "198848",
+    "Html": "<p>It is a fun job for sure. :)</p>\r\n<p>Correct. You can check out the code now (we checkin lots of code daily), but not release yet.&nbsp; I can't say when, but can say to keep watching closely because you will see something in the near future.</p>",
+    "PostedDate": "2010-02-28T00:30:51.71-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "434813",
+    "ThreadId": "198848",
+    "Html": "<p>You should edit the connectionstring in oxiet.config.</p>",
+    "PostedDate": "2010-04-23T15:29:44.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

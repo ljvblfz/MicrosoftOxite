@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "159072",
+    "ThreadId": "47508",
+    "Html": "Hi,<div><br></div><div>I would like to know if you're planning to implement a data provider for SSDS ?</div><div>If not, in order to implement this provider what do you suggest ?</div><div>From what I've understood about Oxite architecture, I've just to write Oxite.LinqToSqlDataProvider project ?</div>",
+    "PostedDate": "2009-02-18T10:26:20.677-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "159075",
+    "ThreadId": "47508",
+    "Html": "No plans, but that would be great if you or someone built it.<br>\r\n<br>\r\nYou would start your own project and implement all the same I*Repository interfaces that all the classes in Oxite.LinqToSqlDataProvider implements.  Then in the web.config in the &lt;unity&gt; section change all the types to point to your classes instead.  That's it.  :)\r\n",
+    "PostedDate": "2009-02-18T10:30:07.7-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "159086",
+    "ThreadId": "47508",
+    "Html": "Thank you for your response :)<div>I will inform you as soon as I have a deployed Oxite blog on Azure platform.</div>",
+    "PostedDate": "2009-02-18T10:52:10.207-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "159146",
+    "ThreadId": "47508",
+    "Html": "+1 on wanting to be notified on that!<br><br>M.<br><br><div>On Wed, Feb 18, 2009 at 19:53, Nakah <span dir=ltr>&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br>\r\n<blockquote style=\"margin:0pt 0pt 0pt 0.8ex;padding-left:1ex\">   <div> <p>From: Nakah</p> <div>Thank you for your response :)<div>I will inform you as soon as I have a deployed Oxite blog on Azure platform.</div>\r\n</div><div> <div> <p>Read the <a href=\"http://www.codeplex.com/oxite/Thread/View.aspx?ThreadId=47508&ANCHOR#Post159086\">full discussion online</a>.</p> <p>To add a post to this discussion, reply to this email (<a href=\"mailto:oxite@discussions.codeplex.com?subject=[oxite:47508]\">oxite@discussions.codeplex.com</a>)</p>\r\n <p>To start a new discussion for this project, email <a href=\"mailto:oxite@discussions.codeplex.com\">oxite@discussions.codeplex.com</a></p> <p>You are receiving this email because you subscribed to this discussion on CodePlex. You can <a href=\"http://www.codeplex.com/site/discussions/project/unsubscribe/oxite\">unsubscribe or change your settings</a> on codePlex.com.</p>\r\n <p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at <a href=\"http://codeplex.com\">codeplex.com</a></p> </div> </div></div> </blockquote>\r\n</div><br><br clear=all><br>-- <br>Magnus Mårtensson<br>Senior Consultant - Scrum Master - MCSD, MCTS<br>Dotway AB<br><br>Tel: +46 (768) 51 00 36<br><br><a href=\"http://blog.noop.se/\">http://blog.noop.se/</a><br>Sent from: Alvesta G Sweden.",
+    "PostedDate": "2009-02-18T13:25:21.157-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227318",
+    "ThreadId": "47508",
+    "Html": "<p>Hi,</p>\r\n<p>A SDS Provider is no longer needed as the SQL Azure CTP is available now !</p>\r\n<p>I've tested Oxite on Windows Azure + SQL Azure and it works perfectly :)</p>",
+    "PostedDate": "2009-08-24T20:58:13.393-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227323",
+    "ThreadId": "47508",
+    "Html": "<p>Nice!&nbsp; Thanks for the notification.&nbsp; Haven't tried it myself yet.&nbsp; Will have to do that soon.&nbsp; :)</p>",
+    "PostedDate": "2009-08-24T21:38:29.703-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "194252",
+    "ThreadId": "57472",
+    "Html": "<p>I ran the scripts in the Setup folder but the Mvc site in the Oxite folder errors when I start it up.</p>\r\n<p>&nbsp;</p>\r\n<p><span>\r\n<h1>Server Error in '/' Application.\r\n<hr size=1>\r\n</h1>\r\n<h2><em>Invalid column name 'SkinsPath'.<br>Invalid column name 'SkinsScriptsPath'.<br>Invalid column name 'SkinsStylesPath'.<br>Invalid column name 'Skin'.<br>Invalid column name 'AdminSkin'.</em></h2>\r\n<p>&nbsp;</p>\r\n<p><em>What am i doing wrong?</em></p>\r\n</span></p>",
+    "PostedDate": "2009-05-26T05:46:13.583-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "194349",
+    "ThreadId": "57472",
+    "Html": "\r\n<span style=\"font-size:10pt;font-family:Arial;font-weight:Normal\">Is this from the latest release or the latest source code checkin?<br>\r\n<br>\r\n(sent from WinMo 6.1 phone)<br>\r\n<br>\r\n<hr>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">From: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">CVertex &lt;notifications@codeplex.com&gt;</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Sent: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Tuesday, May 26, 2009 5:46 AM</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">To: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Erik Porter &lt;Erik.Porter@microsoft.com&gt;</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Subject: </span>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">How do I install the db? [oxite:57472]</span><br>\r\n<br>\r\n</span>\r\n<div>\r\n<p>From: CVertex</p>\r\n<div id=ThreadNotificationPostBody>\r\n<p>I ran the scripts in the Setup folder but the Mvc site in the Oxite folder errors when I start it up.</p>\r\n<p> </p>\r\n<p><span></p>\r\n<h1>Server Error in '/' Application.\r\n<hr size=1>\r\n</h1>\r\n<h2><em>Invalid column name 'SkinsPath'.<br>\r\nInvalid column name 'SkinsScriptsPath'.<br>\r\nInvalid column name 'SkinsStylesPath'.<br>\r\nInvalid column name 'Skin'.<br>\r\nInvalid column name 'AdminSkin'.</em></h2>\r\n<p> </p>\r\n<p><em>What am i doing wrong?</em></p>\r\n</span>\r\n<p></p>\r\n</div>\r\n\r\n</div>\r\n",
+    "PostedDate": "2009-05-26T09:37:14.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "194596",
+    "ThreadId": "57472",
+    "Html": "<p>I think this is from a recent checkin. &nbsp;I saw the same thing when using the latest code as of this past weekend. &nbsp;I thought that what was checked in would be working as well. &nbsp;Is there any thought about how contributions could be allowed for this project? &nbsp;Many people could help with this kind of work, at least. &nbsp;Does someone need to fork it? &nbsp;Would the current contributors be ok with that? &nbsp;To the degree of switching their contributions to the forked version?</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-05-26T19:03:06.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "194607",
+    "ThreadId": "57472",
+    "Html": "<p>Hi Erik,</p>\r\n<p>&nbsp;</p>\r\n<p>I took my version from the latest svn.</p>\r\n<p>CV</p>",
+    "PostedDate": "2009-05-26T19:47:10.76-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "197480",
+    "ThreadId": "57472",
+    "Html": "<p>@CVertext</p>\r\n<p>Yah, we don't keep the install/update scripts up to date with the current checkins.&nbsp; We do keep OxiteSite/App_Date/Oxite.Database.mdf pretty much in sync with the current schema so you can connect to that file to test things out.</p>\r\n<p>@harpreet</p>\r\n<p>We can take contributions from those who sign an agreement and show that they'd be dedicated to the project and have good things to contribute (as in, you have to prove it to us&nbsp; :)).&nbsp; What would you like to contribute?</p>",
+    "PostedDate": "2009-06-03T15:52:02.553-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "197528",
+    "ThreadId": "57472",
+    "Html": "<p>That's great that there's at least some way to contribute. &nbsp;I assume from your response that you wouldn't be able to contribute to a forked (more open) version. Is that right? &nbsp;I'm not sure if I would meet your standards for quality of contributions but I'll tell you what change/contribution was on my mind when I asked the question. &nbsp;It may be that the change I'm thinking of will not matter once you are done with all your recent changes of creating a plugin system. &nbsp;</p>\r\n<p>At the time, I wanted the view that displays a single post to maintain the sidebar as it is shown on the home page. &nbsp;(I'm speaking here of the default skin). &nbsp;I noticed that you were using an Html.RenderPartial to create that sidebar but when an individual post was shown the Model for that partial view didn't have what it needed to render the sidebar in the same way. &nbsp;I wanted to use the MVC contrib and add in the subcontroller functionality so that indivdiual partial views could exist with their own logic or ability to independently get whatever Model they needed. Basically an Html.RenderAction instead of Html.RenderPartial but using the MVC contrib project to accomplish this. &nbsp;Like I said, your recent work with plugins may make this completely unnecessary. &nbsp; At least I can imagine a plugin approach as an alternative (and likely) better strategy.</p>\r\n<p>I'd still be interested in contributing but there's no way for me to know if I would meet your quality expectations or if you expect some minimum weekly time commitment.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-06-03T19:56:49.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "197548",
+    "ThreadId": "57472",
+    "Html": "<p>So I may have gone overboard on making it sound like there's a super high bar to &quot;get in&quot; to contribute to Oxite.&nbsp; There's not.&nbsp; What I'm trying to get across is that we need to be able to understand you or anyone as a potential contributor.&nbsp; We want to keep the &quot;party&quot; small and tight with people of varied talents, ideas and time they can spend on it.&nbsp; All you or anyone needs to do is help us gauge what you would bring as a contributor.&nbsp; Go off and run Oxite as your blog (or don't...not a requirement) and built some things for it.&nbsp; Modify it in a cool way and say &quot;hey, you guys should do it like this&quot; or &quot;look what I added&quot; or show off something cool in Oxite to the world and get people jazzed about it.&nbsp; Get our attention.&nbsp; :)&nbsp; That's how you or anyone can become a contributor.</p>\r\n<p>Regarding your idea, it's definitely a good one.&nbsp; A few other people have brought up wanting to see the sidebar rendered on all pages.&nbsp; It's tricky on the &quot;best&quot; way to accomplish that however.&nbsp; The easiest is to just go into the controller action and stuff the data into the model that you need, then use it in a modifies skin.&nbsp; That way doesn't scale to new versions of Oxite though.&nbsp; There is a more extensible way that won't break in future versions of Oxite, but it's a bit complicated at the moment.&nbsp; If you go into our source tree and grab /Implementations/MIXVideos you can get an idea of how we did custom work for the skin it uses by looking at the Oxite.MIXVideos project.&nbsp; You'll find some filters that do some extra work and stuff other data into the model.&nbsp; Those filters are then registered on specific controller actions in a filter registry class.&nbsp; That class is then registered with the container in the web project so it will get loaded after Oxite's main filter registry does.&nbsp; You could use this same pattern to accomplish getting other data down for the sidebar.</p>\r\n<p>You would think plugins would be perfect for this, but that type of thing isn't our goal with plugins.&nbsp; We have something else we're working on (that will come after plugins, but still in the next release with plugins) we're calling modules (how original, huh?&nbsp; :P).&nbsp; The goal of plugins is to enable anybody to easily (with a few lines of code) build some code that will do something useful based on events in the Oxite pipeline and also be able to display UI at key places in the app.&nbsp; Good examples of the things we're trying to enable with plugins are things like &quot;insert my xbox gamercard or twitter stream&nbsp;in the sidebar of the homepage&quot; or &quot;add share links after the post body on permalinks&quot; or &quot;tweet new posts that get published&quot; or &quot;spam filtering and adding UI on comments to allow people to report spam&quot;, etc.&nbsp; Very simple and very limited (on purpose).&nbsp; The target audience for plugins are breadth developers, meaning those who toy with code.&nbsp; This ranges from people who write macros in&nbsp;Excel to people who build WordPress themes or plugins to professional developers.&nbsp; The goal of modules is to allow developers access to the entire Oxite and MVC pipeline to realy customize how Oxite works without touching our code and keeping it fairly future proof.&nbsp; Building forums or social networking support or new authentication schemes&nbsp;into Oxite&nbsp;are good examples of modules.&nbsp; The target audience for modules is professional .NET developers.</p>\r\n<p>Let me know if you have any other questions.</p>",
+    "PostedDate": "2009-06-03T21:48:09.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

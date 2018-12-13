@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "179219",
+    "ThreadId": "53271",
+    "Html": "Hello again, <br>\r\nI have two, probably related problems:<br>\r\nWhen I try to open Mixvideos project from 30887, message about dbproj appears. It look like dbproj needs some version of VS I don't have. Is it mandatory?<br>\r\nAnd:<br>\r\nIf I ignore this error, it compiles ok, but error about connecting to database appears&gt;<br>\r\n<span> \r\n<h1>Server Error in '/' Application. <hr color=\"#c0c0c0\" size=1 width=\"100%\">\r\n</h1>\r\n<h2><i>A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)</i> </h2>\r\n</span><span style=\"font-family:arial, helvetica, geneva, sunsans-regular, sans-serif\"><b>Description: </b>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. <br>\r\n<br>\r\n<b>Exception Details: </b>System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)<br>\r\n<br>\r\n<b>Source Error:</b> <br>\r\n<br>\r\n<table style=\"background-color:#ffffcc\" width=\"100%\">\r\n    <tbody>\r\n        <tr>\r\n            <td><code>\r\n            <pre>Line 30:                 select s;\r\nLine 31: \r\n<span style=\"color:#ff0000\">Line 32: return projectSites(query).FirstOrDefault();</span>Line 33:         }\r\nLine 34: </pre>\r\n            </code></td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n<br>\r\n<b><span style=\"font-family:verdana\">Source File: </span></b>C:\\oxite-30887\\Implementations\\MIXVideos\\Oxite.LinqToSqlDataProvider\\SiteRepository.cs<b><span style=\"font-family:verdana\">    Line: </span></b>32 <br>\r\n<br>\r\nCan you kick me into right direction?</span>\r\n",
+    "PostedDate": "2009-04-14T13:57:31.663-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "179224",
+    "ThreadId": "53271",
+    "Html": "<p>Ok, now I found similar post here: <a href=\"http://oxite.codeplex.com/Thread/View.aspx?ThreadId=50289\">http://oxite.codeplex.com/Thread/View.aspx?ThreadId=50289</a> . Sorry for duplicate. Is there any solution for those poor childs (like me) without VS for DB developers (like running scripts in database project directory?)</p>\r\n<p> //edit</p>\r\n<p>I fixed path to correct database. Now I have another problem, query: <br>\r\nSELECT [t2].[PostID], [t2].[CreatorUserID], [t2].[Title], [t2].[Body], [t2].[BodyShort], [t2].[State], [t2].[Slug], [t2].[CommentingDisabled], [t2].[CreatedDate], [t2].[ModifiedDate], [t2].[PublishedDate], [t2].[SearchBody], [t3].[UserID], [t3].[Username], [t3].[DisplayName], [t3].[Email], [t3].[HashedEmail], [t3].[Password], [t3].[PasswordSalt], [t3].[DefaultLanguageID], [t3].[Status], [t5].[SiteID], [t5].[AreaID], [t5].[AreaName], [t5].[DisplayName] AS [DisplayName2], [t5].[Description], [t5].[CommentingDisabled] AS [CommentingDisabled2], [t5].[CreatedDate] AS [CreatedDate2], [t5].[ModifiedDate] AS [ModifiedDate2]<br>\r\nFROM [dbo].[oxite_Area] AS [t0]<br>\r\nINNER JOIN [dbo].[oxite_PostAreaRelationship] AS [t1] ON [t0].[AreaID] = [t1].[AreaID]<br>\r\nINNER JOIN [dbo].[oxite_Post] AS [t2] ON [t1].[PostID] = [t2].[PostID]<br>\r\nINNER JOIN [dbo].[oxite_User] AS [t3] ON [t2].[CreatorUserID] = [t3].[UserID]<br>\r\nINNER JOIN [dbo].[oxite_PostAreaRelationship] AS [t4] ON [t2].[PostID] = [t4].[PostID]<br>\r\nINNER JOIN [dbo].[oxite_Area] AS [t5] ON [t4].[AreaID] = [t5].[AreaID]<br>\r\nWHERE ([t2].[State] &lt;&gt; @p0) AND ([t2].[PublishedDate] &lt; @p1) AND ([t0].[SiteID] = @p2)<br>\r\nORDER BY [t2].[PublishedDate] DESC<br>\r\n<br>\r\nReturns SQL Error: Invalid object name 'dbo.oxite_PostAreaRelationship'.</p>\r\n",
+    "PostedDate": "2009-04-14T14:04:35.713-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "179936",
+    "ThreadId": "53271",
+    "Html": "Sadly, no.  Not at the moment.  MIXVideos was developed by our team and we all have DB Pro installed.  Normally, you would just be able to use the MDF provided in the root Oxite branch, but they're not in sync at the moment as we've stopped workin on MIXVideos and have been making some schema changes to Oxite.  Once we get them back in sync you should be able to use the main MDF to run it.  For now all you can do is look at the code, sorry.  :(\r\n",
+    "PostedDate": "2009-04-15T21:35:11.527-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "180015",
+    "ThreadId": "53271",
+    "Html": "I've updated the App_Data file now to not only be the right schema, but also to include all the session data for MIX06 through MIX09, so you can run the exact site that is currently up on videos.visitmix.com\r\n",
+    "PostedDate": "2009-04-16T01:50:45.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "180073",
+    "ThreadId": "53271",
+    "Html": "Thanks god..err...Duncan.\r\n",
+    "PostedDate": "2009-04-16T04:24:54.38-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "269446",
+    "ThreadId": "78693",
+    "Html": "<p>I'm on the 15FEB09 Alpha Release.&nbsp; I want to export my posts and comments, but when I go to manage site it says exporting is &quot;coming soon&quot;.</p>\r\n<p>What's the easiest way I can export my content to move to another platform?</p>",
+    "PostedDate": "2009-12-20T17:25:09.973-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "269466",
+    "ThreadId": "78693",
+    "Html": "<p>Yah, sadly, we never got to that one.&nbsp; You could use the BlogML code for import to build your own export (just the opposite).&nbsp; The other thought is to just write SQL statements (if you're going to something else that uses SQL).&nbsp; Just curious, what are you switching to?</p>",
+    "PostedDate": "2009-12-20T20:06:36.777-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

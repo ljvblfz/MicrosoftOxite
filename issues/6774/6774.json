@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The following image is used on the Admin Files page but has not been included in the project:\n \nOxiteSite\\Content\\skins\\default\\images\\Clear.gif",
+    "LastUpdatedDate": "2013-02-21T15:43:15.843-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-11T17:02:53.047-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Admin/Files/Remove icon missing",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6774
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "The admin files page was not completed (that's why the link to it was comment out in the admin tasks user control).  ;)  When we get to finishing that page we'll add in an appropriate image.  Thanks for the reminder, Darren!  :)",
+      "PostedDate": "2008-12-11T23:17:30.86-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:15.843-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

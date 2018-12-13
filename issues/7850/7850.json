@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "1.  Create a plug-in\n2.  Give it an Author attribute, but no Authors\n3.  Navigate to Admin/Plugins\n \nExpected:\nPlug-in info is displayed with configured Author\n \nActual:\n \nPluginInfo.ascx throws null reference exception on line:\n<th><%=Model.PartialModel.GetAuthors().Length > 1 ? Model.RootModel.Localize(\"Plugin.Authors\", \"Authors\") : Model.RootModel.Localize(\"PluginAuthor\", \"Author\")%></th>\n \nOn a side note...why is there an Author and an Authors attribute?  Isn't Authors sufficient?",
+    "LastUpdatedDate": "2013-02-21T15:43:06.143-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-06-03T13:43:46.023-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Exception thrown if Authors is not defined for plug-in",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7850
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

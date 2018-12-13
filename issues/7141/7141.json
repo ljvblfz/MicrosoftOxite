@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Resolved in the latest source code.\n\nThe fix was to use Tag.DisplayName when displaying the name in a view.\n\nYou should now see the # in all display cases except via the MetaWeblogAPI GetCategories method. I'm looking at enabling it there as well",
+    "ClosedDate": "2009-02-19T10:36:07.913-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "If you have a tag like c#, f# or asp.net the symbols are removed :(",
+    "LastUpdatedDate": "2013-05-16T03:38:04.2-07:00",
+    "PlannedForRelease": "Oxite.2009.2.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-02-19T07:34:38.433-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Tags with symbols",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 7141
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "# isn't a legal character for anywhere in a url except for the hash so it should be removed.  The bug here is that we somehow lost the functionality of having a DisplayName for tags.  The Name should be set to something URL friendly and the DisplayName should be set to exactly what you typed in.  We'll look into it, thanks!",
+      "PostedDate": "2009-02-19T09:52:20.563-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-02-19T09:52:25-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-02-19T09:53:02.797-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-02-19T10:36:07.913-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:11.147-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:04.2-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

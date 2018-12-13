@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "534576",
+    "ThreadId": "238054",
+    "Html": "HI there, QUick question, can Oxite handle rendering pages specific to mobile devices requests? Nixon",
+    "PostedDate": "2010-12-12T01:00:13.023-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "535132",
+    "ThreadId": "238054",
+    "Html": "\r\n<p>Nothing built-in, no, but it's fairly easy to add views that are specific to a mobile device.&nbsp; There are also lots of 3rd party libraries out there for detecting specifics of devices.</p>\r\n<p>Just remember, Oxite hasn't been worked on for the last year and a half and you should probably take a look at\r\n<a href=\"http://orchardproject.net\">Orchard</a> unless you're just trying to learn from Oxite.</p>\r\n",
+    "PostedDate": "2010-12-13T11:07:00.233-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

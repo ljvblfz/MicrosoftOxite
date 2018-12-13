@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "215913",
+    "ThreadId": "63491",
+    "Html": "<p>Is it possible to get the latest database schema?&nbsp; I grabbed the latest code from source control and am getting an Invalid object name 'dbo.oxite_CMS_ContentItem' exception.</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2009-07-24T18:46:33.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "216012",
+    "ThreadId": "63491",
+    "Html": "<p>Seems the oxcite_site is also way off from the latest source and the last Setup\\Oxite.sql</p>\r\n<p>Looks like several of the column names have been changed (SkinsPath, SkinsScriptsPath, SkinsStylesPath, Skin, AdminSkin, HasMultipleBlogs, PluginsPath)</p>",
+    "PostedDate": "2009-07-25T10:14:41.96-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "216021",
+    "ThreadId": "63491",
+    "Html": "<p>Well I thought I was going to be a smartie by taking and attaching the included MDF from the latest source download and then do a backup and restore that backup to my server. But even after doing that I still get &quot;<em>Invalid object name 'dbo.oxite_CMS_ContentItem'.&quot;</em></p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-07-25T10:57:07.293-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "216037",
+    "ThreadId": "63491",
+    "Html": "<p>Apologies.&nbsp; We've been busy and I haven't had time to update the schema in the MDF.&nbsp; We only update the scripts in /Setup for new releases, but I'll get the MDF updated later tonight (don't have time right now).</p>",
+    "PostedDate": "2009-07-25T14:14:42.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "216086",
+    "ThreadId": "63491",
+    "Html": "<p>The schema is now updated for Oxite.</p>",
+    "PostedDate": "2009-07-25T21:14:37.89-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

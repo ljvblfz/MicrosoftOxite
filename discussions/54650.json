@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "184279",
+    "ThreadId": "54650",
+    "Html": "Hi,<br>\r\n<br>\r\nNoticed that when trying to connect to Oxite via Windows Live Writer, if invalid credentials are passed in, the MetaWeblog implementation throws an InvalidCredentialException and Windows Live Writer returns a 500 error.  I'm assuming that a complete implementation would return a &lt;fault&gt; element - like this?<br>\r\n<br>\r\n<span style=\"font-size:13px\">\r\n<p>&lt;?xml version=&quot;1.0&quot;?&gt; <br>\r\n&lt;methodResponse&gt; <br>\r\n&lt;fault&gt; <br>\r\n&lt;value&gt; <br>\r\n&lt;struct&gt;<br>\r\n &lt;member&gt; <br>\r\n&lt;name&gt;faultCode&lt;/name&gt;<br>\r\n &lt;value&gt; &lt;i4&gt;0&lt;/i4&gt; &lt;/value&gt;<br>\r\n &lt;/member&gt;<br>\r\n &lt;member&gt; <br>\r\n&lt;name&gt;faultString&lt;/name&gt; <br>\r\n&lt;value&gt; &lt;string&gt;User does not exist&lt;/string&gt; &lt;/value&gt; &lt;/member&gt;<br>\r\n &lt;/struct&gt; <br>\r\n&lt;/value&gt;<br>\r\n &lt;/fault&gt; </p>\r\n</span>\r\n<p><span style=\"font-size:13px\"><br>\r\nmore info:<br>\r\n</span><span style=\"color:#0066cc;font-size:13px;text-decoration:underline\">http://www.blogger.com/developers/api/1_docs/xmlrpc_getUsersBlogs.html <br>\r\n<br>\r\n</span>thanks,<br>\r\nJim </p>\r\n",
+    "PostedDate": "2009-04-27T16:43:51.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184558",
+    "ThreadId": "54650",
+    "Html": "You are correct, we are not a complete implementation :)<br>\r\n<br>\r\nWe currently use WCF and a custom XMLRPC channel to do all our APIs. The code that we used, however, does not properly report faults at this time. Its something we want to fix but it's going to require one of us to either become a WCF expert or moving to a solution that uses a Controller.<br>\r\n<br>\r\nI'll make sure it's on Erik's list of things to work on.\r\n",
+    "PostedDate": "2009-04-28T08:18:45.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184595",
+    "ThreadId": "54650",
+    "Html": "I added it to the list.\r\n",
+    "PostedDate": "2009-04-28T09:55:17.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

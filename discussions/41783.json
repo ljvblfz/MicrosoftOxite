@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "138649",
+    "ThreadId": "41783",
+    "Html": "Is that in the plans anywhere? :)<br>\r\n<br>\r\nP.S. -- Good job, folks!<br>\r\n<br>\r\nP.P.S. -- First! :)\r\n",
+    "PostedDate": "2008-12-08T09:28:37.233-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "138661",
+    "ThreadId": "41783",
+    "Html": "It is and it isn't.  We've gotten feedback already that an EF provider would be a good thing.  We built a provider model for data providers so it shouldn't be too hard to move it to EF, but I'm honestly not super familiar with EF having not used it yet, so there may be some major changes needed.<br>\r\n<br>\r\nThe EF team has actually shown (verbal) interest in building an EF provider for us to help show it off.  I will be emailing them today to see if they still have interest and will post back to the discussion about what I find out.\r\n",
+    "PostedDate": "2008-12-08T09:52:27.897-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "138785",
+    "ThreadId": "41783",
+    "Html": "I second this.<br>\r\n<br>\r\nI really want to get familiar with EF more in production environments and seeing if it is ready and capable. This would be a great proof of concept.<br>\r\n<br>\r\nAlso, can this be deployed to a shared hosting environment? I hate to bring up competitors but ASP.NET lacks in quality CMS's out there to compete with Drupal, Joomla and such.<br>\r\n<br>\r\nI know there is DotNetNuke but the UI for DNN is horrendeous. Drupal and Joomla are top notch. I've tried some commercial ASP.NET CMS's to see how they compete against Drupal and Joomla however they don't compete very well. They rarely install well in shared hosting providers. DNN does this well however.<br>\r\n<br>\r\nUnfortunately ASP.NET doesn't compete too strong in this category except really expensive sites where people can afford a $1000+ license for a CMS.<br>\r\n<br>\r\nSorry for the rant but I see big potential here.<br>\r\n<br>\r\nI really like the providers concept. I think 2 things would be huge for this, modules concept and an extensible account/role/security concept. This would allow a lot of things to be built ontop. Perhaps a community portal for contributed modules would be great. Drupal has a great community for this.<br>\r\n<br>\r\nI have been wanting to use an ASP.NET CMS for a long time now but DNN just didn't strike me as what I wanted. I talk to Java/.NET developers all the time and nobody has liked DNN but its usually the only option if your forced to go .NET.<br>\r\n<br>\r\nIf this CMS could get some key things like a web installer in hosted situations and some building blocks for extensibility we really have a compelling project here :)<br>\r\n<br>\r\nSorry for all the words. I am really excited to see a real clean ASP.NET CMS project!\r\n",
+    "PostedDate": "2008-12-08T16:04:39.747-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "138837",
+    "ThreadId": "41783",
+    "Html": "I am a joomla CMS user, but I am a dotnet developer, so I like this project.\r\n",
+    "PostedDate": "2008-12-08T19:35:10.823-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "138840",
+    "ThreadId": "41783",
+    "Html": "<a href=\"http://www.codeplex.com/site/users/view/Synced\" id=\"ctl00_ctl00_MasterContent_Content_PostRepeater_ctl04_UserNameLink\"><span style=\"color:#3e62a6\">Synced</span></a> - Have you tried <a href=\"http://www.umbraco.org\">Umbraco</a>\r\n",
+    "PostedDate": "2008-12-08T19:58:36.39-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139175",
+    "ThreadId": "41783",
+    "Html": "I tried umbraco awhile back. It seems too developer centric. Although I am a developer, setting up a website shouldn't be all development tasks. Joomla and Drupal do a great job of letting the average joe create a rich website.<br>\r\n<br>\r\nPerhaps I didn't give umbraco a good enough chance.<br>\r\n<br>\r\nI never really was able to find a good umbraco community of modules and groups of people working on extending it like you see for Joomla, Drupal and DNN.<br>\r\n<br>\r\nDrupal and Joomla are first class. ASP.NET needs something of this calibur badly in my opinion.\r\n",
+    "PostedDate": "2008-12-09T19:55:29.277-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139195",
+    "ThreadId": "41783",
+    "Html": "I've tried dozens of commercial and open-source .NET CMS solutions: Umbraco, Kentico, DotNetNuke, Sitefinity, and the obscure one-off variations from <a href=\"http://www.cmsmatrix.org\">http://www.cmsmatrix.org</a>. Lots of them bombed because they required full-trust. Thus, I settled with Community Server Express, as most of it can run in medium-trust and has all the functionality I need for the sites I'm pushing.\r\n",
+    "PostedDate": "2008-12-09T22:29:09.777-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139253",
+    "ThreadId": "41783",
+    "Html": "<div>I think with every release Umbraco comes closer to the Php CMSes, having used it for several project I must disagree with some of your remarks</div><div><br></div><div>to start you only need to install 1 ASP.net website and maybe one of the sample site packages to learn how it works</div><div>its community is large enough - you'll find a lot of useful info at the Umbraco forum and for most features you can find extra packages and examples<br></div><div>with good knowledge of Xslt you can very quickly set up a custom website</div><div>it's true it requires Full trust to run it, but there are some hosting providers that will allow this (although you could argue that's not a good security practice)<br></div><div><br></div><div>the real drawbacks to me </div><div>no workflow features yet, no authoring checkin/checkout</div><div>some features in the UI don't work well unless with IE, which is really a pity for an open source project</div><div><br></div><div>still, I'm very curious about Oxite, especially since it showcases the new ASP.Net MVC framework and it's an initiative from MS people</div><div><br></div>",
+    "PostedDate": "2008-12-10T04:59:58.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140285",
+    "ThreadId": "41783",
+    "Html": "Designers shouldn't need to know XSLT though.<br>\r\n<br>\r\nAlso I'm not a big fan of the UI in umbraco. Not a big fan of treeview panel navigation to be honest. Drupal and Joomla have a rocking administration backend interface.\r\n",
+    "PostedDate": "2008-12-13T11:57:08.917-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

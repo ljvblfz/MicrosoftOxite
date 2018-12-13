@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "144716",
+    "ThreadId": "43535",
+    "Html": "Hi all,<br>\r\n<br>\r\nQuestion: How does the HashedEmail field gets generated and for what it's used?<br>\r\n<br>\r\nMany Thnx.<br>\r\n",
+    "PostedDate": "2009-01-06T07:50:57.06-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144796",
+    "ThreadId": "43535",
+    "Html": "It is a MD5 hash of the email address, generated at the server using .NET's crypto classes... and it is used to enable gravatar support. (<a href=\"http://en.gravatar.com/\">http://en.gravatar.com/</a>)<br>\r\n",
+    "PostedDate": "2009-01-06T10:58:32.123-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

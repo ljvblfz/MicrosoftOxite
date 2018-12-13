@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "139900",
+    "ThreadId": "42096",
+    "Html": "The Admin/Files view has the following 2 text controls on it:<br>\r\n<br>\r\n<br>\r\n<em>&lt;div&gt;&lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;&lt;/div&gt;<br>\r\n&lt;div&gt;&lt;%=Html.TextBox(&quot;path&quot;) %&gt;&lt;/div&gt;</em><br>\r\n<br>\r\n<br>\r\nWhat is the second text control for?\r\n",
+    "PostedDate": "2008-12-11T17:09:44.363-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139946",
+    "ThreadId": "42096",
+    "Html": "You found a page that we never got around to finishing (yet).  Good job.  ;)  I was just using it to make sure uploading files worked.<br>\r\n<br>\r\nThat field is currently incorrectly named, but it is the extra path you want the file to go in.  Example:  Upload a file called &quot;ToDo.txt&quot; and leave the path field blank.  The path will end up being /Users/{username}/ToDo.txt.  If you add a value of Test/Testing into the path field, the file will end up being located at /Users/{username}/Test/Testing/ToDo.txt<br>\r\n<br>\r\nWe'll get around to actually finishing that page at some point.  :)\r\n",
+    "PostedDate": "2008-12-11T23:20:57.243-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

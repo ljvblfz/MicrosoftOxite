@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Start Oxite\nLog in\nCreate post\n \nEnter a unique title and content\nScroll down to see the slug and date. Click \"publish\". Date is generated - shown as \"12/17/2008 12:45:20\". Click \"save\". \nError shown is \"Publish date specified cannot be parsed.\"\n \nLooks like you're displaying the date in American format (mm/dd) but parsing it (NameValueCollectionExtensions.cs, line 137) in local format, which in my case is UK (dd/mm). SOo it should display as \"12/17/2008 ...\" Or at least be consitent.",
+    "LastUpdatedDate": "2017-11-27T23:44:09.53-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-17T04:55:24.637-08:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Publish date specified cannot be parsed - localisation issue",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6808
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "The bug is still present in the current build, even though posting works\r\nOf course now it's 6 Jan, so the publish date is generated as \"1/6/2009\", which is then parsed as \"1 June 2009\".",
+      "PostedDate": "2009-01-06T14:20:38.417-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "It looks like the date is generated in site.js, line 163:\r\n                var date = new Date();\r\n                $(\"#post_publishDate\").val(date.toShortString());\r\n\r\nThen just after that there's a date picker whcih shows dates in yet another format:  \"yy/mm/dd '8:00 AM'\", which is parsed successfully. \r\n\r\nLocal format throughout would be better.",
+      "PostedDate": "2009-01-06T14:30:32.803-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Using $(\"#post_publishDate\").val(date.toLocaleString()); works for me instead, however this does mean that the date is shown in the long date format of the client pc, then parsed on the server's format. \r\n\r\nIt's safer to use a fixed format in both cases.",
+      "PostedDate": "2009-01-08T04:44:03.04-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "You'd also run into differences in browser implementations of toLocaleString which will probably be different than what works best for the locale in a text box or what the server would happily parse.\r\n\r\nSo we could either \r\n\r\n1) Get a date format string from the server (either inline script or async) and format the date on the client. That might require writing a new jQuery date format/parser plugin (the datepicker's internals seems a bit limited and only does simple dates) and that opens another can-o-worms.\r\n\r\nor\r\n\r\n2) look to the server for correctly formatted date strings given a JSON object with year, month, day, etc.\r\n\r\nI'd like to take off with 1 but will probably begin with something that looks more like 2....",
+      "PostedDate": "2009-01-08T15:16:37.42-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-08T15:16:38.843-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I'm not sure that i understand option 2, but I agree that an object with named fields (even a weakly typed Json object) is better than just having a string to parse. More comments here\r\nhttp://www.codeplex.com/oxite/WorkItem/View.aspx?WorkItemId=6730",
+      "PostedDate": "2009-01-09T02:14:55.587-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:13.62-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-11-27T23:44:09.53-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

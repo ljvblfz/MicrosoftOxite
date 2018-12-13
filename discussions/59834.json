@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "202556",
+    "ThreadId": "59834",
+    "Html": "<p>I have just downloaded the <span id=\"ctl00_ctl00_MasterContent_RightSideBar_CurrentRelease_Sidebar_releaseTitleLabel\">Oxite.2009.2.15 release and installed it by following the getting started guide, but I can't get it to build. I have tried on Windows 7 beta and on a clean XP install, but I keep get the same build errors:</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"color:#000000\">Error&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; The type or namespace name 'Security' does not exist in the namespace 'Microsoft' (are you missing an assembly reference?)&nbsp;&nbsp;&nbsp; C:\\Documents and Settings\\Administrator\\Desktop\\Oxite.2009.2.15\\Oxite\\Oxite\\Extensions\\StringExtensions.cs&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp; Oxite</span></p>\r\n<p><span style=\"color:#000000\">Error&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; Metadata file 'C:\\Documents and Settings\\Administrator\\Desktop\\Oxite.2009.2.15\\Oxite\\Oxite\\bin\\Debug\\Oxite.dll' could not be found&nbsp;&nbsp;&nbsp; Oxite.LinqToSqlDataProvider</span></p>\r\n<p><span style=\"color:#000000\">Error&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; Metadata file 'C:\\Documents and Settings\\Administrator\\Desktop\\Oxite.2009.2.15\\Oxite\\Oxite\\bin\\Debug\\Oxite.dll' could not be found&nbsp;&nbsp;&nbsp; Oxite.Mvc</span></p>\r\n<p><span style=\"color:#000000\">Error&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; Metadata file 'C:\\Documents and Settings\\Administrator\\Desktop\\Oxite.2009.2.15\\Oxite\\Oxite.LinqToSqlDataProvider\\bin\\Debug\\Oxite.LinqToSqlDataProvider.dll' could not be found&nbsp;&nbsp;&nbsp; OxiteSite</span></p>\r\n<p><span style=\"color:#000000\">Error&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; Metadata file 'C:\\Documents and Settings\\Administrator\\Desktop\\Oxite.2009.2.15\\Oxite\\Oxite\\bin\\Debug\\Oxite.dll' could not be found&nbsp;&nbsp;&nbsp; OxiteSite</span></p>\r\n<p><span style=\"color:#000000\">Error&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; Metadata file 'C:\\Documents and Settings\\Administrator\\Desktop\\Oxite.2009.2.15\\Oxite\\Oxite.Mvc\\bin\\Debug\\Oxite.Mvc.dll' could not be found&nbsp;&nbsp;&nbsp; OxiteSite</span></p>\r\n<p><span style=\"color:#000000\">Warning&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; Could not resolve this reference. Could not locate the assembly &quot;AntiXssLibrary&quot;. Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.&nbsp;&nbsp;&nbsp; Oxite</span></p>\r\n<p><span style=\"color:#000000\">Warning&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; The referenced component 'AntiXssLibrary' could not be found. &nbsp;&nbsp;&nbsp; <br></span></p>\r\n<p>&nbsp;</p>\r\n<p>I guess it's a trivial problem, but I have no clue how to fix it. What am I missing? Wrong configuration of Visual Web Dev?</p>\r\n<p>I'm using <span id=\"ctl00_ctl00_MasterContent_RightSideBar_CurrentRelease_Sidebar_releaseTitleLabel\">Oxite.2009.2.15, Asp.Net MVC 1.0, AntiXXS V 3.0 Beta, XUnite 1.1 and Unity 1.2<br></span></p>\r\n<p>Thanks in advance</p>",
+    "PostedDate": "2009-06-17T09:55:50.96-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "202605",
+    "ThreadId": "59834",
+    "Html": "\r\n<span style=\"font-size:10pt;font-family:Arial;font-weight:Normal\">It says it can't find the AntiXSS library. Are you sure you got the right version and put it in the right place? XP or Win7 should work just fine.<br>\r\n<br>\r\n(sent from WinMo 6.1 phone)<br>\r\n<br>\r\n<hr>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">From: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">sorenjacobi &lt;notifications@codeplex.com&gt;</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Sent: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Wednesday, June 17, 2009 10:21 AM</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">To: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Erik Porter &lt;Erik.Porter@microsoft.com&gt;</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Subject: </span>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Build errors/install problem [oxite:59834]</span><br>\r\n<br>\r\n</span>\r\n<div>\r\n<p>From: sorenjacobi</p>\r\n<div id=ThreadNotificationPostBody>\r\n<p>I have just downloaded the <span id=\"ctl00_ctl00_MasterContent_RightSideBar_CurrentRelease_Sidebar_releaseTitleLabel\">\r\nOxite.2009.2.15 release and installed it by following the getting started guide, but I can't get it to build. I have tried on Windows 7 beta and on a clean XP install, but I keep get the same build errors:</span></p>\r\n<p><span></span></p>\r\n<pre>Error    1    The type or namespace name 'Security' does not exist in the namespace 'Microsoft' (are you missing an assembly reference?)    C:\\Documents and Settings\\Administrator\\Desktop\\Oxite test\\Oxite\\Oxite\\Extensions\\StringExtensions.cs    11    17    Oxite\r\n\r\nError    2    Metadata file 'C:\\Documents and Settings\\Administrator\\Desktop\\Oxite test\\Oxite\\Oxite\\bin\\Debug\\Oxite.dll' could not be found    Oxite.LinqToSqlDataProvider\r\n\r\nError    3    Metadata file 'C:\\Documents and Settings\\Administrator\\Desktop\\Oxite test\\Oxite\\Oxite\\bin\\Debug\\Oxite.dll' could not be found    Oxite.Mvc\r\n\r\nError    4    Metadata file 'C:\\Documents and Settings\\Administrator\\Desktop\\Oxite test\\Oxite\\Oxite.LinqToSqlDataProvider\\bin\\Debug\\Oxite.LinqToSqlDataProvider.dll' could not be found    OxiteSite\r\n\r\nError    5    Metadata file 'C:\\Documents and Settings\\Administrator\\Desktop\\Oxite test\\Oxite\\Oxite.Mvc\\bin\\Debug\\Oxite.Mvc.dll' could not be found    OxiteSite\r\n\r\nError    6    Metadata file 'C:\\Documents and Settings\\Administrator\\Desktop\\Oxite test\\Oxite\\Oxite\\bin\\Debug\\Oxite.dll' could not be found    OxiteSite\r\n\r\nWarning    7    Could not resolve this reference. Could not locate the assembly &quot;AntiXssLibrary&quot;. Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.    Oxite\r\n\r\nWarning    8    The referenced component 'AntiXssLibrary' could not be found.    \r\n</pre>\r\n<p>I guess it's a trivial problem, but I have no clue how to fix it. What am I missing? Wrong configuration of Visual Web Dev?</p>\r\n<p>I'm using <span id=\"ctl00_ctl00_MasterContent_RightSideBar_CurrentRelease_Sidebar_releaseTitleLabel\">\r\nOxite.2009.2.15, Asp.Net MVC 1.0, AntiXXS V 3.0 Beta, XUnite 1.1 and Unity 1.2<br>\r\n</span></p>\r\n<p><span>Thanks in advance<br>\r\n</span></p>\r\n</div>\r\n\r\n</div>\r\n",
+    "PostedDate": "2009-06-17T11:47:24.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "202851",
+    "ThreadId": "59834",
+    "Html": "<p>Thanks Erik.</p>\r\n<p>A misplaced AntiXXS was the problem. I guess I was blinded by all the red errors and didn't pay enough attention to the warnings :-/</p>",
+    "PostedDate": "2009-06-18T03:36:22.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "729810",
+    "ThreadId": "59834",
+    "Html": "<p>Hello !</p>\r\n<p>Me too getting all the above .dll and assembly missing errors while building the application...</p>\r\n<p>Pls help me out...</p>\r\n<p>Thanks in Advance !</p>\r\n<p>-Hariharan. A</p>",
+    "PostedDate": "2012-01-24T02:48:52.583-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "729811",
+    "ThreadId": "59834",
+    "Html": "<p>Hello !</p>\r\n<p>Me too getting all the above .dll and assembly missing errors while building the application...</p>\r\n<p>Pls help me out...</p>\r\n<p>Thanks in Advance !</p>\r\n<p>-Hariharan. A</p>",
+    "PostedDate": "2012-01-24T02:48:58.557-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "729815",
+    "ThreadId": "59834",
+    "Html": "<p>I cant find AntiXssLibrary... where i can get that and where to place ??</p>",
+    "PostedDate": "2012-01-24T02:51:34.2-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "729823",
+    "ThreadId": "59834",
+    "Html": "<p><span style=\"color: #ff0000;\"><strong>Errors</strong></span></p>\r\n<p>Error<span> </span>1<span> </span>The type or namespace name 'Security' does not exist in the namespace 'Microsoft' (are you missing an assembly reference?)<span> </span>C:\\Users\\hariharan\\Documents\\Oxite\\Oxite\\Oxite\\Extensions\\StringExtensions.cs<span> </span>11<span> </span>17<span> </span>Oxite</p>\r\n<p>Error<span> </span>2<span> </span>Metadata file 'C:\\Users\\hariharan\\Documents\\Oxite\\Oxite\\Oxite\\bin\\Debug\\Oxite.dll' could not be found<span> </span>Oxite.LinqToSqlDataProvider</p>\r\n<p>Error<span> </span>3<span> </span>Metadata file 'C:\\Users\\hariharan\\Documents\\Oxite\\Oxite\\Oxite\\bin\\Debug\\Oxite.dll' could not be found<span> </span>Oxite.Mvc</p>\r\n<p>Error<span> </span>4<span> </span>Metadata file 'C:\\Users\\hariharan\\Documents\\Oxite\\Oxite\\Oxite.LinqToSqlDataProvider\\bin\\Debug\\Oxite.LinqToSqlDataProvider.dll' could not be found<span> </span>Oxite.Mvc.Tests</p>\r\n<p>Error<span> </span>5<span> </span>Metadata file 'C:\\Users\\hariharan\\Documents\\Oxite\\Oxite\\Oxite.Mvc\\bin\\Debug\\Oxite.Mvc.dll' could not be found<span> </span>Oxite.Mvc.Tests</p>\r\n<p>Error<span> </span>6<span> </span>Metadata file 'C:\\Users\\hariharan\\Documents\\Oxite\\Oxite\\Oxite\\bin\\Debug\\Oxite.dll' could not be found<span> </span>Oxite.Mvc.Tests</p>\r\n<p>Error<span> </span>7<span> </span>Metadata file 'C:\\Users\\hariharan\\Documents\\Oxite\\Oxite\\Oxite.LinqToSqlDataProvider\\bin\\Debug\\Oxite.LinqToSqlDataProvider.dll' could not be found<span> </span>OxiteSite</p>\r\n<p>Error<span> </span>8<span> </span>Metadata file 'C:\\Users\\hariharan\\Documents\\Oxite\\Oxite\\Oxite.Mvc\\bin\\Debug\\Oxite.Mvc.dll' could not be found<span> </span>OxiteSite</p>\r\n<p>Error<span> </span>9<span> </span>Metadata file 'C:\\Users\\hariharan\\Documents\\Oxite\\Oxite\\Oxite\\bin\\Debug\\Oxite.dll' could not be found<span> </span>OxiteSite</p>\r\n<p><span style=\"color: #808000;\"><strong>Warnings</strong></span></p>\r\n<p><span style=\"color: #808000;\"><span style=\"color: #000000;\">Warning 10 Could not resolve this reference. Could not locate the assembly \"AntiXssLibrary\". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors. Oxite</span></span></p>\r\n<p>Warning<span> </span>11<span> </span>The referenced component 'AntiXssLibrary' could not be found.</p>\r\n<p>_____________________________</p>\r\n<p>Please Help me out !!!</p>",
+    "PostedDate": "2012-01-24T03:00:31.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "729827",
+    "ThreadId": "59834",
+    "Html": "<p>Hello Mr. Erik</p>\r\n<p>I am facing the above problems, can u tell me where i can get&nbsp;<span>AntiXssLibrary.dll and where i should place that ??</span></p>\r\n<p><span>Thanks in Advance.</span></p>",
+    "PostedDate": "2012-01-24T03:08:42.62-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "908513",
+    "ThreadId": "59834",
+    "Html": "<p><span>after setup AntiXssLibrary：<a href=\"http://www.microsoft.com/en-us/download/details.aspx?id=28589\">http://www.microsoft.com/en-us/download/details.aspx?id=28589</a></span></p>\r\n<p>you can use this location version：C:\\Program Files\\Microsoft Information Security\\AntiXSS Library v4.2\\NET35\\AntiXSSLibrary.dll</p>\r\n<p>then update your Oxite\\<span>reference\\</span></p>",
+    "PostedDate": "2012-09-05T00:20:32.203-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

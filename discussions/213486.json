@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "446082",
+    "ThreadId": "213486",
+    "Html": "<p>I know that Oxite isn't being actively developed any longer with most of the staff moving to the Orchard project instead but I was just wondering if it's still possible for us to work on it if we choose to.</p>\r\n<p>And if it is, how would one go about it?</p>",
+    "PostedDate": "2010-05-21T20:35:39.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "446728",
+    "ThreadId": "213486",
+    "Html": "<p>You can do whatever you want with it.&nbsp; Grab the source and go to town.&nbsp; If you're asking if there's a way to work on the source code here on CodePlex and check-in new code, no.&nbsp; Since it's not being further developed, we are not taking new contributors.</p>",
+    "PostedDate": "2010-05-24T10:25:12.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

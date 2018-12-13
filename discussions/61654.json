@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "209183",
+    "ThreadId": "61654",
+    "Html": "<p>Hello,</p>\r\n<p>I don't know if this is correct place to put this or not.. stil learning everything .. but should this sort of thing be in issue tracker?</p>\r\n<p>&nbsp;</p>\r\n<p>I was having some trouble working with the edit of pages, I can add, remove.. (subpages though, not the main page... though i think that is most likely just a UI problem as there is no button)</p>\r\n<p>^ ok, ive not looked into it fully but the delete button does not delete the page.. thought it stops showing up on the admin..&nbsp; but stays in the database.</p>\r\n<p>&nbsp;</p>\r\n<p><span>\r\n<h2><em>Cannot insert duplicate key row in object 'dbo.oxite_Page' with unique index 'IX_oxite_Page_SitePageSlug'.<br>The statement has been terminated.</em></h2>\r\n</span><span style=\"font-family:Arial, Helvetica, Geneva, SunSans-Regular, sans-serif\"><strong>Description: </strong>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. <br><br><strong>Exception Details: </strong>System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.oxite_Page' with unique index 'IX_oxite_Page_SitePageSlug'.<br>The statement has been terminated.<br><br><strong>Source Error:</strong> <br><br></span></p>\r\n<table border=0 width=\"100%\" bgcolor=\"#ffffcc\">\r\n<tbody>\r\n<tr>\r\n<td>\r\n<pre>Line 77:             pageToSave.CreatorUserID = user.UserID;\r\nLine 78: \r\n<span style=\"color:#ff0000\">Line 79:             context.SubmitChanges();\r\n</span>Line 80: \r\nLine 81:             return GetPage(pageToSave.SiteID, pageToSave.Slug, pageToSave.ParentPageID);</pre>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;But when editting the pages, it saves the pages but the cache does not update.. just going to go and have a look at the caching stuff now.. see if i can work out whats going wrong there..</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-07-06T15:47:21.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "209207",
+    "ThreadId": "61654",
+    "Html": "<p>looked at the caching and really could not understand how it all worked. time to go and try and learn it:)</p>",
+    "PostedDate": "2009-07-06T16:36:20.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "209208",
+    "ThreadId": "61654",
+    "Html": "<p>This is from a recent check-in, right?&nbsp; We're in the middle of some big refactoring to push all functionality of Oxite into separate modules.&nbsp; I don't believe we've looked at pages lately so there are probably bugs and I'm not sure offhand how to fix.&nbsp; We're unfortunately really busy right now or I'd go in and figure it out and fix it.&nbsp; If you figure out what's wrong, let me know and I can make the change.</p>",
+    "PostedDate": "2009-07-06T16:36:27.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "209209",
+    "ThreadId": "61654",
+    "Html": "<p>Caching is sort of &quot;dumb&quot; at the moment, but *should* invalidate things properly and work fine.&nbsp; Let me know if you find anything wrong.&nbsp; With the refactor, it's quite possible.&nbsp; :(&nbsp; :)</p>",
+    "PostedDate": "2009-07-06T16:37:35.57-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

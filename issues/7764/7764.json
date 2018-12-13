@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-05-14T14:35:04.32-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Well, I've saw that in Oxite, when you've created the model, you've tried to do something independent from O/R mapping and persistence frameworks. I don't know if it's a silly question but, anyway, what I would like to know is: why haven't you used bidirectional associations? For example, in your Post class, you have a IList of Tag. BUT... in Tag you don't have anything related to Post. I was expecting an IList of Post or, at least, a property Post.\n \nI am making this question because I have noticed exactly the same approach in Kona/Storefront Rob Conery's project (http://blog.wekeroad.com/category/mvc-storefront). Why do you both haven't implemented bidirectional associations? It won’t be a problem in the future? Is it correct from an Object Oriented Programming point of view?\n \nThanks for your attention and congratulations for Oxite, great work :)",
+    "LastUpdatedDate": "2013-05-16T03:38:00.67-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-05-14T14:18:38.323-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Bidirectional associations",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7764
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

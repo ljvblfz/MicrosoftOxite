@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The latest code will not allow you to post new blog entries.  It appears that validation fails because the Area is null.  The bug is in PostController.SaveAdd, which assumes that the areaInput.Name is set (actually, it is null and was null in the Feb code base, too):\n \n    Area area = areaService.GetArea(areaInput.Name);\n \nIf you change this to something like:\n \n    postInput.Area = areaService.GetArea(areaInput.ID);\n \nIt works, because the areaInput.ID is available.  The old code used to fall back on the first Area it found, which may explain why the problem wasn't seen earlier.",
+    "LastUpdatedDate": "2013-02-21T15:43:09.82-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-03-16T17:08:47.79-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Blog post fails due to Area validation error",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7289
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "There is a similar problem in PostController.SaveEdit, when saving changes to a post.  It also fails with a validation error due to the missing Area.",
+      "PostedDate": "2009-03-16T18:48:58.393-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:09.82-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "184885",
+    "ThreadId": "54809",
+    "Html": "<p>Has anybody approached the following function?</p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';color:blue;font-size:10pt\">public</span><span style=\"font-family:'courier new';font-size:10pt\"> <span style=\"color:#2b91af\">UrlData</span> NewMediaObject(<span style=\"color:blue\">string</span> blogId, <span style=\"color:blue\">string</span> username, <span style=\"color:blue\">string</span> password, <span style=\"color:#2b91af\">FileData</span> file)</span></p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';font-size:10pt\">{</span></p>\r\n<p style=\"line-height:normal;margin:0cm 0cm 0pt\"><span style=\"font-family:'courier new';color:blue;font-size:10pt\">throw</span><span style=\"font-family:'courier new';font-size:10pt\"> <span style=\"color:blue\">new</span> <span style=\"color:#2b91af\">NotImplementedException</span>();</span></p>\r\n<p><span style=\"font-family:'courier new';font-size:10pt\">}</span></p>\r\n<p style=\"margin:0cm 0cm 10pt\"><span style=\"font-family:calibri\">If not then I shall give it a go. When I realised that I had to make writer use FTP I had a little cry ;).</span></p>\r\n",
+    "PostedDate": "2009-04-29T02:27:47.093-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185105",
+    "ThreadId": "54809",
+    "Html": "What's funny (and sad) is that Oxite v1 had this method implemented.  We unfortunately missed it when we did the big refactor.  I cried a little setting up my blog with FTP too, but it's not that bad after that.  ;)  I'll add this to our ongoing list.\r\n",
+    "PostedDate": "2009-04-29T10:50:07.893-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "222628",
+    "ThreadId": "65375",
+    "Html": "<p>Hi,</p>\r\n<p>I downloaded Oxite yesterday and got the site setup, with the web server running under the visual studio web server on my laptop and the database on a main server.</p>\r\n<p>I managed to get the site to setup successfully and the home page works, along with adding new pages, but the admin and creating a new blog post do not work. I get the following error while creating a new post:</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre style=\"color:#000000;font-family:'Segoe UI', 'Microsoft Sans Serif', Arial, Geneva, sans-serif;font-size:10pt;margin:8px\">Server Error in '/' Application.\r\n\r\nIndex was out of range. Must be non-negative and less than the size of the collection.\r\nParameter name: index\r\n\r\nDescription: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. \r\n\r\nException Details: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.\r\nParameter name: index\r\n\r\nSource Error: \r\n\r\n\r\nLine 162:            Post newPost;\r\nLine 163:\r\nLine 164:            postService.AddPost(area ?? areaService.GetAreas()[0], postInput, currentUser, out validationState, out newPost);\r\nLine 165:\r\nLine 166:            //todo: (nheskew) need to do more than just return another action method because it's likely different actions will need different filters applied to it\r\n\r\nSource File: C:\\work\\Projects\\trunk\\theouteredge\\Oxite\\Oxite.Mvc\\Controllers\\PostController.cs    Line: 164 \r\n</pre>\r\n<div><span style=\"white-space:pre\"><br></span></div>\r\n</div>\r\n<p>And this one when I try to enter the administration area:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"white-space:normal\"><span style=\"white-space:pre\"><div style=\"color:Black;background-color:White\"><pre>Server Error in '/' Application.\r\n\r\nIndex was out of range. Must be non-negative and less than the size of the collection.\r\nParameter name: index\r\n\r\nDescription: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. \r\n\r\nException Details: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.\r\nParameter name: index\r\n\r\nSource Error: \r\n\r\n\r\nLine 28:                 <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">h3</span><span style=\"color:Blue\">&gt;</span><span style=\"background-color:Yellow\">&lt;%=</span>Model.Localize(&quot;ManageAreas&quot;, &quot;Manage Areas&quot;) <span style=\"background-color:Yellow\">%&gt;</span><span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">h3</span><span style=\"color:Blue\">&gt;</span>\r\nLine 29:                 <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">ul</span><span style=\"color:Blue\">&gt;</span>\r\nLine 30:                     <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">li</span><span style=\"color:Blue\">&gt;</span><span style=\"background-color:Yellow\">&lt;%=</span>Html.Link(Model.Localize(&quot;Area.Manage&quot;, &quot;Edit Area&quot;), adminData.Areas.Count &gt; 1 ? Url.AreaFind() : Url.AreaEdit(adminData.Areas[0]))<span style=\"background-color:Yellow\">%&gt;</span><span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">li</span><span style=\"color:Blue\">&gt;</span>\r\nLine 31:                     <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">li</span><span style=\"color:Blue\">&gt;</span><span style=\"background-color:Yellow\">&lt;%=</span>Html.Link(Model.Localize(&quot;Area.Add&quot;, &quot;Add New area&quot;), Url.AreaAdd()) <span style=\"background-color:Yellow\">%&gt;</span><span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">li</span><span style=\"color:Blue\">&gt;</span>\r\nLine 32:                     <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">li</span><span style=\"color:Blue\">&gt;</span><span style=\"background-color:Yellow\">&lt;%=</span>Html.Link(&quot;BlogML&quot;, adminData.Areas.Count &gt; 1 ? Url.AreaFind() : Url.BlogML(adminData.Areas[0])) <span style=\"background-color:Yellow\">%&gt;</span><span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">li</span><span style=\"color:Blue\">&gt;</span>\r\n\r\nSource File: c:\\work\\Projects\\trunk\\theouteredge\\Oxite\\OxiteSite\\Views\\Site\\Dashboard.aspx    Line: 30 \r\n</pre>\r\n</div>\r\n<br></span></span></pre>\r\n</div>\r\n<p>Have I missed something in the database setup or website configuration?</p>",
+    "PostedDate": "2009-08-12T10:40:55.89-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "222754",
+    "ThreadId": "65375",
+    "Html": "<p>It doesn't sound like you missed anything, but somehow it seems like there isn't an area in the database.&nbsp; Usually there's one in the oxite_Area table with a name of &quot;Blog&quot;.&nbsp; Can you verify that's in there or not?&nbsp; I believe the setup should've added this (it's been a long time since I've looked at the code from the last release in February&nbsp; :( ).&nbsp; Let me know if there's an area in there or not.</p>",
+    "PostedDate": "2009-08-12T16:34:45.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "223102",
+    "ThreadId": "65375",
+    "Html": "<p>Hi Erik,</p>\r\n<p>Thanks for you reply. I have just checked the database and there is nothing setup in the area table. I did get an error when accessed the site for the first time and tried to setup the site, but I can't remember what it was.</p>\r\n<p>How can I get this setup correctly? &nbsp;Should I drop the database and try again? At least that way if i get the error again I can post it on here for you.</p>",
+    "PostedDate": "2009-08-13T13:30:01.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "223117",
+    "ThreadId": "65375",
+    "Html": "<p>I dropped and recreated the database and that has work out, thanks for your help.</p>\r\n<p>One thing I noticed first time it setup the system was that the site descritpion on the innitial setup page is not validated. &nbsp;My site description went over the 250 character limit and the system crashed rather than throwing an error. &nbsp;It worked on the site edit screen...</p>",
+    "PostedDate": "2009-08-13T14:10:17.753-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "223970",
+    "ThreadId": "65375",
+    "Html": "<p>We're in the middle of working on a new setup wizard that will replace what exists today so this problem will more than likely just &quot;go away&quot;, but I added an issue to keep track of it just in case it creeps back up.</p>\r\n<p><a href=\"http://oxite.codeplex.com/WorkItem/View.aspx?WorkItemId=8516\">http://oxite.codeplex.com/WorkItem/View.aspx?WorkItemId=8516</a></p>\r\n<p>Thanks for the report and glad you got it working!</p>",
+    "PostedDate": "2009-08-15T21:58:52.49-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

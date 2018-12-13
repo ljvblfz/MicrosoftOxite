@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "159020",
+    "ThreadId": "47497",
+    "Html": "Hi,<br>\r\nI've just downloaded and run Oxite (Revision 29096).<br>\r\nFirst impressions are that it looks nice, the code seems well structured, you had install instructions and it compiled and ran first time (unlike so many openSource projects)<br>\r\n<br>\r\nHowever, having got thus far I'm unsure where to go from here...I have a couple of Newbie type questions for you, hope you don't mind.<br>\r\n<br>\r\nFirstly, please could you give me any kind of an overview on how the whole thing flows...or in other words how do I use Oxite to make my website, which are the Projects I should edit to create my own content pages/menus  etc. (I am experienced, but coming from a Web Forms background, looking to change to the MVC way)<br>\r\n<br>\r\nSecondly, how would you suggest I should source control this solution to be able to take advantage of subsequent releases from yourselves, without overwriting my own tweaks.<br>\r\nFor example...My plan to is to try and build a basic company website (not a blogging engine), so should I start off by tweaking the &quot;OxiteSite&quot; project, then only update the other projects from subversion, or should I create a brand new WebProject as a starting point.<br>\r\n<br>\r\nBest regards,<br>\r\n<br>\r\n",
+    "PostedDate": "2009-02-18T08:34:19.803-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164400",
+    "ThreadId": "47497",
+    "Html": "Well, you'll probably first need to learn about MVC.  It's quite different than WebForms.  Sampy has some posts about the architecture of Oxite that might be useful too:<br>\r\n<br>\r\n<a href=\"http://www.sampy.com/Blog/The-Oxite-Architecture-Good-Bad-and-Meh-Part-1\">http://www.sampy.com/Blog/The-Oxite-Architecture-Good-Bad-and-Meh-Part-1</a><br>\r\n<a href=\"http://www.sampy.com/Blog/The-Oxite-Architecture-Good-Bad-and-Meh-Part-2\">http://www.sampy.com/Blog/The-Oxite-Architecture-Good-Bad-and-Meh-Part-2</a><br>\r\n<br>\r\nYou can use OxiteSite to get started.  While we'll make some changes to that project, they will be minimal so should be fairly easy to update.  The other projects will be updated quite a bit so you should avoid changing them.<br>\r\n<br>\r\nLet me know if you have other questions, but overall I would take a look at ASP.NET MVC first.\r\n",
+    "PostedDate": "2009-03-04T09:34:51.513-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

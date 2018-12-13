@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I got this exception when connect with Live Writer in localhost. any idea?\n \n{\"Resolution of the dependency failed, type = \\\"Oxite.WebServices.MetaWeblogAPI\\\", name = \\\"\\\". Exception message is: The current build operation (build key Build Key[Oxite.WebServices.MetaWeblogAPI, null]) failed: The parameter postService could not be resolved when attempting to call constructor Oxite.WebServices.MetaWeblogAPI(Oxite.Services.IPostService postService, Oxite.Services.IAreaService areaService, Oxite.Services.IUserService userService, Oxite.Services.ITagService tagService, Oxite.Infrastructure.IRegularExpressions expressions). (Strategy type BuildPlanStrategy, index 3)\"}",
+    "LastUpdatedDate": "2013-02-21T15:43:07.72-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-04-29T04:36:09.837-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Exception on connecting with Windows Live Writer",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7709
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I got this fixed, Can i submit patch for it?",
+      "PostedDate": "2009-05-26T19:53:09.54-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:07.72-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

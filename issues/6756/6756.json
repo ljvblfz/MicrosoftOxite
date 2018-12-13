@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "This was an installation issue for the user.",
+    "ClosedDate": "2008-12-10T14:19:12.883-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "---------------------------\nVisual Web Developer 2008 Express Edition\nI followed the exact instructions on the \"getting started\" page, but when I open the project I am getting the following error. Any idea why?\n \n---------------------------\nThe project file 'C:\\Oxite\\OxiteSite\\OxiteSite.csproj' cannot be opened.\n \nThe project type is not supported by this installation.\n---------------------------\nOK   Help   \n---------------------------",
+    "LastUpdatedDate": "2013-05-16T03:38:07.353-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-10T00:09:23.467-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Can't open the project",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6756
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hhhmmm...only time I've seen that is when ASP.NET MVC Beta 1 isn't installed.  Can you verify you have it installed?",
+      "PostedDate": "2008-12-10T02:25:17.95-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "that fixed it. thank you. ",
+      "PostedDate": "2008-12-10T07:40:46.677-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "You're welcome.",
+      "PostedDate": "2008-12-10T14:18:43.477-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-10T14:19:12.883-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:16.763-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:07.353-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

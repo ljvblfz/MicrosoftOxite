@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-04-17T13:43:49.817-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Error\t1\tNo overload for method 'RegisterType' takes '0' arguments\tF:\\MySite\\oxite-31021\\Oxite\\Oxite.Core\\ContainerFactory.cs\t74\t17\tOxite.Core\nError\t2\tMetadata file 'F:\\MySite\\oxite-31021\\Oxite\\Oxite.Core\\bin\\Debug\\Oxite.Core.dll' could not be found\tOxiteSite\n \nHow to solve those two error?",
+    "LastUpdatedDate": "2013-05-16T03:38:01.82-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-04-17T13:01:13.94-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Error While execute the program",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7647
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Do you have the correct version of Unity installed?\r\n\r\nhttp://oxite.codeplex.com/Wiki/View.aspx?title=gettingstarted\r\n\r\nAlso, please start a discussion to walk through your problem instead of an issue in the issue tracker.",
+      "PostedDate": "2009-04-17T13:43:44.33-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-04-17T13:43:49.817-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:08.5-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:01.82-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

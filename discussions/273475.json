@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "675302",
+    "ThreadId": "273475",
+    "Html": "\r\n<p>&nbsp;I login as admin and then I see admin options in menu.</p>\r\n<p>&#65279;&#65279;<a href=\"http://localhost:30913/Admin\">Admin</a>&nbsp;<a href=\"http://localhost:30913/Admin/AddPost\">Add Post</a>&nbsp;\r\n<a href=\"http://localhost:30913/Admin/AddPage\">Add Page</a>&nbsp;<a href=\"http://localhost:30913/Admin%23manageSite\">Manage Site</a></p>\r\n<p>When I click on Add Page /Manage Site it return message</p>\r\n<div id=\"main\">\r\n<h2>&nbsp;&#65279;The url you requested could not be found.</h2>\r\n</div>\r\n<p>&nbsp;&#65279;</p>\r\n",
+    "PostedDate": "2011-09-22T07:17:42.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "682314",
+    "ThreadId": "273475",
+    "Html": "<p>I'm sorry to say that Oxite has not been worked on or supported for over 2 years now. &nbsp;:( &nbsp;Sorry!</p>",
+    "PostedDate": "2011-10-10T14:27:40.61-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

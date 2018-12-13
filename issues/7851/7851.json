@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "1.  Create plug-in.\n2.  Add AuthorUrl attribute but not AuthorUrls\n3.  Navigate to Admin/Plugins\n \nExpected:\n \nAuthor is hyperlinked with AuthorUrl\n \nActual:\n \nNull reference exception is thrown in HtmlHelperExtensions:\n \nreturn htmlHelper.LinkOrDefault(authors[0].CleanText(), authorUrls.Length == 1 ? authorUrls[0].CleanHref() : \"\");\n \nIs AuthorUrl needed?  Won't AuthorUrls just work?",
+    "LastUpdatedDate": "2013-06-14T00:23:19.977-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-06-03T13:58:26.36-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Exception thrown if AuthorUrls not defined for plug-in",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7851
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Sorry about that.  I removed the extension methods and property definition for AuthorUrl last night, but forgot to remove AuthorUrlAttribute.  You're right that only AuthorUrls is needed.  Get latest and you should be fine (by only using AuthorUrlsAttribute).",
+      "PostedDate": "2009-06-03T15:14:25.723-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-06-03T15:14:46.6-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:05.96-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:00.277-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:00.43-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:23:19.977-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

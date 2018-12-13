@@ -1,0 +1,105 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-01-05T20:29:32.817-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Add the following new options to site config for better control of urls\n \n-UrlFormat (string format like \"{0}/Default.aspx\", \"{0}.aspx\" or \"oxite.mvc/{0}\")\n-RedirectFromUrlFormat (bool)",
+    "LastUpdatedDate": "2013-05-16T03:38:08.327-07:00",
+    "PlannedForRelease": "Oxite.2009.1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-08T15:20:38.72-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Add Url Options So No Wildcard is Required for IIS 6",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 6742
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Plumbing needed for this work item was added in 26804.  Reassigning to Nathan.",
+      "PostedDate": "2008-12-10T02:49:37.063-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-10T10:14:40.253-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-10T10:15:25.783-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-10T10:16:11.707-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-10T10:16:30.707-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-10T10:18:25.033-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-11T08:01:06.273-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Went a little different route with this. Just uncomment the routes node under oxte in web.config to use routes with a .aspx file extension.",
+      "PostedDate": "2008-12-11T15:43:44.873-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-11T15:43:45.81-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:29:24.973-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:29:32.817-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:17.847-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:08.327-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

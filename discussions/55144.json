@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "186151",
+    "ThreadId": "55144",
+    "Html": "How display form login on header ???<br>\r\n<br>\r\nHelp Me ???<br>\r\n",
+    "PostedDate": "2009-05-02T12:34:11.887-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "186155",
+    "ThreadId": "55144",
+    "Html": "All you should have to do is copy the form tag from the sign in page and everything in it into whatever control renders the part of the header and just make sure the form posts to the same url the sign in page does and it will &quot;just work&quot;.\r\n",
+    "PostedDate": "2009-05-02T12:49:18.107-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "186157",
+    "ThreadId": "55144",
+    "Html": "What's the action url&nbsp; of the login form (to make the form work from homepage, not the login page) <br>\r\n",
+    "PostedDate": "2009-05-02T13:09:28.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "186161",
+    "ThreadId": "55144",
+    "Html": "\r\n<span style=\"font-size:10pt;font-family:Arial;font-weight:Normal\">My guess is Url.SignIn(), but I don't have the code in front of me right now.<br>\r\n<br>\r\n(sent from WinMo 6.1 phone)<br>\r\n<br>\r\n<hr>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">From: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">tom2288 &lt;notifications@codeplex.com&gt;</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Sent: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Saturday, May 02, 2009 1:10 PM</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">To: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Erik Porter &lt;Erik.Porter@microsoft.com&gt;</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Subject: </span>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Re: How display form login on header ??? [oxite:55144]</span><br>\r\n<br>\r\n</span>\r\n<div>\r\n<p>From: tom2288</p>\r\n<div id=ThreadNotificationPostBody>What's the action url  of the login form (to make the form work from homepage, not the login page)\r\n<br>\r\n</div>\r\n\r\n</div>\r\n",
+    "PostedDate": "2009-05-02T13:33:28.58-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "186166",
+    "ThreadId": "55144",
+    "Html": "Ah, i did it, thank you very much,Btw, how can i get the content of a cetairn page/post, is there have any function like getPageById() or getPageBy Slug()?\r\n",
+    "PostedDate": "2009-05-02T13:52:23.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "186235",
+    "ThreadId": "55144",
+    "Html": "\r\n<span style=\"font-size:10pt;font-family:Arial;font-weight:Normal\">You're welcome. Just look at IPostService. You can use the same methods we do to lookup pages and posts.<br>\r\n<br>\r\n(sent from WinMo 6.1 phone)<br>\r\n<br>\r\n<hr>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">From: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">tom2288 &lt;notifications@codeplex.com&gt;</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Sent: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Saturday, May 02, 2009 1:52 PM</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">To: </span><span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Erik Porter &lt;Erik.Porter@microsoft.com&gt;</span><br>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:bold\">Subject: </span>\r\n<span style=\"font-size:10pt;font-family:Tahoma;font-weight:normal\">Re: How display form login on header ??? [oxite:55144]</span><br>\r\n<br>\r\n</span>\r\n<div>\r\n<p>From: tom2288</p>\r\n<div id=ThreadNotificationPostBody>Ah, i did it, thank you very much,Btw, how can i get the content of a cetairn page/post, is there have any function like getPageById() or getPageBy Slug()?\r\n</div>\r\n\r\n</div>\r\n",
+    "PostedDate": "2009-05-02T22:59:48.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "186274",
+    "ThreadId": "55144",
+    "Html": "ah.got it.Thank you very much<br>\r\n",
+    "PostedDate": "2009-05-03T08:05:43.49-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

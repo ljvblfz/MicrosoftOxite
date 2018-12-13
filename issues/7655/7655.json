@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-04-19T00:14:53.42-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The Atom spec (http://tools.ietf.org/html/rfc4287#section-3.3) says that datetime values must include either a time offset or a capital \"Z\" at the end. The datetime values are rendering without a time offset, but do not include the Z. This results in an invalid feed which can't be loaded by SyndicationFeed or other programmatic feed parsers.\n \nHere's what the Atom spec says:\n3.3. Date Constructs\nA Date construct is an element whose content MUST conform to the \"date-time\" production in [RFC3339].  In addition, an uppercase \"T\" character MUST be used to separate date and time, and an uppercase \"Z\" character MUST be present in the absence of a numeric time zone offset.\n \n\\OxiteSite\\Views\\Post\\AtomFeedEntry.ascx is writing the date values using:\n    <updated><%=XmlConvert.ToString(post.Modified.Value, XmlDateTimeSerializationMode.RoundtripKind)%></updated>\n    <published><%=XmlConvert.ToString(post.Published.Value, XmlDateTimeSerializationMode.RoundtripKind)%></published>\n \nThis renders as:\n    <updated>2009-04-16T22:02:39.44</updated>\n    <published>2009-04-16T15:02:39.44</published>\n \nThe database values (Oxite_Post - CreatedDate, ModifiedDate, PublishedDate) use SQL Server DateTime field types, which don't include timezones, so I believe this is expected behavior. I believe one of the following should be used (either render a valid Atom feed, but I haven't tested yet to see which is the correct time):\n \n    <updated><%=XmlConvert.ToString(post.Modified.Value, XmlDateTimeSerializationMode.Utc)%></updated>\n    <published><%=XmlConvert.ToString(post.Published.Value, XmlDateTimeSerializationMode.Utc)%></published>\nor:\n    <updated><%=XmlConvert.ToString(post.Modified.Value.ToUniversalTime(), XmlDateTimeSerializationMode.Utc)%></updated>\n    <published><%=XmlConvert.ToString(post.Published.Value.ToUniversalTime(), XmlDateTimeSerializationMode.Utc)%></published>",
+    "LastUpdatedDate": "2017-11-27T23:43:43.66-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-04-17T17:10:47.83-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ATOM feed dates aren't according to spec, can't be consumed by SyndicationFeed",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7655
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Resolved with changeset 31060.",
+      "PostedDate": "2009-04-19T00:14:53.42-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:08.3-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:01.68-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-11-27T23:43:43.66-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

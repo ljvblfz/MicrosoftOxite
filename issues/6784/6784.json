@@ -1,0 +1,106 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I'm getting error when I'm running OxiteSite from IIS. It's running fine from localhost.\nPlease check the attached .htm file about the error.\nPlease find a solution for me.\n \nThanks.",
+    "LastUpdatedDate": "2013-02-21T15:43:15.463-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-15T04:45:27.727-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Getting error when running from IIS",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6784
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1619,
+      "FileName": "error.htm",
+      "DownloadUrl": ".\\1619"
+    },
+    {
+      "FileId": 1631,
+      "FileName": "Error1.htm",
+      "DownloadUrl": ".\\1631"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Make sure the \"host\" attribute of the configuration/oxite/site node in your web.config matches the host (and port if appropriate) of the URL you're requesting.",
+      "PostedDate": "2008-12-15T06:47:01.333-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "This isn't something Visual Studio can do on Publish, is it?",
+      "PostedDate": "2008-12-15T20:25:27.46-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Yes..I changed the host attribute to host=\"http://localhost:8090\" and rest attribute (e.g. id, languageDefault etc.. are remained as before)\r\nhttp://localhost:8090 is my IIS address.\r\nNow the default page is working, but the other links like login,about etc are not working. \r\nThe page not found error is occurred when I clicked those links.\r\nAlso, I'm not able to get the look and feel as like it was in local.\r\n\r\nPlease tell me in detail how I'll achieve it completely.",
+      "PostedDate": "2008-12-15T23:07:34.32-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Are you running IIS6 or IIS7?",
+      "PostedDate": "2008-12-16T06:27:12.23-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I'm using IIS 5.1",
+      "PostedDate": "2008-12-16T21:18:16.003-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Please help me...How I'll run the OxiteSite from IIS 5.1 ?",
+      "PostedDate": "2008-12-19T04:01:02.24-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Krushna, look at this issue (http://www.codeplex.com/oxite/WorkItem/View.aspx?WorkItemId=6807) and see if it helps you at all. Duncan indicates adding a \"wildcard mapping\" may be of assistance to IIS 5.1 users.\r\n\r\nI would test this and try to help you, but I only have Server 2008 and Win7 machines available.",
+      "PostedDate": "2008-12-19T11:47:41.507-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Thanks for your support.\r\nBelow are some more issues.\r\n\r\nI tried the 'WIldcard Mapping' in IIS 5.1. Login link is working now. But after logged in as Admin, the links like Create Post, Create Page, Comments link are again not working. The attached .htm file shows the error I got. \r\nAlso, I did not get the same look and feel as in localhost I got before.\r\n\r\nWill my problem solve if I'll use IIS 6.0 or above?\r\nIf the problem will solve with IIS 6.0 or above, I'll try that.\r\n",
+      "PostedDate": "2008-12-19T23:19:23.13-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-19T23:19:25.177-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I would say definitely give IIS6 a shot if you're able to.",
+      "PostedDate": "2008-12-20T14:19:38.75-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:15.463-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

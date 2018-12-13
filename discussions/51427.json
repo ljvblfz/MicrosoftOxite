@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "172434",
+    "ThreadId": "51427",
+    "Html": "I noticed lately that if I am logged into my oxite blog and I go to a post I have a problem with comments.  Initially, when the post loads the comments are there.  When I mouse over them they vanish.<br>\r\n<br>\r\nSomething with Stylesheet or DHTML, but I don't recall changing any of that.  When I get more time I'll look into it more and try to post more details.  ONLY happens when I am logged in.  If I visit the site as an anonymous used the comments stay put and I can post a comment.\r\n",
+    "PostedDate": "2009-03-26T10:53:52.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "172484",
+    "ThreadId": "51427",
+    "Html": "There's some JavaScript that adds a &quot;hover&quot; class name to elements on mouseover and that sounds like what you're seeing. Look for &quot;hoverClassIfy&quot; in site.js (or base.js if you're running off latest) to see/change what it's being hooked up to or take a look at what your <em>element</em>.hover styles are at if you want to keep the hover but make them visible..<br>\r\n",
+    "PostedDate": "2009-03-26T13:15:30.063-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

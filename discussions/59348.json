@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "200914",
+    "ThreadId": "59348",
+    "Html": "<p>I just recently installed oxite on my website using IIS6. I went through the whole setting the route url prefix and other things to get it up and running, but now I'm having issues posting from windows live writer.</p>\r\n<p>when publishing, it returns a 500 Internal Server Error.</p>\r\n<p>any ideas?</p>\r\n<p>-kennydust</p>",
+    "PostedDate": "2009-06-12T10:25:15.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "200940",
+    "ThreadId": "59348",
+    "Html": "<p>Sadly, the latest release doesn't bubble up what the real error is.&nbsp; We've changed our impelmentation of metaweblog since the latest release, but we're not ready with a new release yet so you can't move up yet.&nbsp; :(</p>\r\n<p>For the time being, the only thing you can do is use Visual Studio to attached to the process and see why it's blowing up.&nbsp; Is it doing this on your development machine or in production?&nbsp; WCF needs to be installed for it to work (the future version won't require WCF).</p>",
+    "PostedDate": "2009-06-12T11:40:31.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "200953",
+    "ThreadId": "59348",
+    "Html": "<p>It's happening on my production machine.</p>\r\n<p>I did track down the root cause of it; read somewhere that images cannot be uploaded through the metaweblog api (and oxite)&nbsp;at the moment</p>",
+    "PostedDate": "2009-06-12T12:25:48.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "200962",
+    "ThreadId": "59348",
+    "Html": "<p>Ah, yes, correct.&nbsp; Glad you got it figured out.&nbsp; We'll change that in the next release so you can upload in Oxite.&nbsp; ;)</p>",
+    "PostedDate": "2009-06-12T12:43:36.55-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

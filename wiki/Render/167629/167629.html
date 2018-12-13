@@ -1,0 +1,19 @@
+<div class="wikidoc">The StringArrayValidation attribute is applied to a string[]-type property of the plug-in class.  It allows the plug-in creator to specify several possible validation points for the array of strings.  If an invalid value is entered in the configuration screen, the appropriate error messaging is displayed.<br /><br /><b>Example:</b><br /><br /><pre>
+public class DisclaimerSelectorPlugin
+{
+    [StringArrayValidation(MinCount = 1, // Minimum number of items that should be in array
+        MaxCount = 5, // Maximum number of items that should be in the array
+        MinItemLength = 5, // Minimum length for any item in the array
+        MaxItemLength = 1000, // Maximum length for any item in the array
+        RemoveEmptyItems = true, // Should empty items be removed from the array automatically
+        Separator = &quot;,&quot;, // String that separates items in the string
+        TrimItemSpaces = true)] // Should whitespace be trimmed from each item automatically
+    ...
+    public string[] Disclaimers
+    {
+        get;
+        set;
+    }
+...
+}
+</pre><br /><br /><b>Display:</b><br /></div><div class="ClearBoth"></div>

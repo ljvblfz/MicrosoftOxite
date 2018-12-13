@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "437495",
+    "ThreadId": "211126",
+    "Html": "<p>hello,</p>\r\n<p>I need to develop a news portal and i would like to know if the functionality to embed images within news articles is available in oxite.</p>\r\n<p>thanks</p>",
+    "PostedDate": "2010-04-30T03:58:41.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437630",
+    "ThreadId": "211126",
+    "Html": "<p>If by embed you mean linking (like using Live Writer, writing a post, dragging some images in and having them be uploaded and linked properly for you, then yes.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-04-30T10:41:56.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

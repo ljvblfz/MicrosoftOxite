@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "188182",
+    "ThreadId": "55729",
+    "Html": "<p style=\"line-height:normal;margin:0cm 0cm 12pt\"><span style=\"font-family:'Segoe UI','sans-serif';color:black;font-size:10pt\" lang=EN-US>I have a small problem :<br>My Oxite Application work on my computer but when i copy to Windows 2003 server&nbsp;i have an error:<br><br></span><em><span style=\"font-family:'Segoe UI','sans-serif';color:black;font-size:10pt\" lang=EN-US>Method 'FindPartialView' in type 'Oxite.Mvc.Infrastructure.OxiteViewEngine' from assembly 'Oxite.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' does not have an implementation.</span></em><span style=\"font-family:'Segoe UI','sans-serif';color:black;font-size:10pt\" lang=EN-US> </span></p>\r\n<table style=\"width:100%;background:#ffffcc\" border=0 cellpadding=0 width=\"100%\">\r\n<tbody>\r\n<tr style=\"\">\r\n<td style=\"background-color:transparent;border:#f0f0f0;padding:0.75pt\">\r\n<p style=\"line-height:normal;margin:6pt 12pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt\"><span style=\"font-family:'Segoe UI','sans-serif';color:black;font-size:10pt\" lang=EN-US>[TypeLoadException: Method 'FindPartialView' in type 'Oxite.Mvc.Infrastructure.OxiteViewEngine' from assembly 'Oxite.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' does not have an implementation.]</span></p>\r\n<p style=\"line-height:normal;margin:6pt 12pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt\"><span style=\"font-family:'Segoe UI','sans-serif';color:black;font-size:10pt\" lang=EN-US><span style=\"\">&nbsp;&nbsp; </span>Oxite.Mvc.ContainerFactory.GetOxiteContainer() in F:\\Projekty\\Oxite\\Oxite.Mvc\\ContainerFactory.cs:83</span></p>\r\n<p style=\"line-height:normal;margin:6pt 12pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt\"><span style=\"font-family:'Segoe UI','sans-serif';color:black;font-size:10pt\" lang=EN-US><span style=\"\">&nbsp;&nbsp; </span>Oxite.Mvc.OxiteApplication.setupContiner() in F:\\Projekty\\Oxite\\Oxite.Mvc\\OxiteApplication.cs:91</span></p>\r\n<p style=\"line-height:normal;margin:6pt 12pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt\"><span style=\"font-family:'Segoe UI','sans-serif';color:black;font-size:10pt\" lang=EN-US><span style=\"\">&nbsp;&nbsp; </span>Oxite.Mvc.OxiteApplication.OnStart() in F:\\Projekty\\Oxite\\Oxite.Mvc\\OxiteApplication.cs:37</span></p>\r\n<p style=\"line-height:normal;margin:6pt 12pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt\"><span style=\"font-family:'Segoe UI','sans-serif';color:black;font-size:10pt\" lang=EN-US><span style=\"\">&nbsp;&nbsp; </span>Oxite.Mvc.OxiteApplication.Application_Start() in F:\\Projekty\\Oxite\\Oxite.Mvc\\OxiteApplication.cs:318</span></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p style=\"line-height:normal;margin:0cm 0cm 10pt\"><span style=\"font-family:'Segoe UI','sans-serif';color:black;font-size:10pt\" lang=EN-US>My First thing is : &quot;Database&quot; but when i change all connection strings to the same base on external server on my pc still work but on server didn't.<br></span></p>",
+    "PostedDate": "2009-05-08T09:07:42.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "188185",
+    "ThreadId": "55729",
+    "Html": "<p>hhhmmm...strange.&nbsp; Can you try deleting all the deployed files off of your server and redeploying again from your local machine to make sure it's not a deployment problem?</p>",
+    "PostedDate": "2009-05-08T09:11:37.28-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "188190",
+    "ThreadId": "55729",
+    "Html": "<p>I thing the same but first i publish to project to local IIS (This work)<br>And copy the same files to the server and this not work :(<br>Databse in both case is in the server.<br>Ant this error is showed only when app start when app is started i get :</p>\r\n<p><br><em>A route named 'Site' could not be found in the route collection.</em></p>",
+    "PostedDate": "2009-05-08T09:15:41.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "188191",
+    "ThreadId": "55729",
+    "Html": "<p>Yah, unfortunately that error doesn't mean what it says.&nbsp; It means that something didn't load from the database usually.&nbsp; I'm guessing there's some sort of configuration problem like the connection string to your sql server isn't correct or something required to be there for Oxite to run isn't there (does it have .NET 3.5 SP1? etc).</p>",
+    "PostedDate": "2009-05-08T09:19:04.857-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "188193",
+    "ThreadId": "55729",
+    "Html": "<p>I install all required parts:<br>.NET 3.5 SP1 (normal MVC apps work)</p>\r\n<p>Installing AntiXSS 3.0 Beta <br>Installing Unity 1.2<br><br>Connection string is correct (i check this&nbsp;few times).</p>",
+    "PostedDate": "2009-05-08T09:22:33.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "188197",
+    "ThreadId": "55729",
+    "Html": "<p>Weird.&nbsp; Need to figure out what's not getting loaded.&nbsp; Is this Windows Server 2003 box hosted by someone else or do you have access to debug on it?</p>",
+    "PostedDate": "2009-05-08T09:29:15.31-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "188308",
+    "ThreadId": "55729",
+    "Html": "<p>This is my VPS Host.<br>My testing Server i can do what i wont :)<br>i try to trace bugs and last method what correct work is:<br>GetOxiteContainer() &lt;-- after this i get error</p>",
+    "PostedDate": "2009-05-08T14:21:05.887-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "188318",
+    "ThreadId": "55729",
+    "Html": "<p>I Find Solution:<br>I need MVC ver 1.0 on beta this not work!!!<br>Coud you change&quot;Getting Started with Oxite&quot;</p>",
+    "PostedDate": "2009-05-08T15:02:45.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "188335",
+    "ThreadId": "55729",
+    "Html": "<p>Dang, nice catch. That page is all fixed up to reference the 1.0 release now...</p>",
+    "PostedDate": "2009-05-08T16:21:53.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

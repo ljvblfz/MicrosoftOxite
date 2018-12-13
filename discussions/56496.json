@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "190920",
+    "ThreadId": "56496",
+    "Html": "<p>So through the Oxite installation, I added a few &quot;Pages&quot;. For example's sake, let's say I have Pages that match what is on Codeplex ... &quot;Home&quot;, &quot;Downloads&quot;, &quot;Discussions&quot;, &quot;Issue Tracker&quot;, etc</p>\r\n<p>I'm creating a new Skin and in doing so I want to be able to dynamically create a toolbar.</p>\r\n<p>The way the Default skin is set up, it appears that Header.ascx just hard codes &quot;Home&quot; and &quot;About&quot; and uses the Url.Pages(&quot;About&quot;) method.</p>\r\n<p>Is there a collection that would allow me to loop through it in the Header.ascx control and do something like this?</p>\r\n<p>&lt;%foreach (Page p in Url.Pages)&nbsp;{%&gt;</p>\r\n<p><span style=\"white-space:pre\"> </span>&lt;div id='&lt;%=p.SomeProperty%&gt;'&gt;&lt;%=p.SomeOtherProperty%&gt;&lt;/div&gt;</p>\r\n<p>&lt;%}%&gt;</p>\r\n<p>Pretty new at this so any information on the underlying objects are obviously appreciated.</p>",
+    "PostedDate": "2009-05-15T17:13:26.09-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "191220",
+    "ThreadId": "56496",
+    "Html": "<p>We don't have a way to do that at the moment.</p>\r\n<p>You would need to get the data down to the view to loop through all the pages.&nbsp; It's a bit complicated at the moment to do that.&nbsp; You would need to add and register a new ActionFilter that gets the list of pages and sticks them into the current model and then in the view, loop through those pages that are in the model.</p>\r\n<p>I could setup some of this code in Oxite and check it in because I think being able to get a list of pages from a filter could be useful to others.&nbsp; But you would need to register it yourself and then use it in the view.</p>\r\n<p>Would you want all pages recursively or just the root level pages?</p>",
+    "PostedDate": "2009-05-17T11:34:23.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "191487",
+    "ThreadId": "56496",
+    "Html": "<p>Well for this purpose it would just be the root level.</p>\r\n<p>I could see building nested menus out of a similar feature though, I'm not too picky on how you build it ... just curious whether there was a way to do it with existing objects.</p>",
+    "PostedDate": "2009-05-18T07:47:30.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

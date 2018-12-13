@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-04-19T00:05:36.28-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The current Rev (31034) throws the following error:\n \nThe type SiteController has multiple constructors of length 5. Unable to disambiguate.\n \nBeschreibung: Unbehandelte Ausnahme beim Ausführen der aktuellen Webanforderung. Überprüfen Sie die Stapelüberwachung, um weitere Informationen über diesen Fehler anzuzeigen und festzustellen, wo der Fehler im Code verursacht wurde. \n \nAusnahmedetails: System.InvalidOperationException: The type SiteController has multiple constructors of length 5. Unable to disambiguate.\n \nQuellfehler: \n \n \nZeile 21:         protected override IController GetControllerInstance(Type controllerType)\nZeile 22:         {\nZeile 23:             IController iController = container.Resolve(controllerType) as IController;\nZeile 24: \nZeile 25:             if (typeof(Controller).IsAssignableFrom(controllerType))\n \nQuelldatei: M:\\Projekte\\Diiiablo.de\\Oxite\\Infrastructure\\OxiteControllerFactory.cs    Zeile: 23 \n \nStapelüberwachung: \n \n \n[InvalidOperationException: The type SiteController has multiple constructors of length 5. Unable to disambiguate.]\n   Microsoft.Practices.ObjectBuilder2.ConstructorSelectorPolicyBase`1.FindLongestConstructor(Type typeToConstruct) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\BuildPlan\\Creation\\ConstructorSelectorPolicyBase.cs:114\n   Microsoft.Practices.ObjectBuilder2.ConstructorSelectorPolicyBase`1.SelectConstructor(IBuilderContext context) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\BuildPlan\\Creation\\ConstructorSelectorPolicyBase.cs:36\n   Microsoft.Practices.ObjectBuilder2.DynamicMethodConstructorStrategy.PreBuildUp(IBuilderContext context) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\BuildPlan\\DynamicMethod\\Creation\\DynamicMethodConstructorStrategy.cs:54\n   Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\StrategyChain.cs:92\n \n[BuildFailedException: The current build operation (build key Build Key[Oxite.Controllers.SiteController, null]) failed: The type SiteController has multiple constructors of length 5. Unable to disambiguate. (Strategy type DynamicMethodConstructorStrategy, index 0)]\n   Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\StrategyChain.cs:109\n   Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlanCreatorPolicy.CreatePlan(IBuilderContext context, Object buildKey) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\BuildPlan\\DynamicMethod\\DynamicMethodBuildPlanCreatorPolicy.cs:50\n   Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\BuildPlan\\BuildPlanStrategy.cs:34\n   Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\StrategyChain.cs:92\n \n[BuildFailedException: The current build operation (build key Build Key[Oxite.Controllers.SiteController, null]) failed: The current build operation (build key Build Key[Oxite.Controllers.SiteController, null]) failed: The type SiteController has multiple constructors of length 5. Unable to disambiguate. (Strategy type DynamicMethodConstructorStrategy, index 0) (Strategy type BuildPlanStrategy, index 3)]\n   Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\StrategyChain.cs:109\n   Microsoft.Practices.ObjectBuilder2.Builder.BuildUp(IReadWriteLocator locator, ILifetimeContainer lifetime, IPolicyList policies, IStrategyChain strategies, Object buildKey, Object existing) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Builder.cs:61\n   Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\Unity\\UnityContainer.cs:463\n \n[ResolutionFailedException: Resolution of the dependency failed, type = \"Oxite.Controllers.SiteController\", name = \"\". Exception message is: The current build operation (build key Build Key[Oxite.Controllers.SiteController, null]) failed: The current build operation (build key Build Key[Oxite.Controllers.SiteController, null]) failed: The type SiteController has multiple constructors of length 5. Unable to disambiguate. (Strategy type DynamicMethodConstructorStrategy, index 0) (Strategy type BuildPlanStrategy, index 3)]\n   Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\Unity\\UnityContainer.cs:473\n   Microsoft.Practices.Unity.UnityContainer.Resolve(Type t, String name) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\Unity\\UnityContainer.cs:155\n   Microsoft.Practices.Unity.UnityContainerBase.Resolve(Type t) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\Unity\\UnityContainerBase.cs:488\n   Oxite.Infrastructure.OxiteControllerFactory.GetControllerInstance(Type controllerType) in M:\\Projekte\\Diiiablo.de\\Oxite\\Infrastructure\\OxiteControllerFactory.cs:23\n   System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName) +74\n   System.Web.Mvc.MvcHandler.ProcessRequest(HttpContextBase httpContext) +128\n   System.Web.Mvc.MvcHandler.ProcessRequest(HttpContext httpContext) +57\n   System.Web.Mvc.MvcHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext httpContext) +7\n   System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +181\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +75",
+    "LastUpdatedDate": "2013-05-16T03:38:01.243-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-04-18T08:49:40.43-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "The type SiteController has multiple constructors of length 5. Unable to disambiguate.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7657
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Thank you.  We are aware of this issue.  We're in the middle of some changes so something things are broken.  We will fix them before the next release.\r\n\r\nIn the future, if you have an issue with the currently checked in code that hasn't been part of a release yet, please start a discussion instead of an issue.  We will use issues for bugs related to the current release.  Thanks!",
+      "PostedDate": "2009-04-19T00:05:26.373-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-04-19T00:05:36.28-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:08.127-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:01.243-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "283954",
+    "ThreadId": "82616",
+    "Html": "<p>Hello,</p>\r\n<p>&nbsp;</p>\r\n<p>I am very new to Oxite and wonder if there is a way to integrate it into my existing MVC application i.e to have one single oxite-blog page and my other hundred ones left alone.</p>\r\n<p>Is that possible ?</p>",
+    "PostedDate": "2010-01-31T09:26:34.493-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "284924",
+    "ThreadId": "82616",
+    "Html": "<p>I heard there is the conecpt of &quot;areas&quot;. can someone tell me more about that?</p>",
+    "PostedDate": "2010-02-02T12:17:01.05-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "314375",
+    "ThreadId": "82616",
+    "Html": "<p>I too would like to integrate Oxite into my existing MVC app. Ideally as a subdomain, i.e. blog. domain.com; is doable?</p>",
+    "PostedDate": "2010-02-20T20:00:55.813-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "350807",
+    "ThreadId": "82616",
+    "Html": "I dont think so. I just did a cms by myself.<br>-------- Original-Nachricht --------<br>&gt; Datum: 20 Feb 2010 20:01:27 -0800<br>&gt; Von: &quot;ss86&quot; &lt;notifications@codeplex.com&gt;<br>&gt; An: ph-i-l-i-p@gmx.de<br>&gt; Betreff: Re: Integrating Oxite into existing MVC [oxite:82616]<br><br>&gt; From: ss86<br>&gt; <br>&gt; I too would like to integrate Oxite into my existing MVC app. Ideally as a<br>&gt; subdomain, i.e. blog. domain.com; is doable? <br>&gt; <br>&gt; <br><br>-- <br>GRATIS f�r alle GMX-Mitglieder: Die maxdome Movie-FLAT!<br>Jetzt freischalten unter http://portal.gmx.net/de/go/maxdome01",
+    "PostedDate": "2010-02-21T13:47:53.25-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

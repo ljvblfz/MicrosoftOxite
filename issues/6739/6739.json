@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2008-12-08T13:10:24.233-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Not everybody has this VS Edition.",
+    "LastUpdatedDate": "2013-05-16T03:38:08.747-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-08T12:55:22.107-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Remove DBPro(.dbproj) Project Type Dependency",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6739
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "There is no dependency if you open the Oxite.VWDExpress solution, it has the DBPro and Test projects removed.",
+      "PostedDate": "2008-12-08T13:10:09.873-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-08T13:10:24.233-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "sorry didn't see that there, my bad",
+      "PostedDate": "2008-12-08T14:02:18.327-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:18.387-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:08.747-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

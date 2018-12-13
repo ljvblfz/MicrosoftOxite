@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "241933",
+    "ThreadId": "70965",
+    "Html": "<p>I thought I'd come and post this in the hope it might be addressed in future...</p>\r\n<p>I liked the look of Oxite, so I just downloaded it to try out. I opened the solution and tried to build it but I got errors because I didn't have a Microsoft.Practives.Unity namespace.</p>\r\n<p>I went to Google and found Unity - it's a source-only download, so I had to downloaded it, open it up and build it and&nbsp;then reference it in the Oxite projects.</p>\r\n<p>I tried to build again. Now it failed because I didn't have the AntiXSSLibrary. I Googled this, and found it not only was it binary only, but *AN MSI* that must be installed on the machine!</p>\r\n<p>I just wanted to try Oxite out. .NET is supposed to be nice and portable - I'm shouldn't need to install MSIs and register stuff on my machine just to test out an tiny asp.net app. Thankfully I managed to get the DLL out of the MSI with 7zip without having to install it and&nbsp;I added a reference in the Oxite project...</p>\r\n<p>I tried to build again. Now it fails because I don't have a BlogML library...</p>\r\n<p>It's taking far too much time and effort to try Oite. It's a real shame, because it looked quite good. I can't just keep hacking at this just to get it to run locally to see whether it fits my needs. I suspect I'm not the only user driven away with an crazy setup.</p>\r\n<p>I should be able to download your app and build it, and try it. Most of the things you reference are released under the same licence and can probably be included without any issues (and then you also won't have issues if people download the wrong versions).</p>\r\n<p>I hope you don't consider this a slagging off, but some valid feedback. Some people just won't pour this much time into trying to get something up and running when there are so many alternatives. I hope maybe this is something you can work on.</p>\r\n<p>Good luck.</p>",
+    "PostedDate": "2009-10-04T12:45:32.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242573",
+    "ThreadId": "70965",
+    "Html": "<p>I will give you the AntiXSS issue. That wasn't mentioned in the section on setup. Maybe it was and I just missed it, but. . .&nbsp;</p>\r\n<p>You gotta remember, Oxite is Alpha. It's not set up to just download and install. If you want that type of install, then use something like BlogEngine.net that's been in production for some time now.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-10-06T08:06:08.123-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242621",
+    "ThreadId": "70965",
+    "Html": "<p>Being in Alpha makes it even less tolerable to have to install stuff. What if the components change? What it the versions are updated? Every new build might need me to uninstall and reinstall stuff. This is .NET, we shouldn't need to be installing things, Microsoft put lots of effort into ensuring this! It's almost all, if not all, released under the same licence, so binaries can probably be included in the distribution! Problem solved!</p>\r\n<p>If people are going to consider using Oxite, they need to be able to download a zip file, open it in Visual Studio, click run, and play around with it. Why should the spend hours of time tracking down and building other components and installing MSIs just to see what it's like? If there was an online demo this would be less of an issue, but sadly there isn't. I suspect many users won't try it out for these reasons.</p>\r\n<p>Me, being a mug however, I decided maybe BlogML might be the last dependency and decided to invest yet more time in trying Oxite. I got it running - but I had to remove a public key from the Web.config, because it seems version the version 1.2 of one of the libraries (maybe it was AntiXSS) seems to have a different key (but the same version number) to the one you built with. Super.</p>\r\n<p>Unfortunately, I may have overestimated how developed Oxite is (probably because it's apparently running the Mix site!). It seems basic functionality is broken/missing (the Draft radio option always reverts to Published, the Publish date always appears as 31st Dec 3999 or similar, there's no navigation for pages you add - you have to hack them into the file). I'm not sure whether this is the same code powering the Mix site or a hacked/branched version.</p>\r\n<p>Based on the reecnt progress, I don't see Oxite being &quot;finished&quot; anytime soon, so unfortunately it's not for me. I hope the download/run comments are taken onboard and resolved/improved before the &quot;final&quot; release.</p>",
+    "PostedDate": "2009-10-06T10:08:37.133-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "244969",
+    "ThreadId": "70965",
+    "Html": "<p>This is ridiculous!</p>\r\n<p>Need to spend about an hour to simply compile the source&hellip;</p>\r\n<p>Why are there dlls missing? Is it that hard to include all the library dlls that are being used in the solution? It will take you guys 5 minutes to include them in the downloadable zip and this will allow more people to try it out!</p>\r\n<p>Isn&rsquo;t developer feedback one of the most important issues in open source projects? You are preventing them of offering this to you!</p>\r\n<p>I am giving up.</p>",
+    "PostedDate": "2009-10-13T02:10:53.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "245094",
+    "ThreadId": "70965",
+    "Html": "<p>heh.&nbsp; dannytuppeny and theJazzyBrain, you two are funny! &nbsp; It cracks me up when people think *ALPHA* software should be working smooth and perfect out of the box.</p>\r\n<p>It's good you two are giving up, because clearly you're not the sort who is up dealing with alpha software in the first place and therefore would likely not have given much in the way of constructive criticism anyway.&nbsp; If you've ever tried installing alpha software before, and based on what's been posted here, the two of you have not, you'd know that, unless it's fairly simplistic software and/or is wholly based on some standard framework (and it should be clear that, given your experience, Oxite uses more than the standard .NET components), you'll have to do some manual setup on your environment before you can effectively build/run it.&nbsp; That's the way it is guys, so if you're not up to dealing with that, fine -- but don't come complaining about it...&nbsp; Just go away and play with you Macs (heh heh) until Oxite is nicely packaged, then you can go download, built and start doing... whatever *waves hands vaguely*</p>",
+    "PostedDate": "2009-10-13T08:10:56.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "245158",
+    "ThreadId": "70965",
+    "Html": "<div id=\"ctl00_ctl00_MasterContent_Content_PostRepeater_ctl08_BodyDiv\">\r\n<p>&gt; heh.&nbsp; dannytuppeny and theJazzyBrain, you two are funny! &nbsp; It cracks me up when people think *ALPHA* software should be working smooth and perfect out of the box.</p>\r\n<p>It cracks me up that you think it makes sense for every single developer that downloads Oxite to spend the same hour troubleshooting the same problems because they were too lazy to include the assemblies. That's not a waste of time at all, no? Not only are the DLLs not included, but one of those referenced in the web.config is *NOT* the version you can even download (same version number, different public key) so you need to start changing web.config. Nice one!</p>\r\n<p>&gt; It's good you two are giving up, because clearly you're not the sort who is up dealing with alpha software in the first place and therefore would likely not have given much in the way of constructive criticism anyway.</p>\r\n<p>That's funny, I see plenty of constructive criticism above. I posted a suggested solution to the fact it took me an hour to get up and running, and even included a few bugs. I could have said &quot;this is shit, it doesn't work&quot; but not only did I spend time coming back here to post, but also explained, in detail, the issues I had. People like you make me wish I hadn't bothered.</p>\r\n<p>&gt; If you've ever tried installing alpha software before, and based on what's been posted here, the two of you have not</p>\r\n<p>No surprise, you're wrong. I'm a software developer and I use alpha software on a daily basis. I also&nbsp;worked on a team building an application against early private builds of .NET 2.0 during its development which was used as a Microsoft case study for the .NET 2.0 launch.</p>\r\n<p>&gt; you'd know that, unless it's fairly simplistic software and/or is wholly based on some standard framework (and it should be clear that, given your experience, Oxite<br>&gt; uses more than the standard .NET components), you'll have to do some manual setup on your environment before you can effectively build/run it.&nbsp;</p>\r\n<p>&quot;Some&quot; I can live with. Oxite requires *far* too much effort to run in any form. Not only did I have to download and *build* other components, I had to *install* things on my system. For software that's not complete and could change these dependencies at any time, it's just not acceptable. If I was installing some mammoth application, maybe I'd think about it. This is a simple&nbsp;ASP.NET web application. .Net has been designed very well so you can deploy an app with all external libraries in the same folder and have it work. There is no excuse for such a simple app to require such a lengthy setup.</p>\r\n<p>&gt; That's the way it is guys, so if you're not up to dealing with that, fine -- but don't come complaining about it...&nbsp;Just go away and play with you Macs (heh heh) until Oxite is nicely packaged, then you can go download, built and start doing... whatever *waves hands vaguely*</p>\r\n<p>It's idiots like you that put lots of people off open source projects. Yes, I moaned. But I did so because I was so shocked at the effort involved in getting an ASP.NET web application running to demo. This is not 1995. I gave full details of ll my problems. I even went back after the original post to finish it off and provide more feedback. I could've just left it, but I liked the idea, and hoped maybe the developers would care enough to read my comments and either address the issues or share the reasons not to. I wasn't expecting some arse to come and tell me I'm not good enough to use alpha software.</p>\r\n<p>TLDR Version: If the developers of Oxite want people to play around with it and submit feedback, they need to make it easy to download and run. They also need to stop idiots like Carnix scaring off people that are doing your QA for free :-)</p>\r\n</div>",
+    "PostedDate": "2009-10-13T10:34:14.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "245183",
+    "ThreadId": "70965",
+    "Html": "<p>Alright guys, settle down.</p>\r\n<p>Two things:</p>\r\n<ol>\r\n<li>We can't include the assemblies in source control.&nbsp; Guidance from lawyers about Ms-PL.&nbsp; We wish we could.</li>\r\n<li>Did you follow the <a href=\"http://oxite.codeplex.com/Wiki/View.aspx?title=gettingstarted\">setup</a> instructions on the <a href=\"http://oxite.codeplex.com\">homepage</a>?'</li>\r\n<li>The current checkins only require MVC 1.0, Unity and BlogML to run (even shorter list than the Feb. release).</li>\r\n</ol>",
+    "PostedDate": "2009-10-13T11:23:18.51-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "245397",
+    "ThreadId": "70965",
+    "Html": "<p><strong>&gt; Two things:</strong></p>\r\n<p>That's three ;o)</p>\r\n<p><strong>&gt; We can't include the assemblies in source control.&nbsp; Guidance from lawyers about Ms-PL.&nbsp; We wish we could. </strong></p>\r\n<p>You can. Read the licences. Eg: this is from BlogML's licence page:</p>\r\n<p>* Redistribution and use in source and binary forms, with or without<br>* modification, are permitted provided that the following conditions are met:</p>\r\n<p>* * Redistributions in binary form must reproduce the above copyright<br>* notice, this list of conditions and the following disclaimer in the<br>* documentation and/or other materials provided with the distribution.</p>\r\n<p>Seems pretty clear to me, even a lawyer should understand it ;-)</p>\r\n<p><strong>&gt; Did you follow the </strong><a href=\"http://oxite.codeplex.com/Wiki/View.aspx?title=gettingstarted\"><strong>setup</strong></a><strong> instructions on the </strong><a href=\"http://oxite.codeplex.com/\"><strong>homepage</strong></a><strong>?' </strong></p>\r\n<p>Unfortunately the setup instructions are missing many things, such as the AntiXSS library and the fact you have to hack web.config because the public key is different :-(</p>\r\n<p><strong>&gt; The current checkins only require MVC 1.0, Unity and BlogML to run (even shorter list than the Feb. release).</strong></p>\r\n<p>I've posted parts of the BlogML licence above. You can include it. I haven't checked Unity, but since it's a MS application block I'm 100% certain you can include the binary in your application, otherwise *nobody* could use it in their apps without asking the end user to visit MS and download it. People should not be downloading and installing things like this on their machine when the whole point of these libraries is for you to use and distribute in binary form with your application.</p>\r\n<p>I'm sure I'm not the only person that won't install MSIs because lazy devs didn't include their dependencies when I'm not even sure I'll use the app. I don't want things hanging around on my machine for something&nbsp;I don't use.</p>",
+    "PostedDate": "2009-10-13T23:11:46.583-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "245450",
+    "ThreadId": "70965",
+    "Html": "<p>I would recommend the Oxite team to reconsider including the dlls and have a closer look at their licenses. I am 100% sure that you understand that not making it easy for people to kick start their testing in a few minutes means that this project will die before it is born.</p>\r\n<p>No matter if you or anyone else is offended about this, no matter if oxite is in ALPHA or pre-ALPHA releases, and no matter how lazy I might be, the point is that the majority of the developers are very lazy, and that&rsquo;s reality. Make it easy for people to try things out and you will get more feedback. I really was excited to try it out but I gave up. Simply switched to BlogEngine.NET and got me started in 10 minutes.</p>",
+    "PostedDate": "2009-10-14T01:48:07.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

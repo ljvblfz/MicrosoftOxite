@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "#32814\nThe code refers to \"jquery-ui-20081126-1.5.2.js\" , but the download file is jquery-1.3.2.js",
+    "LastUpdatedDate": "2013-02-21T15:43:05.123-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-06-11T14:50:02.057-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "jquery-ui-20081126-1.5.2.js file not found",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7879
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "The admin is currently in a broken state.  We're aware of this bug, but are finishing up plugins before moving on to fixing up the admin.  Thanks!",
+      "PostedDate": "2009-06-11T18:02:09.817-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:05.123-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

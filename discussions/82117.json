@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "282117",
+    "ThreadId": "82117",
+    "Html": "<p>Hi there,</p>\r\n<p>I never used the Oxite before and I'm excited to get into it.</p>\r\n<p>I'm currently using Visual Studio 2010 BETA 2 at home since it's free. I'm trying to convert the project OxiteSite but no luck. Visual Studio says the project type is not supported by its installation, however the log shows a Project converted successfully. Can anybody give me a hint why this is happening and a workaround?</p>\r\n<p>I appreciate.</p>\r\n<p>Thank you!</p>\r\n<p>Fabio</p>",
+    "PostedDate": "2010-01-26T18:53:42.277-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "426034",
+    "ThreadId": "82117",
+    "Html": "<p>Hi</p>\r\n<p>Use the tool to convert the MVC project to MVC2 : <br><a href=\"http://weblogs.asp.net/leftslipper/archive/2009/10/19/migrating-asp-net-mvc-1-0-applications-to-asp-net-mvc-2.aspx\">http://weblogs.asp.net/leftslipper/archive/2009/10/19/migrating-asp-net-mvc-1-0-applications-to-asp-net-mvc-2.aspx</a></p>\r\n<p>You could do that manually also, but not as easy as this method.<br>You'll have some error when building your project after that upgrade to MVC, I don't remeber exact step to solve them, feel free to post them... Or just look on your favorite search engine, it's fairly esay to fin the solutions.</p>\r\n<p>Regards</p>\r\n<p>Christian Robert</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-03-31T07:54:52.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "426150",
+    "ThreadId": "82117",
+    "Html": "<p>hey skweeky,</p>\r\n<p>I used the tool and it helped a lot... I had yes a few problems when building.</p>\r\n<p>1) Add &quot;RequestContext requestContext&quot; to IController GetControllerInstance(RequestContext requestContext, Type controllerType)</p>\r\n<p>file \\Oxite\\Oxite.Mvc\\Infrastructure\\OxiteControllerFactory.cs</p>\r\n<p>2) Add &quot;.ToString()&quot; for the htmlHelper.*() errors.</p>\r\n<p>a bunch of files</p>\r\n<p>3) normal procedure:</p>\r\n<p>Add dlls</p>\r\n<ul>\r\n<li>BlogML 2.0 (BlogML.dll)</li>\r\n<li>xunit-1.5 (xunit.dll, xunit.extensions.dll)</li>\r\n</ul>\r\n<p>Install</p>\r\n<ul>\r\n<li>AntiXSSV31.msi</li>\r\n<li>Unity Application Block 1.2.msi</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p>Thanks a lot man!!</p>\r\n<p>Regards,</p>\r\n<p>Fabio</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-03-31T12:50:29.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

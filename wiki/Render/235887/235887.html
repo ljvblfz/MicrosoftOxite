@@ -1,0 +1,51 @@
+<div class="wikidoc"><b>Oxite is an open source, web standards compliant, blog engine built on ASP.NET MVC.</b><br /><br />Update: Note that while Oxite is still being actively worked on for our own sites (<a href="http://live.visitmix.com">http://live.visitmix.com</a>, <a href="http://microsoftpdc.com">http://microsoftpdc.com</a> and others), development of this project as a standalone blog engine is not being done. You should check out <a href="http://orchardproject.net/">http://orchardproject.net/</a> as it is actively working to provide a set of features that encompasses and exceeds the original Oxite plan.<br />
+<h2>Features</h2><ul><li><a href="https://oxite.codeplex.com/wikipage?title=Modules&referringTitle=Home">Modules</a></li>
+<li>Commenting</li>
+<li>Comment moderation</li>
+<li>Tagging</li>
+<li>Content pages</li>
+<li>RSS and ATOM feeds everywhere (All up, Blog, Tag, Comment, etc)</li>
+<li>Trackbacks/Pingbacks</li>
+<li>Email subscriptions</li>
+<li>Sitemaps</li>
+<li>Search</li>
+<li><a href="https://oxite.codeplex.com/wikipage?title=Skinning&referringTitle=Home">Skinning</a></li>
+<li><a href="https://oxite.codeplex.com/wikipage?title=Plugins&referringTitle=Home">Plugins</a></li>
+<li>Metaweblog API support (Windows Live Writer, etc)</li>
+<li>Background services</li>
+<li>Web admin
+<ul><li>All up dashboard</li>
+<li>Add/Edit Posts/Pages</li>
+<li>Manage site settings</li>
+<li>Add/Edit Areas (Blogs)</li>
+<li>BlogML Import</li></ul></li>
+<li>Runs on SQL Server 2005 and above</li>
+<li>SQL Scripts to create/update your database</li>
+<li>Multiple sites stored in a single database</li>
+<li>Dependency Injection so parts of Oxite can be replaced</li></ul>
+
+<h2>Getting Started With Oxite</h2><ul><li><a href="https://oxite.codeplex.com/wikipage?title=gettingstarted&referringTitle=Home">Setting Up Oxite</a></li>
+<li><a href="https://oxite.codeplex.com/wikipage?title=skinning&referringTitle=Home">How to Skin Oxite</a></li>
+<li><a href="https://oxite.codeplex.com/wikipage?title=skins&referringTitle=Home">Available Skins for Oxite</a></li>
+<li><a href="https://oxite.codeplex.com/wikipage?title=architecture&referringTitle=Home">Oxite Architecture</a></li>
+<li><a href="https://oxite.codeplex.com/wikipage?title=FAQ&referringTitle=Home">Frequently Asked Questions</a></li>
+<li><a href="https://oxite.codeplex.com/wikipage?title=oxitesites&referringTitle=Home">List of sites running Oxite</a></li>
+<li><a href="http://visitmix.com/lab/oxite">Oxite on VisitMix.com</a></li>
+<li><a href="http://asp.net/mvc">ASP.NET MVC</a></li></ul>
+
+<h2>What this is</h2>This is a simple blog engine written using ASP.NET MVC, and is designed with a few main goals:<br />
+<ol><li>To exist as a base for our visitmix.com site and for our personal blogs (and for the blogs of other folks as well!)</li>
+<li>To provide an example of &#39;core blog functionality&#39; in a reusable fashion.  Blogs are simple and well understood by many developers, but the set of basic functions that a blog needs to implement (trackbacks, rss, comments, etc.) are fairly complex. Hopefully this code helps. </li>
+<li>To provide real-world code written using ASP.NET MVC that produces both valid and semantically correct markup</li></ol>
+<br />Oxite supports all the features we consider essential to a blog engine, including the MetaWebLog API (to allow you to use LiveWriter or similar tools to add/edit your posts), trackbacks, pingbacks, Sitemaps (for search engines), RSS and ATOM feeds (at the site, blog, tag and post level ... plus feeds of all new comments... great for the site owner), tags, integrated search, web based admin features (including editing posts, your site settings, etc.), email subscriptions for new comments, basic support to publish &#39;pages&#39; (non-blog content) and more.<br /><br />This code is the foundation of a real project of ours, <a href="http://visitmix.com">MIX Online</a>.  We also created this project to be the base of our own personal blogs as well so you&#39;ll probably see our blogs on the <a href="https://oxite.codeplex.com/wikipage?title=oxitesites&referringTitle=Home">list of sites running Oxite</a> soon.<br /><br />There are many different ways to architect and implement a site using ASP.NET MVC, and this isn&#39;t supposed to be <b>the</b> reference application for ASP.NET MVC. For that, check out <a href="http://blog.wekeroad.com/mvc-storefront/">Rob Conery&#39;s MVC Storefront application</a> (there are others, <a href="http://asp.net/mvc">start here</a>). Our team has read a great deal of the available guidance and has worked hard to produce an application that follows many of the best practices recommended by the ALT.NET community around ASP.NET MVC.<br />
+<h2>What this isn&#39;t</h2>
+<ol><li>This isn&#39;t a finished product. It has no install, it has no documentation. It is our code, exactly as we are using it. If you&#39;d like something that is farther along and has all the support, documentation and handy installation features you&#39;d expect from a finished product, then you might want to check out <a href="http://www.codeplex.com/blogengine">BlogEngine.NET</a>, <a href="http://subtextproject.com/">SubText</a> or <a href="http://www.codeplex.com/dasBlog">dasBlog</a> ... we are fans of all of these blogging engines... none of which use MVC <b>at the moment</b> but are far more &#39;finished&#39;.</li>
+<li><a href="http://www.codeplex.com/blogsvc">BlogSvc</a> is a .NET, ASP.NET MVC blogging engine that a few people have told us about. We haven&#39;t looked at it, but if you are looking for an ASP.NET MVC based blogging engine then you may wish to check it out.</li>
+<li>This isn&#39;t for non-developers. This follows somewhat from the previous point, but to be clear... if you aren&#39;t familar with a web.config and with some database poking, then this isn&#39;t the project for you. You might have more luck with the other blog engines mentioned in the previous point, but for a non-dev I&#39;d probably suggest you check out <a href="http://graffiticms.com/">Graffiti</a>.</li></ol>
+
+<h2>About us</h2>Oxite is a project built by the team behind <a href="http://channel9.msdn.com">Channel 9</a> (and <a href="http://channel8.msdn.com">Channel 8</a>, <a href="http://on10.net">Channel 10</a>, <a href="http://edge.technet.com">TechNet Edge</a>, <a href="http://visitmix.com">Mix Online</a>):
+<ul><li><a href="http://erikporter.com">Erik Porter</a>,</li>
+<li><a href="http://nathan.heskew.com">Nathan Heskew</a>,</li>
+<li><a href="http://sampy.com">Mike Sampson</a> and </li>
+<li><a href="http://duncanmackenzie.net">Duncan Mackenzie</a></li></ul>
+<br />You can find out more about our team and our projects in <a href="http://channel9.msdn.com/tags/evnet/">our various posts and videos on Channel 9</a>.</div><div class="ClearBoth"></div>

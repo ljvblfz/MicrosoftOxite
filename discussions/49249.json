@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "164642",
+    "ThreadId": "49249",
+    "Html": "I'm attempting to create a few custom routes in my Oxite app.<br>\r\n<br>\r\nI've created a class that mimics the behavior of OxiteRoutes, it also extends IRegisterRoutes.  Then, I have it setup in my ContainerFactory to RegisterType for my new route class.<br>\r\n<br>\r\nIn the OxiteApplication, when registerRoutes is called, my new route class doesnt seem to get registered.<br>\r\n<br>\r\nThis code in registerRoutes leads me to believe it will register any class that implements IRegisterRoutes:<br>\r\n<br>\r\n<br>\r\n<span style=\"color:#0000ff;font-size:13px\">foreach</span><span style=\"font-size:13px\"> (</span><span style=\"color:#2b91af;font-size:13px\">IRegisterRoutes</span><span style=\"font-size:13px\"> routeRegistrar </span><span style=\"color:#0000ff;font-size:13px\">in</span><span style=\"font-size:13px\"> getContainer().ResolveAll&lt;</span><span style=\"color:#2b91af;font-size:13px\">IRegisterRoutes</span><span style=\"font-size:13px\">&gt;()) <br>\r\n{<br>\r\n    routeRegistrar.RegisterRoutes(</span><span style=\"color:#2b91af;font-size:13px\">RouteTable</span><span style=\"font-size:13px\">.Routes); <br>\r\n}<br>\r\n<br>\r\n<br>\r\n<br>\r\nThis code is not resolving the OxiteRoutes class nor my new routes class.<br>\r\n<br>\r\nAm I going about this all wrong?  I would prefer not to have my applications routes in the OxiteRoutes class mainly so I don't have to merge them back in later when I get new code from SVN.<br>\r\n<br>\r\nWhat is the best way to add my own routes to Oxite?<br>\r\n<br>\r\nThanks,<br>\r\n<br>\r\n-Wick</span>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2009-03-04T21:11:07.99-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164645",
+    "ThreadId": "49249",
+    "Html": "You're going down the right path for sure.  This one got me at first too.  When you register your IRegisterRoutes implementation be sure to give it a name when you add it to the container or it won't get picked up by ResolveAll.  The name can be anything.  HTH\r\n",
+    "PostedDate": "2009-03-04T21:14:32.35-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165128",
+    "ThreadId": "49249",
+    "Html": "So now that I've named my IRegisterRoutes class, it is getting picked up by ResolveAll.<br>\r\n<br>\r\nHowever, when I go to the routed URL I'm getting the oxite 404 page.  If I add it directy to OxideRoutes it works as expected.<br>\r\n<br>\r\nI'm kinda stumped.\r\n",
+    "PostedDate": "2009-03-05T17:16:04.08-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165132",
+    "ThreadId": "49249",
+    "Html": "It sounds like the base oxite routes aren't getting picked up anymore.<br>\r\n<br>\r\nDo you still have a getContainer().Resolve&lt;IRegisterRoutes&gt;().RegisterRoutes(RouteTable.Routes); line before the loop on ResolveAll?  The default oxite routes don't have a name in the container so Resolve&lt;&gt; will return it, but ResolveAll won't so we can call ours first.  Ensure that's happening.\r\n",
+    "PostedDate": "2009-03-05T17:26:17.18-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165135",
+    "ThreadId": "49249",
+    "Html": "I had to move the <br>\r\n<br>\r\n<span style=\"font-size:13px\">\r\n<p>getContainer().Resolve&lt;</p>\r\n</span>\r\n<p><span style=\"color:#2b91af;font-size:13px\">IRegisterRoutes</span><span style=\"font-size:13px\">&gt;().RegisterRoutes(</span><span style=\"color:#2b91af;font-size:13px\">RouteTable</span><span style=\"font-size:13px\">.Routes);\r\n<p>&nbsp;</p>\r\n</span></p>\r\n<br>\r\n<br>\r\nline to *below* the for each loop.<br>\r\n<br>\r\nI haven't checked this change in, but the result is to register your route first, which is important because we have a catch all route at the end of the base routes that is probably getting in the way of your new one.\r\n",
+    "PostedDate": "2009-03-05T17:33:08.15-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165137",
+    "ThreadId": "49249",
+    "Html": "Ah, yup, good call.  Forgot they needed to be reversed.\r\n",
+    "PostedDate": "2009-03-05T17:37:19.767-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165178",
+    "ThreadId": "49249",
+    "Html": "Sweet, that's it.  Thanks for the help.<br>\r\n<br>\r\nDo I need to reverse them in the &quot;registerActionFilters&quot; method as well?<br>\r\n",
+    "PostedDate": "2009-03-05T20:22:37.313-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165189",
+    "ThreadId": "49249",
+    "Html": "You shouldn't need to, no.  In that case you want the base filters to run first.\r\n",
+    "PostedDate": "2009-03-05T20:56:34.36-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "189459",
+    "ThreadId": "56102",
+    "Html": "<p>Has anyone looked at hosting multiple Oxite sites in a single web application?&nbsp; Ideally, different host/domain names would all be pointed at the same physical web server with the&nbsp; hostname specifying which Oxite Site to load: abc.domain.com would load Oxite site named abc, while 123.domain.com would load the site named 123.&nbsp; Any suggestions in how to accomplish this would be appreciated.</p>",
+    "PostedDate": "2009-05-12T12:57:02.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "189474",
+    "ThreadId": "56102",
+    "Html": "<p>Actually, I would probably just change how Areas work.&nbsp; Areas are usually at urls like <a href=\"http://domain.com/abc\">http://domain.com/abc</a> and <a href=\"http://domain.com/123\">http://domain.com/123</a>.&nbsp; You could change up routing (and probably something else would need to change too [like a custom MvcRouteHandler would be my guess offhand without looking]) so that the Area would come from whatever was before the domain in the url (<a href=\"http://domain.com/abc\">http://domain.com/abc</a> becomes <a href=\"http://abc.domain.com\">http://abc.domain.com</a>).&nbsp; As long as you can get the right route data to be set (areaName = &quot;abc&quot;), then Oxite won't care and work as it usually does.</p>",
+    "PostedDate": "2009-05-12T13:42:09.897-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "189489",
+    "ThreadId": "56102",
+    "Html": "<p>Thanks Erik,&nbsp;</p>\r\n<p>I possibly over simplified the entire ojective.&nbsp; In addition to blogs, each &quot;site&quot; needs to have it's own set of user created pages as well.&nbsp; I'm thinking I may be able to use the Page parent/child relationships to manage those, with each &quot;site&quot; have a main parent page containing the various child pages.&nbsp; What are your thoughts on that?</p>",
+    "PostedDate": "2009-05-12T14:01:22.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "189492",
+    "ThreadId": "56102",
+    "Html": "<p>Yes, I think that would work fine.</p>\r\n<p>We actually just discussed at lunch that Pages scoped to Area would be useful.&nbsp; Who knew it would be useful for you?&nbsp; ;)&nbsp; &quot;Special&quot; pages for each &quot;site&quot; should work just fine though.</p>",
+    "PostedDate": "2009-05-12T14:03:51.62-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

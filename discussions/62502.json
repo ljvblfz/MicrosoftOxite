@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "212132",
+    "ThreadId": "62502",
+    "Html": "<p><span>\r\n<h2><em>When&nbsp;I click on &nbsp;the file manager&nbsp;for a post, run into thie error:</em></h2>\r\n<h2><em>&quot;The current type, Oxite.Modules.Blogs.Services.IFileService, is an interface and cannot be constructed. Are you missing a type mapping?&quot;</em></h2>\r\n</span></p>",
+    "PostedDate": "2009-07-15T07:16:36.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "212200",
+    "ThreadId": "62502",
+    "Html": "<p>We've recently broken all of Oxite up into modules.&nbsp; We haven't fully tested all of it yet so that's probably just a refactor bug.&nbsp; Thanks for the heads up!&nbsp; We'll get it fixed before the next release.</p>",
+    "PostedDate": "2009-07-15T10:14:24.12-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

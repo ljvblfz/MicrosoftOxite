@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "228577",
+    "ThreadId": "67243",
+    "Html": "<p>The Code Notes of&nbsp; Oxite project is too brief ...</p>",
+    "PostedDate": "2009-08-27T21:04:46.68-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "228579",
+    "ThreadId": "67243",
+    "Html": "<p>Ha, yah, well, we put our implementations (under /Implementations) in the same Code Plex project.&nbsp; Maybe we should &quot;tag&quot; the checkin with which project it's for so you know if you should care about the checkin or not?</p>",
+    "PostedDate": "2009-08-27T21:13:01.477-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "228600",
+    "ThreadId": "67243",
+    "Html": "<p>I know the implementations in the project.</p>\r\n<p>What I mean is too difficult to read the code.</p>\r\n<p>Do you have some documents ?</p>",
+    "PostedDate": "2009-08-27T22:40:11.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

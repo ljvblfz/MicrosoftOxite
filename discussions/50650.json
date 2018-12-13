@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "169861",
+    "ThreadId": "50650",
+    "Html": "I believe oxite would really benefit from a Web Platform Installer 2.0 based install. Does anyone know what kind of investment would this be in terms of hours and can someone point out the resources required to get this started. Is this something the oxite community would be interested in working towards??<br>\r\n",
+    "PostedDate": "2009-03-19T08:03:40.43-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "170489",
+    "ThreadId": "50650",
+    "Html": "Definitely interested in it at some point.  We'd like to get a few more features in there that make maintaining an Oxite site easier (i.e. don't have to mess with code as much) before adding it to WebPI, but definitely something we're interested in and investigating.<br>\r\n<br>\r\nIt appears this is where you'd go to find out more on getting it in there.  <a href=\"http://www.microsoft.com/web/gallery/developer.aspx\">http://www.microsoft.com/web/gallery/developer.aspx</a>  I haven't done much research on it yet.  Feel free.  :)\r\n",
+    "PostedDate": "2009-03-21T23:22:00.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185187",
+    "ThreadId": "50650",
+    "Html": "I just updated the MVC version from RC to 1.0 using the Web Platform Installer so I could install Oxite.&nbsp; During the process I found the documentation for the install of Oxide to be a bit confusing when it referenced the Web Platform Installer.&nbsp; It mentions &quot;<span id=\"ctl00_ctl00_MasterContent_Content_wikiSourceLabel\">then you can skip ahead to 'Web Platform Installer',</span>&quot; but there are no further references to the WPI.&nbsp; Is this an oversight?<br>\r\n",
+    "PostedDate": "2009-04-29T12:56:15.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185189",
+    "ThreadId": "50650",
+    "Html": "Well that would be my fault, the docs were rev'd a few times and I believe that section was moved or renamed. I'll turn this into a work item.\r\n",
+    "PostedDate": "2009-04-29T13:01:50.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185191",
+    "ThreadId": "50650",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"http://oxite.codeplex.com/WorkItem/View.aspx?WorkItemId=7712\">here</a> to go to the work item and continue the discussion.",
+    "PostedDate": "2009-04-29T13:04:03.573-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

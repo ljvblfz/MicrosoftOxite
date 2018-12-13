@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "1. Create a plug-in in a seperate assembly.\n2. Define IconLarge as a relative path.  ie:  \"../Content/Images/image.gif\"\n3. Navigate to Admin/Plugins\n \nExpected:\nPlug-in is listed with configured icon\n \nActual:\nPluginLoadInfoExtensions.GetPath throws ArgumentException \n \nstring roothPath = System.IO.Path.GetDirectoryName(pluginLoadInfo.AssemblyLoadInfo.VirtualPath).Replace(\"\\\\\", \"/\");",
+    "LastUpdatedDate": "2013-02-21T15:43:05.78-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-06-03T14:30:07.053-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Icons defined for plug-ins in external assemblies throw exception if relative path",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7852
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

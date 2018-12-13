@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "165873",
+    "ThreadId": "49566",
+    "Html": "is it possible to edit the excerpt for a post in WLW?\r\n",
+    "PostedDate": "2009-03-08T16:28:44.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165921",
+    "ThreadId": "49566",
+    "Html": "Yes.  Click the arrows in the bottom right hand side of the WLW window and it'll show you a box to type in the excerpt.  Let me know if that doesn't work.\r\n",
+    "PostedDate": "2009-03-08T21:39:10.537-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165929",
+    "ThreadId": "49566",
+    "Html": "That did it. Thanks.\r\n",
+    "PostedDate": "2009-03-08T22:13:42.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

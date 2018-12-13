@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "438098",
+    "ThreadId": "211317",
+    "Html": "<p>Hello ,</p>\r\n<p>Can i use Oxite in a MVC 2.0 Environment?</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2010-05-02T13:50:53.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "438197",
+    "ThreadId": "211317",
+    "Html": "<p>I don't know for sure since I haven't tried it and Oxite isn't being further developed so there won't be anything from us about MVC 2.0, but I believe I read somewhere that someone tried it and it was extremely trivial to get Oxite working with MVC 2.0.&nbsp; Give it a try!</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-05-02T23:43:45.333-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "173969",
+    "ThreadId": "51858",
+    "Html": "<p>Hi,<br>\r\n<br>\r\nI've read that at present we have to configure FTP for uploading picture and videos to an Oxite site. If this isn't the case then please let me know.</p>\r\n<p>I've installed and configured Live Writer and found the FTP setting as follows:<br>\r\nTools -&gt; Accounts -&gt; Select account and Click edit.<br>\r\nThis opens the &quot;Edit Blog Settings (Tawny Lion)&quot; window.<br>\r\nClick Pictures, select &quot;Upload pictures to FTP server:&quot; option and click &quot;Configure FTP...&quot; button.</p>\r\n<p>The question is; what do I specify in:<br>\r\n&quot;Publish pictures into this folder:&quot;<br>\r\n&quot;URL of picture publishing folder:&quot;</p>\r\n<p>I know I specify what I like, but what I'd like to know is what the site structure (design) thinking is and where it should be stored?</p>\r\n<p>FWIW, I've got a bare site up with some minor skinning at <a href=\"http://tawnylion.com/\">http://tawnylion.com/</a></p>\r\n<p>Thank you<br>\r\nLeon </p>\r\n",
+    "PostedDate": "2009-03-31T10:55:49.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "173973",
+    "ThreadId": "51858",
+    "Html": "You are correct that we don't currently allow images to be uploaded through metaweblog api (which is how Live Writer posts to Oxite) right now so FTP in Live Writer is your only option.<br>\r\n<br>\r\nAs for what those fields should be set to in Live Writer it's completely up to you.  Live Writer just needs to know where to put the images.  It doesn't matter where they are in your site.  I just have an images folder in the root of my site to upload them to.\r\n",
+    "PostedDate": "2009-03-31T11:01:57.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "174080",
+    "ThreadId": "51858",
+    "Html": "Thank you for the prompt answer Erik.<div><br></div><div>Regards</div><div>Leon</div>",
+    "PostedDate": "2009-03-31T13:55:07.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "177834",
+    "ThreadId": "51858",
+    "Html": "Found some c# code that handles the newMediaObject command on <a href=\"http://weblogs.asp.net/lkempe/archive/2006/08/27/C_2300_-implementation-of-newMediaObject-for-the-MetaWeblog-API.aspx\">on Laurent Kempe's blog</a>.\r\n",
+    "PostedDate": "2009-04-09T19:36:33.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "177844",
+    "ThreadId": "51858",
+    "Html": "Thanks for the link, Jon!  We actually had newMediaObject in the first version of Oxite, but it got lost in the big refactor and we haven't added it back yet.  Since the refactor we've changed how files are managed so there is a little work on the infrastructure side that needs to be done to accomodate, but I'll try to get it back in soon.\r\n",
+    "PostedDate": "2009-04-09T21:00:49.65-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

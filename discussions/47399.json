@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "158640",
+    "ThreadId": "47399",
+    "Html": "I just tried to build oxite but got 28 Errors most of them say:<br>\r\n<br>\r\nError&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;The type or namespace name 'Practices' does not exist in the namespace 'Microsoft' (are you missing an assembly reference?)&nbsp;&nbsp; &nbsp;D:\\MyData\\Documents\\Visual Studio 2008\\Projects\\sail4you_on_Oxite\\Oxite\\Oxite\\Validation\\ValidationService.cs&nbsp;&nbsp; &nbsp;7&nbsp;&nbsp; &nbsp;17&nbsp;&nbsp; &nbsp;Oxite<br>\r\n<br>\r\nIf I take a look into the reference Folder I also see that this Reference can't be found, where can I get it? <br>\r\n<br>\r\nI am using Visual Web Developer, ist this the problem does oxite require a higher version of Visual Studio?<br>\r\n<br>\r\nGreetings<br>\r\nJohannes<br>\r\n",
+    "PostedDate": "2009-02-17T12:48:20.277-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "158652",
+    "ThreadId": "47399",
+    "Html": "You need to go through the 'getting started' page (<a href=\"http://www.codeplex.com/oxite/Wiki/View.aspx?title=gettingstarted&referringTitle=Home\">http://www.codeplex.com/oxite/Wiki/View.aspx?title=gettingstarted&amp;referringTitle=Home</a>) and do the 'Installing Dependencies' portion. I believe this error is specifically due to Unity, but they all need to be installed.\r\n",
+    "PostedDate": "2009-02-17T13:15:11.147-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "158687",
+    "ThreadId": "47399",
+    "Html": "Ok this will be it, sometimes it's better to read some lines before :-). Thanks anyway.<br>\r\n",
+    "PostedDate": "2009-02-17T14:21:57.813-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

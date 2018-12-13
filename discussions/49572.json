@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "165893",
+    "ThreadId": "49572",
+    "Html": "Hi, I'm getting this error:<br>\r\n<br>\r\n<span>\r\n<h1><span>Server Error in '/' Application.</span><hr width=\"100%\" size=1 color=silver>\r\n</h1>\r\n<h2><span> <em>A route named 'Site' could not be found in the route collection.<br>\r\nParameter name: name</em> </span></h2>\r\n</span>\r\n<span style=\"font-family:arial,helvetica,geneva,sunsans-regular,sans-serif\">\r\n<strong> Description: </strong>An\r\nunhandled exception occurred during the execution of the current web\r\nrequest. Please review the stack trace for more information about the\r\nerror and where it originated in the code. <br>\r\n<br>\r\n<strong> Exception Details: </strong>System.ArgumentException: A route named 'Site' could not be found in the route collection.<br>\r\nParameter name: name<br>\r\n<br>\r\n<strong>Source Error:</strong> <br>\r\n<br>\r\n<table width=\"100%\" bgcolor=\"#ffffcc\">\r\n    <tbody>\r\n        <tr>\r\n            <td>\r\n            <code></code>\r\n            <pre>Line 444:        public static string Site(this UrlHelper urlHelper)<br>Line 445:        {<br><span style=\"color:red\">Line 446:            return urlHelper.RouteUrl(&quot;Site&quot;);<br></span>Line 447:        }<br>Line 448:</pre>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n<br>\r\n<strong> Source File: </strong> C:\\ASPNET\\Oxite\\Oxite.Core\\Extensions\\UrlHelperExtensions.cs<strong> &nbsp;&nbsp; Line: </strong> 446\r\n<br>\r\n<br>\r\n<br>\r\nI followed the install instructions (Getting Started with Oxite) and I have MVC 1.0 RC2 with VWD 2008 SP1 and SQL Server 2008 installed.<br>\r\n<br>\r\nThanks for you help.<br>\r\nJohn<br>\r\n</span>\r\n",
+    "PostedDate": "2009-03-08T18:49:17.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165933",
+    "ThreadId": "49572",
+    "Html": "There's an unfortunate bug where when the app starts and can't get all the data it needs but continues anyway so not all the routes are loaded and that error is what you see when it actually has nothing to do with route problems.  Can you debug the app starting up (start in OxiteApplication.OnStart) and see what really isn't getting loaded up.  I will try to find the bug that lets it go through and give the wrong error in the meantime.\r\n",
+    "PostedDate": "2009-03-08T22:16:06.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "166155",
+    "ThreadId": "49572",
+    "Html": "I was just playing around with it and it seems that when SQL Server Management Studio is open the ASP.NET Development Server isn't able to connect to connect to the database. When I load Oxite it throws an error saying that the local user isn't able to login to the database, then if I refresh the page it displays the &quot;Server Error in '/' Application. A route named 'Site' could not be found in the route collection. Parameter name: name&quot; error.<br>\r\n<br>\r\nTo get Oxite to load correctly I refreshed the SQL Server (SQLEXPRESS) service and close SQL Server Management Studio.<br>\r\n<br>\r\n- Just a quick question. How do I update the Oxite.2009.2.15.Source Release with the newest Oxite Source Code project?<br>\r\n<br>\r\nThanks,<br>\r\nJohn <span></span>\r\n",
+    "PostedDate": "2009-03-09T10:23:13.807-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "166942",
+    "ThreadId": "49572",
+    "Html": "Hey,<br>\r\nI got this bug at one stage also. However I don't think it's because SQL Server is open, but rather probably has something to do with attaching the mdb file.<br>\r\nI'm just messing about with Oxite at the minute and looking at what DB tables are affected etc. but I suggest you should create a new database, run the scripts, and then just point your web.config to this. You shouldn't get the error again (if indeed you got it for the same reasons as I did).<br>\r\n<br>\r\nCathal. \r\n",
+    "PostedDate": "2009-03-11T09:11:49.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "167057",
+    "ThreadId": "49572",
+    "Html": "Hi Cathal,<br>\r\n<br>\r\nThanks, I'll try that out.<br>\r\n<br>\r\nHave a great day,<br>\r\nJohn<br>\r\n",
+    "PostedDate": "2009-03-11T13:16:48.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185129",
+    "ThreadId": "49572",
+    "Html": "I had this the first time I ran the OxideSite.&nbsp; I set a debug in the OxideApplication.OnStart and found no errors and the page loaded correctly the second time.<br>\r\n",
+    "PostedDate": "2009-04-29T11:29:22.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185184",
+    "ThreadId": "49572",
+    "Html": "Funny.  I have a cousin named Chris Porter.  ;)<br>\r\n<br>\r\nYah, the only time that should happen is if it couldn't properly load the data the app needs.  So if there's a problem connecting to the database when the app loads, this could happen.  After it can get a proper connection and the app starts again it should be fine.\r\n",
+    "PostedDate": "2009-04-29T12:49:27.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "202644",
+    "ThreadId": "49572",
+    "Html": "<p>I also ran into this problem right now.</p>\r\n<p>Where can I find the SQL to create the appropriate database schemas?</p>\r\n<p>Thanks!</p>",
+    "PostedDate": "2009-06-17T13:47:42.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "203775",
+    "ThreadId": "49572",
+    "Html": "<p>@mickel</p>\r\n<p>Are you running the latest release or the latest checkin?&nbsp; The sql script for the latest release is in the setup folder.&nbsp; There is no sql script for the latest release.&nbsp; Though, the latest schema is in OxiteSite/App_Date/Oxite.Database.MDF</p>",
+    "PostedDate": "2009-06-20T21:58:01.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

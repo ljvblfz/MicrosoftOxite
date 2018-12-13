@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "215373",
+    "ThreadId": "63342",
+    "Html": "<p>I installed Oxite but it keeps erroring on the following line of code with message below:</p>\r\n<p>&nbsp;</p>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">&nbsp;&nbsp; &nbsp; &nbsp; public static string Site(this UrlHelper urlHelper)</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;{</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return urlHelper.RouteUrl(&quot;Site&quot;);</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}</div>\r\n<p>\r\n<p>&nbsp;&nbsp; &nbsp; &nbsp; public static string Site(this UrlHelper urlHelper)</p>\r\n<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;{</p>\r\n<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return urlHelper.RouteUrl(&quot;Site&quot;);</p>\r\n<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}</p>\r\n</p>\r\n<p>&nbsp;</p>\r\n<p>A route named 'Site' could not be found in the route collection.</p>\r\n<p>Any ideas what I've set up incorrectly?</p>\r\n<p>Rich</p>",
+    "PostedDate": "2009-07-23T09:35:24.643-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "215879",
+    "ThreadId": "63342",
+    "Html": "<p>This is definitely the worst error ever.&nbsp; It has nothing to do with the routes.&nbsp; When there's an error connecting to the database (or some other load issue) it&nbsp;can sometimes get&nbsp;skipped over and since the routes didn't get setup properly it says it can't find any of them.&nbsp; Restart Oxite and make sure the connection to your database is working.</p>",
+    "PostedDate": "2009-07-24T15:15:20.237-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

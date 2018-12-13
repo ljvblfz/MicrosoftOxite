@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "247074",
+    "ThreadId": "72360",
+    "Html": "<p>I'm making an international website for a friend, and am learning MVC right now too.&nbsp; Does Oxite support localization/globalization?</p>",
+    "PostedDate": "2009-10-18T12:53:39.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "247145",
+    "ThreadId": "72360",
+    "Html": "<p>Sort of. It's not finished, but you can put any language you want for the string resources in the database and they'll get used when pages are rendered. There's still more work that needs done to support many languages in a single site though. So not really I guess.</p>",
+    "PostedDate": "2009-10-18T21:16:10.513-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "247254",
+    "ThreadId": "72360",
+    "Html": "<p>Thanks for the reply Erik.&nbsp; Unfortunately, I am looking to run multiple languages simultaneously, so I'll have to look elsewhere for this project.&nbsp; Thanks though!</p>",
+    "PostedDate": "2009-10-19T06:02:09.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

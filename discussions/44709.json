@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "148851",
+    "ThreadId": "44709",
+    "Html": "How should a link in the header look like if I want to url to look like mydomain/blog?<br>\r\nI have tried it like this but the href empty.<br>\r\n&lt;li&lt;%= controller == &quot;Area&quot; &amp;&amp; string.Compare(pagePath, &quot;blog&quot;, true) == 0 ? selected : string.Empty %&gt;&gt;&lt;%= Html.RouteLink(Localize(&quot;Blog&quot;), &quot;Area&quot;, new { pagePath = &quot;Blog&quot; }) %&gt;&lt;/li&gt;<br>\r\n",
+    "PostedDate": "2009-01-20T11:48:22.443-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "148854",
+    "ThreadId": "44709",
+    "Html": "This would work...<br>\r\n<br>\r\n&lt;%=Html.Link(&quot;My Blog&quot;, &quot;http://myblog.com&quot;) %&gt;\r\n",
+    "PostedDate": "2009-01-20T11:51:50.863-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "148855",
+    "ThreadId": "44709",
+    "Html": "That was easy! :) ...<br>\r\nThanks for the help<br>\r\n",
+    "PostedDate": "2009-01-20T11:53:51.593-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "148856",
+    "ThreadId": "44709",
+    "Html": "Er...wait, do you mean you want it to just be an absolute path to a blog in your Oxite app?<br>\r\n<br>\r\nExplain more.  :)\r\n",
+    "PostedDate": "2009-01-20T11:55:41.773-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "148858",
+    "ThreadId": "44709",
+    "Html": "np.  If that's not what you were really looking for let me know.\r\n",
+    "PostedDate": "2009-01-20T11:56:25-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "148859",
+    "ThreadId": "44709",
+    "Html": "I don't want the blog articles on the startpage, so by adding a link to the menu with /blog as the url it's solved I think?<br>\r\n",
+    "PostedDate": "2009-01-20T12:00:48.613-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "148890",
+    "ThreadId": "44709",
+    "Html": "Well, showing something different for the homepage is something different.  You would probably just want to change the home page view with whatever you wanted instead of the list of posts (if I'm understanding you correctly).\r\n",
+    "PostedDate": "2009-01-20T13:13:38.483-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "148904",
+    "ThreadId": "44709",
+    "Html": "Yes exaxtly.<br>\r\n",
+    "PostedDate": "2009-01-20T13:45:30.797-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

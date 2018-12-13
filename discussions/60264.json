@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "204037",
+    "ThreadId": "60264",
+    "Html": "<p>Is there any kind of ETA on the next actual release? I am wanting possibly use Oxite for something, but cannot push it through with just using the HEAD revision from SVN since some of my superiors would like to see a few of the features baked into a release.</p>",
+    "PostedDate": "2009-06-22T05:49:03.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "204126",
+    "ThreadId": "60264",
+    "Html": "<p>We unfortunately don't have an ETA, but I just put up a post about our progress.&nbsp; Check it out: <a href=\"http://erikporter.com/Blog/Planning-for-the-Next-Oxite-Release\">http://erikporter.com/Blog/Planning-for-the-Next-Oxite-Release</a></p>",
+    "PostedDate": "2009-06-22T10:06:51.207-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

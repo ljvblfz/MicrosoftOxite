@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "153787",
+    "ThreadId": "46084",
+    "Html": "Is it possible to configure the host in web.config so both www.mydomain.com and mydomain.com works?<br>\r\n",
+    "PostedDate": "2009-02-03T07:42:08.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "153919",
+    "ThreadId": "46084",
+    "Html": "In the most recent (pre-RC) release of Oxite, this works<br>\r\n<br>\r\n<span style=\"color:#0000ff;font-size:13px\">       &lt;site name=&quot;Duncan Mackenzie .NET&quot; host=&quot;<a href=\"http://duncanmackenzie.net\">http://duncanmackenzie.net</a>&quot; id=&quot;4B0E80FB-BDCA-49F0-B680-AF18D38501D0&quot; languageDefault=&quot;en&quot; timeZoneOffset=&quot;-8&quot; gravatarDefault=&quot;http%3A%2F%2Ffarm4.static.flickr.com%2F3161%2F3075626008_bafe9b2801.jpg%3Fv%3D0&quot; themeDefault=&quot;Duncan&quot;&gt;<br>\r\n        &lt;aliases&gt;<br>\r\n          &lt;add host=&quot;<a href=\"http://www.duncanmackenzie.net\">http://www.duncanmackenzie.net</a>&quot; /&gt;<br>\r\n        &lt;/aliases&gt;<br>\r\n      &lt;/site&gt;            <br>\r\n</span>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2009-02-03T12:35:07.593-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

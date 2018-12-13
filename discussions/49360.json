@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "165126",
+    "ThreadId": "49360",
+    "Html": "Is there an option to delete a content page yet? I didn't see it next to the icons that allow to Add or Edit. <br>\r\n<br>\r\nThanks<br>\r\nVin<br>\r\n",
+    "PostedDate": "2009-03-05T17:12:25.273-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165192",
+    "ThreadId": "49360",
+    "Html": "There is a delete option sometimes.  :)  See my explaination over on this other thread.<br>\r\n<br>\r\n<a href=\"http://oxite.codeplex.com/Thread/View.aspx?ThreadId=49132\">http://oxite.codeplex.com/Thread/View.aspx?ThreadId=49132</a><br>\r\n<br>\r\nThe way we implemented that feature wasn't the greatest and we'll make it better and more clear in the next version.\r\n",
+    "PostedDate": "2009-03-05T21:06:21.463-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

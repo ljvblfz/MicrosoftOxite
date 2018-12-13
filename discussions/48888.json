@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "163222",
+    "ThreadId": "48888",
+    "Html": "Trying to get the latest release running on my hosting provider.&nbsp; Pretty sure its IIS6.&nbsp; I noticed a note in the admin next to the Route Url Prefix field.&nbsp; I tried setting it to oxite.aspx, but the routing still isn't working.&nbsp; Is anything else required to get the site to run on IIS6 ?<br>\r\n",
+    "PostedDate": "2009-03-01T10:11:31.633-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "163231",
+    "ThreadId": "48888",
+    "Html": "By &quot;doesn't work&quot; do you mean that no pages come up or what?  Having anything with .aspx in it should make it so the ASP.NET Handler picks up the requests.<br>\r\n<br>\r\nThe other thing you can do in IIS 6 is see if your hosting provider will add a wildcard for ASP.NET so all requests are picked up by ASP.NET.  Some hosters will, some won't.\r\n",
+    "PostedDate": "2009-03-01T11:33:28.48-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "163235",
+    "ThreadId": "48888",
+    "Html": "As I said the routing isn't working. As expected, with the prefix blank, you end up with 404's when you try to login or go anywhere since the request is not getting to ASP.NET.&nbsp; When i tried setting the prefix to &quot;oxite.aspx&quot;, the home page gives the error &quot;<span></span>\r\n<h2><em><em>The incoming request does not match any route.</em></em></h2>\r\n&quot;<br>\r\nAnd everything else is still a 404.&nbsp; What is that prefix supposed to do exactly?<br>\r\n",
+    "PostedDate": "2009-03-01T11:44:41.09-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "163236",
+    "ThreadId": "48888",
+    "Html": "ohhh... silly me, I see now.&nbsp; I have to put oxite.aspx in the url... Interesting<br>\r\n",
+    "PostedDate": "2009-03-01T11:48:12.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

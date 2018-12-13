@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Not a bug.",
+    "ClosedDate": "2009-01-27T11:53:18.543-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Seem to be a missing file \"ReflectedActionDescriptor.cs\"",
+    "LastUpdatedDate": "2013-05-16T03:38:04.797-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-01-27T09:43:58.19-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Compile error on r28070.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6982
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Oops, find the answer - http://www.codeplex.com/oxite/Thread/View.aspx?ThreadId=45323",
+      "PostedDate": "2009-01-27T09:58:41.303-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-27T11:53:18.543-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:12.083-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:04.797-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

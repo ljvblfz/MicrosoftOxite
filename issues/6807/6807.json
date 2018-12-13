@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "If you can't get wildcard mapping configured for where you have Oxite installed then uncomment the oxite/routes node in the Web.config to use routes with a .aspx file extension.",
+    "ClosedDate": "2009-01-08T15:30:16.167-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "my operater system is window xp professional\nmy iis version is iis 5.1\nI can open page default.aspx,but all link can't open ;for example /Tags/Oxite,/about etc.",
+    "LastUpdatedDate": "2013-05-16T03:38:05.53-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-16T23:10:10.42-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "can't load page Tags/Oxite",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6807
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I don't think anyone has tested Oxite on IIS 5.1. One of the team members can correct me if I'm wrong, though.",
+      "PostedDate": "2008-12-17T06:40:30.933-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Correct.  Untested in IIS 5.1.  We've heard reports of varied success/failures.  Is there a reason you're not using the ASP.NET Web Development Server?",
+      "PostedDate": "2008-12-17T12:23:47.343-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "hi ErikPorter ,\r\nwhat is the ASP.NET Web Development Server ?\r\nas far as know,can load page by httpModules; \r\ndo the Oxite use httpModule to redirect page url?\r\nthanks",
+      "PostedDate": "2008-12-17T21:37:59.43-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "@lishaowensdut ... the web development server is called Cassini and it is installed as part of Visual Studio, including Visual Web Developer Express. This lets you run and debug web projects without actually using IIS. I will see what is possible using XP and IIS 5.1, but off hand I believe the issue is that you need to add a 'wildcard mapping' so that all requests get handled by ASP.NET.",
+      "PostedDate": "2008-12-18T00:43:59.553-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-08T15:30:16.167-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:13.843-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:05.53-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

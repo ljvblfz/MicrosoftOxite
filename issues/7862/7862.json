@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-06-08T20:42:52.75-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I did a get this morning and received an error in TortiseSVN that \"AjaxActionFilter.cs\" was not under source control. When opening up the solution file, I had to exclude the file and comment out the reference in OxiteRegisterFilters.cs to compile.",
+    "LastUpdatedDate": "2013-05-16T03:38:00.06-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-06-06T05:25:00.737-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "AjaxActionFilter.cs not under SourceControl",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7862
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "It looks like it's still in there - http://oxite.codeplex.com/SourceControl/changeset/view/32567#466200.\r\n\r\nIt went through some naming changes yesterday (ending back at AjaxActionFilter) when we were getting the \"PartialViewResult returned on AJAX requests\" part of it working with the skinning engine. But it did end up back at AjaxActionFilter and the solution builds fine for me this morning... could TortiseSVN be getting confused?",
+      "PostedDate": "2009-06-06T08:34:44.64-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Indeed it looks as though Tortise was being wonky. Even just now a get on the Filters folder did nothing, but a fresh get at the root into a brand new folder retrieved the file.\r\n\r\nThanks!\r\n\r\nBrandon",
+      "PostedDate": "2009-06-06T15:10:27.22-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "you have to throw away the local svn repository every now and then. It happened to me several times that it got out of sync.",
+      "PostedDate": "2009-06-08T12:58:01.94-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Yeah, I had some problems with keeping codeplex projects synced up via svn a while back - seems to be a common problem (with updates) in general -> http://codeplex.codeplex.com/WorkItem/View.aspx?WorkItemId=20445",
+      "PostedDate": "2009-06-08T20:42:42.123-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-06-08T20:42:52.75-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:05.6-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:00.06-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

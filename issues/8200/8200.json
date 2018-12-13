@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Login in as Admin and click Add Page link.\n \nServer Error in '/' Application.\n--------------------------------------------------------------------------------\n \nThe RouteData must contain an item named 'controller' with a non-empty string value. \nDescription: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. \n \nException Details: System.InvalidOperationException: The RouteData must contain an item named 'controller' with a non-empty string value.\n \nSource Error: \n \nAn unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.  \n \nStack Trace: \n \n \n[InvalidOperationException: The RouteData must contain an item named 'controller' with a non-empty string value.]\n   System.Web.Routing.RouteData.GetRequiredString(String valueName) +236\n   System.Web.Mvc.MvcHandler.ProcessRequest(HttpContextBase httpContext) +92\n   System.Web.Mvc.MvcHandler.ProcessRequest(HttpContext httpContext) +57\n   System.Web.Mvc.MvcHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext httpContext) +7\n   System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +181\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +75\n \n \n \n \n--------------------------------------------------------------------------------\nVersion Information: Microsoft .NET Framework Version:2.0.50727.3082; ASP.NET Version:2.0.50727.3082",
+    "LastUpdatedDate": "2013-02-21T15:43:03.807-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-07-27T07:53:25.06-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Exception thrown when adding page - revision 35887",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 8200
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

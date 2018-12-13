@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "227596",
+    "ThreadId": "66943",
+    "Html": "<p>While debugging, I found out, that the real error is inside OxiteApplication.cs, Application_BeginRequest method:</p>\r\n<p><span style=\"font-size:x-small\">\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>setupUrl = <span style=\"color:Blue\">new</span> UrlHelper(<span style=\"color:Blue\">new</span> RequestContext(<span style=\"color:Blue\">new</span> HttpContextWrapper(Context), <span style=\"color:Blue\">new</span> RouteData())).Site();\r\n</pre>\r\n</div>\r\n</span></p>\r\n<p>&quot;HttpContextWrapper&nbsp;The type 'System.Web.HttpContextWrapper' exists in both 'System.Web.dll' and 'System.Web.Abstractions.dll'&quot;</p>\r\n<p>Any suggestions are welcomed!</p>",
+    "PostedDate": "2009-08-25T12:13:57.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227608",
+    "ThreadId": "66943",
+    "Html": "<p>This usually means Oxite couldn't connect to your database.&nbsp; We'll be rearranging some things so a more accurate error is given in the near future.</p>",
+    "PostedDate": "2009-08-25T12:38:34.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227615",
+    "ThreadId": "66943",
+    "Html": "<p>Erik,</p>\r\n<p>I've changed connection string to use SQL authentication&nbsp;with&nbsp;SQL user&nbsp;and I've tried to connect with this user via SQL Management Studio - it's works with no problem. Any other possible causes?</p>",
+    "PostedDate": "2009-08-25T12:51:02.96-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227621",
+    "ThreadId": "66943",
+    "Html": "<p>You restarted Oxite and it still doesn't work?&nbsp; You're probably going to have to put a breakpoint in Application_Start in OxiteApplication.cs and see what's throwing the error (something is dying before the app can properly start).</p>",
+    "PostedDate": "2009-08-25T12:59:24.08-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227636",
+    "ThreadId": "66943",
+    "Html": "<p>Yep, that's right. It still doesn't work. While debuging it's dying inside Application_BeginRequest method as pointed in the first post.</p>",
+    "PostedDate": "2009-08-25T13:34:47.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227652",
+    "ThreadId": "66943",
+    "Html": "<p>Oops, sorry...misread your first post there.&nbsp; hhhmmm...I believe HttpContextWrapper and all that was moved into System.Web (and System.Web.Abstractions is no longer needed) in .NET 4.0.&nbsp; Do you have .NET 4.0 installed on your box?&nbsp; I'm guessing it's getting confused where to get that class from.&nbsp; We haven't tested with .NET 4.0 yet so you're treading in new waters.</p>\r\n<p>Not completely sure how to help you since I haven't tried Oxite with .NET 4.0 yet (assuming that IS the problem), but you might want to try messing with the assembly references to make sure you're not having a conflict.</p>",
+    "PostedDate": "2009-08-25T14:01:31.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227780",
+    "ThreadId": "66943",
+    "Html": "<p>The most interesting thing - NO, I'm running .NET Framework 3.5 SP1. Any ideas?</p>",
+    "PostedDate": "2009-08-25T23:09:03.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227781",
+    "ThreadId": "66943",
+    "Html": "<p>hhhmmm...not really.&nbsp; :-\\&nbsp; Run &quot;Clean Solution&quot; in Visual Studio???&nbsp; Remove the reference to System.Web.Abstractions???&nbsp; Really haven't seen this one before.&nbsp; You don't get an error at compile time?</p>",
+    "PostedDate": "2009-08-25T23:19:38.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "228046",
+    "ThreadId": "66943",
+    "Html": "<p><span style=\"color:black;font-size:10pt\" lang=EN-US>Finally! I've found the cause. I deployed Database not by using SQL script, but directly from the Database project. It seems, that Database project generates deployment script with errors (some variable are defined more than once). As a result the DB information was not inserted correctly and the blog didn't work.</span></p>\r\n<p><span style=\"color:black;font-size:10pt\" lang=EN-US>The question is how can it be, that exception is related to the Routes and the inner exception to the HttpContextWrapper...</span></p>",
+    "PostedDate": "2009-08-26T10:41:55.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "228123",
+    "ThreadId": "66943",
+    "Html": "<p>Ah, yah...the DB project isn't meant to generate anything deployable.&nbsp; It's just used for creating a local instance.&nbsp; Weird, I know, but yah, don't use that.&nbsp; You can always do a schema/data compare of the MDF file in App_Data.</p>\r\n<p>Yah, I have no idea about the HttpContextWrapper error.&nbsp; Again, haven't ever seen that one.&nbsp; The relation to routes is that Application_Start failed so certain things never got loaded (like the registration of all the routes), but since the app has already started, the next request tries to run but can't because none of the routes were ever registered.</p>\r\n<p>Glad you got it working!</p>",
+    "PostedDate": "2009-08-26T13:23:21.283-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "228128",
+    "ThreadId": "66943",
+    "Html": "<p>Thanks Erik for support!</p>\r\n<p>Are you guys planning opening Oxite team for the external contributors?</p>",
+    "PostedDate": "2009-08-26T13:37:52.73-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "228171",
+    "ThreadId": "66943",
+    "Html": "<p>We already have a couple external contributors.&nbsp; :)&nbsp; We're always looking for contributors that bring a lot to the table.&nbsp; If interested, the best way to become a contributor is to get our attention.&nbsp; Build cool stuff with Oxite, blog about it (on Oxite of course), etc.&nbsp; We're watching.&nbsp; :)</p>",
+    "PostedDate": "2009-08-26T15:46:35.253-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

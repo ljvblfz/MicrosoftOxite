@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "143178",
+    "ThreadId": "43076",
+    "Html": "My configuration: Windows XP SP2, VSTS 2008, .NET 3.5 SP1, SQL Server 2008, IE7, no IIS<br>\r\nI used SSMS to manually attach the OxiteSite\\App_Data\\Oxite.Database.mdf and the log file, renamed it to &quot;Oxite.Database&quot;, and then executed Oxite.Database\\sql\\Oxite.Database.sql in SQLCMD Mode successfully without any error. Then I modified OxiteSite\\Web.config, set &lt;add name=&quot;ApplicationServices&quot; connectionString=&quot;Data Source=.;Initial Catalog=Oxite.Database;Persist Security Info=True;User ID=OxiteSite;Password=c9FTw!1&quot;/&gt;<br>\r\nEverything seems OK, but when I pressed F5 to debug OxiteSite in IE7, an exception &quot;The incoming request does not match any route.&quot; thrown. The current url is &quot;<a href=\"http://localhost:30913/\">http://localhost:30913/</a>&quot;, and it stops at Default.aspx.cs line 13:  httpHandler.ProcessRequest(HttpContext.Current);<br>\r\nAny idea?\r\n",
+    "PostedDate": "2008-12-28T00:59:03.04-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "143179",
+    "ThreadId": "43076",
+    "Html": "Just got the exact same error... if you deploy your site to a server\r\nsomewhere and try to hit it the config section &lt;oxite&gt;&lt;server\r\nhost=... &gt; must point to the uri of your incoming request. I am\r\ndeploying a staging environment on my server <a href=\"http://www.noop.se/\">http://www.noop.se</a> and so I had to put this value.<br>\r\n<br>\r\nHope this helps!<br>\r\n<br>\r\nCheers,<br>\r\n<br>\r\nM.<br>\r\n<a href=\"http://feedproxy.google.com/~r/Techienotepad/~6/1\"><img style=\"border:0pt none\" alt=Techie.notepad src=\"http://feedproxy.google.com/Techienotepad.1.gif\"></a>\r\n",
+    "PostedDate": "2008-12-28T01:10:14.387-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "143196",
+    "ThreadId": "43076",
+    "Html": "The config section was like:<br>\r\n&lt;oxite&gt;<br>\r\n    &lt;site name=&quot;Oxite Sample&quot; host=&quot;http://localhost:30913&quot; .........&gt;<br>\r\nAnd it threw the exception &quot;The incoming request does not match any route.&quot;<br>\r\n<br>\r\nNow I have changed it to &quot;http://localhost:30913/&quot;  , just one more &quot;/&quot; at the end, and another exception shows up &quot;<em>No site or redirect was found for 'http://localhost:30913'</em>  &quot;<br>\r\n<span style=\"font-family:arial\">Oxite.Mvc\\OxiteApplication.cs</span><b>    Line: </b><span style=\"font-family:arial\">97 <br>\r\n<br>\r\nLine 95: <br>\r\nLine 96:                 if (foundRedirect == null)<br>\r\n<span style=\"color:#ff0000\">Line 97:                     throw new Exception(string.Format(&quot;No site or redirect was found for '{0}'&quot;, host));<br>\r\n</span>Line 98:                 else<br>\r\nLine 99:                 {<br>\r\n<br>\r\n<br>\r\nP.S.: I used VSTS built-in web server, that is ASP.NET Development Server<br>\r\nRoot URL:  http://localhost:30913/<br>\r\nVirtual Path: /<br>\r\nPhsical Path:  D:\\Oxite\\OxiteSite\\<br>\r\n</span>\r\n",
+    "PostedDate": "2008-12-28T03:47:00.873-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "143198",
+    "ThreadId": "43076",
+    "Html": "Just now I reviewed the code of OxiteApplication.cs. If I set &lt;site host=&quot;http://localhost:30913/&quot;&gt;, it definitely will not work.<br>\r\n<p dir=ltr style=\"margin-right:0px\">string host = string.Format(&quot;{0}://{1}{2}&quot;, Request.Url.Scheme, Request.Url.Host, Request.Url.Port != 80 ? &quot;:&quot; + Request.Url.Port.ToString() : &quot;&quot;);<br>\r\n// for me, host = 'http://localhost:30913'.   Host != host, so the block executes, and there's no redirects, so foundRedirect is always null, thus the exception is thrown.<br>\r\nif (string.Compare(Config.Site.Host, host, true) != 0)<br>\r\n{<br>\r\n    ISiteRedirect foundRedirect = null;</p>\r\n<p>    foreach (ISiteRedirect redirect in Config.Site.Redirects)<br>\r\n    {<br>\r\n        if (string.Compare(redirect.Host, host, true) == 0)<br>\r\n        {<br>\r\n            foundRedirect = redirect;<br>\r\n            break;<br>\r\n        }<br>\r\n    }</p>\r\n<p>    if (foundRedirect == null)<br>\r\n        throw new Exception(string.Format(&quot;No site or redirect was found for '{0}'&quot;, host));<br>\r\n    else</p>\r\n",
+    "PostedDate": "2008-12-28T04:06:03.107-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "143203",
+    "ThreadId": "43076",
+    "Html": "Hey there!<br>\r\n<br>\r\nSuddenly we get versioning issues I'm afraid. I don't have the error message you describe anywhere in my code and the code you paste does not match mine.<br>\r\n<br>\r\nI'm sure I can help you but I need to know the version you are using! I've been haning on the new checkins and so I'm sure we don't share the same code.<br>\r\n<br>\r\nM.<br>\r\n<a href=\"http://feedproxy.google.com/~r/Techienotepad/~6/1\"><img style=\"border:0pt none\" alt=Techie.notepad src=\"http://feedproxy.google.com/Techienotepad.1.gif\"></a><br>\r\n",
+    "PostedDate": "2008-12-28T05:50:33.343-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "143246",
+    "ThreadId": "43076",
+    "Html": "The version I was using is 2008.12.5.<br>\r\nJust now I downloaded Dec. 19, oxite-27048. First I detached the old Oxite.Database in SSMS, and executed the script &quot;oxite-27048\\Oxite\\Oxite.Database.sql&quot; (41KB) to rebuild the Oxite.Database. Then I modified Web.config to this: (just commented the first connection string, and uncommented the second one. Because I'm using SQL Server 2008 Enterprise, so I crossed out the &quot;\\SQLEXPRESS&quot;)<br>\r\n    &lt;connectionStrings&gt;<br>\r\n        &lt;!--&lt;add name=&quot;ApplicationServices&quot; connectionString=&quot;Data Source=.\\SQLEXPRESS;AttachDBFileName=|DataDirectory|Oxite.Database.mdf;Integrated Security=true;User Instance=true;&quot;/&gt;--&gt;<br>\r\n        &lt;add name=&quot;ApplicationServices&quot; connectionString=&quot;Data Source=.;Initial Catalog=Oxite.Database;Persist Security Info=True;User ID=OxiteSite;Password=c9FTw!1&quot;/&gt;<br>\r\n    &lt;/connectionStrings&gt;<br>\r\nThat's it. Nothing more modification has been done. Then I set the OxiteSite project as StartUp Project in VSTS 2008, and pressed F5 to debug it. The same exception comes out! &quot;The incoming request does not match any route.&quot;<br>\r\n<br>\r\n<span> \r\n<h1>Server Error in '/' Application. <hr width=\"100%\" color=\"#c0c0c0\" size=1>\r\n</h1>\r\n<h2><i>The incoming request does not match any route.</i> </h2>\r\n</span><span style=\"font-family:arial, helvetica, geneva, sunsans-regular, sans-serif\"><b>Description: </b>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. <br>\r\n<br>\r\n<b>Exception Details: </b>System.Web.HttpException: The incoming request does not match any route.<br>\r\n<br>\r\n<b>Source Error:</b> <br>\r\n<br>\r\n<table width=\"100%\" bgcolor=\"#ffffcc\">\r\n    <tbody>\r\n        <tr>\r\n            <td><code>\r\n            <pre>Line 11:             HttpContext.Current.RewritePath(Request.ApplicationPath);\r\nLine 12:             IHttpHandler httpHandler = new MvcHttpHandler();\r\n<span style=\"color:#ff0000\">Line 13: httpHandler.ProcessRequest(HttpContext.Current);</span>Line 14:         }\r\nLine 15:     }</pre>\r\n            </code></td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n<br>\r\n<b><span style=\"font-family:verdana\">Source File: </span></b>D:\\Cache\\oxite-27048\\Oxite\\OxiteSite\\Default.aspx.cs<b><span style=\"font-family:verdana\">    Line: </span></b>13 <br>\r\n<br>\r\n<b><span style=\"font-family:verdana\">Stack Trace:</span></b> <br>\r\n<br>\r\n<table width=\"100%\" bgcolor=\"#ffffcc\">\r\n    <tbody>\r\n        <tr>\r\n            <td><code>\r\n            <pre>[HttpException (0x80004005): The incoming request does not match any route.]\r\n   System.Web.Routing.UrlRoutingHandler.ProcessRequest(HttpContextBase httpContext) +15589\r\n   System.Web.Routing.UrlRoutingHandler.ProcessRequest(HttpContext httpContext) +40\r\n   System.Web.Routing.UrlRoutingHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context) +7\r\n   OxiteSite._Default.Page_Load(Object sender, EventArgs e) in D:\\Cache\\oxite-27048\\Oxite\\OxiteSite\\Default.aspx.cs:13\r\n   System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e) +14\r\n   System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e) +35\r\n   System.Web.UI.Control.OnLoad(EventArgs e) +99\r\n   System.Web.UI.Control.LoadRecursive() +50\r\n   System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +627\r\n</pre>\r\n            </code></td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n<br>\r\n<hr width=\"100%\" color=\"#c0c0c0\" size=1>\r\n<b><span style=\"font-family:verdana\">Version Information:</span></b> Microsoft .NET Framework Version:2.0.50727.3053; ASP.NET Version:2.0.50727.3053 </span>&lt;!-- \r\n[HttpException]: The incoming request does not match any route.\r\n   at System.Web.Routing.UrlRoutingHandler.ProcessRequest(HttpContextBase httpContext)\r\n   at System.Web.Routing.UrlRoutingHandler.ProcessRequest(HttpContext httpContext)\r\n   at System.Web.Routing.UrlRoutingHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)\r\n   at OxiteSite._Default.Page_Load(Object sender, EventArgs e) in D:\\Cache\\oxite-27048\\Oxite\\OxiteSite\\Default.aspx.cs:line 13\r\n   at System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)\r\n   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)\r\n   at System.Web.UI.Control.OnLoad(EventArgs e)\r\n   at System.Web.UI.Control.LoadRecursive()\r\n   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)\r\n[HttpUnhandledException]: Exception of type 'System.Web.HttpUnhandledException' was thrown.\r\n   at System.Web.UI.Page.HandleError(Exception e)\r\n   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)\r\n   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)\r\n   at System.Web.UI.Page.ProcessRequest()\r\n   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)\r\n   at System.Web.UI.Page.ProcessRequest(HttpContext context)\r\n   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\Temporary ASP.NET Files\\root\\d060e82f\\6c4ac2fa\\App_Web_tajp9phm.0.cs:line 0\r\n   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)\r\n--&gt;\r\n",
+    "PostedDate": "2008-12-28T16:58:09.593-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "270111",
+    "ThreadId": "43076",
+    "Html": "<p>I was getting this as well, however I found out that restarting the built-in asp.net server in VS fixed the issue.&nbsp; To do this, right click on the icon in the systray, click on &quot;Stop&quot;.&nbsp; Then go back to VS, hit F5 and it works fine.</p>",
+    "PostedDate": "2009-12-22T18:16:27.117-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "271885",
+    "ThreadId": "43076",
+    "Html": "<p>hi, i got 2005.2.15 installed and got it up and running up to setup. after setup i get the same &quot;The incoming request does not match any route.&quot; error from an HttpException. stopping dev iis instances doesn't work for me here. can someone post what worked for them? also tried to load oxite.aspx</p>\r\n<p>i think i need to register route, like this: <a href=\"http://www.asp.net/learn/mvc/tutorial-08-cs.aspx\">http://www.asp.net/learn/mvc/tutorial-08-cs.aspx</a>, for my {controller}.aspx, but not sure where to apply this within this code. this is all i've had to add to other mvc projects, though. i would have to change a lot, and it seems that there has to be a better way.&nbsp;</p>\r\n<p>G-</p>",
+    "PostedDate": "2009-12-30T18:46:31.417-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "283464",
+    "ThreadId": "43076",
+    "Html": "<p>i went another round setting up oxite and this time i won... off the top of my head:</p>\r\n<p>1) i used the source control version (&quot;latest&quot;)<br>2) the app_data/.mdf file gave me a problem authenticating my user when i AttachDBFileName, so i used VS 2008 &quot;Publish to Provider&quot; to publish it to my sqlexpress 2008 instance (yes i am actually not that familiar with attachDBFileName devving like that) and then used a regular old connection string after assigning the permission.&nbsp;<br>3) the connection strings used are in both web.config and oxite.config. make sure you check them.&nbsp;</p>\r\n<p>as you can see i was off in la-la-land thinking my problem was something else. hope this helps :)&nbsp;</p>\r\n<p>G-</p>",
+    "PostedDate": "2010-01-29T13:11:04.807-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

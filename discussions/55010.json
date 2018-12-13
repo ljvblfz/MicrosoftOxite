@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "185711",
+    "ThreadId": "55010",
+    "Html": "I've been heavily working on Oxite's views and skin (styles and images) in the last two months and reading the source code meanwhile. The source code is clean and fairly architectured. Thank you for releasing Oxite to the public!<br>\r\n&nbsp;<br>\r\nHere are my suggestion for latest release 2009.2.15:<br>\r\n<br>\r\n1- Changing the styles and XHTML affects the administration section. Usually, who is styling the layout has no interest in changing the admin section, so I suggest separating the admin section completely from skinning.<br>\r\n<br>\r\n2 - The archives, latest posts, latest comments and tags are used sometimes on the master page across the whole blog. My suggestion is making them available to the MasterPage at all times rather than per controller.<br>\r\n<br>\r\n3 - Following the concept used in multiple blogs, I suggest adding support for the &quot;[more]&quot;. The [more] tag will allow cutting the blog post at certain location (and maybe adding three dots) to be used on the home page (as a replacement to the excerpt).<br>\r\n<br>\r\nIs there another exciting release soon?<br>\r\n",
+    "PostedDate": "2009-04-30T14:19:04.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185781",
+    "ThreadId": "55010",
+    "Html": "You're welcome.  Thanks for checking it out and working with it.  :)<br>\r\n<br>\r\n1. We agree and this work has already been done.  They are separate now with the code currently checked in and will be in the next release.<br>\r\n<br>\r\n2. Those are extra and each page should only have data calls made for exactly the data it needs to be as performant as possible.  What I think we could improve on is making it easier for you to add those extra data calls so your skin can show them on a page that the default skin doesn't.  I'll take a look, but sadly, I think this may be a bigger change than we have time for in the next release.<br>\r\n<br>\r\n3. If you don't provide and excerpt for a post we already cut off the main body on the home page.  I agree it definitely needs a more link or something after it to show there's more on the actual permalink.  I will add this to the list (especially since it's so easy) for the next release.<br>\r\n<br>\r\nThere is actually.  We're hard at work on a ton of things right now and we're shooting for the new shiny release at the end of May.  I'll try to blog about the short term roadmap tomorrow.  My blog is located <a href=\"http://erikporter.com\">here</a>. \r\n",
+    "PostedDate": "2009-04-30T22:24:28.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185821",
+    "ThreadId": "55010",
+    "Html": "Erik,<br>\r\n<br>\r\nI am glad to hear that point 1 is already in the new release. And thank you for adding point 3 to the scheduled release!<br>\r\n<br>\r\nPoint 2, I agree that this would be db intensive, however, since the rate of changing of the posts is really low (expecting 4 posts max a day?), caching with lazy loading might be a solution. On the other hand, making it easier to implement for the user is a good option as well.<br>\r\n<br>\r\nThank you for the prompt response :)<br>\r\n<br>\r\nBest regards<br>\r\nAdam Tibi \r\n",
+    "PostedDate": "2009-05-01T01:18:39.57-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

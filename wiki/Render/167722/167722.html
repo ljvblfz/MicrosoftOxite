@@ -1,0 +1,82 @@
+<div class="wikidoc"><h1>Intro</h1>
+Plug-ins are a simple means by which you can add functionality to your Oxite site.  They are simply code files that allow you to specify some configuration and then perform some action.  <br />
+<h1>Creating a stub plug-in</h1>To create a plug-in, we will first create an empty C# class.  Oxite uses a definition by convention model for it&#39;s plug-ins; therefore, we&#39;ll need to make sure that our class name is XXXPlugin.<br /><br /><pre>
+public class DisclaimerSelectorPlugin
+{
+}
+</pre><br />Simple, but although this is enough for Oxite to recognize our plug-in and try and load it, we&#39;ll need to give it a few more pieces of information before it&#39;s actually useful.  Oxite exposes a whole bunch of <a href="https://oxite.codeplex.com/wikipage?title=Plug-in%20definition%20attributes&referringTitle=How%20to%20create%20a%20plugin">attributes</a> that we can apply to our plug-in.  These allow us to configure things like the plug-in&#39;s name, description, icons, etc.  To get access to these attributes, we&#39;ll need to add a  using statement for Oxite.Plugins.Attributes.  Only three of these attributes are currently required for our plug-in to load correctly,  Authors, AuthorUrls, and Tags…and even these can be left blank.  But by not filling in into, our plug-in will look a little weird in the UI :) <br /><br /><pre>
+[Authors(&quot;&quot;)]
+[AuthorUrls(&quot;&quot;)]
+[Tags(&quot;Blog&quot;, &quot;Disclaimer&quot;)]
+public class DisclaimerSelectorPlugin    
+{
+}
+</pre><br />Renders as:<br /><br /><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=oxite&DownloadId=71294" alt="howtocreate1.jpg" title="howtocreate1.jpg" /><br /><br />So let&#39;s go ahead and fill out all the possible information:<br /><br /><pre>
+[Authors(&quot;Travis Merkel&quot;, &quot;Steve Perry&quot;)]
+[AuthorUrls(&quot;http://lostincompilation.com&quot;, &quot;http://www.journeymusic.com&quot;)]
+[BackgroundImage(&quot;background.jpg&quot;)]
+[Category(&quot;Disclaimer&quot;)]
+[Description(&quot;This plug-in will allow the selecting of disclaimers to be added to blog posts.&quot;)]
+[DisplayName(&quot;Disclaimer Selector&quot;)]
+[HomePage(&quot;http://lostincompilation.com&quot;)]
+[IconLarge(&quot;IconLarge.jpg&quot;)]
+[IconLargeDisabled(&quot;IconLargeDisabled.png&quot;)]
+[IconLargeError(&quot;IconLargeError.png&quot;)]
+[IconSmall(&quot;IconSmall.jpg&quot;)]
+[IconSmallDisabled(&quot;IconSmallDisabled.png&quot;)]
+[IconSmallError(&quot;IconSmallError.png&quot;)]
+[OxiteMaxVersion(1, 0, 0, 0)]
+[OxiteMinVersion(0, 0, 0, 0)]
+[Tags(&quot;Blog&quot;, &quot;Disclaimer&quot;)]
+[Version(1, 0, 0, 0)]
+public class DisclaimerSelectorPlugin
+{
+}
+</pre><br />And that&#39;s all the code that is needed to create a working plug-in!  Admittedly…it&#39;s kind of boring, but let&#39;s just make sure it shows up for now.  To get Oxite to recognize our plug-in we&#39;ll need to make sure our .cs file is available in our configured Plug-ins Path.  By default, this path is set to \Plugins, but this can be changed by <b></b><b></b><b></b><b></b><b></b><b></b><b></b>*.  For now, we&#39;ll leave the default and copy our plug-in file there:<br /><br /><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=oxite&DownloadId=71295" alt="howtocreate2.jpg" title="howtocreate2.jpg" /><br /><br />We&#39;re also following Oxite&#39;s organizational example by placing our plug-in into its own folder under \Plugins.<br /><br /><b>Note</b>:  We&#39;ve also added an images subfolder that contains our icon images.  Icon images can be referenced using absolute paths, but if we put them in this subfolder structure Oxite will do the lookup for us given only the file name.<br /><br />Now when we run our site we should see our new plug-in in the list of those available:<br /><br /><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=oxite&DownloadId=71296" alt="howtocreate3.jpg" title="howtocreate3.jpg" /><br /><br />This is currently a very boring example of a plug-in.  There&#39;s no way to configure it, and it wouldn&#39;t do anything even if there was.  So let&#39;s continue our work by fixing the first issue, configuration.  Oxite allows us to expose configuration settings for a plug-in by adding properties to our plug-in class.  In the case of our Disclaimer Selector plug-in, we know we&#39;re going to need at least the text of the disclaimer, so let&#39;s start there.<br />
+<h1>Configuration</h1>
+<pre>
+[Authors(&quot;Travis Merkel&quot;, &quot;Steve Perry&quot;)]
+[AuthorUrls(&quot;http://lostincompilation.com&quot;, &quot;http://www.journeymusic.com&quot;)]
+[BackgroundImage(&quot;background.jpg&quot;)]
+[Category(&quot;Disclaimer&quot;)]
+[Description(&quot;This plug-in will allow the selecting of disclaimers to be added to blog posts.&quot;)]
+[DisplayName(&quot;Disclaimer Selector&quot;)]
+[HomePage(&quot;http://lostincompilation.com&quot;)]
+[IconLarge(&quot;IconLarge.jpg&quot;)]
+[IconLargeDisabled(&quot;IconLargeDisabled.png&quot;)]
+[IconLargeError(&quot;IconLargeError.png&quot;)]
+[IconSmall(&quot;IconSmall.jpg&quot;)]
+[IconSmallDisabled(&quot;IconSmallDisabled.png&quot;)]
+[IconSmallError(&quot;IconSmallError.png&quot;)]
+[OxiteMaxVersion(1, 0, 0, 0)]
+[OxiteMinVersion(0, 0, 0, 0)]
+[Tags(&quot;Blog&quot;, &quot;Disclaimer&quot;)]
+[Version(1, 0, 0, 0)]
+public class DisclaimerSelectorPlugin
+{
+    public string Disclaimer
+    {
+        get;
+        set;
+    }
+}
+</pre><br />That, in and of itself, is enough for us to have something to configure for our plug-in.<br /><br /><a href="http&#58;&#47;&#47;oxite.codeplex.com&#47;Wiki&#47;View.aspx&#63;title&#61;HowToCreate4Image"><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=oxite&DownloadId=71297" alt="Configuration&#32;Image" title="Configuration&#32;Image" /></a><br /><br />Fortunately, we&#39;ve also been given a set of attributes that can be applied to our property to make it a bit prettier and to help us validate things.  In the interest of science, let&#39;s apply all possible attributes to our Disclaimer property.<br /><br /><pre>
+[Appearance(Width = &quot;30%&quot;, Height = &quot;30%&quot;)]
+[DefaultValue(&quot;All opinions are strictly those of the author.&quot;)]
+[Group(&quot;Disclaimer&quot;, // Name of the group
+    1)] // Order in which the group should appear in the UI
+[HelpText(&quot;Enter the disclaimer to use for posts.&quot;)]
+[HelpUrl(&quot;http://oxite.com&quot;)]
+[LabelText(&quot;Disclaimer:&quot;)]
+[Order(1)]
+[Required]
+[StringValidation(MaxLength = 1000,
+    MinLength = 5)]
+public string Disclaimer
+{
+    get;
+    set;
+}
+</pre><br />Now our setting is a little more user friendly, will be validated, and will provide some useful messaging is something isn&#39;t correct.<br /><br /><a href="http&#58;&#47;&#47;oxite.codeplex.com&#47;Wiki&#47;View.aspx&#63;title&#61;HowToCreate5Image"><img src="http://download-codeplex.sec.s-msft.com/Download?ProjectName=oxite&DownloadId=71297" alt="Configuration&#32;Image2" title="Configuration&#32;Image2" /></a><br /><br />
+<h1>Events</h1>
+<h1>Templates</h1></div><div class="ClearBoth"></div>

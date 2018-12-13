@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "212121",
+    "ThreadId": "62498",
+    "Html": "<p>I tried posting a comment on a site using Oxite and my email contains an underscore.&nbsp; It didn't allow me to post.</p>",
+    "PostedDate": "2009-07-15T06:52:39.203-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "212202",
+    "ThreadId": "62498",
+    "Html": "<p>Thanks for letting us know.&nbsp; We'll fix up the regular expression used to validate email addresses before the next release.</p>",
+    "PostedDate": "2009-07-15T10:14:59.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "212209",
+    "ThreadId": "62498",
+    "Html": "<p>Actually, Nathan just checked and this has already been fixed (quite a while ago actually), but since we haven't done a release in quite a while, it hasn't gotten out to everyone yet.&nbsp; It will be fixed in the next release (since the fix is already checked in).</p>",
+    "PostedDate": "2009-07-15T10:24:04.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "212220",
+    "ThreadId": "62498",
+    "Html": "<p>It was actually on your site Erik where I was trying it.&nbsp; Maybe you haven't loaded the latest bits on your blog.</p>",
+    "PostedDate": "2009-07-15T10:35:16.57-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "212222",
+    "ThreadId": "62498",
+    "Html": "<p>Correct, I haven't.&nbsp; Sorry about that!&nbsp; We're still working on an upgrade script for the database so I can run the latest bits.</p>",
+    "PostedDate": "2009-07-15T10:38:08.003-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

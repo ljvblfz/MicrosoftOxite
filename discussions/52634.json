@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "176966",
+    "ThreadId": "52634",
+    "Html": "Hello,<br>\r\n&nbsp; People want to play with Oxite,<br>\r\n&nbsp; People don't want to download and install those dependent libraries.<br>\r\n&nbsp; So,why just simply put all the dependent libs(xunit.dll,blogml.dll,etc.) under the &quot;Oxite\\libs&quot; folder? \r\n",
+    "PostedDate": "2009-04-07T21:40:42.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176969",
+    "ThreadId": "52634",
+    "Html": "Legally, we can not include them to follow MS-PL.  We agree it's a pain, but we can't include them.  Over time we will get rid of some of them.  We are also investigating possibly adding Oxite to the <a href=\"http://www.microsoft.com/web/gallery/default.aspx\">Windows Web App Gallery</a>, which would simplify installation. \r\n",
+    "PostedDate": "2009-04-07T21:49:53.597-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

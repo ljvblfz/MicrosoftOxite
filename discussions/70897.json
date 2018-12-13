@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "241632",
+    "ThreadId": "70897",
+    "Html": "<p>Hello There,</p>\r\n<p>I am having difficulties trying to add a new user to Oxite. it seems to me from looking at the code, that a new user is created only when posting to the &quot;Item&quot; action in the &quot;SiteController&quot; (with a site that has an empty GUID as an ID!!!!). this action maps to the (Admin/Setup) URL. this URL however does not contain any form that has fields for adding new users.</p>\r\n<p>Can someone please point me into how can I add a new user or rename the Admin user name?</p>\r\n<p>Thanks All</p>\r\n<p>Shady H. Sayed</p>",
+    "PostedDate": "2009-10-03T05:21:50.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "251665",
+    "ThreadId": "70897",
+    "Html": "<p>Well from what I can see there is only one place to add a user and that is in the back end admin panel for lack of a better name for it....</p>\r\n<p>You can change the admin name by a simple SQL query and update oxite_user table or correct the bug in the route for the find route for the user administration</p>\r\n<p>and edit that user.</p>\r\n<p>&nbsp;</p>\r\n<p>Keep in mind there is quite a lot in the back end that is not finished and or has bugs that you will have to fix.</p>",
+    "PostedDate": "2009-10-30T10:09:29.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,172 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+        <title>The virtual path '/DummyUrl' maps to another application, which is not allowed.</title>
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Lucida Console";font-size: .9em}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+        </style>
+    </head><body bgcolor="white">
+
+            <span><h1>Server Error in '/Oxite' Application.<hr size="1" width="100%" color="silver"></h1>
+
+            <h2> <i>The virtual path '/DummyUrl' maps to another application, which is not allowed.</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> Description: </b>An
+unhandled exception occurred during the execution of the current web
+request. Please review the stack trace for more information about the
+error and where it originated in the code. <br><br>
+
+            <b> Exception Details: </b>System.ArgumentException: The virtual path '/DummyUrl' maps to another application, which is not allowed.<br><br>
+
+            <b>Source Error:</b> <br><br>
+
+            <table width="100%" bgcolor="#ffffcc">
+               <tbody><tr>
+                  <td>
+                      <code></code><pre>
+Line 24: 	    &lt;/div&gt;
+Line 25: &lt;% Html.RenderPartial("EditSecondaryMetadata"); %&gt;
+<font color="red">Line 26:         &lt;%= Html.AntiForgeryToken(ViewData["AntiForgeryTokenSalt"] as string) %&gt;
+</font>Line 27:         &lt;%= Html.Hidden("returnUri", returnUri)%&gt;
+Line 28:         &lt;% RenderStringResources(); %&gt;</pre>
+
+                  </td>
+               </tr>
+            </tbody></table>
+
+            <br>
+
+            <b> Source File: </b> c:\Inetpub\wwwroot\OxiteSite\Views\Admin\EditPost.aspx<b> &nbsp;&nbsp; Line: </b> 26
+            <br><br>
+
+            <b>Stack Trace:</b> <br><br>
+
+            <table width="100%" bgcolor="#ffffcc">
+               <tbody><tr>
+                  <td>
+                      <code></code><pre>
+[ArgumentException: The virtual path '/DummyUrl' maps to another application, which is not allowed.]
+   System.Web.CachedPathData.GetVirtualPathData(VirtualPath virtualPath, Boolean permitPathsOutsideApp) +3536692
+   System.Web.HttpContext.GetFilePathData() +27
+   System.Web.HttpContext.GetConfigurationPathData() +26
+   System.Web.Configuration.HttpCapabilitiesBase.GetBrowserCapabilities(HttpRequest request) +133
+   System.Web.HttpRequest.get_Browser() +197
+   System.Web.UI.Page.SetIntrinsics(HttpContext context, Boolean allowAsync) +274
+   System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context) +11
+   System.Web.UI.Page.ProcessRequest(HttpContext context) +49
+   Microsoft.Web.Mvc.TokenPersister.CreatePersister() in c:\dd\Cicero\src\Mvc\main\src\MvcFutures\Mvc\DefaultAntiForgeryTokenSerializer.cs:97
+   Microsoft.Web.Mvc.DefaultAntiForgeryTokenSerializer.Serialize(AntiForgeryToken token) in c:\dd\Cicero\src\Mvc\main\src\MvcFutures\Mvc\DefaultAntiForgeryTokenSerializer.cs:67
+   Microsoft.Web.Mvc.AntiForgeryHelper.GetAntiForgeryToken(HttpContextBase httpContext, String salt) in c:\dd\Cicero\src\Mvc\main\src\MvcFutures\Mvc\AntiForgeryHelper.cs:46
+   Microsoft.Web.Mvc.AntiForgeryHelper.AntiForgeryToken(HtmlHelper helper, String salt) in c:\dd\Cicero\src\Mvc\main\src\MvcFutures\Mvc\AntiForgeryHelper.cs:29
+   Microsoft.Web.Mvc.AntiForgeryExtensions.AntiForgeryToken(HtmlHelper helper, String salt) in c:\dd\Cicero\src\Mvc\main\src\MvcFutures\Mvc\AntiForgeryExtensions.cs:15
+   ASP.views_admin_editpost_aspx.__RenderindexContent(HtmlTextWriter __w, Control parameterContainer) in c:\Inetpub\wwwroot\OxiteSite\Views\Admin\EditPost.aspx:26
+   System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children) +98
+   System.Web.UI.Control.RenderChildren(HtmlTextWriter writer) +20
+   System.Web.UI.Control.Render(HtmlTextWriter writer) +7
+   System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter) +25
+   System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter) +121
+   System.Web.UI.Control.RenderControl(HtmlTextWriter writer) +22
+   ASP.views_shared_site_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\Inetpub\wwwroot\OxiteSite\Views\Shared\Site.Master:66
+   System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children) +98
+   System.Web.UI.Control.RenderChildren(HtmlTextWriter writer) +20
+   System.Web.UI.Control.Render(HtmlTextWriter writer) +7
+   System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter) +25
+   System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter) +121
+   System.Web.UI.Control.RenderControl(HtmlTextWriter writer) +22
+   System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children) +199
+   System.Web.UI.Control.RenderChildren(HtmlTextWriter writer) +20
+   System.Web.UI.Page.Render(HtmlTextWriter writer) +26
+   System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer) +42
+   System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter) +25
+   System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter) +121
+   System.Web.UI.Control.RenderControl(HtmlTextWriter writer) +22
+   System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +2558
+</pre>
+
+                  </td>
+               </tr>
+            </tbody></table>
+
+            <br>
+
+            <hr size="1" width="100%" color="silver">
+
+            <b>Version Information:</b>&nbsp;Microsoft .NET Framework Version:2.0.50727.1433; ASP.NET Version:2.0.50727.1433
+
+            </font>
+
+    <!-- 
+[ArgumentException]: The virtual path '/DummyUrl' maps to another application, which is not allowed.
+   at System.Web.CachedPathData.GetVirtualPathData(VirtualPath virtualPath, Boolean permitPathsOutsideApp)
+   at System.Web.HttpContext.GetFilePathData()
+   at System.Web.HttpContext.GetConfigurationPathData()
+   at System.Web.Configuration.HttpCapabilitiesBase.GetBrowserCapabilities(HttpRequest request)
+   at System.Web.HttpRequest.get_Browser()
+   at System.Web.UI.Page.SetIntrinsics(HttpContext context, Boolean allowAsync)
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at Microsoft.Web.Mvc.DefaultAntiForgeryTokenSerializer.TokenPersister.CreatePersister() in c:\dd\Cicero\src\Mvc\main\src\MvcFutures\Mvc\DefaultAntiForgeryTokenSerializer.cs:line 97
+   at Microsoft.Web.Mvc.DefaultAntiForgeryTokenSerializer.Serialize(AntiForgeryToken token) in c:\dd\Cicero\src\Mvc\main\src\MvcFutures\Mvc\DefaultAntiForgeryTokenSerializer.cs:line 67
+   at Microsoft.Web.Mvc.AntiForgeryHelper.GetAntiForgeryToken(HttpContextBase httpContext, String salt) in c:\dd\Cicero\src\Mvc\main\src\MvcFutures\Mvc\AntiForgeryHelper.cs:line 46
+   at Microsoft.Web.Mvc.AntiForgeryHelper.AntiForgeryToken(HtmlHelper helper, String salt) in c:\dd\Cicero\src\Mvc\main\src\MvcFutures\Mvc\AntiForgeryHelper.cs:line 29
+   at Microsoft.Web.Mvc.AntiForgeryExtensions.AntiForgeryToken(HtmlHelper helper, String salt) in c:\dd\Cicero\src\Mvc\main\src\MvcFutures\Mvc\AntiForgeryExtensions.cs:line 15
+   at ASP.views_admin_editpost_aspx.__RenderindexContent(HtmlTextWriter __w, Control parameterContainer) in c:\Inetpub\wwwroot\OxiteSite\Views\Admin\EditPost.aspx:line 26
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.views_shared_site_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\Inetpub\wwwroot\OxiteSite\Views\Shared\Site.Master:line 66
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Page.Render(HtmlTextWriter writer)
+   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+[HttpUnhandledException]: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.views_admin_editpost_aspx.ProcessRequest(HttpContext context) in c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\oxite\65aa8b8f\3a8e5ce2\App_Web_editpost.aspx.925dc4ed.e9_qwses.0.cs:line 0
+   at System.Web.Mvc.ViewPage.RenderView(ViewContext viewContext)
+   at System.Web.Mvc.WebFormView.RenderViewPage(ViewContext context, ViewPage page)
+   at System.Web.Mvc.WebFormView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass13.<InvokeActionResultWithFilters>b__10()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass13.<>c__DisplayClass15.<InvokeActionResultWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ActionResult actionResult, IList`1 filters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+   at System.Web.Mvc.Controller.ExecuteCore()
+   at System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext)
+   at System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext)
+   at System.Web.Mvc.MvcHandler.ProcessRequest(HttpContextBase httpContext)
+   at System.Web.Mvc.MvcHandler.ProcessRequest(HttpContext httpContext)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext httpContext)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--></body></html>

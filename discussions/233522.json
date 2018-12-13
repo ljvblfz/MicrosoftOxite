@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "517212",
+    "ThreadId": "233522",
+    "Html": "\r\n<p>I receive this error when attempting to run: <strong>An error occurred when trying to create a controller of type 'Oxite.Mvc.Controllers.PostController'. Make sure that the controller has a parameterless public constructor.</strong></p>\r\n<p>Here is the code in Default.aspx.cs</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">using</span> System.Web;\r\n<span style=\"color:blue\">using</span> System.Web.Mvc;\r\n<span style=\"color:blue\">using</span> System.Web.UI;\r\n\r\n<span style=\"color:blue\">namespace</span> OxiteSite\r\n{\r\n    <span style=\"color:blue\">public</span> <span style=\"color:blue\">partial</span> <span style=\"color:blue\">class</span> _Default : Page\r\n    {\r\n        <span style=\"color:blue\">public</span> <span style=\"color:blue\">void</span> Page_Load(<span style=\"color:blue\">object</span> sender, System.EventArgs e)\r\n        {\r\n            HttpContext.Current.RewritePath(Request.ApplicationPath, <span style=\"color:blue\">false</span>);\r\n            IHttpHandler httpHandler = <span style=\"color:blue\">new</span> MvcHttpHandler();\r\n            httpHandler.ProcessRequest(HttpContext.Current);\r\n        }\r\n    }\r\n}\r\n\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>I have upgraded the solution and fixed all of the caught errors. Using MVC 2 and ASP.Net 4.</p>\r\n<p>Thanks in advance for any help.</p>\r\n",
+    "PostedDate": "2010-11-04T11:00:08.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

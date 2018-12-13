@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The following license problems exist with the 2008.12.5 release of Oxite:\n \n* No copy of the Ms-PL is provided in the source, none of the source files specifically name the license. Anyone who downloads a copy of the source from a different site will be unaware of the license terms of the software\n* Binary assemblies in bin/ included without source, licenses, or links to their homepages\n  + bin/AntiXssLibrary.dll: closed-source, redistribution explicitly forbidden, see http://www.microsoft.com/downloads/details.aspx?FamilyId=EFB9C819-53FF-4F82-BFAF-E11625130C25&displaylang=en (and pay special attention to license clauses 2 and 5)\n  + bin/CookComputing.XmlRpcV2.dll: MIT/X11 license. Which version is provided? Please supply source or a link to upstream, in case of security problems with the library\n  + bin/Microsoft.Web.Mvc.*: Microsoft Source License for ASP.NET Pre-Release Components, see http://www.codeplex.com/aspnet/license. Non-free license, mandates that you must pay for a commercial final version of the library (should one be released), and some components are closed-source. Also specifically forbids redistribution.\n  + bin/MvcFakes.dll: Unlicensed code from a code sample on a blog, as far as I can tell: http://weblogs.asp.net/stephenwalther/archive/2008/08/16/asp-net-mvc-tip-33-unit-test-linq-to-sql.aspx",
+    "LastUpdatedDate": "2013-02-21T15:43:16.233-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-11T01:16:33.663-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "License problems",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6767
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

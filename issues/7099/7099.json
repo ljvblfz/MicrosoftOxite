@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "A problem occurs when adding an anonymous comment to a post:  \nThe validation message does not show when an invalid email is entered and submitted with the subscription option unchecked.  The validation does show when the subscription option is checked.\n \nRelated View:  Views/Post/CommentFormAnonymous.ascx\nRelated Classes: UserBaseValidator, PostService.AddComment(), PostSubscriptionValidator\n \nWorkaround / fix:\nIn CommentFormAnonymous.ascx\nReplace:  Html.ValidationMessage(\"PostSubscription.Email\", \"Valid email required to subscribe.\") \nWith: Html.ValidationMessage(\"UserBase.Email\", \"Valid email required to subscribe.\")\n \nJudging from the comments in the PostService code, it looks like the team may already be aware of this issue,  but hopefully this'll help someone.",
+    "LastUpdatedDate": "2013-06-14T00:23:20.72-07:00",
+    "PlannedForRelease": "Oxite.2009.2.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-02-16T16:20:20.7-08:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Adding Comments to Post - Email validation",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7099
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Making poor email regex problem a separate issue.",
+      "PostedDate": "2009-03-05T20:10:23.66-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-03-05T20:10:24.41-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "It needs to be able to pick up on both validation messages (invalid email and no email when subscribing). This was fixed up with changeset 29391.",
+      "PostedDate": "2009-03-05T20:31:42.14-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-03-05T20:31:42.783-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:11.46-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:04.37-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:04.49-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:23:20.72-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

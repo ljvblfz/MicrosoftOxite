@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "157687",
+    "ThreadId": "47139",
+    "Html": "I have 29046 up and runnimg, I tried adding a few pages which I did but where are they after being published? <br>\r\n<br>\r\nThey are nowhere to be found.<br>\r\n<br>\r\nThank you.<br>\r\n",
+    "PostedDate": "2009-02-14T09:48:40.233-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "157702",
+    "ThreadId": "47139",
+    "Html": "I believe there is some kind of time-zone bug in Oxite that I've pointed out as an issue.<br><br>IF that is still around then you might get your pages to be published within a few hours! When ever I write a blog post on my Oxite I have to set the time back an hour to make them appear right away! ;~)<br>\r\n<br>I suppose I could have fixed it but I haven't gotten round to it since it's a small thing. Also my site is not up to date it is running on a very much earlier build.<br><br>Not saying this is your issue but I have that issue. I am in time zone +1<br>\r\n<br>Cheers,<br><br>M.<br><br><div>On Sat, Feb 14, 2009 at 18:48, jerrysdean43 <span dir=ltr>&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br><blockquote style=\"margin:0pt 0pt 0pt 0.8ex;padding-left:1ex\">\r\n   <div> <p>From: jerrysdean43</p> <div>I have 29046 up and runnimg, I tried adding a few pages which I did but where are they after being published? <br>\r\n<br>\r\nThey are nowhere to be found.<br>\r\n<br>\r\nThank you.</div></div> </blockquote></div>",
+    "PostedDate": "2009-02-14T13:09:47.71-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "157706",
+    "ThreadId": "47139",
+    "Html": "The posts show up immediately, the pages are nowhere to be found.<br>\r\n",
+    "PostedDate": "2009-02-14T13:15:46.613-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "157731",
+    "ThreadId": "47139",
+    "Html": "A Page is basically a Post that is not connected to any area (blog).&nbsp;\r\nTake a look at the oxite_Post table in the database, your data should be there.&nbsp; <br>\r\n<br>\r\nThere is currently no admin\r\nview for managing pages, so you'd have to roll out your own unless the\r\nOxite team decides to include one in the sample site.&nbsp; <br>\r\n<br>\r\nThe default\r\nAbout page in the sample site is an example of a Page.&nbsp; Take a look at\r\nthe Header.ascx in the Views/Shared folder to see how the About page link is generated.<br>\r\n<br>\r\nYou should also be able to access your page directly&nbsp; ...&nbsp; http://../About<br>\r\n",
+    "PostedDate": "2009-02-14T15:37:59.967-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "157733",
+    "ThreadId": "47139",
+    "Html": "Looks like they forgot the about page in 29046.<br>\r\n",
+    "PostedDate": "2009-02-14T16:03:46.487-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "157735",
+    "ThreadId": "47139",
+    "Html": "I'm still on 28900, so I didn't notice.&nbsp; You're right, that the About page isn't there.&nbsp; You can add a page with the slug &quot;About&quot;, and the About link should work.<br>\r\n<br>\r\nThe comment on the 29046 release says &quot;Making the MDF in App_Data empty.&quot;<br>\r\n",
+    "PostedDate": "2009-02-14T16:32:53.95-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "157770",
+    "ThreadId": "47139",
+    "Html": "<p>@adr_k Yes, you are right (across the board).  :)</p>\r\n<p>@jerrysdean43 Sorry about the confusion.  We wanted to make sure that anyone that wanted to ship the MDF that we ship with Oxite would have a unique SiteID (used for generating the AntiForgeryToken) and just make everyone run through the setup themselves (which will inherently make sure the SiteID is new and unique), but I completely forgot that there wouldn't then be an about page.  I think it would be weird to take About out of the menu with what comes out of the box with Oxite so to make sure this confusion goes away I'm going to revert the MDF back to what it was and put an explaination of SiteID in the &quot;Getting Started with Oxite&quot; doc.  We will probably have to readdress this issue in the future.<br>\r\n<br>\r\nThanks everyone!</p>\r\n",
+    "PostedDate": "2009-02-15T03:17:14.05-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "157781",
+    "ThreadId": "47139",
+    "Html": "i am going to try and use Oxite for a CMS, will there be a way to insert html into a page, a code view of a page. I guess with an about page I could use the about page as a template? Thank you.<br>\r\n",
+    "PostedDate": "2009-02-15T05:52:13.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "157831",
+    "ThreadId": "47139",
+    "Html": "After going though the MVC tutorial I have an understanding of how views work so I guess I have answered my own question.<br>\r\n",
+    "PostedDate": "2009-02-15T11:11:41.797-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

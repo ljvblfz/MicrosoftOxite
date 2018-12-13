@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-07-02T00:44:17.257-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When you write 10 lines of \"ViewData[\"blah\"]=blah\", then you're effectively abusing the ViewData and you're trying to do too much. The idea is to keep your Controllers and Views light, quick, and easy so you can test each of them and be sure of the output. In the case of the AdminController's ViewPost() action, you would need to evaluate 10 separate bits of ViewData in order to test the state of your Controller. This is not ideal since more moving parts equal more bugs.\n \nFrom Rob Conery's blog: http://blog.wekeroad.com/blog/some-thoughts-on-oxite/",
+    "LastUpdatedDate": "2013-05-16T03:38:05.813-07:00",
+    "PlannedForRelease": "Oxite.2009.2.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-16T17:01:44.847-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ViewData as Trashcan",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 6804
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This was fixed in the February 15th release, but I'm just now getting around to marking it as fixed.",
+      "PostedDate": "2009-07-02T00:35:41.27-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-02T00:44:17.257-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:14.48-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:05.813-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

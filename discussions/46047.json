@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "153660",
+    "ThreadId": "46047",
+    "Html": "Downloaded oxite today, installed VWD 2008 Express and MVC beta as described in getting started with.... and tried to open the project. All works fine but OxiteSite.csproj cannot be opened, saying&nbsp; projectfile ....\\OxiteSite.csproj cannot be opened. the project-type is not supported by this installation.<br>\r\nCould somebody give me a hint? many thanks in advance<br>\r\ncheers<br>\r\nhugolitto<br>\r\n(btw: runs on vista home premium, .net version 3.5)<br>\r\n<br>\r\n<br>\r\nOK sorry, this problem disappeared after a restart of VWD. Now I encounter buildproblems but I guess I'll have to wait for the upcoming oxite release, don't I?<br>\r\n<br>\r\n <br>\r\n",
+    "PostedDate": "2009-02-03T02:13:33.41-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "153856",
+    "ThreadId": "46047",
+    "Html": "The upcoming Oxite release will support ASP.NET MVC RC (only).  The current release supports ASP.NET MVC Beta (only).\r\n",
+    "PostedDate": "2009-02-03T10:14:46.207-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "154591",
+    "ThreadId": "46047",
+    "Html": "what is the expected date for the upcoming release?<br>\r\n<br>\r\nis it worth while to go back to MVC Beta?<br>\r\n<br>\r\nis there a way to go back to MVC Beta from RC.<br>\r\n",
+    "PostedDate": "2009-02-05T02:34:26.723-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "154739",
+    "ThreadId": "46047",
+    "Html": "If you're doing other projects with the RC definitely don't change because of us.  If Oxite is the only project you're running that uses MVC then yes, stay on the RC.<br>\r\n<br>\r\nWe're shooting to put up the new release today or tomorrow.\r\n",
+    "PostedDate": "2009-02-05T09:23:01.83-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

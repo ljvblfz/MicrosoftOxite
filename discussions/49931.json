@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "167105",
+    "ThreadId": "49931",
+    "Html": "Hey,<br>\r\nPerhaps this bug is just locally - running in debug with the dev server. But if not then it could be a bug.<br>\r\nI have 2 area's configured in the system - one of them being &quot;Articles&quot;<br>\r\n<br>\r\nSo I can view a list of posts at:<br>\r\nhttp://localhost:30913/Articles<br>\r\n<br>\r\nBut the rss feed:<br>\r\nhttp://localhost:30913/Articles/rss<br>\r\nonly works in internet explorer and not in firefox.<br>\r\n<br>\r\nIn firefox i get an xml doc, with info at the top stating: This XML file does not appear to have any style information associated with it. The document tree is shown below...<br>\r\n<br>\r\nOf course the visitmix website works in both e.g.:<br>\r\nhttp://visitmix.com/Articles/rss<br>\r\n<br>\r\nCathal.<br>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n\r\n",
+    "PostedDate": "2009-03-11T15:28:56.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "168413",
+    "ThreadId": "49931",
+    "Html": "That might just be in dev, but I can't think of a reason why dev would be any different than prod.  You can paste in the XML in here and I can take a look, but there are many reasons this might happen.  Two I can think of offhand are:<br>\r\n<br>\r\n<ol>\r\n    <li>Is there a carriage return at the beginnin of the file?  There shouldn't be and it can cause problems.</li>\r\n    <li>Are there any items for the feed to render.  I know we have a bug currently where if there are no comments yet, the comment feed doesn't render.</li>\r\n</ol>\r\n",
+    "PostedDate": "2009-03-15T21:33:47.147-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

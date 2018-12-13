@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "218955",
+    "ThreadId": "64348",
+    "Html": "<p>Hi,</p>\r\n<p>I am waiting for the next Oxite release to re-launch my blog! We are all waiting :) Are you planning to release anytime soon?</p>\r\n<p>Regards,</p>\r\n<p>Adam</p>",
+    "PostedDate": "2009-08-03T14:19:16.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "218957",
+    "ThreadId": "64348",
+    "Html": "<p>Poke, poke.</p>\r\n<p>I think they are semi-distracted at this point with the PDC site.</p>\r\n<p>&nbsp;</p>\r\n<p>:)</p>",
+    "PostedDate": "2009-08-03T14:23:49.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "218963",
+    "ThreadId": "64348",
+    "Html": "<p>Your thinking is correct.&nbsp; SWAMPED&nbsp; :|</p>\r\n<p>We still have more cleanup to go on Oxite before launching the next version.&nbsp; That's really what we're down to though...stabalization and cleanup.&nbsp; No new features from what you see in the dev branch today&nbsp;(other than some UI for things that aren't completed yet).</p>",
+    "PostedDate": "2009-08-03T14:39:09.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

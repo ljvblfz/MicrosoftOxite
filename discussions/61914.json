@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "210181",
+    "ThreadId": "61914",
+    "Html": "<p>Has anyone gotten Oxite to compile and run under VS 2010. After changing the MVC assembly references from 1.0 to 1.1 all I have been able to achieve is this error message.</p>\r\n<p>ASPNETCOMPILER : error ASPCONFIG: This version of the aspnet_compiler command is used to compile Web applications that target version 4.0 or later of the .NET Framework. The  element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute (for example, ''). To compile this Web application for earlier versions of the .NET Framework, use version 2.0 of the aspnet_compiler command, or use the current version of Visual Studio. To compile this Web application for version 4.0 or later of the .NET Framework, update the  element in the Web.config file to include the 'targetFrameworkMoniker' attribute and the correct version number.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>I wish to compile the app for .net 3.5, but VS seems to be complaining about that. Any nudges in the direction of a fix would be appreciated, as searches here, Bing, and Google have all been fruitless.</p>\r\n<p>Thanks,</p>\r\n<p>&nbsp;</p>\r\n<p>Ariel</p>",
+    "PostedDate": "2009-07-08T15:06:41.21-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "210184",
+    "ThreadId": "61914",
+    "Html": "<p>I haven't tried it myself (and don't plan to for a while), but this might help...</p>\r\n<p><a href=\"http://haacked.com/archive/2009/05/18/aspnetmvc-vs2010-beta1.aspx\">http://haacked.com/archive/2009/05/18/aspnetmvc-vs2010-beta1.aspx</a></p>",
+    "PostedDate": "2009-07-08T15:09:50.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "210188",
+    "ThreadId": "61914",
+    "Html": "<p>This seems to be intended for those who do not have MVC installed, which I do and have gone through the steps in the readme for upgrading projects. I'll give it a shot though and see what happens</p>\r\n<p><strong>Update: </strong>Removing the GUID from the problem project file didn't work in fixing the compliation error. Thanks for the pointer though.</p>",
+    "PostedDate": "2009-07-08T15:23:41.987-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

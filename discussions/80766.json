@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "276998",
+    "ThreadId": "80766",
+    "Html": "<p>Hi man<br>&nbsp; Oxite is very cool. I am really like it. thks very much.<br>&nbsp; Something made me confused when I read code, so I need your help.<br>&nbsp; <br>&nbsp; 1. question<br>&nbsp;&nbsp;&nbsp;&nbsp; Where default controller and action being set? I cannot find it.<br><br>&nbsp;&nbsp;&nbsp;&nbsp; Debug it <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url is: http://localhost:30913/ (This is home page) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default controller is: PostController<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default action is: public OxiteViewModelItems&lt;Post&gt; List(PagingInfo pagingInfo)<br>&nbsp;&nbsp;&nbsp; <br>&nbsp; 2. question<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lot of controller construct with IService, but I cannot find where controller is being register with unity.</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In OxiteControllerFaction, I can see Resolve with controllerType, but where Register?</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; protected override IController GetControllerInstance(Type controllerType)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; IController iController = container.Resolve(controllerType) as IController;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ....<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thks very much.</p>",
+    "PostedDate": "2010-01-13T22:58:17.697-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "277659",
+    "ThreadId": "80766",
+    "Html": "<p>You got most of it figured out already.&nbsp; Unity will instantiate anything that isn't registered explicitly and inject anything needed for the biggest constructor.&nbsp; The registrations we do in Oxite with Unity are for saying &quot;when someone asks for this interface, instantiate this class&quot;.&nbsp; HTH</p>",
+    "PostedDate": "2010-01-15T09:57:46.353-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

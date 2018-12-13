@@ -1,0 +1,85 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Dates should be in the international date format year-month-day.\n \nSo US date: 7/12/2008\nwould become: 2008-12-7\n \nInfo on international date format: http://www.w3.org/QA/Tips/iso-date",
+    "LastUpdatedDate": "2017-11-27T23:44:09.333-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-07T11:23:43.313-08:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Dates should be in the international format",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 6730
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This was actually really easy.\r\n\r\nIn site.js have Date.prototype.toShortString: return year + \"-\" + (this.getMonth() + 1).toString() + \"-\" + this.getDate() + \" \" + this.toLocaleTimeString();\r\nthen in DateTimeExtenstions.cs change line 9 to: return string.Format(\"{0} {1}\", dateTime.ToString(\"yyyy-MM-dd\"), dateTime.ToShortTimeString());",
+      "PostedDate": "2008-12-07T11:57:43.377-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I think dates should be stored in raw db format and displayed respecting the current system locale.",
+      "PostedDate": "2008-12-07T12:19:16.347-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I'll second PaoloM here. Dates displayed in the view can be changed however the theme writer wants, but the system should respect a user's locale.",
+      "PostedDate": "2008-12-15T20:41:20.49-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-08T15:25:29.26-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "A related issue is this one: http://www.codeplex.com/oxite/WorkItem/View.aspx?WorkItemId=6808\r\nThe post default published date is generated in the browser, and then parsed on the web server. This is on two different machines, so if they don't agree on date formats, the date generated on the client will fail to parse on the server (or seem to parse correctly, but quietly swap day and month fields). The only ways that I can think of to do this are\r\n1) use a common, fixed date format throughout\r\n2) set the date format as a user or site preference/setting. I don't think that oxite has user or site preferences/config options yet, but in the long term it seems inevitable.\r\n",
+      "PostedDate": "2009-01-09T02:09:49.41-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-09T02:10:13.487-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-11T11:44:48.537-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:19.207-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-11-27T23:44:09.333-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

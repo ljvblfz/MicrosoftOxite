@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-01-08T15:22:25.857-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I get the following error:\n \nThe project file 'C:\\..\\Oxite\\OxiteSite\\OxiteSite.csproj' cannot be opened.\nThe project type is not supported by this installation.\n \nHow do I get to open the OxiteSite Project?",
+    "LastUpdatedDate": "2013-05-16T03:38:05.09-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-01-01T01:42:03.837-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "OxiteSite Project in solution not loading (VWD Express)",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6861
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Try opening the VWD Express solution (<root>/Oxite/Oxite.VWDExpress.sln). More info/discussion -> [workitem:6741]",
+      "PostedDate": "2009-01-01T09:21:03.58-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "...and that should be -> http://www.codeplex.com/oxite/WorkItem/View.aspx?WorkItemId=6741",
+      "PostedDate": "2009-01-01T09:21:41.703-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Actually, I believe dotnethelp's issue is that they need to install ASP.NET MVC, which is included in the getting started documentation already.",
+      "PostedDate": "2009-01-03T00:14:26.51-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Yeah, I guess that's why \"the project type is not supported\" :)\r\n\r\nIn that case this page would be more useful -> http://www.codeplex.com/oxite/Wiki/View.aspx?title=gettingstarted&referringTitle=Home\r\n\r\nIf you're interested in cracking open the db project -> http://neimke.spaces.live.com/blog/cns!F964EB605E70A5CA!513.entry",
+      "PostedDate": "2009-01-03T07:31:53.407-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-08T15:22:25.857-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:12.797-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:05.09-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

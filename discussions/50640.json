@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "169826",
+    "ThreadId": "50640",
+    "Html": "On your lab site you talk about how you  packaged MIX's code into  this project. However, I am unable to find it. It would be nice to see how you tackled certain aspects of this website.<br>\r\n<br>\r\nSo where is it?\r\n",
+    "PostedDate": "2009-03-19T06:11:41.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "169840",
+    "ThreadId": "50640",
+    "Html": "Along these lines and previous discussions it is my understanding that after MIX your focus may shift, which will be unfortunate, but understandable.  Will you be given time to fold the mix related items in and update to MVC RTM and produce a &quot;final build&quot; in the coming weeks/months or is the road ahead already filled with new endeavors?<br>\r\n<br>\r\nThanks for even opening this up in the first place.\r\n",
+    "PostedDate": "2009-03-19T06:49:42.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "170491",
+    "ThreadId": "50640",
+    "Html": "@markoh<br>\r\n<br>\r\nThe MIX Online website is currently a different branch of Oxite that we're not comfortable publishing yet (it got off course and needs to be steered back into Oxite).  This is something we'd like to do so we can include it.<br>\r\n<br>\r\nIf you're interested, you can go into <a href=\"http://oxite.codeplex.com/SourceControl/ListDownloadableCommits.aspx\">Source Code</a>, go into one of our recent changesets, browse it and navigate to /Implementations/MIXVideos to see how we built the <a href=\"http://videos.visitmix.com\">MIX Videos</a> site using Oxite (latest bits).<br>\r\n<br>\r\n@nosajis<br>\r\n<br>\r\nOur focus during the day will shift and our team won't be putting much time into Oxite like we have been (for the MIX Videos site recently as an example), but we're all very interested in keeping Oxite going for our personal use.  Oxite started as a side project, then became our full time job for a while.  Now it will be moving back to a side project.  Don't worry.  Oxite isn't going away.  :)<br>\r\n<br>\r\nI can't give a timeline on when the MIX Online site's source code will get pushed in for everyone to see.  Again, see above if you're interested in how we did the MIX Videos site though.  As for moving to RTM bits of MVC, yes, we'll be doing that soon and the next release will definitely be on RTM (in a couple weeks I'd guess).<br>\r\n<br>\r\nYou're welcome.  Hope you've gotten some use out of it.\r\n",
+    "PostedDate": "2009-03-21T23:32:26.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "256458",
+    "ThreadId": "74937",
+    "Html": "<p>Receiving the below error when trying to run the site.&nbsp; The site builds as expected.&nbsp; I am currently using the basic download Oxite.2009.2.15.&nbsp; Any thoughts?</p>\r\n<h2><em>Could not load file or assembly 'System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e' or one of its dependencies. The system cannot find the file specified.</em></h2>\r\n<p><span style=\"color:#ff0000\">Line 97:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AppSettingsHelper appSettings = container.Resolve&lt;AppSettingsHelper&gt;();<br></span></p>",
+    "PostedDate": "2009-11-12T12:47:09.603-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

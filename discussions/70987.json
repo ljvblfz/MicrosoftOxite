@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "242015",
+    "ThreadId": "70987",
+    "Html": "<p>Just installed Oxite.&nbsp; I get a compile error 'The type of namespace name 'Security' does not exist'.&nbsp; Where can I get the assembly reference for this item?</p>",
+    "PostedDate": "2009-10-04T21:12:33.537-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242569",
+    "ThreadId": "70987",
+    "Html": "<p>You'll need <a title=\"Microsoft Anti-Cross Site Scripting Library V3.1\" href=\"http://www.microsoft.com/downloads/details.aspx?FamilyId=051ee83c-5ccf-48ed-8463-02f56a6bfc09&displaylang=en\">Microsoft's AntiXSS (cross-site scripting) library</a>. Copy to Oxite/bin and re-compile.</p>",
+    "PostedDate": "2009-10-06T08:00:53.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

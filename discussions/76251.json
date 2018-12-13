@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "260719",
+    "ThreadId": "76251",
+    "Html": "<p>Dear Developers!</p>\r\n<p>Thank you for best architecture of web application I can see, really excellent! :))</p>\r\n<p>But one moment break my heart :((</p>\r\n<p>This moment is very bad performance, for example:&nbsp;you use Unity, and often&nbsp;call Resolve method within one http-context, so many instantiations of services, repositories and data-contexts. Why?!</p>\r\n<p>Regards, Alexey Ostapenko. Russia.</p>",
+    "PostedDate": "2009-11-25T13:13:23.043-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "260810",
+    "ThreadId": "76251",
+    "Html": "<p>I don't think it's a problem</p>",
+    "PostedDate": "2009-11-25T22:56:13.723-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "260891",
+    "ThreadId": "76251",
+    "Html": "<p>Not a problem is multiple instantiations of same data-contexts (many time to constract one instance)</p>\r\n<p>or not a problem the bad performance?</p>",
+    "PostedDate": "2009-11-26T06:16:20.02-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

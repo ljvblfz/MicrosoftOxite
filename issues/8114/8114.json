@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-07-22T10:17:04.64-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi there, \n \nI downloaded Oxite and the necessary libraries and installed that on my local machine. After opening VS 2008 and re referenced the DLL's, I could build and Debug Oxite on my local machine. So far, so good.\nOn my hosted environment I installed the same files, generated my MSSQL database true the SQL installation scripts, uploaded the published (oxitesite project) files and run the installation the first time to setup my Oxite environment. That went well...\n \nIt's shows the first page http://www.mss2010.nl/ but every link I follow ends up in a HTML 404 error. I'm going bananas over here, because I can't reproduce it on my development machine... \nNo logs shows up in IIS.",
+    "LastUpdatedDate": "2013-05-16T03:37:59.787-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-07-22T01:33:30.263-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "After deployment on remote server, Oxite throws 404 errors",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8114
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "If you're running IIS 6, which I would guess you are, you need to either setup a wildcard so all ASP.NET requests go through Oxite or you need to set the route prefix in the site settings to something like \"oxite.aspx\" (so .aspx is in all urls).\r\n\r\nIn the future, please start a discussion for this type of question.  We use the Issue Tracker to keep track of bugs and yours appears to be a setup/deployment problem.  Thanks!",
+      "PostedDate": "2009-07-22T10:16:40.407-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-22T10:17:04.64-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:04.22-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:37:59.787-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

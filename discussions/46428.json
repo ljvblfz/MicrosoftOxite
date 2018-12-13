@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "155068",
+    "ThreadId": "46428",
+    "Html": "Resolution of the dependency failed, type = &quot;&quot;, name = &quot;&quot;. Exception message is: The current build operation (build key Build Key[, null]) failed: Cannot extract type from build key Build Key[, null].<br>\r\n<br>\r\n<strong>buildKey (Strategy type LifetimeStrategy, index 1)</strong>\r\n",
+    "PostedDate": "2009-02-06T06:47:35-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164398",
+    "ThreadId": "46428",
+    "Html": "Sounds like something related to Unity, but hard to tell.  Are you still having any problems with the latest release?\r\n",
+    "PostedDate": "2009-03-04T09:30:06.917-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

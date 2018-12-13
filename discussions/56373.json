@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "190456",
+    "ThreadId": "56373",
+    "Html": "<p>Well, I've saw that in Oxite, when you've created the model, you've tried to do something independent from O/R mapping and persistence frameworks. I don't know if it's a silly question but, anyway, what I would like to know is: why haven't you used bidirectional associations? For example, in your Post class, you have a IList of Tag. BUT... in Tag you don't have anything related to Post. I was expecting an IList of Post or, at least, a property Post.<br><br>I am making this question because I have noticed exactly the same approach in Kona/Storefront Rob Conery's project (http://blog.wekeroad.com/category/mvc-storefront). Why do you both haven't implemented bidirectional associations? It won&rsquo;t be a problem in the future? Is it correct from an Object Oriented Programming point of view?<br><br>Thanks for your attention and congratulations for Oxite, great work :)</p>\r\n<p><em>P.S.: Sorry about my issue tracker. I have used the wrong place to present my doubt. Please, delete it in the Issue Tracker section.</em></p>",
+    "PostedDate": "2009-05-14T14:22:22.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "190465",
+    "ThreadId": "56373",
+    "Html": "<p>This is a perfectly fine question and yah usually in OOP this is a good thing in general.&nbsp; We don't do it for a few reasons:</p>\r\n<ol>\r\n<li>If you look through the code you'll notice we don't ever really look&nbsp;posts up by a tag object.&nbsp; The tag page would get a list of posts by a TagAddress.&nbsp; We haven't found anywhere in Oxite that we've had a Tag and needed to get the Posts off of it.&nbsp; If we don't need it, we don't build it.&nbsp; If you find an example where a tag would need to know all the posts it was associated with and you don't already have that information from somewhere else then we can re-evaluate the decision.</li>\r\n<li>Once you start storing infinite hierarchies (you can navigate up and down the chains as much as you want) it can get a little weird/difficult to implement caching.&nbsp; Blogs are pretty simple at their core and we feel this level of complexity isn't needed.&nbsp; Dumb caching can still work very well.</li>\r\n<li>You may notice that recently I've been making a lot of changes to our services and model to tighten it up.&nbsp; The changes mean now that there are objects to represent each &quot;view&quot; (not to be confused with MVC Views) of the model and these objects are all read only and their properties are only ever set through the contructor when the object is created.&nbsp; This works really well to ensure whatever is asking for data only ever has exactly what it needs and the data can never be in an invalid state.&nbsp; Unfortunately, however, this means we can't do bidirectional associations because the child object's contructor would have to take the parent's instance, but the parent instance can't be created until it has a list of all the children.&nbsp; You see the problem.</li>\r\n</ol>\r\n<p>I'm glad you're checking out Oxite.&nbsp; Let me know if you have any other questions.</p>",
+    "PostedDate": "2009-05-14T14:45:26.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

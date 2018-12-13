@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "244241",
+    "ThreadId": "71609",
+    "Html": "<p>Guys,</p>\r\n<p>At the moment, I feel&nbsp;that Oxite is hindering developers from creating new ASP.NET MVC blog engines because Oxite is already there, on the other hand, the current official release of Oxite is missing load of features and cannot be compared to other popular engines.</p>\r\n<p>If you are not planning to release soon or you are very busy, just declare this project as no longer supported to open the chance for other developers to start their own engines...</p>\r\n<p>Regards,</p>\r\n<p>Adam</p>",
+    "PostedDate": "2009-10-10T12:50:24.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "244780",
+    "ThreadId": "71609",
+    "Html": "<p>Adam, while I do wish we had more time to finish up a new release, I can't really agree with your comment. Does the existance of SubText prevent BlogEngine.NET from being built? Or DasBlog? Or Graffiti?</p>\r\n<p>There is nothing stopping someone from moving forward to make a MVC based blog engine. They could even start with the code from Oxite if they wanted to, or contribute to it... or contribute to AtomSite... or build from scratch.</p>\r\n<p>I'd love to see a list of the features that are essential to a blog engine though, I'm not interested in doing a feature by feature comparision between other engines, but it would be very interesting to know the absolutely key features that you (or anyone else) feel that a blog engine must have to be usable.</p>",
+    "PostedDate": "2009-10-12T11:16:24.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "247075",
+    "ThreadId": "71609",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>adamtibi wrote:</strong><br>\r\n<p>Guys,</p>\r\n<p>At the moment, I feel&nbsp;that Oxite is hindering developers from creating new ASP.NET MVC blog engines because Oxite is already there, on the other hand, the current official release of Oxite is missing load of features and cannot be compared to other popular engines.</p>\r\n<p>If you are not planning to release soon or you are very busy, just declare this project as no longer supported to open the chance for other developers to start their own engines...</p>\r\n<p>Regards,</p>\r\n<p>Adam</p>\r\n</blockquote>\r\n<p>Frankly, that is the stupidest thing I've ever heard!!!&nbsp; That is the exact opposite of the truth.&nbsp; When there is one, great product out there it inspires people to make an even better one!&nbsp; If anything, Oxite is still a prime example of a great MVC architecture (so I've heard).</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-10-18T12:55:58.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-01-08T15:21:56.09-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In the class OxitePostRepository there is a method getPosts(IQueryable<oxite_Post> query, PublishedFilter publishedFilter, Func<IQueryable<oxite_Post>, IQueryable<oxite_Post>> executeAdditionalQuery, int pageIndex, int pageSize)\n \nIt has converts dates ToUniversalTime(). I am on GMT +1 and this causes a problem for me. Posts just posted are not displayed! I could be wrong but the issue solved itself for me when I killed the .ToUniversalTime() part and just kept the DateTime.Now part.\n \nThe correct code should read:\n \n                if (publishedFilter == PublishedFilter.Published)\n                    query = query.Where(e => e.PublishedDate < DateTime.Now); // No .ToUniversalTime()\n                else if (publishedFilter == PublishedFilter.NotPublished)\n                    query = query.Where(e => e.PublishedDate >= DateTime.Now); // No .ToUniversalTime()\n \nCheers,\n \nM.",
+    "LastUpdatedDate": "2013-05-16T03:38:04.957-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-01-05T16:41:16.62-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Bug in query that selects posts for the front page",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6890
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "All dates are stored as UTC in the database and then converted to local server time before rendered in the views.  In the web.config, make sure the timeZoneOffset attribute on /oxite/site element is set to \"1\" since you're +1 GMT.  If that doesn't fix your problem, let us know.",
+      "PostedDate": "2009-01-05T19:48:10.58-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-08T15:21:56.09-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:12.587-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:04.957-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

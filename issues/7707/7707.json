@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Under the \"Mess with the plumbing\" section, the \"Host\" value always resets - sometimes to an invalid value that breaks other things.\n \nUnless the 'host' is set correctly, the metablog API doesn't work at all, while the rest of the site seems to function fine.",
+    "LastUpdatedDate": "2013-02-21T15:43:07.91-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-04-28T20:09:42.25-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "'Host' value always resets",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7707
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

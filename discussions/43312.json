@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "143952",
+    "ThreadId": "43312",
+    "Html": "Why not use the asp.net membership provider ?\r\n",
+    "PostedDate": "2009-01-01T22:30:25.513-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "146180",
+    "ThreadId": "43312",
+    "Html": "That's a good question, and I don't have a great answer for you... but... we will either make that change ourselves or we'll show you how you could implement this feature and have it plugged right in to replace ours. No date for either option at the moment, but I believe it is important to quite a few folks, so I do want to see it happen.<br>\r\n",
+    "PostedDate": "2009-01-11T21:03:50.603-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

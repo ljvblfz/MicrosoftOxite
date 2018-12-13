@@ -1,0 +1,194 @@
+[
+  {
+    "Id": "175996",
+    "ThreadId": "52378",
+    "Html": "So I've gone through and added new areas with posts... pratically tried everything I can think of, but nothing will display. Edited the about page, that was just fine.<br>\r\n<br>\r\nIn order to get a grasp on how it's all pulled together, I've had a good stern look at the database... AreaIDs and such. Everything looks fine... <br>\r\n<br>\r\nBut as you can see: <a href=\"http://tom.is-a-geek.org/\">http://tom.is-a-geek.org/</a><br>\r\nNone of my posts are displayed in the default 'Blog' area.<br>\r\nNothing is returned from search either... not even about page related stuff sooooo it's obviously a coding issue somewhere... I haven't edited any of that though, wouldn't know where to start with ASP... yet anyway :-)<br>\r\n<br>\r\nIdeas? xD\r\n",
+    "PostedDate": "2009-04-05T23:35:47.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176455",
+    "ThreadId": "52378",
+    "Html": "/Blog is the default area that gets setup in Oxite.  You don't need to add a new area unless you really want to.  If you add a post to the &quot;Blog&quot; area do they show up on the homepage?\r\n",
+    "PostedDate": "2009-04-06T22:38:42.297-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176467",
+    "ThreadId": "52378",
+    "Html": "Sadly not &gt;.&lt;<br>\r\n<br>\r\n<a href=\"http://tom.is-a-geek.org/Blog/testttt\">http://tom.is-a-geek.org/Blog/testttt</a>\r\n",
+    "PostedDate": "2009-04-06T23:43:20.75-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176487",
+    "ThreadId": "52378",
+    "Html": "Really strange.  I don't get it.  Must be some weird configuration thing we hadn't thought of.  Any chance you can wipe your database and startover and don't add any areas this time and see if that makes a difference?\r\n",
+    "PostedDate": "2009-04-07T01:19:39.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176498",
+    "ThreadId": "52378",
+    "Html": "No change. :-(\r\n",
+    "PostedDate": "2009-04-07T01:42:57.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176502",
+    "ThreadId": "52378",
+    "Html": "hhhhmmmm...yah, i don't get it.  can you debug the query happening on the homepage and see if you can see why no posts are being returned?\r\n",
+    "PostedDate": "2009-04-07T01:57:59.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176503",
+    "ThreadId": "52378",
+    "Html": "I haven't a clue how! :)\r\n",
+    "PostedDate": "2009-04-07T02:00:55.443-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176511",
+    "ThreadId": "52378",
+    "Html": "Sorry to say I'm not sure what to check next.  :(  Does using the default MDF on your local machine using VSExpress work?\r\n",
+    "PostedDate": "2009-04-07T02:12:21.043-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176518",
+    "ThreadId": "52378",
+    "Html": "Yes, flawlessly.\r\n",
+    "PostedDate": "2009-04-07T02:31:23.51-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176567",
+    "ThreadId": "52378",
+    "Html": "Found my self a solution: attach the sample DB MDF and use it instead of running the query on a new DB.\r\n",
+    "PostedDate": "2009-04-07T05:04:12.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176688",
+    "ThreadId": "52378",
+    "Html": "Very strange.  At least we've narrowed it down to a data problem.  Is it possible you had two different Sites setup in the oxite_Site table?  There is one site per application.  Whatever SiteID is specified in the web.config of your application is what will be used to lookup the current site in oxite_Site (and used for all queries).\r\n",
+    "PostedDate": "2009-04-07T10:06:09.857-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176697",
+    "ThreadId": "52378",
+    "Html": "You're quite possibly a genius, Erik. <br>\r\nI don't suppose the little setup wizard modifies the siteID in web.config now does it. :-)\r\n",
+    "PostedDate": "2009-04-07T10:18:15.15-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176709",
+    "ThreadId": "52378",
+    "Html": "Ha!  I'm not genius, just very familiar with every piece of Oxite since I built a good portion of it and have worked on every aspect of it at some point.<br>\r\n<br>\r\nNo, the setup wizard doesn't touch the web.config.  It just looks for a record in oxite_Site with the same site name that's in the web.config and if it can't find it, it creates it and then uses that site for everything.  You can think of what's in the web.config as an instance name to scope all the data in the database (in case you wanted another Oxite app to also be stored in the same database, but all of its data scoped to that instance).\r\n",
+    "PostedDate": "2009-04-07T10:48:55.01-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176968",
+    "ThreadId": "52378",
+    "Html": "Sounds like smart design. Perhaps it would be beneficial to some to mention it in Getting Started somewhere :P<br>\r\n<br>\r\nThanks for all your help, Erik!\r\n",
+    "PostedDate": "2009-04-07T21:48:21.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176970",
+    "ThreadId": "52378",
+    "Html": "Yes, well, there's lots of stuff that needs documented, but we're still busy building it.  :P  We'll get there.  Just taking a bit.  We just launched the first alpha 4 months ago.  ;)<br>\r\n<br>\r\nYou're welcome.\r\n",
+    "PostedDate": "2009-04-07T21:52:08.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176972",
+    "ThreadId": "52378",
+    "Html": "hehe, I'm so darn demanding. If you started a Wiki, I'm sure the community would chip in wholeheartedly but you probably don't need me to tell you that.\r\n",
+    "PostedDate": "2009-04-07T21:59:52.023-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176974",
+    "ThreadId": "52378",
+    "Html": "True.  I keep thinking we have a wiki here on CP, but it's not open to the public sadly.  I guess I could start one.  Soonish.  :)\r\n",
+    "PostedDate": "2009-04-07T22:01:37.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "177040",
+    "ThreadId": "52378",
+    "Html": "Oh dear... well it's not over yet afterall. It still doesn't work, all I did before was edit the sample post, any new posts won't display just as before. I've gone through all the related tables I can think of and can't find anything wrong, missing or out of place.\r\n",
+    "PostedDate": "2009-04-08T01:51:28.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "177326",
+    "ThreadId": "52378",
+    "Html": "If you take the database that seems to be messed up and run that same data locally does it not work there too?\r\n",
+    "PostedDate": "2009-04-08T13:01:23.313-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "177431",
+    "ThreadId": "52378",
+    "Html": "Afraid not\r\n",
+    "PostedDate": "2009-04-08T19:17:15.377-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "177432",
+    "ThreadId": "52378",
+    "Html": "HAHAHA. Changed the publish dates to that of the sample post, 2009-02-15 11:30:00.000. They now display as expected.\r\n",
+    "PostedDate": "2009-04-08T19:31:14.21-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "177445",
+    "ThreadId": "52378",
+    "Html": "Update: anything but the current day will display.\r\n",
+    "PostedDate": "2009-04-08T20:58:58.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "177456",
+    "ThreadId": "52378",
+    "Html": "That sounds like a timezone issue, perhaps your version of Oxite is set to a different timezone than you or your server are using?<br>\r\n",
+    "PostedDate": "2009-04-08T21:48:31.593-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "177463",
+    "ThreadId": "52378",
+    "Html": "Thse server is local. Perhaps it doesn't like the + in +10. Is there a special character for this? <br>\r\nedit: just noticed it removes the + on save sooo\r\n",
+    "PostedDate": "2009-04-08T22:15:40.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

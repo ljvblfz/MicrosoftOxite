@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "You have a route (PageOfPosts) that supports pagination of posts, but doesn't support specifying the data format.  It seems reasonable that you would want to get an RSS feed that only gave you a certain number of items.  I think you should make this available in the product.  \n \nIn my case, I only need 10 items so I modified the PageOfPosts as follows:\n \nAddRoute(\n          \"PageOfPosts\",\n          \"page{pageNumber}/{dataFormat}\",\n           new { controller = \"Post\", action = \"List\", dataFormat = \"\" },\n           new { pageNumber = new IsInt(), dataFormat = \"(|RSS|ATOM)\" },\n           new { Namespaces = controllerNamespaces }\n           );\n \nIt seems, however, that the PageSizeActionFilter makes the page size 50 for RSS and ATOM so you might want to consider revising that filter as well.",
+    "LastUpdatedDate": "2013-02-21T15:43:10.95-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-02-21T06:58:27.243-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Paginating RSS",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7150
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Good suggestion.  Paging isn't usually needed with feeds since most aggs just provide a If-Modified-Since header so it can be looked up since a certain date.  However, things like the Windows 7 Search Connector can use paging (and there are probably others too since the OpenSearch format has a way to do paging).  We'll take a look at this.  Thanks!",
+      "PostedDate": "2009-02-21T14:20:02.097-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:10.95-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

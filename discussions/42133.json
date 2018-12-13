@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "140024",
+    "ThreadId": "42133",
+    "Html": "I have changed the web.config so I can run the app in a different location than the default (localhost:30913). This is running ok, but I can get to access as anonymous user. I'm sure this is an stupid configuration problem but I can't get working.<br>\r\nany help?<br>\r\n",
+    "PostedDate": "2008-12-12T05:34:20.983-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140112",
+    "ThreadId": "42133",
+    "Html": "&quot;This is running ok, but I can get to access as anonymous user.&quot;<br>\r\n<br>\r\nI'm not sure what you mean.  Can you explain more?\r\n",
+    "PostedDate": "2008-12-12T10:03:24.707-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140494",
+    "ThreadId": "42133",
+    "Html": "Well, I configured the application to run under my specific domanin\r\n(eg. myOxiteApp.domain.com) and this is working. At first I got the\r\nredirect problem but I fixed it by changing the web.config from this:<br>\r\n<br>\r\n&lt;site name=&quot;Oxite Sample&quot; host=&quot;http://localhost:30913&quot;\r\nid=&quot;4F36436B-0782-4a94-BB4C-FD3916734C03&quot; languageDefault=&quot;en&quot;\r\ntimeZoneOffset=&quot;-8&quot;\r\ngravatarDefault=&quot;http%3A%2F%2Ffarm4.static.flickr.com%2F3161%2F3075626008_bafe9b2801.jpg%3Fv%3D0&quot;\r\n/&gt;<br>\r\n<br>\r\nto this:<br>\r\n<br>\r\n&lt;site name=&quot;Oxite Sample&quot; host=&quot;http://myOxiteApp.domain.com&quot;\r\nid=&quot;4F36436B-0782-4a94-BB4C-FD3916734C03&quot; languageDefault=&quot;en&quot;\r\ntimeZoneOffset=&quot;-8&quot;\r\ngravatarDefault=&quot;http%3A%2F%2Ffarm4.static.flickr.com%2F3161%2F3075626008_bafe9b2801.jpg%3Fv%3D0&quot;\r\n/&gt;<br>\r\n<br>\r\nThis is running ok, I guess, but everytime I run oxite I got the forms\r\nauthentication form instead of the hello.world(). I guess there is a\r\nproblem becasue if I run the application in its original location\r\n(localhost:30913) it runs perfectly and with no forms authentication\r\nform until I click on the login link. How can I configure it so the app\r\nlets me see the default with no authentication required. I've been\r\nmessing around with the &lt;location path=&quot;&quot;&gt; in the web.config but\r\nwith no luck, no hello.world(), no css styles... just the\r\nauthentication form.\r\n",
+    "PostedDate": "2008-12-15T00:29:48.533-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140659",
+    "ThreadId": "42133",
+    "Html": "hhhmmm...all I can think off offhand is that something else is conflicting with it.  Do you have your Oxite app sitting underneath another application that it would inherit the web.config settings from?\r\n",
+    "PostedDate": "2008-12-15T10:04:29.737-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "141245",
+    "ThreadId": "42133",
+    "Html": "Nope, the application is running alone, no app over it.<br>\r\nI have the application in the vs 2008 projects folder, IUSR has permision to read, write (I gave it full control to see the effects, but with no luck either).<br>\r\nI'm running on Windows Vista Ultimate 64, IIS7, english installation.<br>\r\nI have anonymous allowed and forms login/redirect enabled.<br>\r\nI'm willing to use this application on a big project, even making modifications so it complies with accessibility standards (WAI/W3C), but I do need to get it running beyond localhost :). I'm sure it's some damn stupid thing...<br>\r\n",
+    "PostedDate": "2008-12-17T00:55:25.02-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "141247",
+    "ThreadId": "42133",
+    "Html": "hhhmmm...try changing the app to run 32-bit instead of 64-bit.  I've got Oxite running in a hosted environment so it should work just fine.<br>\r\n<br>\r\nSide note: Would love to hear what accessibility standards changes you'd suggest.  :)\r\n",
+    "PostedDate": "2008-12-17T00:58:45.767-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "184425",
+    "ThreadId": "54699",
+    "Html": "This doesn't look good:<br>\r\n<br>\r\n<code>\r\n<pre>Server Error in '/' Application.\r\n--------------------------------------------------------------------------------\r\n\r\nThe view 'List' or its master could not be found. The following locations were searched:\r\n~/Skins/Default/Views/Post/List.aspx\r\n~/Skins/Default/Views/Post/List.ascx\r\n~/Skins/Default/Views/Shared/List.aspx\r\n~/Skins/Default/Views/Shared/List.ascx\r\n~/Views/Post/List.aspx\r\n~/Views/Post/List.ascx\r\n~/Views/Shared/List.aspx\r\n~/Views/Shared/List.ascx \r\nDescription: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. \r\n\r\nException Details: System.InvalidOperationException: The view 'List' or its master could not be found. The following locations were searched:\r\n~/Skins/Default/Views/Post/List.aspx\r\n~/Skins/Default/Views/Post/List.ascx\r\n~/Skins/Default/Views/Shared/List.aspx\r\n~/Skins/Default/Views/Shared/List.ascx\r\n~/Views/Post/List.aspx\r\n~/Views/Post/List.ascx\r\n~/Views/Shared/List.aspx\r\n~/Views/Shared/List.ascx\r\n\r\nSource Error: \r\n\r\nAn unhandled exception was generated during the execution of the current web request. Information regarding the origin and location of the exception can be identified using the exception stack trace below.  \r\n\r\nStack Trace: \r\n\r\n\r\n[InvalidOperationException: The view 'List' or its master could not be found. The following locations were searched:\r\n~/Skins/Default/Views/Post/List.aspx\r\n~/Skins/Default/Views/Post/List.ascx\r\n~/Skins/Default/Views/Shared/List.aspx\r\n~/Skins/Default/Views/Shared/List.ascx\r\n~/Views/Post/List.aspx\r\n~/Views/Post/List.ascx\r\n~/Views/Shared/List.aspx\r\n~/Views/Shared/List.ascx]\r\n   System.Web.Mvc.ViewResult.FindView(ControllerContext context) +100701\r\n   System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context) +123\r\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult) +10\r\n   System.Web.Mvc.&lt;&gt;c__DisplayClass11.&lt;invokeactionresultwithfilters /&gt;b__e() +20\r\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation) +251\r\n   System.Web.Mvc.&lt;&gt;c__DisplayClass13.&lt;invokeactionresultwithfilters /&gt;b__10() +19\r\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult) +178\r\n   System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName) +350\r\n   System.Web.Mvc.Controller.ExecuteCore() +110\r\n   System.Web.Mvc.ControllerBase.Execute(RequestContext requestContext) +27\r\n   System.Web.Mvc.ControllerBase.System.Web.Mvc.IController.Execute(RequestContext requestContext) +7\r\n   System.Web.Mvc.MvcHandler.ProcessRequest(HttpContextBase httpContext) +119\r\n   System.Web.Mvc.MvcHandler.ProcessRequest(HttpContext httpContext) +41\r\n   System.Web.Mvc.MvcHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext httpContext) +7\r\n   System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +181\r\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +75\r\n\r\n \r\n\r\n\r\n--------------------------------------------------------------------------------</pre>\r\n</code>And so basically, it just popped up like this one morning and has been the same ever since.<br>\r\nI haven't changed any mission critical files, I've merely made some HTML/CSS additions for deeper customization.<br>\r\n<br>\r\nTom.\r\n",
+    "PostedDate": "2009-04-28T03:06:59.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184427",
+    "ThreadId": "54699",
+    "Html": "Are you sure?  I don't think it would complain unless it couldn't find a view.  Where is List.aspx in your solution?  What's the file path?\r\n",
+    "PostedDate": "2009-04-28T03:10:07.39-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184430",
+    "ThreadId": "54699",
+    "Html": "&quot;D:\\Users\\Tom\\Documents\\Visual Studio 2008\\Projects\\Oxite\\OxiteSite\\Views\\Post\\List.aspx&quot;\r\n",
+    "PostedDate": "2009-04-28T03:19:15.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184431",
+    "ThreadId": "54699",
+    "Html": "hhhmmm...what about the master page it references.  what does it say is the path in List.aspx for the master and what's the actual path on disk?\r\n",
+    "PostedDate": "2009-04-28T03:22:24.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184546",
+    "ThreadId": "54699",
+    "Html": "&quot;&lt;%@ Page Language=&quot;C#&quot; AutoEventWireup=&quot;true&quot; MasterPageFile=&quot;~/Views/Shared/Site.master&quot; Inherits=&quot;System.Web.Mvc.ViewPage&lt;OxiteModelList&lt;Post&gt;&gt;&quot; %&gt;&quot;<br>\r\n<br>\r\nActual path: D:\\Users\\Tom\\Documents\\Visual Studio 2008\\Projects\\Oxite\\OxiteSite\\Views\\Shared\\Site.Master\r\n",
+    "PostedDate": "2009-04-28T07:55:35.853-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184593",
+    "ThreadId": "54699",
+    "Html": "hhhmmm...i'm confused then what's going on.  that should work.  :(  any chance you can step through and debug Oxite.Core/Skinning/OxiteWebFormViewEngine.cs in the FindFile method and see why it thinks the file doesn't exist?\r\n",
+    "PostedDate": "2009-04-28T09:53:47.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

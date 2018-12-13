@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "250833",
+    "ThreadId": "73400",
+    "Html": "<p>When the oxite will support the Asp.net mvc 2?</p>",
+    "PostedDate": "2009-10-28T12:19:15.663-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "250887",
+    "ThreadId": "73400",
+    "Html": "<p>Unknown at this time.&nbsp; Have you tried it yourself?&nbsp; It might &quot;just work&quot;.&nbsp; Not sure if there are breaking changes or not.</p>",
+    "PostedDate": "2009-10-28T14:20:24.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "258117",
+    "ThreadId": "73400",
+    "Html": "<p>I've tried. &nbsp;There are a few breaking issues and I decided against trying to fix them since MVC 2 is still in preview. &nbsp;Didn't want to waste some time on features that may or may not be there (or where method signatures may change etc).</p>\r\n<p>&nbsp;</p>\r\n<p>Just be patient and wait until MVC 2 is a RC.</p>",
+    "PostedDate": "2009-11-17T20:28:13.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

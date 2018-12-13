@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "163676",
+    "ThreadId": "48997",
+    "Html": "Does oxite cache any data or output?&nbsp; If not, are their any plans to implement any?<br>\r\n",
+    "PostedDate": "2009-03-02T19:07:39.253-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164424",
+    "ThreadId": "48997",
+    "Html": "No, we do not provide any caching yet.  Do you have a site that isn't working well because of high traffic?  Caching's a big job that we're still working out how we might build.  We have lots of ideas, but haven't implemented anything into Oxite yet.<br>\r\n<br>\r\nIf you take a look at the latest source code though we have done custom caching for the new MIX Videos site (under /Oxite/Implementations/MIXVideos) that is specific to that site so you could take a look at that for ideas if you want to do your own for now.\r\n",
+    "PostedDate": "2009-03-04T10:10:01.857-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164438",
+    "ThreadId": "48997",
+    "Html": "No high traffic sites yet, but I did get my personal blog up and running&nbsp;on the latest release. :) http://sleekdigital.com <br>\r\n<br>\r\nThis is very helpful info. Thanks again and keep up the good work.<br>\r\n",
+    "PostedDate": "2009-03-04T10:34:25.797-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164468",
+    "ThreadId": "48997",
+    "Html": "Looks good.  I've added your site to the list of sites running Oxite.<br>\r\n<br>\r\nYou're welcome!\r\n",
+    "PostedDate": "2009-03-04T11:30:46.853-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

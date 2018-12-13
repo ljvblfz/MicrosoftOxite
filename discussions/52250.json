@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "175540",
+    "ThreadId": "52250",
+    "Html": "I am trying to install this project. I followed all the steps and downloaded all the requirments, but whenever I try to open Oxite.sln, I get an error for the project OxiteSite.csproj.<br>\r\nThe error is <br>\r\nProject OxiteSite.csproj cannont be opened.<br>\r\nThe project is not supported by this installation.<br>\r\nI tried to open it with Visual Web Developer 2008 Express Edition, Visual Studio 2005 and Visual Studio 2008 (Professional Edition), all reported same error.<br>\r\n<br>\r\nAny idea?<br>\r\n<br>\r\nThanks<br>\r\n",
+    "PostedDate": "2009-04-03T17:08:59.107-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "175696",
+    "ThreadId": "52250",
+    "Html": "That error only happens when MVC isn't installed.  Are you sure it was successful?\r\n",
+    "PostedDate": "2009-04-04T14:01:45.84-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

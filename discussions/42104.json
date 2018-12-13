@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "139925",
+    "ThreadId": "42104",
+    "Html": "if (foundRedirect == null)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; throw new Exception(string.Format(&quot;No site or redirect was found for '{0}'&quot;, host));<br>\r\nHi all this line is throwing the exception and saying <em><em>No site or redirect was found for 'http://localhost'</em></em><br>\r\nCan anyone please help me what is the problem<br>\r\nI have created a virtual directory for the Oxite project and running it from IIS<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\n",
+    "PostedDate": "2008-12-11T20:17:17.6-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139948",
+    "ThreadId": "42104",
+    "Html": "That means the url being requested wasn't found to be the url your instance of Oxite was setup to accept.<br>\r\n<br>\r\n<ul>\r\n    <li>What was the url being requested?</li>\r\n    <li>What is the value on the web.config/oxite/site &quot;host&quot; attribute?</li>\r\n</ul>\r\nIf they don't match then it will throw an error.<br>\r\n<br>\r\nI am in the process of making a change to the site element so you can specify other aliases (e.g. your host can be setup for myhost.com while you can have an alias of www.myhost.com that is also accepted) and will probably have that checked in later tonight.<br>\r\n<br>\r\nFor now though just make sure the two values I asked about above match and you won't get that error.\r\n",
+    "PostedDate": "2008-12-11T23:27:45.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140069",
+    "ThreadId": "42104",
+    "Html": "Please make sure you allow for blogs not running as the main site.&nbsp; In other words, almost all my websites will have blogs, but blogging won't be the only thing or even the main thing going on.&nbsp; So I would want my blog to run as http://www.mysite.com/blog or http://blog.mysite.com.&nbsp; I also need to be able to handle this with multiple blogs, so I would want to support:<br>\r\n<br>\r\nhttp://www.mysite.com/jerrys_blog<br>\r\nhttp://www.mysite.com/blogs/jerrys_blog<br>\r\netc.<br>\r\n<br>\r\nIf this is not already supported, please try and account for it.&nbsp; One of the things that has turned me off almost all .NET blogging platforms is that they take over the whole world and interfere with my main application.<br>\r\n<br>\r\nRegards,<br>\r\n<br>\r\nTrevor<br>\r\n",
+    "PostedDate": "2008-12-12T08:29:07.923-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140100",
+    "ThreadId": "42104",
+    "Html": "You can definitely not have the accumulation of all the blogs on your site as the home page.  You'll have to do a few changes to make that happen at the moment.  In the future, we'll make it easier.  Right now, you'll need to get the latest checked-in code, but it will show up in the next release, and inherit from OxiteRoutes and override what controller and action are called for the homepage, make your own action that gets the data you need (if any) and an appropriate view and register your new routes class in the web.config.  Again, this will get easier down the road.  For now, I'm sure we could do a write up on how to do this if you're interested, but it's definitely possible today.<br>\r\n<br>\r\nToday, http://blog.mysite.com might not be possible.  We could definitely make it possible without a huge amount of work though.<br>\r\n<br>\r\n<em>http://www.mysite.com/jerrys_blog<br>\r\nhttp://www.mysite.com/blogs/jerrys_blog<br>\r\netc.</em><br>\r\n<br>\r\nWe built in some plumbing at the last second before publishing the first release to enable different urls for blogs like that, but didn't get to actually implementing all the rest of the plumbing needed to make different names happen.<br>\r\n<br>\r\nThanks for the feedback and we'll keep this all in mind moving forward.\r\n",
+    "PostedDate": "2008-12-12T09:41:38.51-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

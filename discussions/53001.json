@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "178227",
+    "ThreadId": "53001",
+    "Html": "Hi, <br>\r\nI tried to fill my language (I tried &quot;cs-CZ&quot; and &quot;cs&quot; strings) and nothing happend. Is there any localization resource?\r\n",
+    "PostedDate": "2009-04-11T12:16:35.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "178237",
+    "ThreadId": "53001",
+    "Html": "In most for pay VS2005/8 you could save the solution as CZ with the advanced save as option and in SQL Server you could change the database collation to CZ in database properties then options.  I am not saying this will take care of all but will take you in the right direction.\r\n",
+    "PostedDate": "2009-04-11T13:16:45.247-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "178295",
+    "ThreadId": "53001",
+    "Html": "I described my problem wrong probably. I have no problem with national characters (as fas as I tried) I want to translate UI of Oxite itself.\r\n",
+    "PostedDate": "2009-04-12T00:41:18.463-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "178338",
+    "ThreadId": "53001",
+    "Html": "I am not aware of Asp.net providing translation but there is existing code you could use with a switch statement that can change language with drop downlist.  It is almost automatic but some globalization code required.<br>\r\n<br>\r\n",
+    "PostedDate": "2009-04-12T07:57:01.84-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "178359",
+    "ThreadId": "53001",
+    "Html": "There is localization code built-in to Oxite, but we haven't used it for much ... you should be able to just fill the database table with the appropriate language + value and then, if the user's accept language in their browser is set to that language, that is the text they will see.<br>\r\n<br>\r\nThis is for UI only, not for content.<br>\r\n",
+    "PostedDate": "2009-04-12T11:13:45.55-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "186455",
+    "ThreadId": "53001",
+    "Html": "I returned to this and found only languages table, where is dome kind of guid and language description. In which table are these language resources?\r\n",
+    "PostedDate": "2009-05-04T02:06:06.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "186711",
+    "ThreadId": "53001",
+    "Html": "You can find the language specific strings in oxite_StringResource and oxite_StringResourceVerson , essentially you can have the same string resource with multiple versions with different language values.<br>\r\n",
+    "PostedDate": "2009-05-04T15:19:49.807-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

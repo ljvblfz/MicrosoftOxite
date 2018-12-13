@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-05-03T23:53:39.37-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "A route named 'Site' could not be found in the route collection.\nParameter name: name \nDescription: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. \n \nException Details: System.ArgumentException: A route named 'Site' could not be found in the route collection.\nParameter name: name\n \nSource Error: \n \n \nLine 471:        public static string Site(this UrlHelper urlHelper)\nLine 472:        {\nLine 473:            return urlHelper.RouteUrl(\"Site\");\nLine 474:        }\nLine 475:\n \n \nSource File: C:\\oxite-31236\\Oxite\\Oxite.Core\\Extensions\\UrlHelperExtensions.cs    Line: 473",
+    "LastUpdatedDate": "2013-05-16T03:38:00.92-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-05-03T09:00:48.913-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "31236 route problem",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7723
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Sorry, found in discussion along with solution.",
+      "PostedDate": "2009-05-03T09:30:53.793-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-05-03T23:53:39.37-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:07.18-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:00.92-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

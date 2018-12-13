@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "487967",
+    "ThreadId": "225724",
+    "Html": "<p>As a&nbsp; newbie, trying to learn MVC by reverse engineering Oxite, I am wondering why, with everything so abstracted and encapsulated, is pageSize hard coded in OnActionExecution? Is 10 posts per page some kind of universal constant? I'm sure there is a reason, what is it?<span style=\"font-family:Consolas;font-size:x-small\"></span></p>",
+    "PostedDate": "2010-09-01T20:20:20.687-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "494874",
+    "ThreadId": "225724",
+    "Html": "<p>i don't know this ,but <a href=\"http://www.breast-chest.com\">breast</a></p>",
+    "PostedDate": "2010-09-17T03:56:52.237-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

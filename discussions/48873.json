@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "163181",
+    "ThreadId": "48873",
+    "Html": "I am trying to create  post with live writer, which has an image, and I'm getting a not implemented exception.  Does this sound right?  Are there other limitations as well?\r\n",
+    "PostedDate": "2009-03-01T07:22:44.01-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "163189",
+    "ThreadId": "48873",
+    "Html": "We don't currently support adding images via the Metaweblog API and somehow we missed setting the flag for that correctly so Live Writer thinks we do support it.  If you go into Live Writer and change it so images are uploaded via FTP everything will work fine for you.  We'll fix the flag in the next release.\r\n",
+    "PostedDate": "2009-03-01T08:09:39.523-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "163241",
+    "ThreadId": "48873",
+    "Html": "Bingo, thanks.\r\n",
+    "PostedDate": "2009-03-01T12:22:44.427-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

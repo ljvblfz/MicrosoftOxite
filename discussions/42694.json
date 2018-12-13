@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "141876",
+    "ThreadId": "42694",
+    "Html": "Can you please update &quot;What this isn't&quot; on the home page to mention &quot;BlogSvc&quot; as it is based on MVC and it very functional yet simple to understand.  We recently added Html-&gt;Xhtml cleansing with special support for the dirty xhtml that live writer creates.  It is also heavily influenced by the Storefront series.<div><br></div><div>Thanks</div>",
+    "PostedDate": "2008-12-19T08:21:47.207-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "146176",
+    "ThreadId": "42694",
+    "Html": "Good idea... we did... thanks!<br>\r\n",
+    "PostedDate": "2009-01-11T21:00:01.247-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

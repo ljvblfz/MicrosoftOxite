@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "140038",
+    "ThreadId": "42137",
+    "Html": "<a href=\"http://blogs.msdn.com/tconte/archive/2008/12/12/import-your-wordpress-data-into-oxite.aspx\">Just a quick hack</a>.\r\n",
+    "PostedDate": "2008-12-12T07:03:10.107-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140135",
+    "ThreadId": "42137",
+    "Html": "Nice.  :)  The latest changeset has BlogML import if you want to see a pattern of importing all the data needed to get an existing blog running.  Importing WordPress stuff through their RSS extensions seems cool and might be worth adding down the road.\r\n",
+    "PostedDate": "2008-12-12T11:20:28.9-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "138738",
+    "ThreadId": "41812",
+    "Html": "Do you foresee this remaining a developer sample/quick start going forward, or do you intend to allow community contributions to flesh out the platform into a more robust blogging solution?<br>\r\n<br>\r\nRegards,<br>\r\nJoe\r\n",
+    "PostedDate": "2008-12-08T13:47:35.56-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "138739",
+    "ThreadId": "41812",
+    "Html": "We have no plans to make this anything but a really good developer sample that should be able to run any site you want.<br>\r\n<br>\r\nThat said, this is a community project now and if the community decides to take it a different direction, we won't stop it.  :)\r\n",
+    "PostedDate": "2008-12-08T13:54:34.987-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

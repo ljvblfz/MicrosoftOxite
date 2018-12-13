@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "230769",
+    "ThreadId": "67892",
+    "Html": "<p>I've grabed the latest version of sources and found, that DB project produces SQL like this:</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\">IF</span> <span style=\"color:Blue\">NOT</span> <span style=\"color:Blue\">EXISTS</span>(<span style=\"color:Blue\">SELECT</span> * <span style=\"color:Blue\">FROM</span> oxite_Module <span style=\"color:Blue\">WHERE</span> ModuleName = <span style=\"color:#A31515\">'Site'</span>)\r\n<span style=\"color:Blue\">BEGIN</span>\r\n\t<span style=\"color:Blue\">INSERT</span> <span style=\"color:Blue\">INTO</span>\r\n\t\toxite_Module\r\n\t(\r\n\t\tSiteID,\r\n\t\tModuleName,\r\n\t\tModuleOrder,\r\n\t\tModuleType,\r\n\t\tEnabled,\r\n\t\tIsSystem\r\n\t)\r\n\t<span style=\"color:Blue\">VALUES</span>\r\n\t(\r\n\t\t@SiteID,\r\n\t\t<span style=\"color:#A31515\">'Site'</span>,\r\n\t\t13,\r\n\t\t<span style=\"color:#A31515\">'OxiteSite.App_Code.Modules.OxiteSite.OxiteSiteModule'</span>,\r\n\t\t1,\r\n\t\t0\r\n\t)\r\n<span style=\"color:Blue\">END</span>\r\n</pre>\r\n</div>\r\n<p>though current database has no definition of this table</p>",
+    "PostedDate": "2009-09-03T10:31:32.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "230780",
+    "ThreadId": "67892",
+    "Html": "<p>Ouch, sorry.&nbsp; My bad.&nbsp; Fixed now.&nbsp; Thanks for letting me know!</p>",
+    "PostedDate": "2009-09-03T10:54:13.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

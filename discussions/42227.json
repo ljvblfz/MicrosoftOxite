@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "140281",
+    "ThreadId": "42227",
+    "Html": "<p style=\"margin:0cm 0cm 10pt\"><span style=\"font-family:calibri\">Hello!<br>\r\n<br>\r\nI am a bit new to ASP.NET so forgive me if this sounds like a stupid question<br>\r\n<br>\r\nhow do you go about adding new users? I can’t see anything on the main page :(<br>\r\n<br>\r\nI looked in the database, and the users table has some funky uniqueidentifier types that makes manual insertion a bit of a pain<br>\r\n<br>\r\nThanks!<br>\r\n<br>\r\nKris</span></p>\r\n",
+    "PostedDate": "2008-12-13T11:16:40.847-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "145551",
+    "ThreadId": "42227",
+    "Html": "If you grab the latest changeset you'll see there is now a &quot;Manage Users&quot; item on the admin task list.  From that page there is now a Create User page.  It hasn't been completely fleshed out yet, but it will allow you to create a user without having to go into the database.  Enjoy!\r\n",
+    "PostedDate": "2009-01-08T16:24:45.597-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "146162",
+    "ThreadId": "42227",
+    "Html": "I got the release from january 5th and I don't see this option\r\n",
+    "PostedDate": "2009-01-11T19:35:22.81-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "146174",
+    "ThreadId": "42227",
+    "Html": "Get the latest source instead. It was checked in on the 7th.<br>\r\n",
+    "PostedDate": "2009-01-11T20:42:57.02-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "148876",
+    "ThreadId": "42227",
+    "Html": "I can't see this option in the latest source? Should it be in admintasks.ascx?<br>\r\n",
+    "PostedDate": "2009-01-20T12:43:18.783-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "148891",
+    "ThreadId": "42227",
+    "Html": "Unfortunately, we're in the middle of a big refactor so the latest changeset is and will be broken for another week or so.  You'd probably have to navigate back to the version that Duncan mentioned above on the 7th of January.\r\n",
+    "PostedDate": "2009-01-20T13:15:00.863-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "163242",
+    "ThreadId": "42227",
+    "Html": "Any more info on the ManageUsers page?  I see the route added...but when I try site/ManageUsers or site/Admin/ManageUsers I get page not found\r\n",
+    "PostedDate": "2009-03-01T12:29:37.693-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164409",
+    "ThreadId": "42227",
+    "Html": "Sadly, no.  :(  In the last release we decided to focus on what we think a majority of users will use Oxite as and that's a single blog so user management was cut for now.  I, personally, want to bring it back in the near future, but time is limited and I can't make any promises.\r\n",
+    "PostedDate": "2009-03-04T09:50:46.993-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

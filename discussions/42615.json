@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "141633",
+    "ThreadId": "42615",
+    "Html": "Cross-posted from the Issue Tracker, as some discussion is probably warranted.<br>\r\n<br>\r\nI nearly have this implemented and working with Live Writer. One problem, though: since Pages aren't assigned to an area, how should I go about dealing with security? Should anyone who can log in be able to edit/add/delete Pages? If we add the Pages to an area, will that break anything else? Should the Pages for a particular User be placed under a specific relative path? Thoughts?\r\n",
+    "PostedDate": "2008-12-18T10:03:57.817-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "141639",
+    "ThreadId": "42615",
+    "Html": "As a start, you could assume that only members of a site-wide admin role can edit pages... many of the people who are looking to use this feature would be focused on a single person blog, in which case they would be editing all of the pages themselves. A more granular security method could be added in later.\r\n",
+    "PostedDate": "2008-12-18T10:35:14.777-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "417347",
+    "ThreadId": "204741",
+    "Html": "<p>I downloaded all source code <a href=\"http://oxite.codeplex.com/SourceControl/changeset/view/56543\">http://oxite.codeplex.com/SourceControl/changeset/view/56543n</a></p>\r\n<p>I opened &quot;MicrosoftPDC&quot; Solution of  implementations. But Oxite.LiveID Project don't have reference to  Microsoft.Passport.RPS assembly</p>\r\n<p>and I searched but I cannot find  Microsoft.Passport.RPS assembly. Help me please.</p>",
+    "PostedDate": "2010-03-12T02:06:16.383-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

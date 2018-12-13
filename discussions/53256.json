@@ -1,0 +1,122 @@
+[
+  {
+    "Id": "179147",
+    "ThreadId": "53256",
+    "Html": "I've looked around for instructions and the only site I found was in another language!<br>\r\nIs there a good web source somewhere for info on how to move forward?<br>\r\n<br>\r\nThanks!\r\n",
+    "PostedDate": "2009-04-14T11:00:52.15-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "179935",
+    "ThreadId": "53256",
+    "Html": "I'm not sure I understand what you're looking to do.  Are you trying to use Windows Live Writer or something other blogging tool with Oxite?\r\n",
+    "PostedDate": "2009-04-15T21:32:28.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "179980",
+    "ThreadId": "53256",
+    "Html": "Quite right. Windows Live Writer.\r\n",
+    "PostedDate": "2009-04-16T00:40:10.827-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "179981",
+    "ThreadId": "53256",
+    "Html": "It runs you through a wizard to set up your blog.  Did you go down the custom blog route (or whatever it's called, I forget offhand)?  I believe it just asks you for the url of your site and a username and password.\r\n",
+    "PostedDate": "2009-04-16T00:42:26.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "179984",
+    "ThreadId": "53256",
+    "Html": "<a href=\"http://asvoqg.blu.livefilestore.com/y1p12qKVbt4RRPsPA1nj5IUbddm1iPWc0unoPCCH0T-cHMQKQuANiSeWri_-1U8yggihw2DkuDJ2G-C5UmEjQG2qWuy1Fs5YAqA/405 Method Not Allowed.JPG\">http://asvoqg.blu.livefilestore.com/y1p12qKVbt4RRPsPA1nj5IUbddm1iPWc0unoPCCH0T-cHMQKQuANiSeWri_-1U8yggihw2DkuDJ2G-C5UmEjQG2qWuy1Fs5YAqA/405%20Method%20Not%20Allowed.JPG</a><br>\r\n<br>\r\nIIS7.\r\n",
+    "PostedDate": "2009-04-16T00:52:59.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "179987",
+    "ThreadId": "53256",
+    "Html": "Does it work when running it locally in IIS?\r\n",
+    "PostedDate": "2009-04-16T00:55:36.5-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "179989",
+    "ThreadId": "53256",
+    "Html": "I'm not sure I understand... the server is @ 127.0.0.1.\r\n",
+    "PostedDate": "2009-04-16T00:57:43.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "179994",
+    "ThreadId": "53256",
+    "Html": "Well then I'm not sure I understand.  If you run Oxite on your local machine then that would be the IP, but it looks like you're trying to connect to the web server that runs your domain.  I'm asking if it doesn't work in both places to see if it's a configuration problem with your web server or if something's really broken.\r\n",
+    "PostedDate": "2009-04-16T01:00:48.88-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "183797",
+    "ThreadId": "53256",
+    "Html": "Hey Erik,<br>\r\n<br>\r\nI'm getting a similar error.  Is there a Handler that needs mapped to service *.svc files?  I removed Live Writer from the equation and simply typed the following URL into my web browser:<br>\r\n<br>\r\nhttp://localhost/MetaWeblog.svc<br>\r\n<br>\r\nAnd received the following IIS 7 error:<br>\r\n<br>\r\nHTTP Error 404.3 - Not Found<br>\r\nThe page you are requesting cannot be served because of the extension configuration. If the page is a script, add a handler. If the file should be downloaded, add a MIME map.<br>\r\n<br>\r\nCheers,<br>\r\n<br>\r\nGabe Sumner<br>\r\n<br>\r\n",
+    "PostedDate": "2009-04-26T11:38:58.753-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "183800",
+    "ThreadId": "53256",
+    "Html": "The MetaWeblog stuff is done with WCF so I don't believe there's anything you need to setup for that.<br>\r\n<br>\r\nIf you're running Oxite locally through the ASP.NET Web Development server then the url should be this: <a href=\"http://localhost:30913/MetaWeblog.svc\">http://localhost:30913/MetaWeblog.svc</a>  Does that work?\r\n",
+    "PostedDate": "2009-04-26T11:44:13.01-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "183801",
+    "ThreadId": "53256",
+    "Html": "Ah.  I actually setup Oxite on my local IIS 7 server (not using Web Development server).  I wanted to simulate the IIS changes I would need to make during deployment.  It seems some type of Handler mapping needs to be in place to make this work.<br>\r\n<br>\r\nGabe Sumner\r\n",
+    "PostedDate": "2009-04-26T11:48:51.49-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "183802",
+    "ThreadId": "53256",
+    "Html": "Weird.  I thought *.svc &quot;just works&quot; out of the box with ASP.NET.  I know when I deployed my site ( <a href=\"http://erikporter.com\">http://erikporter.com</a> ) to my IIS 7 host ( <a href=\"http://discountasp.net\">http://discountasp.net</a> ), I didn't have to set anything up.  I'll see if the guy that wrote that code knows what might be going on...\r\n",
+    "PostedDate": "2009-04-26T11:52:12.65-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "183825",
+    "ThreadId": "53256",
+    "Html": "As it turns out, I didn't have WCF activated.  Here is the web site that led me to the solution:<br>\r\n<br>\r\n<a href=\"http://blogs.msdn.com/davidwaddleton/archive/2007/11/02/wcf-and-404-3-errors.aspx\">http://blogs.msdn.com/davidwaddleton/archive/2007/11/02/wcf-and-404-3-errors.aspx</a><br>\r\n<br>\r\nThe fix is reposted below:<br>\r\n<br>\r\nWCF Activation installed<br>\r\n<ul>\r\n    <li>This can be found under  the 3.0 framework options. Depending on your operating system this could be under different locations. </li>\r\n    <li>Vista  : Control Panel -&gt; Program and Features -&gt; Turn on/ off Windows Features -&gt; Microsoft.NET Framework 3.0</li>\r\n    <li>Server 2008 : Server Manager -&gt; Add Features-&gt; .Net Framework 3.0 Features -&gt; WCF Activatio</li>\r\n</ul>\r\n<p>Thanks for your help Erik.  <br>\r\n<br>\r\nGabe Sumner</p>\r\n",
+    "PostedDate": "2009-04-26T13:58:40.257-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "183838",
+    "ThreadId": "53256",
+    "Html": "Voila!<br>\r\nThank you Mr. Sumner.\r\n",
+    "PostedDate": "2009-04-26T14:43:28.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "230981",
+    "ThreadId": "53256",
+    "Html": "<p>I have the same problem (or, a similar one). I'm using Word, which manages to find the MetaWeblog service just fine, but when I go to post a blog entry (localhost, Win2008R2, IIS and WCF activation <em>is</em>&nbsp;enabled), it just fails.</p>\r\n<p>Any ideas on how to debug this?</p>",
+    "PostedDate": "2009-09-03T20:41:37.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

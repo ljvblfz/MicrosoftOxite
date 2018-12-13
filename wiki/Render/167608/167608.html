@@ -1,0 +1,13 @@
+<div class="wikidoc">The DoubleRangeValidation attribute is applied to a double-type property of the plug-in class.  It allows the plug-in creator to specify that the value of the property must fall within a certain range.  If the configured value is not within that range, appropriate error messaging is displayed in the UI.<br /><br /><b>Example:</b><br /><br /><pre>
+public class DisclaimerSelectorPlugin
+{
+    [DoubleRangeValidation(10, 20)]
+    ...
+    public double DisclaimerDouble
+    {
+        get;
+        set;
+    }
+...
+}
+</pre><br /><br /><b>Display:</b><br /></div><div class="ClearBoth"></div>

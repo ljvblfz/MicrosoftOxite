@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "139965",
+    "ThreadId": "42113",
+    "Html": "as title desc. need modify &quot;site.Master&quot; ??<br>\r\nthanks.<br>\r\n<br>\r\n",
+    "PostedDate": "2008-12-12T00:55:59.857-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140102",
+    "ThreadId": "42113",
+    "Html": "If you look in Site.master, you'll see a Html.RenderPartial call with &quot;Header&quot; in it.  That renders /Views/Shared/Header.ascx.  If you look in that file you'll see the menu.  Make your changes there.\r\n",
+    "PostedDate": "2008-12-12T09:44:12.107-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140220",
+    "ThreadId": "42113",
+    "Html": "thank your reply.  I had added one. but this uri is not correct.<br>\r\nError page body context &quot;The url you requested could not be found.&quot;<br>\r\nI add code  in &quot;header.ascx&quot;:<br>\r\n&lt; li&lt;%= controller == &quot;Page&quot; &amp;&amp; string.Compare(pagePath, &quot;ManagePage&quot;, true) == 0 ? selected : string.Empty %&gt;&gt;&lt;%= Html.RouteLink(Localize(&quot;ManagePage&quot;), &quot;Page&quot;, new { pagePath = &quot;ManagePage&quot; })%&gt;&lt;/li&gt;<br>\r\n<br>\r\ncan you explain give me some sample code (I want call some manager pages . put  &quot;changepassword.aspx&quot; on admin page after login)? I'm sorry my english. can you kown my means.<br>\r\n<br>\r\nthanks.  <br>\r\n",
+    "PostedDate": "2008-12-12T22:12:36.64-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

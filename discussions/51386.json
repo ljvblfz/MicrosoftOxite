@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "172269",
+    "ThreadId": "51386",
+    "Html": "<div>All,</div><div><br></div>Oxite looks like a great project. I'd like to use it but I don't want to shell out another $10 a month for db services with my hosting provider. Any plans for an xml store?<div><br></div><div>Cheers,</div><div><br></div><div>Rana</div>",
+    "PostedDate": "2009-03-26T04:54:36.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "172479",
+    "ThreadId": "51386",
+    "Html": "No plans, sorry.  It shouldn't be too hard (depending on your skill level) to implement your own provider though.  Contribute the code to Oxite as another provider?  :)\r\n",
+    "PostedDate": "2009-03-26T13:05:31.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "172559",
+    "ThreadId": "51386",
+    "Html": "Touché. I will consider it.",
+    "PostedDate": "2009-03-26T16:07:26.06-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "198735",
+    "ThreadId": "51386",
+    "Html": "<p>Did you ever get this idea of the ground?</p>\r\n<p>I got part of the way on this and would be interested in comparing notes, code and ideas.</p>\r\n<p>You can download my code and read some of my thoughts on the subject here:</p>\r\n<p><a href=\"http://www.hexadecimal.se/2009/05/03/ImplementingAnXMLDataProviderForOxitePartI.aspx\">http://www.hexadecimal.se/2009/05/03/ImplementingAnXMLDataProviderForOxitePartI.aspx</a></p>\r\n<p>Hope to hear from you!</p>",
+    "PostedDate": "2009-06-07T07:51:36.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "199255",
+    "ThreadId": "51386",
+    "Html": "<p>hexadecimal,</p>\r\n<p>Nice! I haven't done anything for an xml store and won't have the time either... Busy with other projects. I'm really pleased to see you have some code for it :) Cheers!</p>",
+    "PostedDate": "2009-06-08T14:37:47.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "199262",
+    "ThreadId": "51386",
+    "Html": "<p>Fame and fortune awaits you, hexadecimal, if you can finish it!&nbsp; Ok, no fortune, but definitely fame.&nbsp; :)</p>",
+    "PostedDate": "2009-06-08T14:51:23.217-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "201220",
+    "ThreadId": "51386",
+    "Html": "<p>Half-way there!</p>\r\n<p>IPageRepository, caching, thread-safty and some minor refactoring left.</p>\r\n<p><a href=\"http://www.hexadecimal.se/2009/06/13/ImplementingAnXMLDataProviderForOxitePartII.aspx\">http://www.hexadecimal.se/2009/06/13/ImplementingAnXMLDataProviderForOxitePartII.aspx</a></p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-06-13T15:27:57.97-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

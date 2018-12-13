@@ -1,0 +1,354 @@
+[
+  {
+    "Id": 6729,
+    "Title": "Prototype 'Date.toShortString' returns incorrect date"
+  },
+  {
+    "Id": 6730,
+    "Title": "Dates should be in the international format"
+  },
+  {
+    "Id": 6731,
+    "Title": "Permalink InvalidOperationException"
+  },
+  {
+    "Id": 6732,
+    "Title": "Cleanup of skinning references"
+  },
+  {
+    "Id": 6738,
+    "Title": "Implement Wordpress API"
+  },
+  {
+    "Id": 6739,
+    "Title": "Remove DBPro(.dbproj) Project Type Dependency"
+  },
+  {
+    "Id": 6740,
+    "Title": "config change for medium trust"
+  },
+  {
+    "Id": 6741,
+    "Title": "Advanced Installation Instructions missing"
+  },
+  {
+    "Id": 6742,
+    "Title": "Add Url Options So No Wildcard is Required for IIS 6"
+  },
+  {
+    "Id": 6743,
+    "Title": "Add BlogML Import Support"
+  },
+  {
+    "Id": 6744,
+    "Title": "Add BlogML Export"
+  },
+  {
+    "Id": 6745,
+    "Title": "System.InvalidOperationException: Dude, what the heck?"
+  },
+  {
+    "Id": 6746,
+    "Title": "what'is the password of the default user \"Admin\""
+  },
+  {
+    "Id": 6747,
+    "Title": "svn:ignore flags on bin/obj dirs?"
+  },
+  {
+    "Id": 6749,
+    "Title": "Archive Pager Doesn't Generate Urls Properly"
+  },
+  {
+    "Id": 6756,
+    "Title": "Can't open the project"
+  },
+  {
+    "Id": 6757,
+    "Title": "InvalidOperationException when not specifying publish date in draft post"
+  },
+  {
+    "Id": 6761,
+    "Title": "Error Rendering Sitemap Views"
+  },
+  {
+    "Id": 6767,
+    "Title": "License problems"
+  },
+  {
+    "Id": 6773,
+    "Title": "can't load the database project oxite.database"
+  },
+  {
+    "Id": 6774,
+    "Title": "Admin/Files/Remove icon missing"
+  },
+  {
+    "Id": 6779,
+    "Title": "'This slug is already being used' when saving a draft post with no publish date"
+  },
+  {
+    "Id": 6784,
+    "Title": "Getting error when running from IIS"
+  },
+  {
+    "Id": 6800,
+    "Title": "XSS Vulnerability in comments area"
+  },
+  {
+    "Id": 6801,
+    "Title": "Repositories,Singletons, and ProviderModel Confusion"
+  },
+  {
+    "Id": 6802,
+    "Title": "Controllers as Business Layer"
+  },
+  {
+    "Id": 6803,
+    "Title": "Controller Segregation"
+  },
+  {
+    "Id": 6804,
+    "Title": "ViewData as Trashcan"
+  },
+  {
+    "Id": 6805,
+    "Title": "BaseController Script/CSS Lists"
+  },
+  {
+    "Id": 6806,
+    "Title": "Helpers - Use Them To Clear Up View Logic"
+  },
+  {
+    "Id": 6807,
+    "Title": "can't load page Tags/Oxite"
+  },
+  {
+    "Id": 6808,
+    "Title": "Publish date specified cannot be parsed - localisation issue"
+  },
+  {
+    "Id": 6818,
+    "Title": "OpenId Logins"
+  },
+  {
+    "Id": 6845,
+    "Title": "Oxite - Table name cleanup project"
+  },
+  {
+    "Id": 6858,
+    "Title": "Is it possible to remove post?"
+  },
+  {
+    "Id": 6861,
+    "Title": "OxiteSite Project in solution not loading (VWD Express)"
+  },
+  {
+    "Id": 6890,
+    "Title": "Bug in query that selects posts for the front page"
+  },
+  {
+    "Id": 6911,
+    "Title": "can't input Chinese in tags"
+  },
+  {
+    "Id": 6982,
+    "Title": "Compile error on r28070."
+  },
+  {
+    "Id": 7032,
+    "Title": "Blank page"
+  },
+  {
+    "Id": 7091,
+    "Title": "If blogml upload fails, the error doesn't show any text -- just a pink icon."
+  },
+  {
+    "Id": 7099,
+    "Title": "Adding Comments to Post - Email validation"
+  },
+  {
+    "Id": 7137,
+    "Title": "404 error received after deleting a post"
+  },
+  {
+    "Id": 7141,
+    "Title": "Tags with symbols"
+  },
+  {
+    "Id": 7150,
+    "Title": "Paginating RSS"
+  },
+  {
+    "Id": 7174,
+    "Title": "Oxite exceptions on first redirect after admin setup"
+  },
+  {
+    "Id": 7177,
+    "Title": "OxiteApplication.ReloadSite() fails"
+  },
+  {
+    "Id": 7199,
+    "Title": "System.ArgumentException: A route named 'Site' could not be found in the route collection."
+  },
+  {
+    "Id": 7227,
+    "Title": "Email validation regex is way too limiting"
+  },
+  {
+    "Id": 7236,
+    "Title": "Add option to enable SSL in SendMessages plugin"
+  },
+  {
+    "Id": 7289,
+    "Title": "Blog post fails due to Area validation error"
+  },
+  {
+    "Id": 7291,
+    "Title": "RenderPartialFromSkin triggers a NullReferenceException when rendering comments"
+  },
+  {
+    "Id": 7356,
+    "Title": "Project file ...\\OxiteSite.csproj cannot be opened. The project type is not supported."
+  },
+  {
+    "Id": 7438,
+    "Title": "IE8"
+  },
+  {
+    "Id": 7441,
+    "Title": "Emails Sent for Spam Comments"
+  },
+  {
+    "Id": 7444,
+    "Title": "Unhandled exception when UserAgent is null"
+  },
+  {
+    "Id": 7446,
+    "Title": "Adding post to new Area causes NullReferenceException"
+  },
+  {
+    "Id": 7647,
+    "Title": "Error While execute the program"
+  },
+  {
+    "Id": 7655,
+    "Title": "ATOM feed dates aren't according to spec, can't be consumed by SyndicationFeed"
+  },
+  {
+    "Id": 7657,
+    "Title": "The type SiteController has multiple constructors of length 5. Unable to disambiguate."
+  },
+  {
+    "Id": 7707,
+    "Title": "'Host' value always resets"
+  },
+  {
+    "Id": 7709,
+    "Title": "Exception on connecting with Windows Live Writer"
+  },
+  {
+    "Id": 7712,
+    "Title": "Documentation Unclear around use of Web Platform Installer"
+  },
+  {
+    "Id": 7723,
+    "Title": "31236 route problem"
+  },
+  {
+    "Id": 7756,
+    "Title": "Error changing password"
+  },
+  {
+    "Id": 7764,
+    "Title": "Bidirectional associations"
+  },
+  {
+    "Id": 7768,
+    "Title": "Exception thrown for Atom/RSS feeds when tag is not found"
+  },
+  {
+    "Id": 7832,
+    "Title": "Area - Add Area (Error)"
+  },
+  {
+    "Id": 7850,
+    "Title": "Exception thrown if Authors is not defined for plug-in"
+  },
+  {
+    "Id": 7851,
+    "Title": "Exception thrown if AuthorUrls not defined for plug-in"
+  },
+  {
+    "Id": 7852,
+    "Title": "Icons defined for plug-ins in external assemblies throw exception if relative path"
+  },
+  {
+    "Id": 7862,
+    "Title": "AjaxActionFilter.cs not under SourceControl"
+  },
+  {
+    "Id": 7878,
+    "Title": "Add User Error"
+  },
+  {
+    "Id": 7879,
+    "Title": "jquery-ui-20081126-1.5.2.js file not found"
+  },
+  {
+    "Id": 7891,
+    "Title": "xmlrpc lib missing"
+  },
+  {
+    "Id": 7942,
+    "Title": "he current type, Oxite.Infrastructure.ISkinResolver, is an interface and cannot be constructed. Are you missing a type mapping?"
+  },
+  {
+    "Id": 8008,
+    "Title": "Missing null check in GetPostDependecies."
+  },
+  {
+    "Id": 8114,
+    "Title": "After deployment on remote server, Oxite throws 404 errors"
+  },
+  {
+    "Id": 8199,
+    "Title": "Exception when 'saving' changed Site Properties on release 35887"
+  },
+  {
+    "Id": 8200,
+    "Title": "Exception thrown when adding page - revision 35887"
+  },
+  {
+    "Id": 8494,
+    "Title": "Exception selecting admin hyperlink"
+  },
+  {
+    "Id": 8495,
+    "Title": "Exception selecting Manage Comments"
+  },
+  {
+    "Id": 8516,
+    "Title": "Setup Wizard Doesn't Validate Length of Site Description Field"
+  },
+  {
+    "Id": 8908,
+    "Title": "In Oxite.Infrastructure.OxiteRegularExpressions.loadExpressions() \"TagReplace\" is not inline with \"IsTag\""
+  },
+  {
+    "Id": 9010,
+    "Title": "Do not use CLUSTERED when creating PK's on GUIDs"
+  },
+  {
+    "Id": 9215,
+    "Title": "Admin Pages are not working"
+  },
+  {
+    "Id": 10146,
+    "Title": "Please modify the source to reflect update in AntiXSS"
+  },
+  {
+    "Id": 10282,
+    "Title": "Latest (55873) version problem in return a post to Draft or Remove it"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "155881",
+    "ThreadId": "46651",
+    "Html": "Receiving this error <br>\r\n<br>\r\n<span>\r\n<h2> <em>A route named 'Site' could not be found in the route collection.<br>\r\nParameter name: name</em> </h2>\r\n</span>\r\n<span style=\"font-family:arial,helvetica,geneva,sunsans-regular,sans-serif\">\r\n<strong> Description: </strong>An\r\nunhandled exception occurred during the execution of the current web\r\nrequest. Please review the stack trace for more information about the\r\nerror and where it originated in the code. <br>\r\n<br>\r\n<strong> Exception Details: </strong>System.ArgumentException: A route named 'Site' could not be found in the route collection.<br>\r\nParameter name: name<br>\r\n<br>\r\n<strong>Source Error:</strong> <br>\r\n<br>\r\n<table bgcolor=\"#ffffcc\" width=\"100%\">\r\n    <tbody>\r\n        <tr>\r\n            <td>\r\n            <code></code>\r\n            <pre>Line 341:        public static string Site(this UrlHelper urlHelper)\r\nLine 342:        {\r\n<span style=\"color:red\">Line 343:            return urlHelper.RouteUrl(&quot;Site&quot;);\r\n</span>Line 344:        }\r\nLine 345:</pre>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n<br>\r\n<strong> Source File: </strong> C:\\Users\\Jerry Dean\\Desktop\\oxite\\Oxite\\Oxite.Mvc\\Extensions\\UrlHelperExtensions.cs<strong> &nbsp;&nbsp; Line: </strong> 343\r\n</span><br>\r\n",
+    "PostedDate": "2009-02-09T10:26:11.073-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "155882",
+    "ThreadId": "46651",
+    "Html": "I tried again and got the hello world post up, clicked on login and nothing changes. The about link does not work either.<br>\r\n",
+    "PostedDate": "2009-02-09T10:37:32.71-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "155989",
+    "ThreadId": "46651",
+    "Html": "I mentioned this to you in email, but to &quot;close the loop&quot;, make sure you're running ASP.NET MVC RC (not the Beta).\r\n",
+    "PostedDate": "2009-02-09T13:50:33.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "155997",
+    "ThreadId": "46651",
+    "Html": "Yes, I am running ASP.NET MVC RC<br>\r\n",
+    "PostedDate": "2009-02-09T14:05:59.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156021",
+    "ThreadId": "46651",
+    "Html": "Are you running the latest release (from January 5th) or one of our checkins since then?\r\n",
+    "PostedDate": "2009-02-09T15:03:48.64-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156027",
+    "ThreadId": "46651",
+    "Html": "28737\r\n",
+    "PostedDate": "2009-02-09T15:17:51.83-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156030",
+    "ThreadId": "46651",
+    "Html": "Weird.  That should work fine.<br>\r\n<br>\r\nThere were two versions of the RC that were released.  Is it possible you caught the first one?  Check out <a href=\"http://www.haacked.com/archive/2009/01/30/aspnetmvc-refresh.aspx\">Phil's post</a> for details of what I'm talking about.  Just want to first make sure you're running the RC Refresh because urls not rendering properly was a bug in the original RC that went out.\r\n",
+    "PostedDate": "2009-02-09T15:24:18.643-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156035",
+    "ThreadId": "46651",
+    "Html": "I installed the latest RC and I am able to login now. Thanks.<br>\r\n",
+    "PostedDate": "2009-02-09T15:45:33.5-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156040",
+    "ThreadId": "46651",
+    "Html": "I tried to add and save a page and received this error:<br>\r\n<br>\r\n<span>\r\n<h2> <em>Object reference not set to an instance of an object.</em> </h2>\r\n</span>\r\n<span style=\"font-family:arial,helvetica,geneva,sunsans-regular,sans-serif\">\r\n<strong> Description: </strong>An\r\nunhandled exception occurred during the execution of the current web\r\nrequest. Please review the stack trace for more information about the\r\nerror and where it originated in the code. <br>\r\n<br>\r\n<strong> Exception Details: </strong>System.NullReferenceException: Object reference not set to an instance of an object.<br>\r\n<br>\r\n<strong>Source Error:</strong> <br>\r\n<br>\r\n<table bgcolor=\"#ffffcc\" width=\"100%\">\r\n    <tbody>\r\n        <tr>\r\n            <td>\r\n            <code></code>\r\n            <pre>Line 56:         public virtual object SaveAdd(string pageAddPath, Page pageInput, User currentUser)\r\nLine 57:         {\r\n<span style=\"color:red\">Line 58:             string pagePath = pageAddPath.Substring(0, pageAddPath.Length - (&quot;/&quot; + PageMode.Add).Length);\r\n</span>Line 59: \r\nLine 60:             if (pagePath.Length == pageAddPath.Length) return null;</pre>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n<br>\r\n<strong> Source File: </strong> C:\\Users\\Jerry Dean\\Desktop\\oxite\\Oxite\\Oxite.Mvc\\Controllers\\PageController.cs<strong> &nbsp;&nbsp; Line: </strong> 58\r\n</span><br>\r\n",
+    "PostedDate": "2009-02-09T15:52:00.147-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156043",
+    "ThreadId": "46651",
+    "Html": "We are still in the process of finalizing the next release so there are things that are broken in our current checkins.  We are expecting to ship the new release some time tomorrow.  You can either keep getting our latest checkins (we are checking in very frequently though) or wait until tomorrow.\r\n",
+    "PostedDate": "2009-02-09T15:57:37.69-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

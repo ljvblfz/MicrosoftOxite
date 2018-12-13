@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "196132",
+    "ThreadId": "58008",
+    "Html": "<p>I am using the build - &quot;oxite-32223\\branches\\tobint\\auth&quot;. It throws an exception when I try to add or edit an area.</p>\r\n<p>Am I using the wrong project?</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-05-31T06:15:00.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "196171",
+    "ThreadId": "58008",
+    "Html": "<p>I believe area management is broken across all branches at the moment.&nbsp; After we finish up plugins over the next few days we'll be moving back to focusing on the rest of the admin.&nbsp; We're in the middle of rebuilding it to be more feature complete.&nbsp; Keep watching.</p>",
+    "PostedDate": "2009-05-31T12:10:28.013-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

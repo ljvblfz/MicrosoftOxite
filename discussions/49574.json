@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "165895",
+    "ThreadId": "49574",
+    "Html": "Any info about properly configuring the two plugins?  When I tried I got an Input String format error...I am wondering if it is because I left a few fields like Domain blank.\r\n",
+    "PostedDate": "2009-03-08T19:05:48.917-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165935",
+    "ThreadId": "49574",
+    "Html": "The branch with plugins is completely experimental and might go away or change at anytime so use it at your own risk.  :)<br>\r\n<br>\r\nThat said, there shouldn't be any secret to getting it configured.  If you don't set a field the plugin doesn't try to set the object's property so you shouldn't get any errors (unless there's a bug).  Leaving the domain field blank is fine.  For my site I just set the username and password and from address and host fields.  If you can debug and step through where the error happens and provide some more info I might be able to help.\r\n",
+    "PostedDate": "2009-03-08T22:23:28.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

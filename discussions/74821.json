@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "256068",
+    "ThreadId": "74821",
+    "Html": "<p>Yeah, this is really weird behavior.&nbsp; I was able to browse all the files in a new d/l of Oxite, but once I'd resolved all the dependencies and successfully built the&nbsp;solution (which works fine; can browse, edit contents, etc), I can't open anything from the /views/* folders or else VS crashes. I get a really cryptic error in my event log as well:</p>\r\n<p>.NET Runtime version 2.0.50727.3603 - Fatal Execution Engine Error (6FC16050) (80131506)</p>\r\n<p>&nbsp;</p>\r\n<p>Any ideas?&nbsp; I've tryed several times now, new locations, new installs of all the dependencies, etc.&nbsp; Same problem no matter what I do.&nbsp; I have VS 2k8, latest patches and such installed.</p>",
+    "PostedDate": "2009-11-11T11:00:53.947-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "256293",
+    "ThreadId": "74821",
+    "Html": "<p>Looks like this was due to a missing hotfix having to do w/ Visual Studio. The oxite connection was temporal only.&nbsp; Sorry!</p>",
+    "PostedDate": "2009-11-12T05:03:35.39-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

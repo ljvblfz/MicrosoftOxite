@@ -1,0 +1,14 @@
+<div class="wikidoc">The StringValidation attribute is applied to a string-type property of the plug-in class.  It allows the plug-in creator to specify a min and max length for the property.  If an invalid value is entered in the configuration screen, the appropriate error messaging is displayed.<br /><br /><b>Example:</b><br /><br /><pre>
+public class DisclaimerSelectorPlugin
+{
+    [StringValidation(MaxLength = 1000,
+        MinLength = 5)]
+    ...
+    public string Disclaimer
+    {
+        get;
+        set;
+    }
+...
+}
+</pre><br /><br /><b>Display:</b><br /></div><div class="ClearBoth"></div>

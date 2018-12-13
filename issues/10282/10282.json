@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Line 38:         public void FillTags(ITaggedEntity entity)\nLine 39:         {\nLine 40:             foreach (Tag tag in entity.GetTags())\nLine 41:                 FillTag(tag);\nLine 42:         }\n \nthis is where the error occurs, I am Missing something, another interesting fact is that here on my machine only 5 projects have loaded Oxite, Blogs, CMS, Site, Setup",
+    "LastUpdatedDate": "2013-02-21T15:43:01.563-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2010-02-20T01:46:36.383-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Latest (55873) version problem in return a post to Draft or Remove it",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10282
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

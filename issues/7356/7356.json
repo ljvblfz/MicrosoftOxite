@@ -1,0 +1,76 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Config issue.",
+    "ClosedDate": "2009-03-26T13:11:27.697-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\n \nI'm getting the error, \"Project file ...\\OxiteSite.csproj cannot be opened. The project type is not supported...\" (please see attached screenshot) after following each installation step by the letter as per the getting started page, and I've reviewed all the (2) articles here regarding this same issue but neither of them have helped. \n \nWe have VS 2008 Professional Edition w/ SP1 installed, and all pre-req's have been deployed as per instructions, yet this error refuses to go away. Could someone please help?\n \nHow do I get this working please?\n \nMany thanks,\nPhilip",
+    "LastUpdatedDate": "2013-05-16T03:38:02.577-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-03-25T13:48:44.883-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Project file ...\\OxiteSite.csproj cannot be opened. The project type is not supported.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7356
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1850,
+      "FileName": "Oxite_Error.jpg",
+      "DownloadUrl": ".\\1850"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Did you install ASP.NET MVC?  Not having ASP.NET MVC installed would cause this problem.  Also, questions like this would be more appropriate as a new discussion, not a new work item.",
+      "PostedDate": "2009-03-25T21:40:54.167-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-03-26T13:11:27.697-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Hi Erik, Sorry missed your post. Yes, we have ASP.NET MVC v.1 installed successfully on a clean VS 2008 Professional Edition instance, running on a clean install of Windows Server 2003 Enterprise Edition. We followed all the steps to the letter. Please advise as to what else might be the issue, or should I copy this over to the discussion group now?\r\n\r\nThanks,\r\nPhilip",
+      "PostedDate": "2009-04-07T10:23:27.28-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Yah, a discussion would be more appropriate, but offhand, the only time I've ever seen that error is when MVC isn't installed.  :(",
+      "PostedDate": "2009-04-07T12:34:38.857-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:09.393-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:02.577-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

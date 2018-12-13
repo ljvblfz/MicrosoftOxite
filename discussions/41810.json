@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "138733",
+    "ThreadId": "41810",
+    "Html": "The page for advanced installation instructions has nothing on it. <a href=\"http://www.codeplex.com/oxite/Wiki/View.aspx?title=vsdbpro&referringTitle=gettingstarted\">here</a><br>\r\nI got to it from the getting started page.<br>\r\n",
+    "PostedDate": "2008-12-08T13:30:24.183-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "138735",
+    "ThreadId": "41810",
+    "Html": "yeah... I'm behind on those, but I'll get to them soon. General gist of the advanced instructions is:<br>\r\n<br>\r\n<ul>\r\n    <li>You need the ASP.NET MVC Beta installed</li>\r\n    <li>You need SQL Server 2005 or 2008, specifically SQL Server 2005 Express if you want to use the DB Pro project the way it is.</li>\r\n    <li>You should open the Oxite.VWDExpress solution file unless you have a version of Visual Studio that supports database and test projects</li>\r\n</ul>\r\n",
+    "PostedDate": "2008-12-08T13:43:11.727-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "138750",
+    "ThreadId": "41810",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"http://www.codeplex.com/oxite/WorkItem/View.aspx?WorkItemId=6741\">here</a> to go to the work item and continue the discussion.",
+    "PostedDate": "2008-12-08T14:16:36.087-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

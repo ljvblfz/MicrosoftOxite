@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "216151",
+    "ThreadId": "63569",
+    "Html": "<p>So far the DB issues seem to be resolved with the latest MDF (thanks!)</p>\r\n<p>However now when I do a Publish of the OxiteSite I get this error:</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>Publishing folder Skins/Admin/Views/ContentItem...\r\nUnable to add <span style=\"color:#A31515\">'Skins/Admin/Views/ContentItem/GlobalContentEdit.ascx'</span> to the Web site.  \r\nUnable to add file <span style=\"color:#A31515\">'Skins\\Admin\\Views\\ContentItem\\GlobalContentEdit.ascx'</span>.  The system cannot find the file specified.\r\n\r\nUnable to add <span style=\"color:#A31515\">'Skins/Admin/Views/ContentItem/GlobalContentEdit.aspx'</span> to the Web site.  Unable to add file <span style=\"color:#A31515\">'Skins\\Admin\\Views\\ContentItem\\GlobalContentEdit.aspx'</span>.  The system cannot find the file specified.\r\n\r\nUnable to add <span style=\"color:#A31515\">'Skins/Admin/Views/Shared/EditContentItems.ascx'</span> to the Web site.  Unable to add file <span style=\"color:#A31515\">'Skins\\Admin\\Views\\Shared\\EditContentItems.ascx'</span>.  The system cannot find the file specified\r\n</pre>\r\n</div>\r\n<p>Any ideas here? Should I just skip it? Sorry if this was covered in another post.</p>\r\n<p>Thanks!<br>Steven</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-07-26T06:58:46.993-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "216199",
+    "ThreadId": "63569",
+    "Html": "<p>Sorry about that.&nbsp; I missed a few files in the merge last week between Oxite and MicrosoftPDC branches.&nbsp; OxiteSite is a copy instead of a branch because there are things that are specific to each site in there so it's a little difficult to keep the views in sync.&nbsp; Get latest and everything will work fine for you.</p>",
+    "PostedDate": "2009-07-26T12:39:42.983-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

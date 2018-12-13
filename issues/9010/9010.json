@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "CLUSTERED means it will physically sort the data on the hard disc in the order of the PK. This gives the fastest lookup performance. However, the GUIDs (which are random) for inserts means that it will not be added to the end of the database, but somewhere in the middle. This means a re-sort upon insertion, and because its CLUSTERED it has to resort the data on the hard disc meaning slow inserts.\n \nCLUSTERED indexes are ideally suited to integer IDENTITY columns only.\nYou should simply remove the CLUSTERED keyword from the database schema creation SQL against PK's that are using GUIDs (uniqueidentifier).",
+    "LastUpdatedDate": "2013-02-21T15:43:02.683-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-10-20T02:52:57.887-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Do not use CLUSTERED when creating PK's on GUIDs",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 9010
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

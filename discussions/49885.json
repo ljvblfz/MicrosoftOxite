@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "166945",
+    "ThreadId": "49885",
+    "Html": "Hey,<br>\r\nIn my experience, using GUIDs as primary keys becomes very inefficient as the size of the DB grows.<br>\r\nIs there any particular reason you opted for this approach?<br>\r\n<br>\r\nAs I understand, you've already identified all the appropriate entities to allow for multiple sites and multiple blogs (areas) etc. So why can't a identity seeded int PK column be used?<br>\r\n<br>\r\nCheers,<br>\r\nCathal.<br>\r\n",
+    "PostedDate": "2009-03-11T09:16:44.52-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "166999",
+    "ThreadId": "49885",
+    "Html": "Yes, there are performance differences, but they're minor until you get into huge amounts of data.  If someone is running a site on Oxite so huge that GUIDs as PKs become a problem, we can look into it.  But I can promise you there will be other performance issues much more important than GUIDs as PKs that would need to be addressed first.  Are you having performance issues?\r\n",
+    "PostedDate": "2009-03-11T11:13:38.91-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "167058",
+    "ThreadId": "49885",
+    "Html": "Hey Erik,<br>\r\nNo I haven't been having any performance issues.<br>\r\nI guess it was just more a design decision question than anything else.<br>\r\nIt's also much easier to compare integers at a glance than it is GUIDs etc. So I was just interested to see if there was an underlying reason for the choice.<br>\r\n<br>\r\nBut that all aside (and it goes without saying) - cool fu*kin' app!<br>\r\nI'm still at the exploritory phase. I'm trying to decide how I can fit the S#arp Architecture idiom (I don't know if you're aware of the project) into the Oxite framework . So combine Oxite functionalities with the S#arp approach for CRUD and unit testing.<br>\r\n<br>\r\nCheers,<br>\r\nCathal.<br>\r\n",
+    "PostedDate": "2009-03-11T13:19:36.057-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "167066",
+    "ThreadId": "49885",
+    "Html": "It was mostly just a personal preference.  With everything being the same type for IDs you can do some interesting things around logging.  That's not reason enough to do it, but since I like it, I went with it.  :)  To be honest, this project started out of me extracting what our team built for <a href=\"http://visitmix.com\">http://visitmix.com</a> into something more generic we could share with others.  Sometimes design decisions are made very quickly.  ;)\r\n",
+    "PostedDate": "2009-03-11T13:39:46.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

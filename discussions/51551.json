@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "172896",
+    "ThreadId": "51551",
+    "Html": "I am trying to get my rss feed working with feedburner.  Here is a sample of the rss xml produced by oxite:<br>\r\n&lt;title&gt;Blog Name&lt;/title&gt;<br>\r\n        &lt;description&gt;some description&lt;/description&gt;<br>\r\n        &lt;link&gt;/RSS&lt;/link&gt;<br>\r\n        &lt;language&gt;en&lt;/language&gt;<br>\r\n        &lt;image&gt;<br>\r\n            &lt;url&gt;http://mysite/Content/icons/mushroom.png&lt;/url&gt;<br>\r\n            &lt;title&gt;My Blog&lt;/title&gt;<br>\r\n            &lt;link&gt;/RSS&lt;/link&gt;<br>\r\n            &lt;width&gt;64&lt;/width&gt;<br>\r\n            &lt;height&gt;64&lt;/height&gt;<br>\r\n        &lt;/image&gt;<br>\r\n<br>\r\nI *think* some of these places like feedburner are having a problem with the &lt;link&gt;/RSS&lt;/link&gt; portion.  Various validators say this should be a full url.<br>\r\n<br>\r\nAny thoughts?\r\n",
+    "PostedDate": "2009-03-27T12:16:04.053-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "172902",
+    "ThreadId": "51551",
+    "Html": "I found and fixed that bug a few days ago actually.  Unfortunately, the current checkin is a bit unstable here and there.  However, you should be able to go in and find the RSS related views and update yours to match so it's fixed for you until the next release.  Basically, you just need to add a Url.AbsolutePath() call around where that link is being generated.\r\n",
+    "PostedDate": "2009-03-27T12:42:20.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "172906",
+    "ThreadId": "51551",
+    "Html": "I'm not sure how to contribute (in an earlier post community contribution was slated for a later date and probably still is) but here goes anyway.  Can someone point this newbie contributor to some sort of process for producing diff/patch files with VS2008?  I looked, and got lost.  Anyway:<br>\r\n<br>\r\nThe File: OxiteSite\\Views\\Post\\Rss.aspx<br>\r\n<br>\r\nLine 7:  &lt;link&gt;&lt;%=Url.Container(Model.Container) %&gt;&lt;/link&gt;<br>\r\nbecomes<br>\r\n&lt;link&gt;&lt;%=Url.AbsolutePath(Url.Container(Model.Container)) %&gt;&lt;/link&gt;<br>\r\n<br>\r\nand line 12 is exactly the same scenario.<br>\r\n<br>\r\nPerhaps the Atom.aspx file would also need some doctoring, but at this point I haven't looked at it.\r\n",
+    "PostedDate": "2009-03-27T12:52:02.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "172908",
+    "ThreadId": "51551",
+    "Html": "Doh, you're too quick.  You gotta let me struggle through this some.  :)  Thanks.\r\n",
+    "PostedDate": "2009-03-27T12:54:24.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "172911",
+    "ThreadId": "51551",
+    "Html": "Ha, ok, I'll let you struggle next time.  :P  And yes, I believe ATOM needs the fix too.  Still working on getting contributions to be accepted.\r\n",
+    "PostedDate": "2009-03-27T12:58:02.84-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

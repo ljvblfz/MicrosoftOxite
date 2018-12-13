@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "The visuals of this page still need updated to fit the new admin, but the errors are now fixed.",
+    "ClosedDate": "2009-08-15T01:16:03.77-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Changeset\n-----------------------------\n39866\n \nRepro Steps\n-----------------------------\nAdd some comments to the default post.\nLogin as Admin\nSelect Quicklinks > Manage Comments\n \nExpected Result\n-----------------------------\nGo to the Manage Comments page.\n \nActual Result\n-----------------------------\nSystem.NullReferenceException was unhandled by user code\n  Message=\"Object reference not set to an instance of an object.\"\n  Source=\"Oxite\"\n  StackTrace:\n       at Oxite.Extensions.HtmlHelperExtensions.PageTitle[TModel](HtmlHelper`1 htmlHelper, String[] items) in c:\\users\\charlie\\desktop\\oxite\\oxite\\oxite\\extensions\\htmlhelperextensions.cs:line 504\n       at ASP.views_shared_error_aspx.__Render__control3(HtmlTextWriter __w, Control parameterContainer) in c:\\Users\\Charlie\\Desktop\\Oxite\\Oxite\\OxiteSite\\Views\\Shared\\Error.aspx:line 28\n       at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)\n       at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)\n       at System.Web.UI.Control.Render(HtmlTextWriter writer)\n       at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)\n       at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)\n       at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)\n       at ASP.views_shared_site_master.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\\Users\\Charlie\\AppData\\Local\\Temp\\Temporary ASP.NET Files\\root\\e97f5a43\\4f0bbb58\\App_Web_qgwgxlad.17.cs:line 0\n       at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)\n       at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)\n       at System.Web.UI.Control.Render(HtmlTextWriter writer)\n       at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)\n       at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)\n       at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)\n       at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)\n       at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)\n       at System.Web.UI.Page.Render(HtmlTextWriter writer)\n       at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)\n       at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)\n       at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)\n       at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)\n       at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)\n  InnerException: [Null]",
+    "LastUpdatedDate": "2013-05-16T03:37:59.03-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-08-14T03:13:35.387-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Exception selecting Manage Comments",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8495
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

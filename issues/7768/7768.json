@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Display page for missing tags returns the 404 page, which makes sense:\nhttp://erikporter.com/Tags/NOTFOUNDTAG\n \nThe Atom and RSS feeds for missing tags return an exception:\nhttp://erikporter.com/Tags/NOTFOUNDTAG/Atom\n \nI think they should probably just return an empty feed.",
+    "LastUpdatedDate": "2013-02-21T15:43:06.49-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-05-15T13:19:23.957-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Exception thrown for Atom/RSS feeds when tag is not found",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7768
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Good catch.  I probably won't get to this for a bit, but I'll make feeds return a 404 as well, which I think is more appropriate than an empty feed.  Thanks!",
+      "PostedDate": "2009-05-15T14:58:19.623-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I don't think a 404 would make sense - it's like running a select on a table and getting no matching results. I shouldn't get a \"database connection failed\", I should get a result with no records. That's what other blog engines do:\r\nhttp://blogs.msdn.com/e7/archive/tags/GODZILLA/default.aspx",
+      "PostedDate": "2009-05-17T21:40:31.047-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "It should return a 404, since it is a non-existent path. From a developer point of view the tag name is just a parameter in a query, but from a URI point of view it is a pointer to a resource that doesn't exist. A page or feed based on the value entered in a search form should return a nice response (a \"no results found\" page or an empty feed), but a manually constructed URI to a page that doesn't exist should return a 404 just like it would if we were building the site using static html pages. The fact that we are using routes, controllers and a database shouldn't be reflected in the behavior of our site.",
+      "PostedDate": "2009-05-17T23:35:32.283-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "We can work with whatever you come up with, but the argumentative nerd in me says that you should match what other major blogs and feeds do, which is return an empty feed when there's no matching content:\r\nhttp://en.blog.wordpress.com/category/GODZILLA/feed/\r\nhttp://www.amazon.com/rss/tag/GODZILLA-LOVES-OXITE/new/\r\n\r\nThat makes more sense to me, anyways - when you filter something and get no results, you get back an empty list. It's like running a \"SELECT * FROM TABLE WHERE PRODUCTID = -1\" query - I should get back an empty recordset, not a \"database not found\" error.",
+      "PostedDate": "2009-05-19T13:01:55.837-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "But you're not querying anything.  A better comparison in your example would be \"what should SELECT * FROM SOME_TABLE_THAT_DOES_NOT_EXIST WHERE PRODUCTID - 1 return?\".  It shouldn't return an empty result set, it should return an error.  Because the tag doesn't exist, how can something underneath it exist?  Besides, if that result is something that gets cached (as a blank result until there are results) it seems like you could write an app to quickly fill the cache by just putting in a new word for the tag and /ATOM after it every 1/100th of a second.  Seems bad to me.\r\n\r\nApparently I have an argumentative nerd side too.  ;)",
+      "PostedDate": "2009-05-19T13:52:02.067-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:06.49-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

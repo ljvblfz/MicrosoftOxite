@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "changeset #32814\nWhen adding a new user, \n \nerror on UserRepository.cs \n \nuserToSave.DefaultLanguageID = user.LanguageDefault.ID;\n \nthe user.LanguageDefault.ID is null",
+    "LastUpdatedDate": "2013-02-21T15:43:05.373-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-06-11T14:42:10.78-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Add User Error",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7878
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "The admin is currently in a broken state.  We're aware of this bug, but are finishing up plugins before moving on to fixing up the admin.  Thanks!",
+      "PostedDate": "2009-06-11T18:03:02.19-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:05.373-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

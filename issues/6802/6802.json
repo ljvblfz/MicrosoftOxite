@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-07-02T00:34:39.27-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "One of the things that the Oxite team decided to do was to separate the Controllers and Views into another Project for what I can only assume is the separation of business logic from view logic. This can lead to some confusion since Controllers are meant to handle application flow - not necessarily business logic. \n \nThis decision is causing an excess of code in the form of Controller Actions. Some actions have more than 100 lines of code. In general your Controller should concern itself with 7-10 actions only (http://blog.wekeroad.com/2007/12/06/aspnet-mvc-using-restful-architecture/) - and these should revolve around CRUD. In general, if you find yourself needing 12-20 Actions on your Controller, it's time to refactor a bit and split out your functionality.\n \nI would suggest splitting this into a specific layer, letting the Controllers do what they do the best: control the flow of the application based on user input.\n \nFrom Rob Conery's blog: http://blog.wekeroad.com/blog/some-thoughts-on-oxite/",
+    "LastUpdatedDate": "2013-05-16T03:38:06.103-07:00",
+    "PlannedForRelease": "Oxite.2009.2.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-16T16:59:07.24-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Controllers as Business Layer",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 4,
+    "Id": 6802
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This was fixed in the February 15th release, but I'm just now getting around to marking it as fixed.",
+      "PostedDate": "2009-07-02T00:34:33.083-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-02T00:34:39.27-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:14.893-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:06.103-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

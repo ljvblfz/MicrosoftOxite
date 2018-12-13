@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "139713",
+    "ThreadId": "42061",
+    "Html": "Why does Microsoft have to create ANOTHER CMS or blog platform.&nbsp; Why can't they just build off of BlogEngine.NETs success and take on development for the engine?<br>\r\n<br>\r\nThis is total Chaos.<br>\r\n",
+    "PostedDate": "2008-12-11T08:10:38.807-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139797",
+    "ThreadId": "42061",
+    "Html": "Oxite was built to be a learning tool to help developers learn ASP.NET MVC.  BlogEngine.NET (at least the last time I checked) doesn't run on ASP.NET MVC.  There are lots of advantages to running on ASP.NET MVC as opposed to ASP.NET WebForms and we wanted to show that off and have a good starting point for thos interested.<br>\r\n<br>\r\nThis is now a community project so we'll see where it goes, but today we don't have anywhere near the functionality of BlogEngine.NET or other blogging engines.  If you're looking to run a blog off of a polished, well established blogging engine, then Oxite is not for you.<br>\r\n<br>\r\nI will add this to the FAQ soon to help clear up any confusion.\r\n",
+    "PostedDate": "2008-12-11T12:23:54.813-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139800",
+    "ThreadId": "42061",
+    "Html": "Why didn't you complain about this when BlogEngine.NET was announced?  It certainly wasn't the first.<br>\r\n<br>\r\nIf it were any other company, you wouldn't here this sort of whining.<br>\r\n<br>\r\n",
+    "PostedDate": "2008-12-11T12:32:11.22-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140063",
+    "ThreadId": "42061",
+    "Html": "@kfarmer,<br>\r\n<br>\r\nHey man back off.&nbsp; I am a true Microsoft fan and love the work they do.&nbsp; I was just wondering why if any were they trying to take the place of BlogEngine.NET and Erik answered that question.&nbsp; I thought BlogEngine was a GREAT Open source tool and it shouldn't try to be replaced.&nbsp; It just looked to me for a second that Microsoft was trying to replace it.<br>\r\n<br>\r\n@ErikPorter,<br>\r\n<br>\r\nThanks for the answer.&nbsp; Appreciate it a lot.<br>\r\n",
+    "PostedDate": "2008-12-12T08:19:17.957-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140238",
+    "ThreadId": "42061",
+    "Html": "There are several ASP MVC-blog projects here on codeplex alone. Not to mention blogging platforms on other hosts (e.g. subtext) or in other languages (e.g. WordPress) You could call it &quot;total chaos&quot;, or you could call it an open market. You could call it a lot of experiments going on. <br>\r\n<br>\r\nIt's worth remembering when winners emerge that standards and interop between the winners is good.<br>\r\n",
+    "PostedDate": "2008-12-13T03:50:32.343-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

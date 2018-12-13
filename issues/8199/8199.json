@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-08-06T08:41:42.083-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "System.Data.SqlClient.SqlException was unhandled by user code\n  Message=\"Cannot insert the value NULL into column 'PluginsPath', table 'C:\\\\PROJECTS\\\\OXITE\\\\35887\\\\OXITE\\\\OXITESITE\\\\APP_DATA\\\\OXITE.DATABASE.MDF.dbo.oxite_Site'; column does not allow nulls. UPDATE fails.\\r\\nThe statement has been terminated.\"\n  Source=\".Net SqlClient Data Provider\"\n  ErrorCode=-2146232060\n  Class=16\n  LineNumber=1\n  Number=515\n  Procedure=\"\"\n  Server=<cut>\n  State=2\n  StackTrace:\n       at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)\n       at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)\n       at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)\n       at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)\n       at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)\n       at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)\n       at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)\n       at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)\n       at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()\n       at System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)\n       at System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)\n       at System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)\n       at System.Data.Linq.ChangeDirector.StandardChangeDirector.DynamicUpdate(TrackedObject item)\n       at System.Data.Linq.ChangeDirector.StandardChangeDirector.Update(TrackedObject item)\n       at System.Data.Linq.ChangeProcessor.SubmitChanges(ConflictMode failureMode)\n       at System.Data.Linq.DataContext.SubmitChanges(ConflictMode failureMode)\n       at System.Data.Linq.DataContext.SubmitChanges()\n       at Oxite.Repositories.SqlServer.SqlServerSiteRepository.Save(Site site) in C:\\Projects\\oxite\\35887\\Oxite\\Oxite\\Repositories\\SqlServer\\SqlServerSiteRepository.cs:line 90\n       at Oxite.Services.SiteService.EditSite(Site site, ValidationStateDictionary& validationState) in C:\\Projects\\oxite\\35887\\Oxite\\Oxite\\Services\\SiteService.cs:line 70\n       at Oxite.Modules.Core.Controllers.SiteController.SaveItem(Site siteInput, UserInputAdd userInput) in C:\\Projects\\oxite\\35887\\Oxite\\Oxite.Core\\Controllers\\SiteController.cs:line 123\n       at lambda_method(ExecutionScope , ControllerBase , Object[] )\n       at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)\n       at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)\n       at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)\n       at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7()\n       at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)\n  InnerException:",
+    "LastUpdatedDate": "2017-11-27T23:44:18.19-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-07-27T07:28:16.203-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Exception when 'saving' changed Site Properties on release 35887",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8199
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Resolved with changeset 38711.",
+      "PostedDate": "2009-08-06T08:41:42.083-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:04.04-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:37:59.64-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-11-27T23:44:18.19-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "178300",
+    "ThreadId": "53019",
+    "Html": "Is there some way to convert MVC design galleries to Oxite Skin?\r\n",
+    "PostedDate": "2009-04-12T01:14:04.24-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "178467",
+    "ThreadId": "53019",
+    "Html": "Sure, but some work is involved (like with anything).  :)<br>\r\n<br>\r\nThis site took one of the skins from the mvc design gallery and used it for their site as an Oxite skin: <a href=\"http://www.dinalt.ru/\">http://www.dinalt.ru/</a><br>\r\n<br>\r\nNathan put up a wiki page a while back about <a href=\"http://oxite.codeplex.com/Wiki/View.aspx?title=Skinning\">skinning</a> that might help get you started. \r\n",
+    "PostedDate": "2009-04-12T23:18:41.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "Id": "138966",
+    "ThreadId": "41875",
+    "Html": "Getting systems such as Oxite LIVE in a shared hosting environment can be difficult.  But a large portion, if not majority share, of the potential oxite community will be using shared hosting.<br>\r\n<br>\r\nI use DiscountASP.NET hosting as recommended by <a href=\"http://www.ASP.NET\">www.ASP.NET</a>.  So, will Oxite run smoothly in that environment? \r\n",
+    "PostedDate": "2008-12-09T08:02:03.163-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139008",
+    "ThreadId": "41875",
+    "Html": "We are working to make this run in medium trust right now, which is a common setting for shared hosting, but Linq to SQL has special requirements as documented here <a href=\"http://msdn.microsoft.com/en-us/library/bb907622.aspx\">http://msdn.microsoft.com/en-us/library/bb907622.aspx</a> and those might be a problem in some environments. We are busy right now trying to get it to run on our own various hosts, but if you get it running on any specific hosts please post information here on any issues you ran into (or if it just worked).<br>\r\n",
+    "PostedDate": "2008-12-09T09:15:06.813-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139041",
+    "ThreadId": "41875",
+    "Html": "I use Discount ASP.NET and will be moving to Oxite for my own blog soon.  I will let you know what it takes to get it running (or that I switched hosts).  :)\r\n",
+    "PostedDate": "2008-12-09T09:53:58.27-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139169",
+    "ThreadId": "41875",
+    "Html": "I will be working to setup an Oxite site on Discount ASP.NET so I too will post my experience (success or failure).<br>\r\n<br>\r\nAs a side note, to the authors, a quick way to gain visibility would be to coordinate with GoDaddy on making Oxite one of the Community Applications that can be installed in a GoDaddy shared host with the click of a button.\r\n",
+    "PostedDate": "2008-12-09T18:22:02.963-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139170",
+    "ThreadId": "41875",
+    "Html": "I don't think we are ready to be included in the GoDaddy community apps yet, but it is a good idea... thanks.<br>\r\n<br>\r\nI expect DiscountASP.NET should work for you, I sent them email today and they thought it would. I haven't had a chance to try it out though.<br>\r\n",
+    "PostedDate": "2008-12-09T18:35:02.19-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139200",
+    "ThreadId": "41875",
+    "Html": "Server Intellect is another option. They'll hook you up with full trust, to let LinqToSql do its thing, if you just ask for it.<br>\r\n<br>\r\nI'm still working on getting my blog up and running with them. I'm just holding out for the legacy (IIS6) routing solution Erik's working on so I don't have to muck with the route URLs. Something you'd need to do if going the wildcard mapping route (http://blog.codeville.net/2008/07/04/options-for-deploying-aspnet-mvc-to-iis-6/) isn't an possible.<br>\r\n",
+    "PostedDate": "2008-12-09T23:18:47.437-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139273",
+    "ThreadId": "41875",
+    "Html": "I am trying to get things working at webhost4life with limited success - still working on it.<div><br></div><div>1) Make sure you have the beta MVC .dll references set to copy-local (i.e. most shared hosts won't have the beta MVC bits in the GAC)</div><div><br></div><div>2) Trying to get the local SQL Express database to work (don't think they have SQL Express on the shared boxes), or looking for a script to generate the tables on a shared instance of SQL Server 2008 (or 2005 if necessary). There is a lot of helpful stuff in the DB project, just trying to separate out what is needed.  This is harder to do when you aren't sa/dbo on the database and don't have access to the system tables.  It'd be nice if there was one script that would generate the tables and insert the seed/lookup data that would run inside a single database that you had dbo rights on.</div>",
+    "PostedDate": "2008-12-10T06:23:43.517-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139771",
+    "ThreadId": "41875",
+    "Html": "Got it working<br>\r\n<br>\r\n1) Generated the CREATE scripts from the local SQL Express DB instance for all the tables<br>\r\n2) Even if you can't open the database project, the folder still has this file &quot;Oxite.Database\\Scripts\\Post-Deployment\\DefaultValues.sql&quot; - run that on your new tables and that seeds the DB<br>\r\n3) Make sure you update your Connection String and the Site information for your new site<br>\r\n<br>\r\nWorking without errors in shared hosting.<br>\r\n<br>\r\nNow to figure out more about customizing it and meshing it into some existing MVC stuff.<br>\r\n",
+    "PostedDate": "2008-12-11T10:48:28.727-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139772",
+    "ThreadId": "41875",
+    "Html": "That's good to here babernethy! Good job figuring all that out, we'll be trying to improve the database deployment side of the project ... mostly with additional instructions... so I appreciate you working hard to get it working.<br>\r\n<br>\r\nAlso good to hear that you have it up and running under shared hosting. Post a link to your site when you are ready for folks to check it out!\r\n",
+    "PostedDate": "2008-12-11T10:51:41.677-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140119",
+    "ThreadId": "41875",
+    "Html": "I work for DiscountASP.NET. We got oxite working on DiscountASP.NET. We posted in our blog (daspblog.com) about it.\r\n",
+    "PostedDate": "2008-12-12T10:23:58.367-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140121",
+    "ThreadId": "41875",
+    "Html": "Thanks, dasp!<br>\r\n<br>\r\nI've also successfully migrated my own blog to run Oxite on DiscountASP.NET  :)\r\n",
+    "PostedDate": "2008-12-12T10:26:17.11-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140666",
+    "ThreadId": "41875",
+    "Html": "Has anyone tried any of the BackgroundServices stuff on shared hosting?  I see that it uses TransactionScope, and since that involves DTS I would think it would not work in medium trust.\r\n",
+    "PostedDate": "2008-12-15T10:22:16.46-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140669",
+    "ThreadId": "41875",
+    "Html": "I could be wrong, but my understanding was that DTS is only used when the transaction occurrs across multiple connections.  There shouldn't be any place in Oxite (if there is, it's a bug) that does work across multiple connections.<br>\r\n<br>\r\nThat said, I'll be trying out the background services on DiscountASP.NET soon (running on their Medium-Trust + ReflectionPermssion [for LINQ to SQL]) so we'll see.  :)\r\n",
+    "PostedDate": "2008-12-15T10:25:27.29-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140671",
+    "ThreadId": "41875",
+    "Html": "A little digging and it looks like you are right: <a href=\"http://msdn.microsoft.com/en-us/library/ms973865.aspx\">http://msdn.microsoft.com/en-us/library/ms973865.aspx</a><br>\r\n<br>\r\nIt uses the Lightweight Transaction Manager unless it needs to be promoted to DTS, and that is when it demands DistributedTransaction permission.  Sorry for my ignorance; I have never tried to run TransactionScope in medium trust and I must admit that I have never paid attention to the internals of its magic.\r\n",
+    "PostedDate": "2008-12-15T10:35:58.957-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140729",
+    "ThreadId": "41875",
+    "Html": "No worries.  :)  Only reason I knew that was because of a bug we found a while back where we were doing work off of two different datacontexts and it freaked calling DTS.\r\n",
+    "PostedDate": "2008-12-15T13:56:59.74-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

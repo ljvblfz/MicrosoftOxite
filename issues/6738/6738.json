@@ -1,0 +1,95 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Metaweblog isn't extensible enough.  Change the API to Wordpress API.  The site supports New Pages, but the API doesn't...that seems wrong.  Better Live Writer integration with feature set if WordPress API supported.",
+    "LastUpdatedDate": "2013-02-21T15:43:18.6-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-08T12:46:04.747-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Implement Wordpress API",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 8,
+    "Id": 6738
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Adding support for the page api is planned, but with no ETA... good suggestion!",
+      "PostedDate": "2008-12-08T13:19:42.263-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-08T14:16:42.013-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I wouldn't *change* it. Metaweblog can coexist with Wordpress as a separate API (on a separate service page).",
+      "PostedDate": "2008-12-08T17:20:01.05-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-08T19:53:50.19-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-09T14:03:36.863-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I nearly have this implemented and working with Live Writer.  One problem, though:  since Pages aren't assigned to an area, how should I go about dealing with security?  Should anyone who can log in be able to edit/add/delete Pages?  If we add the Pages to an area, will that break anything else?  Should the Pages for a particular User be placed under a specific relative path?  Thoughts?",
+      "PostedDate": "2008-12-16T19:41:24.427-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-17T09:18:27.767-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-09T12:50:08.48-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-11T11:43:47.6-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-01T15:11:50.7-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:18.6-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

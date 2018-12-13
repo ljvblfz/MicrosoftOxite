@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "230803",
+    "ThreadId": "67902",
+    "Html": "<p>I just managed to run Oxite on SQL Azure but I'm wondering whether someone has succeeded running it on Windows Azure as well?</p>",
+    "PostedDate": "2009-09-03T11:27:02.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "230904",
+    "ThreadId": "67902",
+    "Html": "<p>OK, I did it! It's really easy to make Oxite running on Windows Azure and SQL Azure.</p>\r\n<p>Is it worth posting manual on moving Oxite to Azure?</p>",
+    "PostedDate": "2009-09-03T15:25:06.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "230905",
+    "ThreadId": "67902",
+    "Html": "<p>Yah, I saw your tweet.&nbsp; Very awesome!&nbsp; Yes, blog about it, share the details.&nbsp; :)</p>",
+    "PostedDate": "2009-09-03T15:27:51.51-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

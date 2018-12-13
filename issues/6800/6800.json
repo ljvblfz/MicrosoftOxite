@@ -1,0 +1,90 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-01-05T20:38:53.97-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I know this has been fixed, I'm just adding it for visibility and so it can be closed as such.\n \nThere is a vulnerability in the comments area. A fix would be to Html.Encode() the comment.Url on the comments page.\n \nFrom Rob Conery's blog: http://blog.wekeroad.com/blog/some-thoughts-on-oxite/",
+    "LastUpdatedDate": "2013-05-16T03:38:06.387-07:00",
+    "PlannedForRelease": "Oxite.2009.1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-16T16:53:13.74-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "XSS Vulnerability in comments area",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6800
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This was taken care of and checked-in shortly after we were alerted of the problem.",
+      "PostedDate": "2008-12-16T17:49:36.693-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-16T17:49:37.52-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-18T10:43:05.323-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "fixed\r\n\r\n** Closed by Duncanma 12/18/2008 10:43 AM",
+      "PostedDate": "2009-01-05T20:38:04.72-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:38:05.063-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:38:26.517-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:38:47.983-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:38:53.97-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:15.283-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:06.387-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

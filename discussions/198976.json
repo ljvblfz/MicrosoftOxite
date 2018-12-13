@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "407592",
+    "ThreadId": "198976",
+    "Html": "<p>Simply question, Can Oxite work without xUnit ? If Yes, how it would be? There's a reason behind this, it's not simply curiosity. I run VS 2010 RC and I'm trying to get Oxite to work with MVC 2; However, xUnit doesn't support the current MVC 2 version.</p>",
+    "PostedDate": "2010-02-25T22:08:32.457-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "407597",
+    "ThreadId": "198976",
+    "Html": "<p>Sure, just remove any tests that use xUnit.</p>",
+    "PostedDate": "2010-02-25T22:11:30.927-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

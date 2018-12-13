@@ -1,0 +1,110 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-01-05T20:34:26.893-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Add minimal BlogML import UI.",
+    "LastUpdatedDate": "2013-05-16T03:38:08.18-07:00",
+    "PlannedForRelease": "Oxite.2009.1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-08T15:24:26.703-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Add BlogML Import Support",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 6,
+    "Id": 6743
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Added Blog ML importing in the most recent check-in. You put a BlogML.xml file into the root of your site and then go to /Admin/BlogMLImport/ ... it blows away what is there and adds your data in. Obviously could use some UI and more options, but it is a start and was enough to get all of Erik's data brought into the system.",
+      "PostedDate": "2008-12-09T13:26:04.3-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-09T14:30:57.41-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-09T16:17:09.833-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-09T16:17:21.363-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I just tried it and it works. It also blew off all the html and images in my posts :) I'll try to fix it tomorrow...",
+      "PostedDate": "2008-12-10T00:12:10.31-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Are you sure it actually removed html and images?  If an excerpt isn't supplied for a post, we supply one for you when listing out posts (which means we strip all html and get the first x characters).  When you click on actual posts that take you to the permalink do you see your post correctly (without all the html stripped)?",
+      "PostedDate": "2008-12-10T02:27:14.733-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "You're right, the full post has the HTML.\r\n\r\nAnd if you change line 17 in OxiteSite\\Views\\Home\\Index.aspx from:\r\n\r\n<div class=\"content\"><%=post.GetBodyShort() %></div>  \r\n\r\nto\r\n\r\n<div class=\"content\"><%= post.Body %></div>  \r\n\r\nyou get the full post :)",
+      "PostedDate": "2008-12-11T09:37:30.227-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Cool, glad it wasn't a bug.\r\n\r\nThat's the fun of ASP.NET MVC, just change the view and you're done.  Glad you figured out you could do that.  :)",
+      "PostedDate": "2008-12-11T11:16:21.82-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "\r\n\r\n** Closed by ErikPorter 12/9/2008 4:17 PM",
+      "PostedDate": "2009-01-05T20:33:52.597-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:33:52.94-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:34:19.69-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:34:26.893-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:17.677-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:08.18-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

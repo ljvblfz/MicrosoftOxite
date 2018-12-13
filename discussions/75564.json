@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "258554",
+    "ThreadId": "75564",
+    "Html": "<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\">foreach</span> (ConnectionStringSettings connectionString <span style=\"color:Blue\">in</span> parentContainer.Resolve&lt;OxiteConfigurationSection&gt;().ConnectionStrings)\r\n    parentContainer.RegisterInstance(connectionString.Name, connectionString.ConnectionString);\r\n\r\n</pre>\r\n<pre>If I chang the connectionStrings of oxite.config in runtime, how to update the connectionString in the container?</pre>\r\n</div>",
+    "PostedDate": "2009-11-19T00:16:34.317-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "258556",
+    "ThreadId": "75564",
+    "Html": "<p>Sadly, right now you have to just reset the oxite instance so it all reloads again.</p>",
+    "PostedDate": "2009-11-19T00:26:23.633-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "259265",
+    "ThreadId": "75564",
+    "Html": "<p>Thanks.</p>",
+    "PostedDate": "2009-11-20T17:20:19.697-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

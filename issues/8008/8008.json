@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In Oxite revision 34013, if you remove the default post so there is no post in the database you will get a null reference exception in Oxite.Modules.Blogs.Extensions.PostExtensions.GetPostDependencies.\nProblem fixed by adding a null check to the parameter post.\n \nRegards\nFredrik",
+    "LastUpdatedDate": "2013-02-21T15:43:04.45-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-07-11T13:16:28.23-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Missing null check in GetPostDependecies.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8008
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

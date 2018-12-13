@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "138865",
+    "ThreadId": "41840",
+    "Html": "I just have the SQL SERVER 2000, how can I use this project?\r\n",
+    "PostedDate": "2008-12-09T00:43:07.57-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139123",
+    "ThreadId": "41840",
+    "Html": "We've never tested this with SQL 2000, but SQL Server Express 2005 and 2008 are both free to download.\r\n",
+    "PostedDate": "2008-12-09T13:32:26.687-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139201",
+    "ThreadId": "41840",
+    "Html": "I haven't tried SQL 2000, but i got Oxite working with SQL Server 2005 (not Express). I assume you can get Oxite working with SQL 2000 in the same way. These are the steps i took:<br>\r\n<br>\r\n-Make a copy of the <a></a>Oxite_Database.mdf file using the &quot;Microsoft SQL Server Data Publishing Wizard&quot;. You need to have SQL 2005 Express installed to do this.<br>\r\n-Create an empty SQL 2005/2000 database.<br>\r\n-Run the created .sql file from step 1 on your new database.<br>\r\n-Update the connectionstring in your Oxite web.config file to point to the new database.<br>\r\n<br>\r\nGood luck!<br>\r\n",
+    "PostedDate": "2008-12-09T23:21:59.077-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

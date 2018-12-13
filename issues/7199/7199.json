@@ -1,0 +1,90 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When I run the application I get this error. Please help me getting rid of this problem\n \nSource Error: \n \n \nLine 379:        public static string Site(this UrlHelper urlHelper)\nLine 380:        {\nLine 381:            return urlHelper.RouteUrl(\"Site\");\nLine 382:        }\nLine 383:\n \n \nSource File: C:\\Dinesh\\Help Files\\Oxite[1].2009.2.15\\Oxite\\Oxite.Mvc\\Extensions\\UrlHelperExtensions.cs    Line: 381 \n \nStack Trace: \n \n \n[ArgumentException: A route named 'Site' could not be found in the route collection.\nParameter name: name]\n   System.Web.Routing.RouteCollection.GetVirtualPath(RequestContext requestContext, String name, RouteValueDictionary values) +384\n   System.Web.Mvc.UrlHelper.GenerateUrl(String routeName, String actionName, String controllerName, RouteValueDictionary routeValues, RouteCollection routeCollection, RequestContext requestContext, Boolean includeImplicitMvcValues) +53\n   System.Web.Mvc.UrlHelper.GenerateUrl(String routeName, String actionName, String controllerName, String protocol, String hostName, String fragment, RouteValueDictionary routeValues, RouteCollection routeCollection, RequestContext requestContext, Boolean includeImplicitMvcValues) +36\n   System.Web.Mvc.UrlHelper.RouteUrl(String routeName, Object routeValues, String protocol) +61\n   System.Web.Mvc.UrlHelper.RouteUrl(String routeName) +8\n   Oxite.Mvc.Extensions.UrlHelperExtensions.Site(UrlHelper urlHelper) in C:\\Dinesh\\Help Files\\Oxite[1].2009.2.15\\Oxite\\Oxite.Mvc\\Extensions\\UrlHelperExtensions.cs:381\n   Oxite.Mvc.OxiteApplication.OxiteApplication_BeginRequest(Object sender, EventArgs e) in C:\\Dinesh\\Help Files\\Oxite[1].2009.2.15\\Oxite\\Oxite.Mvc\\OxiteApplication.cs:68\n   System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +68\n   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +75",
+    "LastUpdatedDate": "2013-02-21T15:43:10.403-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-03-02T03:09:25.98-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "System.ArgumentException: A route named 'Site' could not be found in the route collection.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 4,
+    "Id": 7199
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "We've seen this error too, but it only happens when the default site can't be loaded.  An app restart usually helps that.  In the future we'll change the code around so a failure to load doesn't cause permanent issues (until an app restart).",
+      "PostedDate": "2009-03-02T08:49:43.047-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Could you please tell me how to restart the app?",
+      "PostedDate": "2009-03-02T20:39:29.293-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-04-08T16:46:35.293-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-04-29T07:14:13.397-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Just kill the asp.net developer server instance(s) (seen in your taskbar: Notification area). ",
+      "PostedDate": "2009-06-18T00:45:16.983-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-11T15:24:16.807-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "i'm facing the same problem. could u please tell me how to restart the application",
+      "PostedDate": "2010-01-24T21:51:45.99-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "i'm facing the same problem. could u please tell me how to restart the application",
+      "PostedDate": "2010-01-24T21:51:56.177-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Get the same error, but not after spending an awful lot of time just getting the code to compile :(\r\n\r\n\r\nRestart of app doesnt help  me.. The problem seems to occur, because whatever is in OxiteRegisterRoutes isnt fired before the RouteURL method is fired. \r\nWhy is this, and why seem other users of this Oxite code not have this problem?\r\n\r\nUntil this is solved, Oxite is useless for me",
+      "PostedDate": "2012-08-27T01:21:18.81-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:10.403-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

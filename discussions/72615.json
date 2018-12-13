@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "247979",
+    "ThreadId": "72615",
+    "Html": "<p>Hello,</p>\r\n<p>I've studied Oxite for a while.</p>\r\n<p>There's a problem that I can't understand.</p>\r\n<p>How the controller been create??</p>\r\n<p>Who pass the services to the controllers??</p>\r\n<p>And where you guys define those things??</p>\r\n<p>I can't find it anywhere, the only thing I found is OxiteControllerFactory.GetControllerInstance.</p>\r\n<p>But I can't see how to do those actions.</p>\r\n<p>Can anyone tell me??</p>\r\n<p>Thanks</p>\r\n<p>River</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-10-20T23:58:23.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "248009",
+    "ThreadId": "72615",
+    "Html": "<p>OK,</p>\r\n<p>I've found the answer,</p>\r\n<p>It's a function of unity.</p>\r\n<p>I think I have to work hard with unity.</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2009-10-21T01:17:51.723-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

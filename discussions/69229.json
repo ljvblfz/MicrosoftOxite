@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "235543",
+    "ThreadId": "69229",
+    "Html": "<p>On a new deployment of Oxite, I'm trying to use Live Writer to publish a post.&nbsp; I realize about using FTP for the images.&nbsp;</p>\r\n<p>The post title is &quot;TEST&quot; and the body is &quot;TEST&quot;.&nbsp; When I try to publish, I'm receiving an HTTP 500 Internal Server Error message.</p>\r\n<p>When attempting to reconfigure the blog, I receive a &quot;500 System.ServiceModel.ServiceActivationException&quot; message.</p>\r\n<p>Does anyone know how to go about resolving this?</p>",
+    "PostedDate": "2009-09-17T05:40:53.793-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "235552",
+    "ThreadId": "69229",
+    "Html": "<p>I've resolved this issue.&nbsp; The web.config refers to a ServiceBehavior that doesn't exist.&nbsp; I changed it to an empty string and it seems to work.</p>\r\n<p>I'm still receiving the 500 error, but now there's a message in the Application Event Log that says &quot;Forms authentication failed for the request.&nbsp; Reason: The ticket supplied has expired.&quot;.</p>\r\n<p>Thoughts?</p>",
+    "PostedDate": "2009-09-17T06:02:08.57-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

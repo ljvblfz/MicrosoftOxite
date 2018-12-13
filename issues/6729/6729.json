@@ -1,0 +1,90 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-01-05T20:36:04.377-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In site.js Date.prototype.toShortString returns the incorrect date.\n \nat line 215:\nreturn (this.getMonth() + 1).toString() + \"/\" + this.getDay() + \"/\" + year + \" \" + this.toLocaleTimeString();\nshould be:\nreturn (this.getMonth() + 1).toString() + \"/\" + this.getDate() + \"/\" + year + \" \" + this.toLocaleTimeString();",
+    "LastUpdatedDate": "2013-05-16T03:38:09.18-07:00",
+    "PlannedForRelease": "Oxite.2009.1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-07T11:18:12.41-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Prototype 'Date.toShortString' returns incorrect date",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 6729
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "yes, I encountered it too.",
+      "PostedDate": "2008-12-10T06:41:12.313-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "This has been fixed and checked in and will show up in the next release.  If you want the fix now, you can click on \"Source Code\" in the menu of Code Plex and click on the download link next to the most recent changeset.",
+      "PostedDate": "2008-12-10T14:20:39.913-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "\r\n\r\n** Closed by ErikPorter 12/10/2008 2:44 AM",
+      "PostedDate": "2009-01-05T20:35:41.267-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:35:41.61-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:35:57.407-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:36:04.377-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Is this the same as this issue: http://www.codeplex.com/oxite/WorkItem/View.aspx?WorkItemId=6808",
+      "PostedDate": "2009-01-06T04:20:22.76-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Seems to be related to http://www.codeplex.com/oxite/WorkItem/View.aspx?WorkItemId=6730",
+      "PostedDate": "2009-01-06T04:21:52.307-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:19.417-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:09.18-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

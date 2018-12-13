@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "139836",
+    "ThreadId": "42084",
+    "Html": "I am really starting to get into exploring the Oxite code and see all the things you pulled together here, and how you've segmented things - some nice models.<div><br></div><div>What I'm not finding are things that I can handle in code or in the database, but that I'd hoped I'd find in the existing functionality, such as ...</div><div><br></div><div>1) Add/Edit a user</div><div>2) Change Password - I see some Views for Registration and Change Password but I don't see where they map to Controllers or Routes in the existing app</div><div>3) Change the Site name (or is that all in web.config?)</div><div>4) Change the skin of a particular site (i.e. if I create a new skin based on the default skin, can I easily add that to one or more sites?)</div><div>5) Managing Pages as opposed to Blog posts (BTW, were do the Pages get saved to in the DB - they add and save nicely, but I can't find them in the DB)</div><div><br></div><div>I'm carving out an hour or two a day to look into these things, but if there is a quick/easy answer that you already know, I would really appreciate it.</div>",
+    "PostedDate": "2008-12-11T13:47:11.467-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139858",
+    "ThreadId": "42084",
+    "Html": "We don't have most of those things... admin/control panel style pages... I expect they'll be added, by us or by someone else, but at the moment you'll need to use the DB for many of these tasks.<br>\r\n<br>\r\n3) that is in the web.config, yep ... no 'Site' table in the DB<br>\r\n4) also in the web.config, a property of the site config line... I'd need Erik to say how to set it<br>\r\n5) pages are the same as blog posts in the DB, so you should find them in oxite_Post\r\n",
+    "PostedDate": "2008-12-11T14:41:06.17-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139878",
+    "ThreadId": "42084",
+    "Html": "<span style=\"font-size:13px\">\r\n<p>4) Add this attribute to the web.config/oxite/site...<br>\r\n<br>\r\nthemeDefault=&quot;MyTheme&quot;<br>\r\n<br>\r\nEdit: I guess we should get consistent on if we're calling them themes or skins, huh?  Since it will look under /Content/skins for a folder named &quot;MyTheme&quot;.  Noted.  ;)</p>\r\n</span>\r\n",
+    "PostedDate": "2008-12-11T15:47:27.153-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "207747",
+    "ThreadId": "61251",
+    "Html": "<p>Can oxite serve multiple sites from a single install? It can apparently save multiple sites in a single database but not serve them from a common install. I'm talking about the kind of funtionality that Wordpress MU has - one database, one install, and I can point as many domains as I want at it and they are all independent Wordpress installs (logically speaking.)</p>\r\n<p>I'm guessing that a lot of the infrastructure required for this setup is already present, so why not take it to completion? Is this on the roadmap somewhere? I really want to see something in the admin area that lets me create a new site, provide a list of host headers (which is already present), and get a fresh new site on that domain.</p>\r\n<p>Nikhil Dabas.</p>",
+    "PostedDate": "2009-07-01T15:10:11.703-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "207833",
+    "ThreadId": "61251",
+    "Html": "<p>We've thought about this too, but haven't seen any interest from anyone until your post.&nbsp; Would you run your own site to let people setup Oxite blogs like WordPress does?</p>\r\n<p>A lot of what's needed is already built, but there's more that would be needed.&nbsp; Definitely doable, but there are so many hours in the day and <a href=\"http://erikporter.com/Blog/Planning-for-the-Next-Oxite-Release\">we're currently very busy with the next release</a>.&nbsp; Why don't you build it yourself?&nbsp; Happy to answer any questions you have along the way.&nbsp; :)</p>",
+    "PostedDate": "2009-07-02T00:30:02.513-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "208028",
+    "ThreadId": "61251",
+    "Html": "<p>Allowing people to setup their own blogs would be a nice benefit of this kind of functionality. The business case that I had in mind was that you could run lots of websites from a single install and it would just make management of those websites easier.</p>\r\n<p>A lot of people use WordPress as a generic CMS, and I've seen a lot of web design firms (my own company included)&nbsp;use WordPress MU to manage dozens of websites this way. In fact, our company has its own ASP.NET CMS which has this kind of functionality - and it's really cool to be able to just point an A record and have a website up and running in five minutes. My clients can login and edit their own websites too. This is the sort of thing that I'd like to see in Oxite - WordPress MU is a bit of a hack really, if you look at how it manages the database. Oxite already has the right kind of database schema for this functionality.</p>\r\n<p>I know you guys are really busy with the upcoming release, so I'm going to have a look at the code and see what needs to be done. I'll post my ideas here.</p>\r\n<p>Keep up the good work Erik. :)</p>",
+    "PostedDate": "2009-07-02T09:36:07.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "208080",
+    "ThreadId": "61251",
+    "Html": "<p>Ah, right...that's a really good scenario actually...ISVs.&nbsp; We'll think about that one more, but as always, time is a problem.&nbsp; Would love to hear your ideas.</p>",
+    "PostedDate": "2009-07-02T11:34:56.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "237408",
+    "ThreadId": "61251",
+    "Html": "<p>Hello,</p>\r\n<p>When searching for CMS/MVC i found this project, congratulations on this superb work.<br>As <a id=\"ctl00_ctl00_MasterContent_Content_PostRepeater_ctl00_UserNameLink\" href=\"http://www.codeplex.com/site/users/view/ndabas\">ndabas,</a> i am aiming for a multi-tenant system using Oxite. After revolving the source code, i realized you have the system pratically implemented...(except for the admin area).<br>Right now i am trying to get this to work. The first step would be to get the instance name from the &quot;url.Host&quot;, and removing the setting &quot;Oxite.InstanceName&quot;.</p>\r\n<p>I was thinking of placing a method in the &quot;SiteService&quot; class for this, and replace the calls to the &quot;AppSettingsHelperExtensions.GetInstanceName&quot; method with the new method.</p>\r\n<p>What do you think ?</p>\r\n<p>Best Regards,<br>Carlos Fernandes</p>",
+    "PostedDate": "2009-09-22T09:52:31.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

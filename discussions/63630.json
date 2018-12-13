@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "216367",
+    "ThreadId": "63630",
+    "Html": "<p>I am trying to run the Microsoft PDC Implementation. I got this error message</p>\r\n<p><span> </span></p>\r\n<h2><em>Object reference not set to an instance of an object.</em></h2>\r\n<table border=0 width=\"100%\" bgcolor=\"#ffffcc\">\r\n<tbody>\r\n<tr>\r\n<td>\r\n<pre>Line 37:         private Guid getSiteID()\r\nLine 38:         {\r\n<span style=\"color:red\">Line 39:             return siteService.GetSite().ID;\r\n</span>Line 40:         }\r\nLine 41: </pre>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p><br> <strong> Source File: </strong> C:\\Labs\\oxite-35887\\Implementations\\MicrosoftPDC\\Oxite\\Services\\ModuleService.cs<strong> &nbsp;&nbsp; Line: </strong> 39 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>I am using the same db from the main project. What do I need to do to run the Microsoft PDC Implementation?</p>\r\n<p>Thanks.</p>\r\n<p>&nbsp;</p>\r\n<p><em><br></em></p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-07-27T06:53:07.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "216433",
+    "ThreadId": "63630",
+    "Html": "<p>The MicrosoftPDC branch has its own database.&nbsp; You would need DB Pro installed to get it to work.&nbsp; You would also need Live ID to get it to work which isn't public.&nbsp; For right now, the MicrosoftPDC branch is just for us to develop with, but feel free to look at all the source code.&nbsp; We plan to fix up MicrosoftPDC to work without Live ID and provide the database to all of you so we can share the source code when PDC is happening, so you'll have to wait until then.</p>",
+    "PostedDate": "2009-07-27T09:22:06.317-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "216599",
+    "ThreadId": "63630",
+    "Html": "<p>Thanks a lot for your reply.</p>",
+    "PostedDate": "2009-07-27T17:40:50.05-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

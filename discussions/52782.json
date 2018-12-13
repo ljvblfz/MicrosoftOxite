@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "177562",
+    "ThreadId": "52782",
+    "Html": "I've enabled the Slimbox 2 jQuery plugin on my blog by editing /Skins/&lt;myskin&gt;/Views/Shared/HeadCustomContents.ascx to include the relevant javascript and css.<br>\r\n<br>\r\nI now have slimbox available on every page of the site, but don't think this is a good thing. It seems unncessary to download this script on every page.<br>\r\n<br>\r\nIs it possible to have the plugins loaded per post, i.e. if a post uses it it is loaded, otherwise not. Where would I make the change?<br>\r\n<br>\r\nI'm also unsure how this would work on for example the homepage where a post may contain the library or not. If a picture is clicked in the main page the plugin wouldn't be available.<br>\r\n<br>\r\nThank you<br>\r\nLeon<br>\r\n",
+    "PostedDate": "2009-04-09T05:42:31.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "177640",
+    "ThreadId": "52782",
+    "Html": "You could skin individual pages like the post item page (would be /Skins/&lt;myskin&gt;/Views/Post/Item.aspx) and add the script to the Scripts content placeholder along with base.js. If you might have images showing up in the post list pages (like the home page) then you could do the same to all of the Post/List*.aspx pages - and if you want the same behavior on &quot;pages&quot; then do the same to Page/Item.aspx.<br>\r\n<br>\r\nAnother benefit of using the Scripts content placeholder is that it will drop the JavaScript referenced down into the bottom of the page instead of the head so your content can render before any extra scripts are loaded up and executed.\r\n",
+    "PostedDate": "2009-04-09T08:26:25.327-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "177870",
+    "ThreadId": "52782",
+    "Html": "Thanks skewed, this sounds like a much better way of doing it.<div><br></div><div>L</div>",
+    "PostedDate": "2009-04-10T00:03:59.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "178347",
+    "ThreadId": "52782",
+    "Html": "I was about to be rather redundant by starting a new thread. :-)<br>\r\nLucky. I've been sifting the webs for a lightbox that will play MOVs and is jQuery compatible and I also found something <a href=\"http://www.shadowbox-js.com/\">http://www.shadowbox-js.com/</a>.<br>\r\nIt's just swell... also, I merely placed the script tags etc in the body of my post - it didm't fuss, nor did I. ^.^\r\n",
+    "PostedDate": "2009-04-12T08:57:33.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

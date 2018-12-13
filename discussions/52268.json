@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "175598",
+    "ThreadId": "52268",
+    "Html": "Checked out latest version, launched solution in VS, entered admin credentials and when clicking on Admin tab getting a SQL error saying following columns do not exist.<br>\r\n(BTW this is the MDF database that sits in App_Data folder, had no success creating new DB with supplied scripts.)<br>\r\nWhat I had to do is attach the MDF to SQL Express in SQL Express Management studio, then manually add the missing columns like so:<br>\r\n<br>\r\nALTER TABLE [dbo].[oxite_Comment]<br>\r\nAdd [CreatorName] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL<br>\r\n<br>\r\nALTER TABLE [dbo].[oxite_Comment]<br>\r\nAdd [CreatorEmail] [nvarchar] (100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL<br>\r\n<br>\r\nALTER TABLE [dbo].[oxite_Comment]<br>\r\nAdd [CreatorHashedEmail] [nvarchar] (200) COLLATE SQL_Latin1_General_CP1_CI_AS NULL<br>\r\n<br>\r\nALTER TABLE [dbo].[oxite_Comment]<br>\r\nAdd [CreatorUrl] [nvarchar] (300) COLLATE SQL_Latin1_General_CP1_CI_AS NULL<br>\r\n<br>\r\nQuestion: why do I need to do this and what other columns I miss that I don't know about?<br>\r\n",
+    "PostedDate": "2009-04-04T05:11:37.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176458",
+    "ThreadId": "52268",
+    "Html": "We do our development using DB Pro and manually update the MDF as we can remember to when we make changes to the schema.  We will always ensure that the schema is correct for every release, but can't promise it will always be right for the latest checkin.  That said, usually when people (like you) bring it up, we'll update the MDF for those checking out the latest code.  I just now updated the MDF to the latest schema so if you grab it you should be good to go.  Most of the time, we will not update the SQL scripts until the new release since it's even more of a manual process, FYI.\r\n",
+    "PostedDate": "2009-04-06T22:50:44.33-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176606",
+    "ThreadId": "52268",
+    "Html": "Thanks so much!<br>\r\n",
+    "PostedDate": "2009-04-07T06:32:17.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

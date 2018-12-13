@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "139186",
+    "ThreadId": "41934",
+    "Html": "My Studio 2008 install already has <a href=\"http://blogs.msdn.com/gertd/archive/2008/11/25/visual-studio-team-system-2008-database-edition-gdr-rtm.aspx\" title=\"Visual Studio Team System 2008 Database Edition GDR - RTM November 2008\">Visual Studio 2008 Database Ed GDR </a>applied, which 'Upgrades' the Oxite.Database.dbproj and seems to leave it in a 'broken' state. The problems seem to be around the way the Sql login and user are created (I guess this has changed in the new version). Builds OK but won't deploy unless i comment out all the user/login-related T-SQL.<br>\r\n<br>\r\nI can't quite fix it 'properly' but have got it running by manually creating the user later. Got some reading to do on the breaking changes between the two versions of Database Edition... <br>\r\n<br>\r\nCool 'alpha' out-of-the-box though... Pretty much the only thing I miss is an auto-generated menu (so far). Does anyone know if Live Writer can be used to create pages as well as update blogs (seems unlikely, but would be cool). \r\n",
+    "PostedDate": "2008-12-09T21:27:22.587-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139188",
+    "ThreadId": "41934",
+    "Html": "Yah, sorry about that.  The GDR had not RTM'd yet when we built this (just a month ago or so).  Now that it has RTM'd we should probably look at making it the project work and then require that people upgrade.  We'll give it a little time to get out there to people first though.<br>\r\n<br>\r\nGlad you got it running though.  If you'd like to share the step-by-step changes you had to make, please feel free to share them here.  I'm sure we (and others) will get good use out of it.<br>\r\n<br>\r\nGlad you like what we have so far.  Menus were an item we didn't have time to push into the database so they could be generated and changed from the admin.  That said, all you have to do is change the /OxiteSite/Views/Shared/Header.ascx user control with what you need.<br>\r\n<br>\r\nLive Writer can create pages, but we haven't yet implemented the WordPress Metaweblog API Page extensions in Oxite yet.  Once we (or someone from the community) does that, then you'll be able to create content pages directly from Live Writer.\r\n",
+    "PostedDate": "2008-12-09T21:34:08.107-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140113",
+    "ThreadId": "41934",
+    "Html": "Just poking around a little, and it appears that pages are simply stored in the oxite_Post table, but the only possible distinction I can find is that a Page does not have an Area...is that accurate, or is there some other method to distinguish a Page from a Post?\r\n",
+    "PostedDate": "2008-12-12T10:07:41.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

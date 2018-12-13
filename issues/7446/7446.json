@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-04-10T10:17:33.487-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "After logging in with the default Admin account, I created a new Area.  When adding a post to this area, I get a NullReferenceException:\n \nLine 15, ItemEditPrimaryMetadata.ascx:\n<%=Html.DropDownList(\n                                \"areaID\",          \n                                new SelectList(areaListViewModel.Areas, \"ID\", \"Name\", Model.Item != null && Model.Item.Area != null ? Model.Item.Area.ID.ToString() : ((Area)Model.Container).ID.ToString()),\n                                new { id = \"post_area\" },\n                                !urlIsLocked\n                                ) %>\n \nStack Trace:\nat ASP.views_post_itemeditprimarymetadata_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in c:\\Projects\\Oxite Builds\\oxite-30837\\Oxite\\OxiteSite\\Views\\Post\\ItemEditPrimaryMetadata.ascx:line 15\n   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)\n   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)\n   at System.Web.UI.Control.Render(HtmlTextWriter writer)\n   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)\n   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)\n   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)\n   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)\n   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)\n   at System.Web.UI.Page.Render(HtmlTextWriter writer)\n   at System.Web.Mvc.ViewPage.Render(HtmlTextWriter writer)\n   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)\n   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)\n   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)\n   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)\n------------\nIs this functionality working?",
+    "LastUpdatedDate": "2013-05-16T03:38:01.977-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-04-09T16:47:02.25-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Adding post to new Area causes NullReferenceException",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7446
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This error happened with 30837 ChangeSet.",
+      "PostedDate": "2009-04-09T16:52:38.263-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Our latest checkins aren't necessarily bug free.  They're a work in progress.  For issues like this, please start a discussion instead of creating an issue.  If you need a stable version of Oxite, use the latest release, not our latest checked in code.\r\n\r\nIn the meantime, I'll investigate what the problem might be.",
+      "PostedDate": "2009-04-10T10:17:25.97-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-04-10T10:17:33.487-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:08.67-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:01.977-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

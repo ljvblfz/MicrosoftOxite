@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "181678",
+    "ThreadId": "53945",
+    "Html": "In the latest changeset ~2831089~29 I~27m getting an exception is thrown when loading the /Admin URL~3a\r\nIs this a known issue or is it something to do with my setup~3f\r\nThank you for the work that you~27re doing~21\r\nServer Error in ~27/~27 Application.\r\nThe type SiteController has multiple constructors of length 5. Unable to disambiguate.\r\nDescription~3a An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.\r\nException Details~3a System.InvalidOperationException~3a The type SiteController has multiple constructors of length 5. Unable to disambiguate.\r\nSource Error~3a\r\nLine 21~3a         protected override IController GetControllerInstance~28Type controllerType~29\r\nLine 22~3a         {\r\nLine 23~3a             IController iController ~3d container.Resolve~28controllerType~29 as IController~3b\r\nLine 24~3a\r\nLine 25~3a             if ~28typeof~28Controller~29.IsAssignableFrom~28controllerType~29~29\r\nSource File~3a D~3a~5cProjects~5cDevelopment~5cASPNET~5cSample Code~5cOxite~5coxite-31089~5cOxite~5cOxite~5cInfrastructure~5cOxiteControllerFactory.cs    Line~3a 23 \r\n",
+    "PostedDate": "2009-04-21T02:19:50.393-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "181679",
+    "ThreadId": "53945",
+    "Html": "Wow I borked the formatting somehow... ~3aS~3cbr /~3e\r\n",
+    "PostedDate": "2009-04-21T02:25:04.587-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "181857",
+    "ThreadId": "53945",
+    "Html": "We're aware of that issue.  I'll try to get it fixed soon.  Thanks!\r\n",
+    "PostedDate": "2009-04-21T09:41:42.663-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

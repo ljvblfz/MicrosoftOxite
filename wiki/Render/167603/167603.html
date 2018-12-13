@@ -1,0 +1,13 @@
+<div class="wikidoc">The ByteRangeValidation attribute is applied to a byte-type property of the plug-in class.  It allows the plug-in creator to specify that the value of the property must fall within a certain range.  If the configured value is not within that range, appropriate error messaging is displayed in the UI.<br /><br /><b>Example:</b><br /><br /><pre>
+public class DisclaimerSelectorPlugin
+{
+    [ByteRangeValidation(50, 100)]
+    ...
+    public byte DisclaimerBytes
+    {
+        get;
+        set;
+    }
+...
+}
+</pre><br /><br /><b>Display:</b><br /></div><div class="ClearBoth"></div>

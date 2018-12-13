@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "230896",
+    "ThreadId": "67925",
+    "Html": "<p>I downloaded todays source release, and used the Setup\\Oxite.sql to set up a new database on SQL Server 2008. After changing the connection string in OxiteSite\\Web.config from SQLExpress to my server I get the following exception:</p>\r\n<p>\r\n<pre>Exception Details: System.Data.SqlClient.SqlException: Invalid column name 'SkinsPath'.\r\nInvalid column name 'SkinsScriptsPath'.\r\nInvalid column name 'SkinsStylesPath'.\r\nInvalid column name 'Skin'.\r\nInvalid column name 'AdminSkin'.\r\nInvalid column name 'HasMultipleBlogs'.\r\nInvalid column name 'PluginsPath'.\r\n\r\nSource Error: \r\n\r\n\r\nLine 30:                 select s;\r\nLine 31: \r\nLine 32:             return projectSites(query).FirstOrDefault();\r\nLine 33:         }\r\nLine 34: \r\n \r\n\r\nSource File: ...\\Oxite\\Oxite\\Repositories\\SqlServer\\SqlServerSiteRepository.cs    Line: 32 \r\n</pre>\r\nI searched for the items in Oxite.sql in the download and couldn't find any mention of them. I also changed the connection string in Oxite\\Repositories\\SqlServer\\Oxite.dbml to reflect my setup, but got no change. Am I missing something easy? This is the first Source Code download I have tried. I have successfully used the <a id=\"ctl00_ctl00_MasterContent_Content_ProjectReleasesSidebar_Sidebar_ReleaseTypeRepeater_ctl00_ReleaseRepeater_ctl01_ReleaseLink\" title=\"Default Release: Oxite.2009.2.15\">2009.2.15 </a>release in the past.</p>",
+    "PostedDate": "2009-09-03T15:03:32.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "230906",
+    "ThreadId": "67925",
+    "Html": "<p>We don't have updated sql scripts for generating a new database with the latest checkins (since they're ever evolving).&nbsp; What you can do is grab the /Oxite/OxiteSite/App_Data/Oxite.Database.MDF and do a schema compare on it and a new database to get the proper schema you need created.&nbsp; That or just attach the MDF I pointed to to a SQL Server instance.&nbsp; It should &quot;just work&quot;.&nbsp; When we have a new release, we will have updated sql scripts for you to use, but for now you'll have to get the schema from the MDF.&nbsp; Sorry for the inconvenience.</p>",
+    "PostedDate": "2009-09-03T15:30:09.733-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "140780",
+    "ThreadId": "42378",
+    "Html": "Following community review, we’d like to see simplification to the Oxite table names.&nbsp; Let us know if you'd like to take on this project.<br>\r\n<br>\r\nUpdated table names:<br>\r\n<br>\r\nArea - unchanged<br>\r\nAreaRole – formerly AreaRoleRelationship<br>\r\nBackgroundService – formerly BackgroundServiceAction<br>\r\nComment – unchanged<br>\r\nCommentAnonymous – unchanged (removal recommended by using CommentMessage and User table)<br>\r\nCommentMessage – formerly CommentMessageRelationship<br>\r\nCommentRelation – formerly CommentRelationship<br>\r\nFile – formerly FileResource (This table could also manage attached Images)<br>\r\nLanguage – unchanged<br>\r\nMessage – unchanged<br>\r\nMessageUser – formerly MessageTo (Using “To” makes relation tables containing “To” seem inconsistently named.)<br>\r\nMessageAnonymous – formerly MessageToAnonymous (removal recommended by using MessageUser and User table)<br>\r\nPost – unchanged<br>\r\nPostArea – formerly PostAreaRelationship<br>\r\nPostRelation – formerly PostRelationship<br>\r\nPostTag – formerly PostTagRelationship<br>\r\nRole – unchanged<br>\r\nSnippet – formerly StringResource (Rename StringResourceKey to SnippetKey)<br>\r\nSnippetLanguage – formerly StringResourceVersion<br>\r\nSubscription – unchanged<br>\r\nSubscriptionAnonymous – unchanged (removal recommended by using Subscription and User table)<br>\r\nTag – unchanged<br>\r\nTrackback – unchanged<br>\r\nUser – unchanged<br>\r\nUserFile – formerly UserFileResourceRelationship<br>\r\nUserLanguage – unchanged<br>\r\nUserRole – formerly UserRoleRelationship<br>\r\n<br>\r\nA. Compound words are used here to indicate relation tables – typically with only two capital letters.&nbsp; Example: “AreaRole”<br>\r\n<br>\r\nB. The word “Relation” is appended only for parent-to-child tables.&nbsp; Example: “CommentRelation” instead of “CommentRelationship” or “CommentComment”.&nbsp; Appending “Relationship” to all relation tables is too verbose and is not a standard practice.<br>\r\n<br>\r\nC. Singular table names are retained.&nbsp; Plural set names are now created automatically by LINQ to SQL.&nbsp; Keeping table names singular avoids confusion over whether a relation table should be called AreaRoles, AreasRoles or Areas_Roles.<br>\r\n<br>\r\nD. Oxite will serve as a Web 2.0 database design starting point, so “oxite_” is removed from the start of table names.&nbsp; Pre-pended names are reserved for third-party tables.&nbsp; This will avoid multiple User tables.&nbsp; It will also allow Oxite to work well as an instructional application.&nbsp; Removing the pre-pended database name will prevent future changes to the Oxite project name from breaking existing blog sites.&nbsp; Most importantly, it will allow Oxite to serve as a generic Web 2.0 foundation for other applications to build upon.<br>\r\n<br>\r\nE. The Snippet table (formerly StringResource) could serve the dual purpose of managing insertions of code snippets compiled at run-time.&nbsp; It could contain tags for inserting SilverLight, MashUp and other widgets.&nbsp; Another name for this table could be Widget or Insertion.<br>\r\n<br>\r\nF. View discussion regarding <a href=\"http://www.codeplex.com/oxite/Thread/View.aspx?ThreadId=42285\">Using the User table for anonymous users</a> which would eliminate the need for several current tables and more future tables.<br>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n",
+    "PostedDate": "2008-12-15T16:33:47.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140969",
+    "ThreadId": "42378",
+    "Html": "Loren, consider adding this to the Issue Tracker instead of just discussions. You make great points and this is definitely that would help Oxite now and in the future.\r\n",
+    "PostedDate": "2008-12-16T06:34:46.97-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "142348",
+    "ThreadId": "42378",
+    "Html": "Thanks, I've added to the Issue Tracker.&nbsp; <a href=\"http://www.codeplex.com/oxite/WorkItem/View.aspx?WorkItemId=6845\">View status of table name updates</a>.<br>\r\n",
+    "PostedDate": "2008-12-22T06:35:13.167-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "142441",
+    "ThreadId": "42378",
+    "Html": "Thanks for adding it. Ironically, Issues seem to get more discussion than Discussions, so you should get more feedback now. :-)\r\n",
+    "PostedDate": "2008-12-22T13:05:24.157-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

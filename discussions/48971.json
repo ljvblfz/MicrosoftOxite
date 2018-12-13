@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "163576",
+    "ThreadId": "48971",
+    "Html": "I just installed version 29620 and now get an error when trying to browse the site. It doesn't seem to matter if I run it from vs.net 2008 or from a site setup in IIS.<br>\r\n<br>\r\nRedirect Loop<br>\r\n<br>\r\nFirefox has detected that the server is redirecting the request for this address in a way that will never complete.<br>\r\n<br>\r\nThe browser has stopped trying to retrieve the requested item. The site is redirecting the request in a way that will never complete.<br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp; * Have you disabled or blocked cookies required by this site?<br>\r\n&nbsp;&nbsp;&nbsp; * NOTE: If accepting the site's cookies does not resolve the problem, it is likely a server configuration issue and not your computer.<br>\r\n<br>\r\nThis error is slightly different in IE 7 but with less specific information.<br>\r\n<br>\r\nIE says: &quot;Internet Explorer cannot display the webpage.&quot;<br>\r\n<br>\r\nDoes anyone have any idea what the problem might be?<br>\r\n",
+    "PostedDate": "2009-03-02T12:01:58.86-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164422",
+    "ThreadId": "48971",
+    "Html": "It's quite possible that some of our checkins will be broken so use at your own risk.<br>\r\n<br>\r\nThat said, something you can check is if you have any redirect urls setup for your site, turn them off and see if the problem still exists.  Also ensure the host url of your site (in the oxite_Site table) is the same root url being requested by the browser.\r\n",
+    "PostedDate": "2009-03-04T10:07:45.95-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

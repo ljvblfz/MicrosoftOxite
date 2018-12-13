@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "No worries, just start a discussion instead.",
+    "ClosedDate": "2009-04-07T10:34:33.793-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Anyone else having problems with the default theme with IE8?  I have the alpha release, haven't done much with the CSS, installed IE8 today and my content is all squished against the right side of the page.",
+    "LastUpdatedDate": "2013-05-16T03:38:02.38-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-04-07T09:02:32.827-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "IE8",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7438
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Whoops, I meant for this to go in discussions.  Sorry.",
+      "PostedDate": "2009-04-07T09:03:22.607-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-04-07T10:34:33.793-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:09.223-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:02.38-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

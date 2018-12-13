@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "150658",
+    "ThreadId": "45171",
+    "Html": "Oxite looks great. Nice project.<br>\r\n<br>\r\nWhile looking at the code - I was interested to see the use of a custom configuration section for site settings. <br>\r\n<br>\r\nI've seen a few approaches for configuration - from separate IXmlSerializable based classes that read and write to an Xml configuration file, to the use of custom config sections in App or Web.config (as Oxite does). In the case of a custom configration section, I'm curious to know how you would implement an admin user interface for site settings. I've tried (albeit briefly) to write to custom configration sections back to the Web.config in the past - but wasn't able to get it to work. The MSDN docs describe writing to a configuration section using the Save methods (which in the Web.config would obviously cause the app to re-cycle) but was wondering if this is something that the Oxite team has tried in the past, or is planning for a future release? <br>\r\n<br>\r\nhttp://msdn.microsoft.com/en-us/library/system.configuration.configurationelement.aspx<br>\r\n<br>\r\nKind regards,<br>\r\n<br>\r\nTony<br>\r\n",
+    "PostedDate": "2009-01-25T02:35:03.52-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "150662",
+    "ThreadId": "45171",
+    "Html": "I'm not on that team but I am qurious on what you mean. I've done quite a lot of config sections in my day.<br><br>If you write to the config settings your site will have to be restarted to apply said settings. As far as I know.<br>\r\n<br>Another way to solve that issue is to make a reference from your web.config to another config file and put your custom settings there. Enterprise Library contains functionality for this. You would simply referece in the Microsoft.Practices.Common.dll into your project and (figure out how to) add settings for a separate config file. Don't have a sample right now but I'm sure you can find one in the Ent.Lib. quick starts.<br>\r\n<br>Cheers,<br><br>M.<br><br><div>On Sun, Jan 25, 2009 at 11:37, abouch <span dir=ltr>&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br><blockquote style=\"margin:0pt 0pt 0pt 0.8ex;padding-left:1ex\">\r\n   <div> <p>From: abouch</p> <div>Oxite looks great. Nice project.<br>\r\n<br>\r\nWhile looking at the code - I was interested to see the use of a custom configuration section for site settings. <br>\r\n<br>\r\nI've seen a few approaches for configuration - from separate IXmlSerializable based classes that read and write to an Xml configuration file, to the use of custom config sections in App or Web.config (as Oxite does). In the case of a custom configration section, I'm curious to know how you would implement an admin user interface for site settings. I've tried (albeit briefly) to write to custom configration sections back to the Web.config in the past - but wasn't able to get it to work. The MSDN docs describe writing to a configuration section using the Save methods (which in the Web.config would obviously cause the app to re-cycle) but was wondering if this is something that the Oxite team has tried in the past, or is planning for a future release? <br>\r\n\r\n<br>\r\n<a href=\"http://msdn.microsoft.com/en-us/library/system.configuration.configurationelement.aspx\">http://msdn.microsoft.com/en-us/library/system.configuration.configurationelement.aspx</a><br>\r\n<br>\r\nKind regards,<br>\r\n<br>\r\nTony<br>\r\n</div> <div> <p>Read the <a href=\"http://www.codeplex.com/oxite/Thread/View.aspx?ThreadId=45171&ANCHOR#Post150658\">full discussion online</a>.</p> <p>To add a post to this discussion, reply to this email (<a href=\"mailto:oxite@discussions.codeplex.com?subject=[oxite:45171]\">oxite@discussions.codeplex.com</a>)</p>\r\n <p>To start a new discussion for this project, email <a href=\"mailto:oxite@discussions.codeplex.com\">oxite@discussions.codeplex.com</a></p> <p>You are receiving this email because you subscribed to this discussion on CodePlex. You can <a href=\"http://www.codeplex.com/site/discussions/project/unsubscribe/oxite\">unsubscribe or change your settings</a> on codePlex.com.</p>\r\n <p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at <a href=\"http://codeplex.com\">codeplex.com</a></p> </div> </div> </blockquote>\r\n</div><br><br clear=all><br>-- <br>Magnus Mårtensson<br>Senior Consultant - Scrum Master - MCSD, MCTS<br>Dotway AB<br><br>Tel: +46 (768) 51 00 36<br><br><a href=\"http://blog.noop.se/\">http://blog.noop.se/</a><br>",
+    "PostedDate": "2009-01-25T03:15:01.59-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "150666",
+    "ThreadId": "45171",
+    "Html": "Hi Magnus. Thanks for the reply. <br>\r\n<br>\r\nWas being a bit lazy in asking the question I guess. I've never had any problem creating and reading custom configuration sections - only saving them.<br>\r\n<br>\r\nEither way - a quick test (which I should have really done before posting) and&nbsp; the code below works fine (and causes the AppDomain to reset as well since the Web.Config is being written to)<br>\r\n<br>\r\nConfiguration config = WebConfigurationManager.OpenWebConfiguration(&quot;/&quot;);<br>\r\nMyCustomSection mySection= (MyCustomSection )config.GetSection(&quot;myCustomSection &quot;);<br>\r\nmySection.CustomSetting1 = &quot;Some New Value 1&quot;;<br>\r\nmySection.CustomSetting2 = &quot;Some New Value 2&quot;;<br>\r\nconfig.Save();<br>\r\n<br>\r\nFor more complex (nested section groups and configuration elements) - I'm assuming they'd all be written/serialised to the section correctly.\r\n",
+    "PostedDate": "2009-01-25T03:30:05.823-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "150705",
+    "ThreadId": "45171",
+    "Html": "I actually started moving &lt;site&gt; into the database and out of the web.config just last night.  This will make it easier for us to have an admin section for changing it as well as intial setup on first run.\r\n",
+    "PostedDate": "2009-01-25T09:24:11.793-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "150718",
+    "ThreadId": "45171",
+    "Html": "The path Erik is taking is the best idea, I wouldn't advise writing to the config file from a running web site... it would be too easy to take down your site completely... and even an AppDomain reset can be an expensive side affect in most cases.\r\n",
+    "PostedDate": "2009-01-25T09:59:45.773-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "150734",
+    "ThreadId": "45171",
+    "Html": "I sort of agree with you though I'm not a big fan of one table in the database with one row in it which sort of tends to be the solution to this cunundrum if you opt for a database approach. Putting som settings in a textfile on the web site or in another folder on the server it if you like is as viable an option in my book. All depends on your situation. That said putting config data that can change from the ui in the web.config is never a good option. I've once put a config xml file in the App_Data folder,<br>\r\n<br>It allt depends on your situation really. If you're fine with a &quot;table&quot; that has one row or entry rather that's all good. I wouldn't necessarily go so far as to say it's &quot;the best&quot; approach!<br>\r\n<br>Cheers,<br><br>M.<br><br><div>On Sun, Jan 25, 2009 at 18:59, Duncanma <span dir=ltr>&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br><blockquote style=\"margin:0pt 0pt 0pt 0.8ex;padding-left:1ex\">\r\n   <div> <p>From: Duncanma</p> <div>The path Erik is taking is the best idea, I wouldn't advise writing to the config file from a running web site... it would be too easy to take down your site completely... and even an AppDomain reset can be an expensive side affect in most cases.\r\n</div><div> <div> <p>Read the <a href=\"http://www.codeplex.com/oxite/Thread/View.aspx?ThreadId=45171&ANCHOR#Post150718\">full discussion online</a>.</p> <p>To add a post to this discussion, reply to this email (<a href=\"mailto:oxite@discussions.codeplex.com?subject=[oxite:45171]\">oxite@discussions.codeplex.com</a>)</p>\r\n <p>To start a new discussion for this project, email <a href=\"mailto:oxite@discussions.codeplex.com\">oxite@discussions.codeplex.com</a></p> <p>You are receiving this email because you subscribed to this discussion on CodePlex. You can <a href=\"http://www.codeplex.com/site/discussions/project/unsubscribe/oxite\">unsubscribe or change your settings</a> on codePlex.com.</p>\r\n <p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at <a href=\"http://codeplex.com\">codeplex.com</a></p> </div> </div></div> </blockquote>\r\n</div><br><br clear=all><br>-- <br>Magnus Mårtensson<br>Senior Consultant - Scrum Master - MCSD, MCTS<br>Dotway AB<br><br>Tel: +46 (768) 51 00 36<br><br><a href=\"http://blog.noop.se/\">http://blog.noop.se/</a><br>",
+    "PostedDate": "2009-01-25T12:10:21.737-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "150751",
+    "ThreadId": "45171",
+    "Html": "I'll go so far as to say it is a best practice to not allow the web.config (or app.config in a windows forms app) to be edited from the UI... that is not its intent. So... if it turns out you have settings in there that you need the user to be able to modify, then you should move them to *something* else. It doesn't have to be the DB, but the DB is there and you need it for the site to run... so why not?<br>\r\n<br>\r\nYou could go with an settings dictionary style table instead of a one-row table, we use that on C9 now, a table with &quot;Name&quot;/&quot;Value&quot; rows in it...\r\n",
+    "PostedDate": "2009-01-25T13:17:53.877-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "150756",
+    "ThreadId": "45171",
+    "Html": "Also, just because there is usually one row in it, doesn't mean that there can't be more.  In fact, that's why a table for site is very appropriate.  Oxite is designed to allow more than one site to exist in the same application.  This is mostly designed around hour our team does things, but we thought it might be useful to others as well.  If there's only one site in most Oxite instances, so be it.  It doesn't mean it's a bad design. \r\n",
+    "PostedDate": "2009-01-25T14:05:23.107-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "150758",
+    "ThreadId": "45171",
+    "Html": "Oh absolutely! It is all very context related! I like the fact that the db does support multiple site instances. Solid design.<br><br>M.<br><br><div>On Sun, Jan 25, 2009 at 23:05, ErikPorter <span dir=ltr>&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br>\r\n<blockquote style=\"margin:0pt 0pt 0pt 0.8ex;padding-left:1ex\">   <div> <p>From: ErikPorter</p> <div>Also, just because there is usually one row in it, doesn't mean that there can't be more.  In fact, that's why a table for site is very appropriate.  Oxite is designed to allow more than one site to exist in the same application.  This is mostly designed around hour our team does things, but we thought it might be useful to others as well.  If there's only one site in most Oxite instances, so bet it.  :)\r\n</div><div> <div> <p>Read the <a href=\"http://www.codeplex.com/oxite/Thread/View.aspx?ThreadId=45171&ANCHOR#Post150756\">full discussion online</a>.</p> <p>To add a post to this discussion, reply to this email (<a href=\"mailto:oxite@discussions.codeplex.com?subject=[oxite:45171]\">oxite@discussions.codeplex.com</a>)</p>\r\n <p>To start a new discussion for this project, email <a href=\"mailto:oxite@discussions.codeplex.com\">oxite@discussions.codeplex.com</a></p> <p>You are receiving this email because you subscribed to this discussion on CodePlex. You can <a href=\"http://www.codeplex.com/site/discussions/project/unsubscribe/oxite\">unsubscribe or change your settings</a> on codePlex.com.</p>\r\n <p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at <a href=\"http://codeplex.com\">codeplex.com</a></p> </div> </div></div> </blockquote>\r\n</div><br><br clear=all><br>-- <br>Magnus Mårtensson<br>Senior Consultant - Scrum Master - MCSD, MCTS<br>Dotway AB<br><br>Tel: +46 (768) 51 00 36<br><br><a href=\"http://blog.noop.se/\">http://blog.noop.se/</a><br>",
+    "PostedDate": "2009-01-25T14:09:01.567-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "150760",
+    "ThreadId": "45171",
+    "Html": "Thanks!  :)\r\n",
+    "PostedDate": "2009-01-25T14:10:36.243-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "150764",
+    "ThreadId": "45171",
+    "Html": "Ok - so I guess what I'm seeing above is that the Web.config or App.config should really be reserved for framework or application-wide settings that are not going to be changed (at least not frequently) at runtime.<br>\r\n<br>\r\nAs for configuration settings that might be user editable, or changes to a site that don't require an AppDomain restart - then maybe this is a job for the strategy pattern - an abstract ConfigurationStrategy - persisted wherever is best (the DB, an Xml file, or even as a wrapper around a user scoped Settings class).\r\n",
+    "PostedDate": "2009-01-25T14:39:45.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "150765",
+    "ThreadId": "45171",
+    "Html": "That about sums it up for me! ;~)<br><br><div>On Sun, Jan 25, 2009 at 23:39, abouch <span dir=ltr>&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br><blockquote style=\"margin:0pt 0pt 0pt 0.8ex;padding-left:1ex\">\r\n   <div> <p>From: abouch</p> <div>Ok - so I guess what I'm seeing above is that the Web.config or App.config should really be reserved for framework or application-wide settings that are not going to be changed (at least not frequently) at runtime.<br>\r\n\r\n<br>\r\nAs for configuration settings that might be user editable, or changes to a site that don't require an AppDomain restart - then maybe this is a job for the strategy pattern - an abstract ConfigurationStrategy - persisted wherever is best (the DB, and Xml file, or even as a wrapper around a user scoped Settings class).\r\n</div><div><div></div><div> <div> <p>Read the <a href=\"http://www.codeplex.com/oxite/Thread/View.aspx?ThreadId=45171&ANCHOR#Post150764\">full discussion online</a>.</p> <p>To add a post to this discussion, reply to this email (<a href=\"mailto:oxite@discussions.codeplex.com?subject=[oxite:45171]\">oxite@discussions.codeplex.com</a>)</p>\r\n <p>To start a new discussion for this project, email <a href=\"mailto:oxite@discussions.codeplex.com\">oxite@discussions.codeplex.com</a></p> <p>You are receiving this email because you subscribed to this discussion on CodePlex. You can <a href=\"http://www.codeplex.com/site/discussions/project/unsubscribe/oxite\">unsubscribe or change your settings</a> on codePlex.com.</p>\r\n <p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at <a href=\"http://codeplex.com\">codeplex.com</a></p> </div> </div></div></div>\r\n </blockquote></div><br><br clear=all><br>-- <br>Magnus Mårtensson<br>Senior Consultant - Scrum Master - MCSD, MCTS<br>Dotway AB<br><br>Tel: +46 (768) 51 00 36<br><br><a href=\"http://blog.noop.se/\">http://blog.noop.se/</a><br>",
+    "PostedDate": "2009-01-25T14:42:21.79-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

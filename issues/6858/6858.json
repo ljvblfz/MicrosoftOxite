@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-01-06T13:19:50.47-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I saw only edit functional in the post's admin. what about delete? \n \nthe AdminController.RemovePost was there, question is where does it call from?\n \nThanks.",
+    "LastUpdatedDate": "2013-05-16T03:38:05.227-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-29T09:45:07.353-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Is it possible to remove post?",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6858
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You can delete a post, but the button is hidden after the post/page has been published for (by default) 24 hours.  This is just done as a hint that you shouldn't be deleting anything that has been probably been indexed by search engines.\r\n\r\nSo you can get around the default behavior by 1) setting the postEditTimeout on the oxite/site node in the Web to something a lot higher than 24 (hours) or 2) change the ManagePage and/or ManagePost partial views in <OxiteSite>/Views/Shared to change when the delete button is rendered. If you go the \"modify the views\" route then you'll want to check out the skinning wiki page (http://www.codeplex.com/oxite/Wiki/View.aspx?title=skinning) so you don't run into future direct conflicts with modified views.",
+      "PostedDate": "2009-01-06T13:18:51.877-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-06T13:19:50.47-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:12.973-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:05.227-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

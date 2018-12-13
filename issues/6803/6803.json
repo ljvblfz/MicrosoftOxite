@@ -1,0 +1,95 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-07-02T00:32:50.96-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In general the web site's structure feels a lot like a standard Web Application. That's not a bad thing of itself - however it's confusing, especially if people are wanting to learn from a sample application. For instance, I mentioned the \"AdminController\" above, it has Views named \"EditPost\" and \"ViewPost\", \"AreasEdit\" etc. I understand from reading the code what they were after - however each of these things (Post, Area, Comment, Permalink, Tag, etc) needs its own Controller with a small set of actions devoted to working directly with the data and its repository.\n \nFrom Rob Conery's blog: http://blog.wekeroad.com/blog/some-thoughts-on-oxite/",
+    "LastUpdatedDate": "2013-05-16T03:38:05.957-07:00",
+    "PlannedForRelease": "Oxite.2009.2.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-16T17:01:16.02-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Controller Segregation",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 7,
+    "Id": 6803
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "wonderful~",
+      "PostedDate": "2008-12-19T20:37:52.503-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-25T08:37:50.817-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "This IMO is probably the biggest stumbling block I have using Oxite at the moment.  I feel that this means objects don't have the correct responsibilities.  I would really like to see this issue addressed before others as it will change a lot of things like directories, controller names, routes, etc., and it would be best to get that out of the way soon so as not to become much more difficult to change later.",
+      "PostedDate": "2008-12-25T08:39:46.41-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-25T16:38:08.14-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-09T12:55:07.73-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-11T11:42:25.773-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-04-19T07:28:34.81-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "This was fixed in the February 15th release, but I'm just now getting around to marking it as fixed.",
+      "PostedDate": "2009-07-02T00:32:39.71-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-02T00:32:50.96-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:14.69-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:05.957-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

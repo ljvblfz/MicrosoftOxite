@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "408425",
+    "ThreadId": "199694",
+    "Html": "<p>Hellow there,</p>\r\n<p>I succesfully opened the Oxite website in Visual Studio 2010.</p>\r\n<p>Unforatunatley, when I tried to build and run the website, I get following error:</p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"color:#ff0000\">'Oxite.Mvc.Infrastructure.OxiteControllerFactory.GetControllerInstance(System.Type)': no suitable method found to override&nbsp;&nbsp; &nbsp;</span></p>\r\n<p><span style=\"color:#ff0000\">....\\Oxite.Mvc\\Infrastructure\\OxiteControllerFactory.cs&nbsp;&nbsp; &nbsp;</span></p>\r\n<p><span style=\"color:#ff0000\">line 21&nbsp;&nbsp; </span></p>\r\n<p><span style=\"color:#ff0000\">column 40&nbsp;&nbsp; &nbsp;</span></p>\r\n<p><span style=\"color:#ff0000\">Project Oxite.Mvc</span></p>\r\n<p>&nbsp;</p>\r\n<p>I have VS 2010 RC1 installed together with APS.NET MVC 2.0.</p>\r\n<p>Is there a solution for this error?</p>\r\n<p>thanks in advance</p>",
+    "PostedDate": "2010-02-26T05:57:04.34-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "426037",
+    "ThreadId": "199694",
+    "Html": "<p>Hi</p>\r\n<p>Just change the defition of the method :</p>\r\n<p><span style=\"font-family:Consolas;color:#0000ff;font-size:x-small\"><span style=\"font-family:Consolas;color:#0000ff;font-size:x-small\"><span style=\"font-family:Consolas;color:#0000ff;font-size:x-small\">\r\n<p>protected</p>\r\n</span></span></span><span style=\"font-family:Consolas;font-size:x-small\"></span><span style=\"font-family:Consolas;color:#0000ff;font-size:x-small\"><span style=\"font-family:Consolas;color:#0000ff;font-size:x-small\"><span style=\"font-family:Consolas;color:#0000ff;font-size:x-small\">override</span></span></span><span style=\"font-family:Consolas;font-size:x-small\"><span style=\"font-family:Consolas;font-size:x-small\"> </span></span><span style=\"font-family:Consolas;color:#2b91af;font-size:x-small\"><span style=\"font-family:Consolas;color:#2b91af;font-size:x-small\"><span style=\"font-family:Consolas;color:#2b91af;font-size:x-small\">IController</span></span></span><span style=\"font-family:Consolas;font-size:x-small\"><span style=\"font-family:Consolas;font-size:x-small\"> GetControllerInstance(</span></span><span style=\"font-family:Consolas;color:#2b91af;font-size:x-small\"><span style=\"font-family:Consolas;color:#2b91af;font-size:x-small\"><span style=\"font-family:Consolas;color:#2b91af;font-size:x-small\">RequestContext</span></span></span><span style=\"font-family:Consolas;font-size:x-small\"><span style=\"font-family:Consolas;font-size:x-small\"> requestContext, </span></span><span style=\"font-family:Consolas;color:#2b91af;font-size:x-small\"><span style=\"font-family:Consolas;color:#2b91af;font-size:x-small\"><span style=\"font-family:Consolas;color:#2b91af;font-size:x-small\">Type</span></span></span><span style=\"font-family:Consolas;font-size:x-small\"><span style=\"font-family:Consolas;font-size:x-small\"> controllerType)</span></span></p>\r\n<p>And also add the following reference :</p>\r\n<p><span style=\"font-family:Consolas;color:#0000ff;font-size:x-small\"><span style=\"font-family:Consolas;color:#0000ff;font-size:x-small\"><span style=\"font-family:Consolas;color:#0000ff;font-size:x-small\">\r\n<p>using</p>\r\n</span></span></span><span style=\"font-family:Consolas;font-size:x-small\"><span style=\"font-family:Consolas;font-size:x-small\">System.Web.Routing;</span></span></p>\r\n<p>Regards</p>\r\n<p>Christian Robert&nbsp;</p>",
+    "PostedDate": "2010-03-31T07:57:16.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "642891",
+    "ThreadId": "199694",
+    "Html": "<p>Hi</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I am changed definition but it not working....i got the error</p>\n<p>&nbsp;Oxite.Mvc.Infrastructure.OxiteControllerFactory.GetControllerInstance(System.Type)': no suitable method found to override</p>\n<p>Is there any solutions for that....?</p>\n<p>Regards,</p>\n<p>karthikeyan.B</p>\n<p>thanks in advance</p>",
+    "PostedDate": "2011-07-15T05:11:36.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-01-05T20:32:11.987-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "BaseControllers can cut down on code quite a lot, however using them to control script output is not a good idea since this is the concern of the View, not the Controller (which scripts are needed is not an application flow concern). These can go into a Helper class.\n \nFrom Rob Conery's blog: http://blog.wekeroad.com/blog/some-thoughts-on-oxite/",
+    "LastUpdatedDate": "2013-05-16T03:38:05.67-07:00",
+    "PlannedForRelease": "Oxite.2009.1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-16T17:02:11.503-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "BaseController Script/CSS Lists",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6805
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I didn't move them into a helper class and instead pushed them into BaseViewPage, but they are now removed from BaseController.  There are a few other things like how feeds are registered that should be moved out of BaseController to, but I'll do that in another work item.",
+      "PostedDate": "2008-12-16T17:48:37.193-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-16T17:48:38.38-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:32:03.923-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-05T20:32:11.987-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:14.243-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:05.67-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

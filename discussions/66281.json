@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "225136",
+    "ThreadId": "66281",
+    "Html": "<p>I'm currently moving to Oxite from a home grown blogging engine I wrote years ago. I wrote my own BlogML exporter to speed things up.<br>The BlogML I produced had a lot of problems, which I've now figured out by stepping through the BlogMLSave action method.</p>\r\n<p>I've a few suggestions that could help make the error detection and messages better.<br>Although hopefully most people won't have the BlogML problems I've had, because they won't be writing their own blogML.</p>\r\n<p><strong>1. Badly formed XML</strong></p>\r\n<p>If there is a problem with the XML an exception is thrown and it is caught by this bit of code, which I modified slightly to give a more helpful warning in my case.</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\">catch</span> (Exception ex)\r\n{\r\n    ModelState.AddModelErrors(validationState);\r\n\r\n    <span style=\"color:Blue\">if</span> (!<span style=\"color:Blue\">string</span>.IsNullOrEmpty(ex.Message))\r\n    {\r\n         ModelState.AddModelError(<span style=\"color:#A31515\">&quot;ModelName&quot;</span>, ex.InnerException.Message);\r\n    }\r\n    <span style=\"color:Blue\">return</span> BlogML(areaInput);\r\n}\r\n<br>I think it should be possible to use the information in the exception to give a very useful error message that shows a snippet of your XML where the problem is.<br><br><strong>2. Missing &lt;![CDATA[ --- ]]&gt; tags in content</strong><br><br>I missed off these tags and it caused the import to wrongly report it had been successful.<br>The missing CDATA tags caused blogMLPost.Content.Text to be empty in the imported XML.<br>This line checks for blank title and content and proceeds to the next post if either are blank:<br><br><div style=\"color:Black;background-color:White\"><pre><span style=\"color:Blue\">if</span> (<span style=\"color:Blue\">string</span>.IsNullOrEmpty(blogMLPost.Title) || <span style=\"color:Blue\">string</span>.IsNullOrEmpty(blogMLPost.Content.Text))\r\n    <span style=\"color:Blue\">continue</span>;\r\n</pre>\r\n</div>\r\nIt should also keep track of how many posts haven't been imported and report this as an error.<br><br><br>Hope that's helpful. Loving Oxite and MVC. Keep up the good work.</pre>\r\n</div>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-08-18T13:59:00.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "225529",
+    "ThreadId": "66281",
+    "Html": "<p>Good suggestions.&nbsp; Thank you!&nbsp; I will be working on import soon-ish and will take these suggestions into consideration when I get things fixed up.</p>\r\n<p>Glad you like Oxite (and MVC) so far and do let us know if you have other questions or problems you find.&nbsp; Thanks!</p>",
+    "PostedDate": "2009-08-19T10:37:21.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "226061",
+    "ThreadId": "66281",
+    "Html": "<p>Thanks Erik.</p>\r\n<p>I've uploaded my very <a href=\"http://code.msdn.microsoft.com/simpleBlogML\">quick and dirty blogML converter</a> to Code gallery incase anyone esle is trying to do what I've done. It's not fab code, but it does the trick. It won't work out of the box, but it should be a nice starting place for people wanting to get content out of a blogging engine they made themselves.</p>",
+    "PostedDate": "2009-08-20T15:02:19.107-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "226174",
+    "ThreadId": "66281",
+    "Html": "<p>Cool, thanks for sharing!&nbsp; And glad you got it going.&nbsp; Let us know if you have any other questions.</p>",
+    "PostedDate": "2009-08-20T23:27:44.423-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

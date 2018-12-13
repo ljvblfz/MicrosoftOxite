@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "139481",
+    "ThreadId": "42000",
+    "Html": "From a brief look: Interesting. The idea of putting interfaces on the LING to SQL data model to keep the internally-genrated data classes, but free you from dependence on them is really good.<br>\r\n<br>\r\n<strong>But:<br>\r\n</strong>Comment your classes, tell us what they do. Tell us why they exist. No comments, anywhere. How do you cope?<br>\r\nTurn on warnings as errors. <br>\r\nWhat about code Analysis? StyleCop? Resharper for unused using directives and other bits?<br>\r\n<br>\r\nCan you somewhere list which features are in and which out? I see atom and RSS mentioned in the code. I'd like foaf, even thought hat's not core in blogs.<br>\r\n",
+    "PostedDate": "2008-12-10T15:02:14.203-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139934",
+    "ThreadId": "42000",
+    "Html": "I totally agree - this is a very interesting project, but comments or at least some high-level doc (what's an &quot;area&quot; and how does that impact the Uri space of the site etc) would be really useful. I'm all for reading the code and tracing through stuff, but some guidance would make it easier to know where to jump in.<br>\r\n<br>\r\nThanks!<br>\r\n<br>\r\nDave<br>\r\n",
+    "PostedDate": "2008-12-11T21:37:59.98-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140267",
+    "ThreadId": "42000",
+    "Html": "Also, I don't see a lot of test cases. What is the test coverage like in general?<br>\r\n",
+    "PostedDate": "2008-12-13T09:20:00.66-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "141089",
+    "ThreadId": "42000",
+    "Html": "I'm sure you've seen <a href=\"http://blog.wekeroad.com/blog/some-thoughts-on-oxite/\">Rob Connery's thoughts on Oxite</a> by now.<br>\r\n<br>\r\nI'll add my 2c : The folder Oxite\\Data contains quite a few files. I would split this into<br>\r\n1) Oxite\\DataInterfaces&nbsp; Interfaces to &quot;domain objects&quot; that correspond to rows in tables on the db.<br>\r\n2) .. other. Or more than one other.<br>\r\n<br>\r\nYou have these lines all over the place in various forms:<br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Config = (IOxiteConfiguration)ConfigurationManager.GetSection(&quot;oxite&quot;);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IOxiteDataProvider dataProvider = Config.DataProvider.GetInstance();<br>\r\n<br>\r\nHave you considered wrapping these up in a common method - would avoid the direct dependence on System.Configuration.ConfigurationManager, and provide a single point of change for introducing IOC?<br>\r\n<br>\r\nOf cource with real IOC, the IOxiteDataProvider interface itself becomes unnecessary, since it's just a way to get the individual repositories.<br>\r\n<br>\r\n",
+    "PostedDate": "2008-12-16T13:05:52.287-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "141248",
+    "ThreadId": "42000",
+    "Html": "Ummm its an Alpha version people! And what ever happend to stepping thru code? I've spent an hour steping thru code and I already understand most of the how it all hangs together, i suggest you do the same and stop complaining. If you want a fully documented solution then wait for final release!!!<br>\r\n<br>\r\nThis is the problem with today's developers/architects too lazy to get your hands dirty work and too much emphasis on compliance &amp; documentation!!!<br>\r\n<br>\r\n",
+    "PostedDate": "2008-12-17T01:04:17.82-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "141276",
+    "ThreadId": "42000",
+    "Html": "Point taken about stepping though - and I can do that now that the DB script is in place, I could not when I wrote the original post. But if you start with your comments only after you finish your code, you're doing it wrong.<br>\r\n",
+    "PostedDate": "2008-12-17T02:28:56.157-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "177654",
+    "ThreadId": "52812",
+    "Html": "I am a .Net developer who can work in c# or VB.  I have a requirement to setup a website ASAP which will allow users to setup their own blogs, and have a common forum for those users.  I'm wondering if I'll be able to setup Oxite with these features relatively easy.<br>\r\n<br>\r\nThanks\r\n",
+    "PostedDate": "2009-04-09T08:38:09.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "177751",
+    "ThreadId": "52812",
+    "Html": "Not yet, no.<br>\r\n<br>\r\nI'm actually finishing up (over the next few days) the ability to add new users and assign them to a new blog so that will be there, but we don't have forums yet.  The infrastructure is there to build forums (Areas, Posts and Comments), but no UI.  Lots of people have asked about forums.  It will come at some point to Oxite, but definitely not in the next release (in a few weeks probably).\r\n",
+    "PostedDate": "2009-04-09T12:33:27.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

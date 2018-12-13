@@ -1,0 +1,160 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "OpenId is good, I would like a blog engine that I use to support OpenId logins.\nWill Oxite suport users with OpenId logins? \nI thought I should put this on the table so the oxite team and users can comment on it.",
+    "LastUpdatedDate": "2017-11-27T23:44:09.68-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-17T13:44:07.58-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "OpenId Logins",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 16,
+    "Id": 6818
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Yes, OpenID is good.\r\n\r\nUnknown on if/when we'll implement it.  We definitely maybe might.  :)\r\n\r\nIt is definitely a subject worth bringing up.  Thanks!\r\n\r\nIf anybody implements it themselves, blog about it or something.",
+      "PostedDate": "2008-12-17T14:43:13.233-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I have some working code now, based on code that I got from colleages, which they based on code from Rob Connery. I'll blog about it when I get the time.",
+      "PostedDate": "2008-12-21T12:12:52.53-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I have some working code. I have started blogging this over here: http://blogs.conchango.com/anthonysteele/archive/2008/12/22/adding-openid-to-oxite-part-1.aspx",
+      "PostedDate": "2008-12-22T07:15:05.84-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-22T13:06:24.81-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Appreciate the blog post.  Very nice!",
+      "PostedDate": "2008-12-23T19:42:22.573-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-23T19:42:32.2-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "yep, i think so. Openid is very nice, worth to implement this feature",
+      "PostedDate": "2008-12-28T16:35:04.86-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-29T06:34:00.163-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-11T11:46:18.32-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-02-02T04:12:02.85-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-02-16T09:10:47.25-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-02-19T17:46:48.04-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-03-03T07:14:47.837-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-03-23T13:54:53.533-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-04-03T11:49:50.367-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-05-03T09:31:26.793-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "+1",
+      "PostedDate": "2009-05-03T09:34:19.183-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-05-06T11:49:55.783-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-01T15:11:35.903-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "An update on this...\r\n\r\nNow that we've moved to modules (in the currently checked in code that will become the next release in the coming months), an OpenID module is now possible.  We may implement it ourselves for the next release or we may leave it up to someone else to build, but it will be extremely easy to do and Oxite is now built for multiple kinds of authentication.  So yay!",
+      "PostedDate": "2009-07-02T00:40:21.57-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-30T20:28:58.403-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-12-30T16:23:19.283-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:13.397-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-11-27T23:44:09.68-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

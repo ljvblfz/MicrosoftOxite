@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Description: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code. \n \nException Details: System.InvalidOperationException: The current type, Oxite.Infrastructure.ISkinResolver, is an interface and cannot be constructed. Are you missing a type mapping?\n \nSource Error: \n \n \nLine 26:             ISkinResolverRegistry skinResolverRegistry = container.Resolve<SkinResolverRegistry>();\nLine 27: \nLine 28:             skinResolverRegistry.Default = container.Resolve<ISkinResolver>();\nLine 29: \nLine 30:             foreach (ISkinResolver skinResolver in container.ResolveAll<ISkinResolver>())\n \nSource File: E:\\Source\\Oxite2\\Oxite\\Oxite\\BootStrappers\\RegisterSkinResolvers.cs    Line: 28 \n \nStack Trace: \n \n \n[InvalidOperationException: The current type, Oxite.Infrastructure.ISkinResolver, is an interface and cannot be constructed. Are you missing a type mapping?]\n   Microsoft.Practices.ObjectBuilder2.DynamicMethodConstructorStrategy.ThrowForAttemptingToConstructInterface(IBuilderContext context) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\BuildPlan\\DynamicMethod\\Creation\\DynamicMethodConstructorStrategy.cs:174\n   BuildUp_Oxite.Infrastructure.ISkinResolver(IBuilderContext ) +115\n   Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\BuildPlan\\DynamicMethod\\DynamicMethodBuildPlan.cs:37\n   Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\BuildPlan\\BuildPlanStrategy.cs:40\n   Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\StrategyChain.cs:92\n \n[BuildFailedException: The current build operation (build key Build Key[Oxite.Infrastructure.ISkinResolver, null]) failed: The current type, Oxite.Infrastructure.ISkinResolver, is an interface and cannot be constructed. Are you missing a type mapping? (Strategy type BuildPlanStrategy, index 3)]\n   Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Strategies\\StrategyChain.cs:109\n   Microsoft.Practices.ObjectBuilder2.Builder.BuildUp(IReadWriteLocator locator, ILifetimeContainer lifetime, IPolicyList policies, IStrategyChain strategies, Object buildKey, Object existing) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\ObjectBuilder\\Builder.cs:61\n   Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\Unity\\UnityContainer.cs:463\n \n[ResolutionFailedException: Resolution of the dependency failed, type = \"Oxite.Infrastructure.ISkinResolver\", name = \"\". Exception message is: The current build operation (build key Build Key[Oxite.Infrastructure.ISkinResolver, null]) failed: The current type, Oxite.Infrastructure.ISkinResolver, is an interface and cannot be constructed. Are you missing a type mapping? (Strategy type BuildPlanStrategy, index 3)]\n   Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\Unity\\UnityContainer.cs:473\n   Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, String name) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\Unity\\UnityContainer.cs:456\n   Microsoft.Practices.Unity.UnityContainer.Resolve(Type t, String name) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\Unity\\UnityContainer.cs:155\n   Microsoft.Practices.Unity.UnityContainerBase.Resolve(Type t) in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\Unity\\UnityContainerBase.cs:488\n   Microsoft.Practices.Unity.UnityContainerBase.Resolve() in e:\\Builds\\Unity\\UnityTemp\\Compile\\Unity\\Src\\Unity\\UnityContainerBase.cs:466\n   Oxite.BootStrappers.RegisterSkinResolvers.Execute(IDictionary`2 state) in E:\\Source\\Oxite2\\Oxite\\Oxite\\BootStrappers\\RegisterSkinResolvers.cs:28\n   Oxite.OxiteApplication.Load(HttpContextBase context) in E:\\Source\\Oxite2\\Oxite\\Oxite\\OxiteApplication.cs:88\n   Oxite.OxiteApplication.load() in E:\\Source\\Oxite2\\Oxite\\Oxite\\OxiteApplication.cs:95\n   Oxite.OxiteApplication.Application_Start() in E:\\Source\\Oxite2\\Oxite\\Oxite\\OxiteApplication.cs:39\n \nVersion Information: Microsoft .NET Framework Version:2.0.50727.3074; ASP.NET Version:2.0.50727.3074",
+    "LastUpdatedDate": "2013-02-21T15:43:04.683-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-06-26T02:39:22.297-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "he current type, Oxite.Infrastructure.ISkinResolver, is an interface and cannot be constructed. Are you missing a type mapping?",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7942
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

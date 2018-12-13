@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "437309",
+    "ThreadId": "211078",
+    "Html": "<p>hi,</p>\r\n<p>are there any issues setting up oxite on shared hosting? i noticed that their are several things that need to be installed..Will it work in medium trust?</p>\r\n<p>thanks</p>",
+    "PostedDate": "2010-04-29T13:31:26.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437398",
+    "ThreadId": "211078",
+    "Html": "<p>Works fine in shared hosting.&nbsp; Should work in Medium Trust though I know some people have had troubles getting it to work on GoDaddy.&nbsp; I host on <a href=\"http://discountasp.net\">DiscountASP.NET</a> and did absolutely nothing other than copy up the files to get Oxite running.</p>",
+    "PostedDate": "2010-04-29T20:47:41.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

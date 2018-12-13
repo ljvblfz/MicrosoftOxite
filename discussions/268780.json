@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "656889",
+    "ThreadId": "268780",
+    "Html": "\r\n<p>Hi, I downloaded the source, loaded the project in VS 2008 and it gave me some errors loading. &nbsp;When I run the project, it kept saying namespace &quot;Practices&quot; doesn't exist. &nbsp;Please help.</p>\r\n<p>Thank you</p>\r\n",
+    "PostedDate": "2011-08-11T16:37:55.96-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "682315",
+    "ThreadId": "268780",
+    "Html": "<p>Sorry I never replied to this thread, but Oxite has not been worked on or supported for over 2 years now. &nbsp;:( &nbsp;Sorry!</p>",
+    "PostedDate": "2011-10-10T14:28:25.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

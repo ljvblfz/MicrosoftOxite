@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "139764",
+    "ThreadId": "42073",
+    "Html": "I saw <a href=\"http://www.codeplex.com/site/users/view/ripvannwinkler\">ripvanwinkler</a>'s low rating on Oxite and wanted to clarify a few things while also sharing a little goof up we made in the first release.<br>\r\n<br>\r\n<p>You can run the Oxite.VWDExpress.sln file so you won't need to have Database Professional installed so the data project should be a non-issue.</p>\r\n<p>Also, when you run that solution, an MDF is included in the App_Data folder so you can just run immediately and everything should work.</p>\r\n<p>If you need the sql script to generate the database for yourself (for running it on your own SQL Server) then this is an oversight on our part.  We'll include the output sql file made by the database project in the next release so you don't have to build it yourself.</p>\r\n<p>Thanks for the feedback!</p>\r\n",
+    "PostedDate": "2008-12-11T10:31:23.533-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

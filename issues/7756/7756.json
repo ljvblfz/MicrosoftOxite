@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When I try to change the password for the Admin user, Oxite throws a NullReferenceException.\n \nHere is the stack trace:\n[NullReferenceException: Object reference not set to an instance of an object.]\n   Oxite.Extensions.ModelStateDictionaryExtensions.AddModelErrors(ModelStateDictionary modelStateDictionary, ValidationStateDictionary validationStateDictionary) in C:\\DevJon\\OpenSource\\Oxite\\Source\\Oxite\\Oxite.Core\\Extensions\\ModelStateDictionaryExtensions.cs:18\n   Oxite.Controllers.UserController.ChangePasswordSave(UserAddress userAddress, UserChangePasswordInput userInput) in C:\\DevJon\\OpenSource\\Oxite\\Source\\Oxite\\Oxite.Core\\Controllers\\UserController.cs:172\n   lambda_method(ExecutionScope , ControllerBase , Object[] ) +130\n   System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters) +17\n   System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters) +178\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters) +24\n   System.Web.Mvc.<>c__DisplayClassa.<InvokeActionMethodWithFilters>b__7() +52\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) +254\n   System.Web.Mvc.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9() +19\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) +254\n   System.Web.Mvc.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9() +19\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) +254\n   System.Web.Mvc.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9() +19\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) +254\n   System.Web.Mvc.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9() +19\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation) +254\n   System.Web.Mvc.<>c__DisplayClassc.<InvokeActionMethodWithFilters>b__9() +19\n   System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters) +192\n   System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName) +297\n \n \nThis is occurring because Oxite.Services.ChangePassword is calling ModelResult's default constructor rather than calling the version that accepts a ValidationStateDictionary parameter.  This causes ModelResult's IsValid property to be set to false, even though the password has been changed correctly and there were no validation errors.\n \nI believe this can be fixed by changing line 149 of Oxite.Services.UserService.ChangePassword from this:\n \n    return new ModelResult();\n \nTo this:\n    \n    return new ModelResult(validationState);\n \nHowever, I do not know if this is the proper fix, and will leave this to the project developers, as I am just getting started with Oxite.\n \nSteps to reproduce:\n1) Get latest from https://oxite.svn.codeplex.com/svn (as of 5/11/2009 at 9:20am)\n2) Open Oxite.sln\n3) Launch Oxite in the debugger (or Ctrl+F5; doesn't matter)\n4) Log in with the default Admin username and password\n5) Click \"manage site\"\n6) Under Manage Users, click \"Find Users\"\n7) In Find a User, enter Admin and click \"Find\"\n8) Click on the link that appears, \"Admin (Oxite Administrator)\"\n9) Under User Tasks, click \"Change Password\"\n10) Enter and confirm your new password, and click \"Change Password\"\n \nExpected results:\nPassword is changed successfully\n \nActual results:\n(See above for description of NullReferenceException)\n \n \nServer OS: Windows Server 2008 SP1\nWeb server: IIS7\nVisual Studio 2008 SP1",
+    "LastUpdatedDate": "2013-02-21T15:43:06.97-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-05-11T13:23:30.43-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Error changing password",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7756
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

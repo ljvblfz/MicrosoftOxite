@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "230787",
+    "ThreadId": "67897",
+    "Html": "<p>Scenario: Go to blog post editing and try saving the entry.<br>Expected result: Post saved.<br>Actual result: Exception.<br>Details:<br>Exception: Unable to cast object of type 'System.String[]' to type 'System.String'.<br>File: PostModelBinder<br>Line: 22</p>\r\n<p>P.S.<br>I've seen this kind of exception not only here, but while trying to edit site settings as well.</p>",
+    "PostedDate": "2009-09-03T11:04:42.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "230918",
+    "ThreadId": "67897",
+    "Html": "<p>Yah, we've seen that problem too.&nbsp; I thought I fixed it, but I may have fixed one of the other occurrances and hadn't noticed that one.&nbsp; Not sure what changed to make the type come in wrong, but we'll look into it.&nbsp; Thanks!</p>",
+    "PostedDate": "2009-09-03T15:59:15.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

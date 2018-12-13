@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "165511",
+    "ThreadId": "49463",
+    "Html": "Can you tell me any more about the future of this project?  After MIX09 will it continue to be actively developed?<br>\r\n<br>\r\nI like it.  I want to use it.  I'm afraid of adopting it only to have development of the project stagnate.<br>\r\n<br>\r\nI do apologize, I assume you must get asked some form of this question repeatedly.\r\n",
+    "PostedDate": "2009-03-06T13:38:28.57-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165591",
+    "ThreadId": "49463",
+    "Html": "We can't promise much.  After MIX our team will be doing very minimal work on Oxite (read: barely any at all unless it relates to one of our projects like it has for MIX).  On a personal level, we are all running Oxite as our blogs (as are others) and will continue to develop Oxite in our spare time.  Hopefully, as soon as we finalize accepting patches, others will start to contribute as well.  The only thing I can really promise is that Oxite will not go away.\r\n",
+    "PostedDate": "2009-03-06T21:00:39.023-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165645",
+    "ThreadId": "49463",
+    "Html": "Good enough, other contributing and it not going away is pretty well what I wanted to hear.  Thanks.  :)\r\n",
+    "PostedDate": "2009-03-07T05:12:29.783-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165652",
+    "ThreadId": "49463",
+    "Html": "Are you taking contributions at the moment?<br>\r\n<br>\r\nI've been a GraffitiCMS user for the last year or so, but it seems that Telligent are pulling support for the product (you can read the <a href=\"http://support.graffiticms.com/p/1390/4983.aspx\">thread here</a>) and I'm currently considering moving and contributing to Oxite. I run a couple of CodePlex projects - and there are definitely ways in which I can contribute, for example I could quite easily take the automated build and installer framework I created for <a href=\"http://stylecopforresharper.codeplex.com/\">StyleCop for ReSharper</a> and port that into the Oxite codebase, if you'd be interested? Have you considered getting a free http://teamcity.codebetter.com account set up to run CI builds?<br>\r\n<br>\r\nRegards,<br>\r\nHoward van Rooijen<br>\r\n",
+    "PostedDate": "2009-03-07T06:20:30.303-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165854",
+    "ThreadId": "49463",
+    "Html": "Interesting thread.  Thanks for the link.<br>\r\n<br>\r\nWe currently aren't taking contributions, but we are very close on finishing up the process to do so.  I can't give any sort of official date, but I can say soon-ish.  :)  We'll be wanting to see what people build for Oxite and the ones that build the best stuff are the ones we'll want helping with the project so feel free to get started on Oxite and once we open the doors we'll checkout what you have.\r\n",
+    "PostedDate": "2009-03-08T14:25:12.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

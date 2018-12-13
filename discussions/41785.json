@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "138652",
+    "ThreadId": "41785",
+    "Html": "Assuming I kick off an Oxite implementation today (in Alpha) and there are subsequent releases what is the version to version migration path likely to be?<br>\r\n<br>\r\nI am not a developer so want to minimise the number of times I have to dip into .aspx pages to make changes, and I don't have control of the server (so updates will be via FTP)\r\n",
+    "PostedDate": "2008-12-08T09:40:01.24-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "138660",
+    "ThreadId": "41785",
+    "Html": "Not being a developer will make working on Oxite hard.  We really targeted developers for it and make some assumptions that developers would be the ones using it.  That said, if the community wants to take this down the path of making it work well for non-developers we're not going to stop it.  :)\r\n",
+    "PostedDate": "2008-12-08T09:50:05.093-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "138686",
+    "ThreadId": "41785",
+    "Html": "Erik,<br>\r\nFor fear of playing &quot;Captain Obvious&quot;, it would be great if you guys posted a planned roadmap.  This would help those of us that are planning on modding Oxite to prepare for changes.  Obviously, I'm not asking for data committments, but just something that gives an idea of the changes you guys foresee in the next few releases.\r\n",
+    "PostedDate": "2008-12-08T11:30:38.733-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "138688",
+    "ThreadId": "41785",
+    "Html": "Captain Obvious is always welcome here.  :)<br>\r\n<br>\r\nWe will publish a roadmap soon.  That said, the list will not be very large.  We know of a few things we're definitely going to work on and will publish that, but we really want to see what the community involvement is going to be like and where you all want this to go.  We're going to help guide where it goes, but want help from the community too so we don't want to be too strict on the roadmap.\r\n",
+    "PostedDate": "2008-12-08T11:37:27.313-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139197",
+    "ThreadId": "41785",
+    "Html": "Suck it up Jeremy (<a href=\"http://www.codeplex.com/site/users/view/offbeatmammal\" id=\"ctl00_ctl00_MasterContent_Content_PostRepeater_ctl00_UserNameLink\"><span style=\"color:#3e62a6\">offbeatmammal</span></a>), and if you get stuck, just go poke Erik on the shoulder with a &quot;please help&quot;<br>\r\n<br>\r\n<br>\r\n",
+    "PostedDate": "2008-12-09T22:58:59.107-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139199",
+    "ThreadId": "41785",
+    "Html": ":) I like one-click automation... isn't that what WebAI promises us <br>\r\n(and why is it all XHTML compliant... I want a 100% Silverlight front-end!)\r\n",
+    "PostedDate": "2008-12-09T23:08:54.387-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

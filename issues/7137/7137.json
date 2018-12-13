@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In place deletion of posts is convenient and easy. However, after deleting a post, the engine redirects you back to the post that you just deleted, resulting in a 404 error. User should likely be redirected back to the posts list.",
+    "LastUpdatedDate": "2017-11-27T23:44:09.833-08:00",
+    "PlannedForRelease": "Oxite.2009.2.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-02-19T01:11:47.58-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "404 error received after deleting a post",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7137
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Which post list do you want to go back to: the home page or the admin?",
+      "PostedDate": "2009-02-19T11:04:49.66-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Since posts can only be removed directly from the post itself (and so you don't need to be in the admin to remove a post) I would expect it to go back to the homepage.  Definitely open for anyone who has other reasons for somewhere else though.",
+      "PostedDate": "2009-02-19T11:47:41.643-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I woudl say go back to home page. I'm guessing that maintaining an internal breadcrumb of where they were before viewing the post is out of the question? Like, the post keeps track of the refering page, if one exists when they delete, it returns to that page. If one doesn't exist (they got there by opening directly), then go back to the main page?",
+      "PostedDate": "2009-02-19T11:53:46.357-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Yes, we keep track of the referrer in other places, we could do it there and if not, go to the homepage.  Thanks!",
+      "PostedDate": "2009-02-19T14:35:15.717-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-02-19T14:35:39.467-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:11.31-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-11-27T23:44:09.833-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

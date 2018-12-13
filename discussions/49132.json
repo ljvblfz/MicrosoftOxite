@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "164161",
+    "ThreadId": "49132",
+    "Html": "I'm not seeing a way to delete a post.&nbsp; Am I missing something?<br>\r\n",
+    "PostedDate": "2009-03-03T20:46:23.207-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164428",
+    "ThreadId": "49132",
+    "Html": "When you're looking at a post on the site and you're logged in there will be a remove button if the post was published less than the post edit timeout site setting (default is 24 hours).  This is mostly just to encourage people to not delete things that have more than likely already been indexed by search engines.  You can go into the site settings and change it to 0 hours and you can remove the post any time you want.  Also, I believe you can just unpublish the post and you'll see the remove button too.\r\n",
+    "PostedDate": "2009-03-04T10:20:10.46-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164431",
+    "ThreadId": "49132",
+    "Html": "Ah, ok.&nbsp; Thanks for all the helpful responses today Erik :)<br>\r\n",
+    "PostedDate": "2009-03-04T10:25:01.097-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164464",
+    "ThreadId": "49132",
+    "Html": "You're welcome.  Sorry it took me a while to get caught up.  :)\r\n",
+    "PostedDate": "2009-03-04T11:25:02.593-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "183922",
+    "ThreadId": "49132",
+    "Html": "I found the option mentioned above, but even after setting the <strong>Post Editable Timeperiod</strong> option to 0, I cannot remove the sample <strong>World.Hello()</strong> post.<br>\r\n<br>\r\nIn addition, once Areas have been added, I cannot find an option to remove them.  <br>\r\n<br>\r\nDoes this functionality not yet exist, or am I missing something obvious?  :)<br>\r\n<br>\r\nGabe Sumner\r\n",
+    "PostedDate": "2009-04-26T22:16:27.19-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "183923",
+    "ThreadId": "49132",
+    "Html": "Post Editable Time Period set to zero not work must be a bug (that's how it should work).<br>\r\n<br>\r\nNot being able to remove an area is not yet implemented.  It should be in the next release.  For now, you can just go into oxite_Area and delete the area you want to delete.  You might have to delete related data first though (like posts that are in that area).\r\n",
+    "PostedDate": "2009-04-26T22:19:31.883-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

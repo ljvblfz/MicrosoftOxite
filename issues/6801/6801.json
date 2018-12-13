@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-07-02T00:33:59.63-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The Oxite team are dividing up the data access into Repositories, which is a good thing for testability and is a nice concise pattern to work with. \nWhat's not so good is that this scheme is then wrapped in the ProviderModel, which is responsible for configuring and setting a subset of Repositories (but not all of them). \n \nGenerally speaking, Providers are usually instantiated once (Singleton) from the ConfigurationSettings that you provide (doing so more than once is a perf hit, usually). I'm still not completely clear what's happening with the Provider stuff - right now it's using a Singleton pattern but the locking has been commented out - which leads me to believe that the Provider is instantiated for every Controller call, which means multiple provider instances per application, which means ... general confusion: (...)\n \nMy suggestion here is that Repositories don't need Providers - you can use <a href=\"http://www.asp.net/learn/mvc-videos/video-366.aspx\">Dependency Injection to get around this</a>.\n \nFrom <a href=\"http://blog.wekeroad.com/blog/some-thoughts-on-oxite/ \">Rob Conery's blog</a>.",
+    "LastUpdatedDate": "2013-05-16T03:38:06.24-07:00",
+    "PlannedForRelease": "Oxite.2009.2.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-16T16:56:55.13-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Repositories,Singletons, and ProviderModel Confusion",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 6801
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I'm shocked that I can't add links. :-( Sorry...",
+      "PostedDate": "2008-12-16T16:57:38.74-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-17T04:51:23.357-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-04-19T07:30:34.83-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "This was fixed in the February 15th release, but I'm just now getting around to marking it as fixed.",
+      "PostedDate": "2009-07-02T00:33:52.177-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-02T00:33:59.63-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:15.1-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:06.24-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

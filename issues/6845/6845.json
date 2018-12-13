@@ -1,0 +1,120 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Most of your proposed changes are your opinions on how things should be named.  We have our own opinions on naming as well and will stick with them.  We&#39;ve made a lot of schema changes since your issue was submitted.  You&#39;ll probably like some of them and still won&#39;t like others.  We&#39;re ok with that and won&#39;t be changing the schema.",
+    "ClosedDate": "2009-07-02T00:43:45.177-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Here’s a list of Oxite table name changes for ease of use as a common database starting point.  Shortening the names will allow more code to be viewed without scrolling – an important factor for use in classroom instruction.  Concise table names will allow Oxite to serve as a generic Web 2.0 app for extension by the development community.\n \nProposed table name updates:\n \nArea - unchanged\nAreaRole – formerly AreaRoleRelationship\nBackgroundService – formerly BackgroundServiceAction\nComment – unchanged\nCommentAnonymous – unchanged (removal recommended by using CommentMessage and User table)\nCommentMessage – formerly CommentMessageRelationship\nCommentRelation – formerly CommentRelationship\nFile – formerly FileResource (This table could also manage attached Images)\nLanguage – unchanged\nMessage – unchanged\nMessageUser – formerly MessageTo (Using “To” makes relation tables containing “To” seem inconsistently named.)\nMessageAnonymous – formerly MessageToAnonymous (removal recommended by using MessageUser and User table)\nPost – unchanged\nPostArea – formerly PostAreaRelationship\nPostRelation – formerly PostRelationship\nPostTag – formerly PostTagRelationship\nRole – unchanged\nSnippet – formerly StringResource (Rename StringResourceKey to SnippetKey)\nSnippetLanguage – formerly StringResourceVersion\nSubscription – unchanged\nSubscriptionAnonymous – unchanged (removal recommended by using Subscription and User table)\nTag – unchanged\nTrackback – unchanged\nUser – unchanged\nUserFile – formerly UserFileResourceRelationship\nUserLanguage – unchanged\nUserRole – formerly UserRoleRelationship\n \nA. Compound words are used here to indicate relation tables – typically with only two capital letters.  Example: “AreaRole”\n \nB. The word “Relation” is appended only for parent-to-child tables.  Example: “CommentRelation” instead of “CommentRelationship” or “CommentComment”.  Appending “Relationship” to all relation tables is too verbose and is not a standard practice.\n \nC. Singular table names are retained.  Plural set names are now created automatically by LINQ to SQL.  Keeping table names singular avoids confusion over whether a relation table should be called AreaRoles, AreasRoles or Areas_Roles.\n \nD. Oxite will serve as a Web 2.0 database design starting point, so “oxite_” is removed from the start of table names.  Pre-pended names are reserved for third-party tables.  This will avoid multiple User tables.  It will also allow Oxite to work well as an instructional application.  Removing the pre-pended database name will prevent future changes to the Oxite project name from breaking existing blog sites.  Most importantly, it will allow Oxite to serve as a generic Web 2.0 foundation for other applications to build upon.\n \nE. The Snippet table (formerly StringResource) could serve the dual purpose of managing insertions of code snippets compiled at run-time.  It could contain tags for inserting SilverLight, MashUp and other widgets.  Another name for this table could be Widget or Insertion.\n \nF. Dual use of the User table for anonymous users will eliminate the need for several current tables and more future tables. View related discussion: \nhttp://www.codeplex.com/oxite/Thread/View.aspx?ThreadId=42285",
+    "LastUpdatedDate": "2013-05-16T03:38:05.397-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-22T06:31:10.273-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Oxite - Table name cleanup project",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 8,
+    "Id": 6845
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Why no prefixes? Prefixing the table names makes it easier to put it alongside other apps - less chance of a name clash, easier to read which table is from which part.",
+      "PostedDate": "2008-12-22T06:49:13.217-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "The renamings assume this will be used as an application base instead of as an addition on top of some other app. Using prefixes would support the latter case more than the prior, in my mind.",
+      "PostedDate": "2008-12-22T13:02:25.577-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-22T13:06:16.967-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "With Oxite as the application base, it would have the special privilege of having no prefixes.  This will allow for simple table names like “UserRole”, rather than the cumbersome “aspnet_Users_oxite_Role”.  For those developers who have table name conflicts, let’s provide an install script which adds “oxite_” as an option.  We’d like to start with the simplicity of no prefix so trainers don’t accidentally install the complex version.  We’ll be renaming several of our own application tables to use Oxite as a starting point for an open source SmartGov project management system.  Simple queries are a requirement since many in-house report builders will be using SQL for the first time.",
+      "PostedDate": "2008-12-22T18:49:37.97-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-22T21:02:22.237-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Sounds good to me. Doing so would make it easier to use in new applications or perhaps extend existing ones. Plus, including the technology name or codename in the table names may make the table names obsolete or dated as newer versions of the software are released.",
+      "PostedDate": "2008-12-22T21:09:07.097-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-25T16:38:39.623-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-29T06:34:09.603-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-29T08:09:53.133-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I like this.  Using short names as the application base is much cleaner than the alternatives of oxite_User and aspnet_Users.  Starting point tables with generic names like \"User\" and \"Role\" would create a common structure for third-party customization.",
+      "PostedDate": "2008-12-29T08:10:08.79-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Here’s a script to apply the table naming updates.   Nine corresponding ID columns are also renamed.\r\nPlease post a comment here if you are working on the related renaming in the source code.\r\n\r\nUSE Oxite;\r\nGO\r\nEXEC sp_rename 'oxite_Area', 'Area';\r\nGO\r\nEXEC sp_rename 'oxite_AreaRoleRelationship', 'AreaRole';\r\nGO\r\nEXEC sp_rename 'oxite_BackgroundServiceAction', 'BackgroundService';\r\nGO\r\nEXEC sp_rename 'BackgroundService.BackgroundServiceActionID', 'BackgroundServiceID', 'COLUMN'\r\nGO\r\nEXEC sp_rename 'oxite_Comment', 'Comment';\r\nGO\r\nEXEC sp_rename 'oxite_CommentAnonymous', 'CommentAnonymous';\r\nGO\r\nEXEC sp_rename 'oxite_CommentMessageRelationship', 'CommentMessage';\r\nGO\r\nEXEC sp_rename 'oxite_CommentRelationship', 'CommentRelation';\r\nGO\r\nEXEC sp_rename 'oxite_FileResource', 'File';\r\nGO\r\nEXEC sp_rename 'File.FileResourceID', 'FileID', 'COLUMN'\r\nGO\r\nEXEC sp_rename 'File.FileResourceName', 'FileName', 'COLUMN'\r\nGO\r\nEXEC sp_rename 'oxite_Language', 'Language';\r\nGO\r\nEXEC sp_rename 'oxite_Message', 'Message';\r\nGO\r\nEXEC sp_rename 'oxite_MessageTo', 'MessageUser';\r\nGO\r\nEXEC sp_rename 'oxite_MessageToAnonymous', 'MessageAnonymous';\r\nGO\r\nEXEC sp_rename 'MessageAnonymous.MessageToID', 'MessageAnonymousID', 'COLUMN'\r\nGO\r\nEXEC sp_rename 'oxite_Post', 'Post';\r\nGO\r\nEXEC sp_rename 'oxite_PostAreaRelationship', 'PostArea';\r\nGO\r\nEXEC sp_rename 'oxite_PostRelationship', 'PostRelation';\r\nGO\r\nEXEC sp_rename 'oxite_PostTagRelationship', 'PostTag';\r\nGO\r\nEXEC sp_rename 'oxite_Role', 'Role';\r\nGO\r\nEXEC sp_rename 'oxite_StringResource', 'Snippet';\r\nGO\r\nEXEC sp_rename 'Snippet.StringResourceKey', 'SnippetKey', 'COLUMN'\r\nGO\r\nEXEC sp_rename 'Snippet.StringResourceValue', 'SnippetValue', 'COLUMN'\r\nGO\r\nEXEC sp_rename 'oxite_StringResourceVersion', 'SnippetLanguage';\r\nGO\r\nEXEC sp_rename 'SnippetLanguage.StringResourceKey', 'SnippetKey', 'COLUMN'\r\nGO\r\nEXEC sp_rename 'SnippetLanguage.StringResourceValue', 'SnippetValue', 'COLUMN'\r\nGO\r\nEXEC sp_rename 'oxite_Subscription', 'Subscription';\r\nGO\r\nEXEC sp_rename 'oxite_SubscriptionAnonymous', 'SubscriptionAnonymous';\r\nGO\r\nEXEC sp_rename 'oxite_Tag', 'Tag';\r\nGO\r\nEXEC sp_rename 'oxite_Trackback', 'Trackback';\r\nGO\r\nEXEC sp_rename 'oxite_User', 'User';\r\nGO\r\nEXEC sp_rename 'oxite_UserFileResourceRelationship', 'UserFile';\r\nGO\r\nEXEC sp_rename 'UserFile.FileResourceID', 'FileID', 'COLUMN'\r\nGO\r\nEXEC sp_rename 'oxite_UserLanguage', 'UserLanguage';\r\nGO\r\nEXEC sp_rename 'oxite_UserRoleRelationship', 'UserRole';\r\nGO",
+      "PostedDate": "2009-01-06T19:43:37.037-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-11T11:46:10.193-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-03-25T11:36:29.98-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-07-02T00:43:45.177-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:13.177-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:05.397-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

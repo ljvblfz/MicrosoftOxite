@@ -1,0 +1,8 @@
+<div class="wikidoc">Oxite exposes events to a plug-in via method signature/naming convention.  So in order to hook to an event, a plug-in writer simply needs to add a method to their plug-in class that has the correct name, takes the right parameter types, and returns the correct type.<br /><br /><b>Example:</b><br /><br /><pre>
+public class MyCustomPlugin
+{
+    public PluginPostInput ProcessInputOfPostOnAdd(PluginPostInput post)
+    {
+    }
+}
+</pre><br />This defines a custom plug-in that hooks to the <a href="https://oxite.codeplex.com/wikipage?title=ProcessInputOfPostOnAdd&referringTitle=Events">ProcessInputOfPostOnAdd</a> event.  This will allow the plug-in to manipulate elements of a blog post before it is saved to the database.<br /></div><div class="ClearBoth"></div>

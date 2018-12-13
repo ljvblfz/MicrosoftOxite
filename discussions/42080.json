@@ -1,0 +1,234 @@
+[
+  {
+    "Id": "139806",
+    "ThreadId": "42080",
+    "Html": "I am using VS 2008 pro with MS SQL server 2008, just installed MVC beta 1. When I tried to open the solution, it throws error as following.<br>\r\n<br>\r\n'C:\\Inetpub\\wwwroot\\Oxite\\Oxite.database\\Oxite.Database.dbproj' cannot be opened because its projet type (.dbproj) is not supported by this version of the application.<br>\r\n<br>\r\nDid I miss anything? Thanks.<br>\r\n",
+    "PostedDate": "2008-12-11T12:48:18.26-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139807",
+    "ThreadId": "42080",
+    "Html": "@qahwah ... you don't have the Database version of Visual Studio installed, so you might want to try opening up the oxite.vwdexpress.sln file instead. It is the solution without the database or test projects included.\r\n",
+    "PostedDate": "2008-12-11T12:51:35.213-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139808",
+    "ThreadId": "42080",
+    "Html": "You need to have <a href=\"http://msdn.microsoft.com/en-us/vsts2008/products/bb933747.aspx\">Visual Studio Team System 2008 Database Edition</a> installed for the project to work.  You can either just remove the project from the solution yourself (if you still want to run the tests project) or you can instead just run the Oxite.VWDExpress solution file instead, which doesn't include the database or test projects.\r\n",
+    "PostedDate": "2008-12-11T12:52:07.54-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139820",
+    "ThreadId": "42080",
+    "Html": "Thanks guys! <br>\r\nSo the database is for testing only? Any document shows how to link oxite to MS SQL server? I can't login using the default user name and pa$$w0rd. <br>\r\n",
+    "PostedDate": "2008-12-11T13:08:23.243-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139853",
+    "ThreadId": "42080",
+    "Html": "I have the same problem and error of not having team system 2008 installed. Can anyone describe how to use the DB in an external instance I have SS 2008 installed on the same machine as the project files.",
+    "PostedDate": "2008-12-11T14:31:00.08-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139856",
+    "ThreadId": "42080",
+    "Html": "Regarding the database, you'll need attach the .mdf that we ship in the /App_Data folder of the web project (OxiteSite) to your SQL Server instance and then modify the connection string in the web.config of the OxiteSite project to point to your server and using your credentials.\r\n",
+    "PostedDate": "2008-12-11T14:37:49.77-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139869",
+    "ThreadId": "42080",
+    "Html": "Thanks Duncan. The connection worked great. The sql log shows I am logging in succesfully but the app is erroring at line 13 of default.aspx.cs &quot;<em>The incoming request does not match any route.&quot;. Might there still be a dB problem and the route is not found for that reason?</em>",
+    "PostedDate": "2008-12-11T15:22:25.04-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139883",
+    "ThreadId": "42080",
+    "Html": "@spinoza I've seen that error randomly as well.  I believe it has to do with the app getting confused after an exception has occurred (might be a bug on our end, not sure yet).  Can you debug Oxite and put a breakpoint where the call is executed and then continue to follow it line by line until you hit an exception or something out of ordinary happens?  Let us know if you find anything.\r\n",
+    "PostedDate": "2008-12-11T15:52:28.283-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139889",
+    "ThreadId": "42080",
+    "Html": "Ok here are a few things I don't think are right but I have nothing to compare to. Right off the bat in the page load on HttpContext.Current.RewritePath(Request.ApplicationPath);<div><br></div><div>the currentNotification and is PostNotification show a value of &quot;'HttpContext.Current.IsPostNotification' threw an exception of type 'System.PlatformNotSupportedException'&quot; same for currentNotification.</div><div><br></div><div>Then on line 13 the HttpHandler ..RouteCollection count=0. I'll try and restart VS and see what happens.</div>",
+    "PostedDate": "2008-12-11T16:09:37.717-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139949",
+    "ThreadId": "42080",
+    "Html": "hhhmmm...not ruling out that this is our bug, but that error seems like ASP.NET MVC is freaking out about your platform (and then everything breaks after that).  Weird.  What OS are you running on?\r\n",
+    "PostedDate": "2008-12-11T23:30:00.47-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140040",
+    "ThreadId": "42080",
+    "Html": "Yea thats what It looked like to me. Gald you concur. I am running 32k Vista sp1, VS 2008 9.0.30729.1 SP1 3.5 framework SP1. Pretty much standard stuff I would think. Could there be something going on with Cassini. I have iis7 installed on this box but I don't think I am running against it not sure how to tell. Also to thrw out a bit more cruft. I am not 100% sure that I am getting to the data even though the logs show the user and the machine are connecting.<div><br></div>",
+    "PostedDate": "2008-12-12T07:14:02.527-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140059",
+    "ThreadId": "42080",
+    "Html": "Is it possible to run this with VS 2008 and SQL Server 2005 or not? And if not, when can we see this happen?\r\n",
+    "PostedDate": "2008-12-12T08:15:47.597-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140070",
+    "ThreadId": "42080",
+    "Html": "Antony, check the post above &quot;<span style=\"font-family:'segoe ui';font-size:13px\"><table>    <tbody>        <tr>            <td style=\"border-top-style:none;border-right-style:none;border-bottom-style:none;border-left-style:none\">            <div id=\"ctl00_ctl00_MasterContent_Content_PostRepeater_ctl10_BodyDiv\">Regarding the database, you'll need attach the .mdf that we ship in the /App_Data folder of the web project (OxiteSite) to your SQL Server instance and then modify the connection string in the web.config of the OxiteSite project to point to your server and using your credentials&quot; </div>            <div id=\"ctl00_ctl00_MasterContent_Content_PostRepeater_ctl10_BodyDiv\"><br>            </div>            <div id=\"ctl00_ctl00_MasterContent_Content_PostRepeater_ctl10_BodyDiv\">It worked for me to run against an external instance of SS 2008 i have some other problems but the DB coneection seems to be good. Give it a try.</div>            </td>        </tr>    </tbody></table></span>",
+    "PostedDate": "2008-12-12T08:31:22.557-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140266",
+    "ThreadId": "42080",
+    "Html": "I have SQL server 2008, Developer edition. I am on Vista-64 bit. I cannot attach the .MDF. I get an error:<br>\r\n<br>\r\nADDITIONAL INFORMATION:<br>\r\nAn exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)<br>\r\n------------------------------<br>\r\nUnable to open the physical file &quot;C:\\Code\\oxite\\Oxite\\OxiteSite\\App_Data\\Oxite.Database.mdf&quot;. Operating system error 5: &quot;5(failed to retrieve text for this error. Reason: 15105)&quot;. (Microsoft SQL Server, Error: 5120)<br>\r\n<br>\r\n",
+    "PostedDate": "2008-12-13T09:19:25.47-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140465",
+    "ThreadId": "42080",
+    "Html": "That's interesting Anthony, I'm on Vista 64-bit as well, but SQL 2008 Express and had no problem... I doubt this is a limitation of Developer edition, but I wish that error was more descriptive. Can you just create a new DB and use the .sql file that is checked in with the solution now?<br>\r\n",
+    "PostedDate": "2008-12-14T19:48:36.767-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140750",
+    "ThreadId": "42080",
+    "Html": "I have run the Oxite.Database.sql script, thanks. It starts off with some errors, but after that creates tables, etc.<br>\r\n<br>\r\nOutput is:<br>\r\nMsg 102, Level 15, State 1, Line 1<br>\r\nIncorrect syntax near ':'.<br>\r\nMsg 102, Level 15, State 1, Line 2<br>\r\nIncorrect syntax near ':'.<br>\r\nMsg 102, Level 15, State 1, Line 2<br>\r\nIncorrect syntax near ':'.<br>\r\nMsg 5105, Level 16, State 2, Line 1<br>\r\nA file activation error occurred. The physical file name '$(PrimaryFilePhysicalName)' may be incorrect. Diagnose and correct additional errors, and retry the operation.<br>\r\nMsg 1802, Level 16, State 1, Line 1<br>\r\nCREATE DATABASE failed. Some file names listed could not be created. Check related errors.<br>\r\nMsg 102, Level 15, State 1, Line 2<br>\r\nIncorrect syntax near ':'.<br>\r\nMsg 911, Level 16, State 1, Line 2<br>\r\nDatabase '$(DatabaseName)' does not exist. Make sure that the name is entered correctly.<br>\r\nMsg 102, Level 15, State 1, Line 2<br>\r\nIncorrect syntax near ':'.<br>\r\nCreating [dbo].[oxite_User]<br>\r\n.. etc. success messages<br>\r\n",
+    "PostedDate": "2008-12-15T15:03:37.703-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "143083",
+    "ThreadId": "42080",
+    "Html": "You can just use the sqlcmd.exe for that.<div><br></div><div>1. Open vs.net 2008 / 2005 command line</div><div>2. sqlcmd -S .\\SQLEXPRESS -i Oxite.Database.sql</div><div><br></div><div>Hope this help.</div>",
+    "PostedDate": "2008-12-26T19:38:37.033-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144180",
+    "ThreadId": "42080",
+    "Html": "<p>Anthony,</p>\r\n<p>You need to put the MDF file in the location in your C drive and then go to Management Studio and right click choose attach.  Then you will see the message no LDF file click on that and then click remove.  When you do that the attach will work as expected. Below are also code you can use to attach, known issues it may not work if the parent database is more than one file.</p>\r\n<p>C:\\Program Files\\Microsoft SQL Server\\MSSQL.1\\MSSQL\\DATA</p>\r\n<p> </p>\r\n<p>EXEC sp_attach_single_file_db @dbname=‘MyDatabase’,<br>\r\n    @physname=‘E:\\Database\\MyDatabase.mdf’</p>\r\n",
+    "PostedDate": "2009-01-03T20:15:49.677-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144234",
+    "ThreadId": "42080",
+    "Html": "Hi Caddre.<br>\r\n<br>\r\nHere's what I did in more detail. I did not get any messages about LDFs.<br>\r\n<br>\r\n- Delete the oxite database, get the latest version of the source via svn from codeplex to local folder “C:\\Code\\Oxite”.<br>\r\n<br>\r\n- In SQL management studio, right-click “databases”, select “attach”, add C:\\Code\\Oxite\\Oxite\\OxiteSite\\App_Data\\Oxite.Database.mdf, click ok on the &quot;locate database files&quot; dialog, click ok on the &quot;attach databases&quot; dialog.<br>\r\n<br>\r\n- Get the message “if you are certain that you have added all the necessary full-text catalogs, click OK. To add more catalogs, click Cancel.”<br>\r\n<br>\r\n- Click OK to that.<br>\r\n<br>\r\n- It fails. The message is: An error occurred when attaching the database(s). Click the hyperlink in the Message column for details.<br>\r\n<br>\r\n- The details in the message column are as posted above.<br>\r\n<br>\r\n&nbsp;<br>\r\n",
+    "PostedDate": "2009-01-04T10:36:16.307-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144406",
+    "ThreadId": "42080",
+    "Html": "<p>Hi Anthony,</p>\r\n<p>That is not correct I attached only the MDF BradA posted in his blog before I posted here, you need to put the MDF in the folder below which is the Microsoft SQL Server Data subfolder in programs and SQL Server will create the file path for you after the attachment.  You also know you need to make changes in Web.Config after attachment.</p>\r\n<p>C:\\Program Files\\Microsoft SQL Server\\MSSQL.1\\MSSQL\\DATA</p>\r\n<p>Then you go to Management Studio and right click attach navigate to the file you added to the SQL Server folder  then click attach look in the LDF section of the attach GUI and you will see the no log file message click on it to enable it then click remove below and then click OK.  If you want you can practice with the BradA Northwind first.</p>\r\n<p><a href=\"http://blogs.msdn.com/brada/archive/2008/01/29/asp-net-mvc-example-application-over-northwind-with-the-entity-framework.aspx\">http://blogs.msdn.com/brada/archive/2008/01/29/asp-net-mvc-example-application-over-northwind-with-the-entity-framework.aspx</a></p>\r\n<p>If you still get an error then it maybe File Stream related which means you have not enabled it so go to configuration manager and right click on SQL Server Service change the account from Network Service to Local System, then click on File Stream click on all the check boxes.  You then go to Management Studio go right click on Server Properties and go to Advanced and you will see file stream is still not enabled change that and re start your box.  Then follow step one.</p>\r\n<p>BTW this editor is not good copy and paste is not enabled, I posted this with Ctrl-V and I have not been able to login for 30 minutes.</p>\r\n",
+    "PostedDate": "2009-01-05T08:01:51.053-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144545",
+    "ThreadId": "42080",
+    "Html": "Ok, take 2 at trying to understand your stream of consciousness suggestions. Here’s what I did:<br>\r\n<br>\r\n-&nbsp;&nbsp; &nbsp;SVN Update to get Oxite to the latest version<br>\r\n-&nbsp;&nbsp; &nbsp;Note that there is no&nbsp; folder called “C:\\Program Files\\Microsoft SQL Server\\MSSQL.1”, databases appear to be in “C:\\Program Files\\Microsoft SQL Server\\MSSQL10.MSSQLSERVER\\MSSQL\\DATA”<br>\r\n-&nbsp;&nbsp; &nbsp;Go to C:\\Code\\Oxite\\Oxite\\OxiteSite\\App_Data, copy Oxite.Database.mdf to “C:\\Program Files\\Microsoft SQL Server\\MSSQL10.MSSQLSERVER\\MSSQL\\DATA”<br>\r\n-&nbsp;&nbsp; &nbsp;In SQL management studio, right-click “databases, select “attach”.<br>\r\n-&nbsp;&nbsp; &nbsp;Get the “attach databases” dialog, click “add”, select the Oxite.Database.mdf in C:\\Program Files\\Microsoft SQL Server\\MSSQL10.MSSQLSERVER\\MSSQL\\DATA” <br>\r\n-&nbsp;&nbsp; &nbsp;Click “OK” to the “locate database files” dialog, and to the “attach databases” dialog. <br>\r\n-&nbsp;&nbsp; &nbsp;It fails again, the Error message is as before.<br>\r\n<br>\r\nNo dialogs were given about missing ldf files.<br>\r\n<br>\r\nSQL server service is already running as local system, and there are no options to do with file streams that I can find in configuration manager. That Brad Abrams blog entry that you reference doesn’t seem to have anything to do with attaching databases. Sure I can edit a connection string, once there is a database to connect to.<br>\r\n<br>\r\n",
+    "PostedDate": "2009-01-05T14:57:55.003-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144575",
+    "ThreadId": "42080",
+    "Html": "<p><strong>(SQL server service is already running as local system, and there are no options to do with file streams that I can find in configuration manager.)</strong></p>\r\n<p>In configuration manager right click on SQL Server Service go to properties you will see service then FILESTREAM click on it to enable all features.<br>\r\n<br>\r\nBut that is not the reason for your problem when you click attach in Management Studio and click add to add the file in the SQL Server folder on the lower screen you see Oxite data and Oxite log at the end under messages in the log section you will see not found click on it and you will see remove enabled at the bottom.<br>\r\n<br>\r\n Click remove to remove it and then click ok and you can attach the database. I used BradA's Northwind.MDF because attach MDF is attach MDF in most cases.  I could not post the image at Codeplex because of the editor.</p>\r\n<p>Attach lower pane. </p>\r\n<p>Original file name   File Type  Current file Path    Messages<br>\r\n  <br>\r\nOxite.MDF             Data      C:</p>\r\n<p><strong>Oxite_log.ldf         LOG       C:                           Not found </strong></p>\r\n<p>Click on the not found line which I have made bold and you will see remove enabled at the bottom click on remove and then click OK.</p>\r\n<p> </p>\r\n<p> </p>\r\n",
+    "PostedDate": "2009-01-05T17:17:58.467-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144728",
+    "ThreadId": "42080",
+    "Html": "It works.<br>\r\n<br>\r\nThe complete correct procedure for attaching the MDF into SQL Server is as follows:<br>\r\n<br>\r\n- Use SVN Update to get Oxite to the latest version to a folder, e.g. &quot;C:\\Code\\Oxite\\&quot;<br>\r\n- Locate where MS SQL keeps the database files, e.g. &quot;C:\\Program Files\\Microsoft SQL Server\\MSSQL10.MSSQLSERVER\\MSSQL\\DATA&quot;, <br>\r\n- Go to C:\\Code\\Oxite\\Oxite\\OxiteSite\\App_Data, copy\r\nOxite.Database.mdf to “C:\\Program Files\\Microsoft SQL\r\nServer\\MSSQL10.MSSQLSERVER\\MSSQL\\DATA”<br>\r\n- In SQL management studio, right-click “databases, select “attach”.<br>\r\n- Get the “attach databases” dialog, click “add”, select the\r\nOxite.Database.mdf in C:\\Program Files\\Microsoft SQL\r\nServer\\MSSQL10.MSSQLSERVER\\MSSQL\\DATA” <br>\r\n- Click “OK” to the “locate database files” dialog<br>\r\n- In the &quot;database details&quot; list (lower pane), look for the &quot;log&quot; line with &quot;not found&quot; in the &quot;message&quot; column. Select it and click &quot;remove&quot;<br>\r\n- Click “OK” to the “attach databases” dialog<br>\r\n- Click “OK” to the message “if you are certain that you have added all the\r\nnecessary full-text catalogs, click OK”.<br>\r\n- The database is now present in the list of databases, named &quot;C:\\CODE\\CODEPLEX\\OXITE\\OXITESITE\\APP_DATA\\OXITE.DATABASE.MDF&quot;. Right-click it, rename to &quot;Oxite.database&quot;<br>\r\n<br>\r\nDone!<br>\r\n",
+    "PostedDate": "2009-01-06T08:29:51.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "144742",
+    "ThreadId": "42080",
+    "Html": "Anthony,<br>\r\n<br>\r\nAlmost funny but you did not add any techincal value in you current post because there was a new code drop at 8 PM Monday that includes the LDF in the App_Data folder so you are the person who did not understand simple click<strong> Not Found</strong> to enable Remove.<br>\r\n<br>\r\nHappy Coding.\r\n",
+    "PostedDate": "2009-01-06T09:10:58.413-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "145379",
+    "ThreadId": "42080",
+    "Html": "That you for your support, Caddre. I wish you both punctuation and politeness.<br>\r\n<br>\r\nDocumenting the procedure in a way that is easy to follow is important for future reference of other people who may be consulting this forum for similar issues.<br>\r\n",
+    "PostedDate": "2009-01-08T03:22:50.363-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "145392",
+    "ThreadId": "42080",
+    "Html": "I did not see it that way because my work was used to replace the App_Data folder in source control going back to early December when this thread started.  Note to self post image from image shack and I did not see documentation you are creating a task I can perform in my sleep.<br>\r\n<br>\r\n<br>\r\nHappy coding       \r\n",
+    "PostedDate": "2009-01-08T05:11:14.193-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "167614",
+    "ThreadId": "42080",
+    "Html": "I am also having problems with connecting to the database with the same error(s):<br>\r\n<br>\r\nI am going to attempt some of these things, but I have several questions:<br>\r\n<br>\r\n1) I am running VS 2008 Developer.&nbsp; Does that mean I cannot run the project?&nbsp; I can install VS 2008 Pro, but not Team Foundation<br>\r\n<br>\r\n2) I have SQL 2005, SQL 2008 and 2008 Express all installed on my system.&nbsp; Which does Oxite expect?<br>\r\n&nbsp;&nbsp; All of these are installed with instance names, so there is no SQL default instance on this machine...<br>\r\n<br>\r\n3) I do not see ANY database connection info in the Web.Config.&nbsp; What's up with that?&nbsp; If I could see the connection info I suspect some of these questions could be ignored.<br>\r\n<br>\r\nThanks,<br>\r\nTom<br>\r\n<br>\r\n",
+    "PostedDate": "2009-03-12T20:54:59.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "167615",
+    "ThreadId": "42080",
+    "Html": "@tlatourelle<br>\r\n<br>\r\n1) VS2K8 Pro should be able to run the database project.<br>\r\n2) SQL Express 2005 is what is needed to run the database project.<br>\r\n3) The connection string is in the web.config of the OxiteSite project. The name of it is &quot;ApplicationServices&quot; (just like the sample app that comes with ASP.NET MVC). Just curious, why are you trying to use the database project? You don't need it. There is an MDF under OxiteSite/App_Data that will be run by default.\r\n",
+    "PostedDate": "2009-03-12T21:00:56.897-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "168006",
+    "ThreadId": "42080",
+    "Html": "Erik &amp; all, <br>\r\nDepending how your Sql server is setup(named instance etc..) it won't start by default. In this case we need to attach the Db.<br>\r\nIn order to avoid the attach issue mentioned above (error 5120) you must start your SSManagement Studio as administrator(right click on menu and select run as admin).<br>\r\nJean<br>\r\n",
+    "PostedDate": "2009-03-13T20:13:18.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

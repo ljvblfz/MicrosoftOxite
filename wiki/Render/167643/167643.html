@@ -1,0 +1,14 @@
+<div class="wikidoc">The Group attribute is applied to a  property of the plug-in class.  It allows the plug-in creator to specify the name of the group that the property should be displayed in withn the configuration UI and the order in which the group should appear.<br /><br /><b>Note:</b>  If there are two groups with the same name but different order values, there will be two groups with the same name in the configuration UI.<br /><br /><b>Example:</b><br /><br /><pre>
+public class DisclaimerSelectorPlugin
+{
+    [Group(&quot;Disclaimer&quot;, // Name of the group
+        1)] // Order in which the group should appear in the UI
+    ...
+    public string DisclaimerText
+    {
+        get;
+        set;
+    }
+...
+}
+</pre><br /><br /><b>Display:</b><br /></div><div class="ClearBoth"></div>

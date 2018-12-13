@@ -1,0 +1,85 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi -\n \nCan you guys set svn:ignore flags for the bin/obj directories? It would make us SVN users rrrrrrrrrrrreally happy :-)",
+    "LastUpdatedDate": "2017-11-27T23:43:36.5-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-09T11:26:59.253-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "svn:ignore flags on bin/obj dirs?",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 6747
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I have no idea if this is something we can do or not. I suppose we could remove them from source code control",
+      "PostedDate": "2008-12-09T13:28:54.74-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "We're all VSTF users over here.  How do we do what you need?  We'd be happy to do it to make you happy.  :)",
+      "PostedDate": "2008-12-09T15:05:33.77-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-09T16:21:47.143-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "[Assuming TortoiseSVN]\r\nRemove the bin and obj (and VS user settings files) from source control. Then right-click, TortoiseSVN, Add to ignore list. Then commit it.",
+      "PostedDate": "2008-12-15T20:32:17.037-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-15T20:32:28.147-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Sorry for posting twice :-)\r\n\r\nOr right-click, TortoiseSVN, Settings, and add \"bin obj *.user\" to the global ignore pattern.",
+      "PostedDate": "2008-12-15T20:38:37.443-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-11T20:48:38.833-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:17.13-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-11-27T23:43:36.5-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

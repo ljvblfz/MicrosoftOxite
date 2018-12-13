@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "139682",
+    "ThreadId": "42058",
+    "Html": "Does Oxite is installable on a virtual folder of IIS?<br>\r\nI tried to modify web.config SITE attribute, but &quot;Oxite.Mvc\\OxiteApplication.cs&quot; made verify on Config.Site.Host.<br>\r\nIf you set on &lt;site host=&quot;...&quot;&gt; only the servername, site works but without style: it wrongs on .css reference.<br>\r\n<br>\r\nThanks<br>\r\nMerlinox<br>\r\n<em>blog.merlinox.com</em><br>\r\n",
+    "PostedDate": "2008-12-11T06:22:48.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "139885",
+    "ThreadId": "42058",
+    "Html": "Can you paste in the &lt;site&gt; element here so I can see what you've set everything to?  That might help me figure out what's really going wrong.  Thanks!\r\n",
+    "PostedDate": "2008-12-11T15:55:02.43-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140706",
+    "ThreadId": "42058",
+    "Html": "I have a similar question about publish the oxitesite project to my local IIS 5.1. I am able to run the website in debug mode. But failed to publish it on a virtual app folder.<br>\r\n<br>\r\nIf I have a virtual folder called &quot;OxiteSite&quot; under localhost, is this the only place I need to change in web.config file in order to make it work? <br>\r\n<br>\r\n&lt;site name=&quot;Oxite Sample&quot; host=&quot;http://localhost/OxiteSite&quot; id=&quot;4F36436B-0782-4a94-BB4C-FD3916734C03&quot; languageDefault=&quot;en&quot; timeZoneOffset=&quot;-5&quot; gravatarDefault=&quot;http%3A%2F%2Ffarm4.static.flickr.com%2F3161%2F3075626008_bafe9b2801.jpg%3Fv%3D0&quot; /&gt;<br>\r\n<br>\r\nThanks.<br>\r\n<br>\r\n",
+    "PostedDate": "2008-12-15T12:26:56.133-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140741",
+    "ThreadId": "42058",
+    "Html": "That &quot;should&quot; be the only place you have to change it, but we haven't done any testing on IIS 5.1.  We've only tested running the ASP.NET Development Web Server.\r\n",
+    "PostedDate": "2008-12-15T14:30:39.32-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "140742",
+    "ThreadId": "42058",
+    "Html": "I debug application to use it with virtual folder but without good result. I can use it only via debug mode.<br>\r\nToday Oxite gave me also some errore on first onPageLoad event, I must comment a row.<br>\r\n",
+    "PostedDate": "2008-12-15T14:38:29.447-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "140967",
+    "ThreadId": "42425",
+    "Html": "I was looking through the code and one of the more interesting features are the background services running inside the website.<div>I am thinking I can do something similar in a new project I am about to work on.</div><div>I really like the idea as it would eliminate having to remember were such and such service is installed or this console app running this job is installed doing multiple deployments etc..<br></div><div><br></div><div>Are running services like this a common occurance? How does it affect things like scalablity, such as moving into a web farm?</div><div><br></div><div>Thanks,</div><div>Joe</div><div><br></div>",
+    "PostedDate": "2008-12-16T06:28:28.817-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "141036",
+    "ThreadId": "42425",
+    "Html": "It's decently scalable.  If you're running Oxite on one web server it should work just fine.  You can run into some troubles having it run inside the web application.  If the web app goes down, your service does too.  What's cool though is that it will come back up when your app does though and it's disconnected enough to pick up where it left off.<br>\r\n<br>\r\nFor web farms we'd recommend creating a scheduled task to run the background service directly (just build a command-line app that instantiates the services and executes them at the intervals you want [no need for the BackgroundServiceExecutor stuff]) on each node (or just one node in the farm) so it's a separate process and can run independently of the web app.  This is how we do it on <a href=\"http://channel9.msdn.com\">Channel 9</a>.\r\n",
+    "PostedDate": "2008-12-16T10:02:03.603-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

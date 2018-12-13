@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "191158",
+    "ThreadId": "56569",
+    "Html": "<p>Hello.</p>\r\n<p>Can you allow to make a page is front page of the site instead of post list in future versions?</p>\r\n<p>Thank you very much for this amazing software!</p>",
+    "PostedDate": "2009-05-17T02:07:22.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "191224",
+    "ThreadId": "56569",
+    "Html": "<p>You're welcome.&nbsp; Glad you like Oxite.</p>\r\n<p>If I understand correctly, you're asking if the home page can be a page instead of a list of posts?&nbsp; That's not easily done today, but sounds like a good future option we should add.&nbsp; I'm not sure of your coding experience with MVC, but if you'd like me to walk you through how to change some routes, controllers and views to make the homepage show something different, let me know and I'd be happy to explain more.</p>",
+    "PostedDate": "2009-05-17T11:41:48.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "193319",
+    "ThreadId": "56569",
+    "Html": "<p>Thanks for the answer. You have correctly understood my wish about Front page. I can realise this function for myself. But then with each new version I should make changes to an initial code manually.</p>\r\n<p>But I am a little upset by productivity ASP.NET MVC.<br>One request of one page of Oxite causes 9-% CPU loading of my Pentium 4 3.2, 2 gb the dedicated server.<br>Tell, at me something is not correctly adjusted?</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-05-22T11:19:09.073-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "193321",
+    "ThreadId": "56569",
+    "Html": "<p>I think ASP.NET MVC is very performant.&nbsp; You might be seeing some CPU usage because the current release of Oxite&nbsp;doesn't do any caching so you're hitting SQL every page load.&nbsp; The next release will cache pretty much everything so it should get even faster.</p>",
+    "PostedDate": "2009-05-22T11:25:37.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

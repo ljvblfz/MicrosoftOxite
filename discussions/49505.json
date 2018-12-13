@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "165658",
+    "ThreadId": "49505",
+    "Html": "When i build my oxite project first time,i get some errors:<br>\r\n<br>\r\nError&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;The type or namespace name 'ModelBinderResult' could not be found (are you missing a using directive or an assembly reference?)&nbsp;&nbsp; &nbsp;C:\\Documents and Settings\\bilgitek\\Belgelerim\\Oxite\\Oxite.Mvc\\ArchiveDataBinder.cs&nbsp;&nbsp; &nbsp;14&nbsp;&nbsp; &nbsp;16&nbsp;&nbsp; &nbsp;Oxite.Mvc<br>\r\n<br>\r\nError&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;Metadata file 'C:\\Documents and Settings\\bilgitek\\Belgelerim\\Oxite\\Oxite.Mvc\\bin\\Debug\\Oxite.Mvc.dll' could not be found&nbsp;&nbsp; &nbsp;OxiteSite<br>\r\n<br>\r\nwhere's my problem???anyone can help me!!!!<br>\r\n<br>\r\nError&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;Metadata file 'C:\\Documents and Settings\\bilgitek\\Belgelerim\\Oxite\\Oxite.Mvc\\bin\\Debug\\Oxite.Mvc.dll' could not be found&nbsp;&nbsp; &nbsp;OxiteSite<br>\r\n\r\n",
+    "PostedDate": "2009-03-07T07:07:48.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165670",
+    "ThreadId": "49505",
+    "Html": "I've downloaded and installed the OXITE application, unziped and extracted the dll's as mentioned on the installation page.<br>\r\n<br>\r\nWhen I try to run the app from Visual Studio 2008, I get this error:<br>\r\n<br>\r\nError 1 The type or namespace name 'IRouteConstraint' could not be found (are you missing a using directive or an assembly reference?) <br>\r\nC:\\Users\\ME\\Documents\\Visual Studio 2008\\WebSites\\Oxite\\Oxite\\Routing\\IsPageModeConstraint.cs 12 31 Oxite<br>\r\n<br>\r\nAlong with a bunch of other references/occurences of this error.<br>\r\n<br>\r\nWhat am I missing?  Why is the install so cumbersome.  One installer would have been key.<br>\r\n<br>\r\nAnyway, thanks in advance for any assistance.\r\n",
+    "PostedDate": "2009-03-07T08:13:00.347-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "165924",
+    "ThreadId": "49505",
+    "Html": "@onthere<br>\r\n<br>\r\nIt looks like you don't have <a href=\"http://go.microsoft.com/fwlink/?LinkID=140768&clcid=0x409\">ASP.NET MVC RC1</a> installed.  Make sure you have all the <a href=\"http://oxite.codeplex.com/Wiki/View.aspx?title=gettingstarted&referringTitle=Home\">dependencies</a> for Oxite installed.<br>\r\n<br>\r\n@doWhileSomething<br>\r\n<br>\r\nAre you sure you successfully installed ASP.NET MVC RC1?  IRouteConstraint would be in there.<br>\r\n<br>\r\nAs for why it's so cumbersome is because of legal issues we have to exclude all referenced assemblies because of this being an open source project.  Later we might consider making a single installer, but that would only be if we decided to provide a binary (no source code) version.\r\n",
+    "PostedDate": "2009-03-08T21:47:08.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "443463",
+    "ThreadId": "49505",
+    "Html": "<p>i am having following problems any solution please?</p>\r\n<p>&nbsp;</p>\r\n<p>Error&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;'Oxite.Mvc.Infrastructure.OxiteControllerFactory.GetControllerInstance(System.Type)': no suitable method found to override&nbsp;&nbsp; &nbsp;C:\\Users\\yoosuf\\Documents\\Visual Studio 2010\\WebSites\\Oxite\\Oxite.Mvc\\Infrastructure\\OxiteControllerFactory.cs&nbsp;&nbsp; &nbsp;21&nbsp;&nbsp; &nbsp;40&nbsp;&nbsp; &nbsp;Oxite.Mvc</p>\r\n<p>Error&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;Metadata file 'C:\\Users\\yoosuf\\Documents\\Visual Studio 2010\\WebSites\\Oxite\\Oxite.Mvc\\bin\\Debug\\Oxite.Mvc.dll' could not be found&nbsp;&nbsp; &nbsp;OxiteSite<br><br>Error&nbsp;&nbsp; &nbsp;3&nbsp;&nbsp; &nbsp;Metadata file 'C:\\Users\\yoosuf\\Documents\\Visual Studio 2010\\WebSites\\Oxite\\Oxite.Mvc\\bin\\Debug\\Oxite.Mvc.dll' could not be found&nbsp;&nbsp; &nbsp;Oxite.Mvc.Tests</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-05-16T09:36:46.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "160943",
+    "ThreadId": "48238",
+    "Html": "Hi,<br>\r\n<br>\r\nI am trying to build application but but has error saying BlogML reference missing. Please advice where I can get this Namespace.<br>\r\n<br>\r\nThanks<br>\r\nShoeb\r\n",
+    "PostedDate": "2009-02-23T06:25:37.463-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "160952",
+    "ThreadId": "48238",
+    "Html": "Hey,<br>\r\n<br>\r\nI got the solution in Setup steps. Download BlogML from <a href=\"http://www.codeplex.com/BlogML/Release/ProjectReleases.aspx?ReleaseId=171\">http://www.codeplex.com/BlogML/Release/ProjectReleases.aspx?ReleaseId=171</a> and give the reference.<br>\r\n<br>\r\nThanks<br>\r\nShoeb\r\n",
+    "PostedDate": "2009-02-23T06:48:47.493-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,135 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-01-08T15:26:34.353-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The page for advanced installation instructions has nothing on it.",
+    "LastUpdatedDate": "2013-05-16T03:38:08.47-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2008-12-08T14:16:33.013-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Advanced Installation Instructions missing",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 2,
+    "Id": 6741
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I was just starting a blog post on this and then realized that there were no installation  instructions... plus since MVC is beta, I will have to create a VM to try this out. Bummer.",
+      "PostedDate": "2008-12-08T19:49:10.72-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Anthony, there *are* some instructions and I'll write more, but if you reply with your specific situation (what version of VS do you have installed for example, what OS, what DB), then I'll make sure I cover that scenario as I work on building out the instructions to cover more than the 'I have nothing' case.",
+      "PostedDate": "2008-12-08T20:04:18.097-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Oh, and unless you are already deploying something based on a different version of MVC, I don't believe there is any real reason to isolate it into a VM",
+      "PostedDate": "2008-12-08T20:05:02.08-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I have vs 2008 professional(SP1) and after opening the Visual Web Developer SLN file and successfully building with F5, I get an error from VS:\r\n\r\nA project with an output type of Class Library cannot be started directly.  In order to debug this project, add an executable project to this solution which references the library project.  Set the executable project as the startup project.\r\n\r\n<OK>\r\n",
+      "PostedDate": "2008-12-09T11:35:03.737-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "@MichaelJKelly You need to set the \"OxiteSite\" project as the startup project.  Our Getting started page shows you how.\r\n\r\nhttp://www.codeplex.com/oxite/Wiki/View.aspx?title=gettingstarted&referringTitle=Home",
+      "PostedDate": "2008-12-09T14:29:28.833-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Will the Oxite.Database project be compatible with SQL 2008? I ran the upgrade on the project and I am having some issues, maybe I am doing something wrong?",
+      "PostedDate": "2008-12-09T18:24:34.687-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "The database project will currently only work with 2005, although with very minimal (if any) changes to the output sql file generated you should be able to run it in production on SQL Server 2008.\r\n\r\nFor SQL Server 2008 support in the project itself, we'll need to upgrade the project after installing the new GDR for database professional projects which adds 2008 support.  That will probably be low priority for us until more people get it installed (it just RTM'd recently).",
+      "PostedDate": "2008-12-09T22:34:42.953-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Thanks Duncanma,\r\n\r\nI'm using VS 2008 Pro, SQL Server 2005 on Vista Ultimate. I've never installed a version of MVC on this machine. Is there anything special I need to look for during the installation? Thanks for getting back and great work you guys are doing!\r\n\r\nAnthony :-)",
+      "PostedDate": "2008-12-10T06:20:20.063-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I'm getting this exception below. I'm guessing I need my DB setup, but I didn't see any instructions on how to do this? Do you have a sql script that automatically sets up the database? Also, I'm using VS Studio 2008 Professional, IIS 5.1, and SqlExpress. I trying to run this on my local machine. Any help would be great.\r\n\r\nServer Error in '/oxite' Application.\r\nTimeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.\r\nDescription: An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.\r\n\r\nException Details: System.Data.SqlClient.SqlException: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.\r\n\r\nSource Error:\r\n\r\nLine 26:         public void RegisterRoutes()\r\nLine 27:         {\r\nLine 28:             string[] areas = areaRepository.GetAreas(config.Site.ID).Select(a => a.Name).ToArray();\r\nLine 29:             string areasConstraint = areas != null && areas.Length > 0 ? areas.Length > 1 ? string.Format(\"({0})\", string.Join(\"|\", areas)) : areas[0] : \"\";\r\nLine 30: \r\n\r\n\r\nSource File: C:\\SDF\\Oxite\\Oxite\\Routing\\OxiteRoutes.cs    Line: 28\r\n\r\nStack Trace:\r\n\r\n[SqlException (0x80131904): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.]\r\n   System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection) +800131\r\n   System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj) +186\r\n   System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error) +556\r\n   System.Data.SqlClient.TdsParserStateObject.ReadSni(DbAsyncResult asyncResult, TdsParserStateObject stateObj) +164\r\n   System.Data.SqlClient.TdsParserStateObject.ReadPacket(Int32 bytesExpected) +34\r\n   System.Data.SqlClient.TdsParserStateObject.ReadBuffer() +44\r\n   System.Data.SqlClient.TdsParserStateObject.ReadByte() +17\r\n   System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj) +79\r\n   System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK) +33\r\n   System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject) +172\r\n   System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart) +381\r\n   System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance) +181\r\n   System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance) +173\r\n   System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection) +133\r\n   System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options) +30\r\n   System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject) +424\r\n   System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject) +66\r\n   System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject) +494\r\n   System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection) +82\r\n   System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory) +105\r\n   System.Data.SqlClient.SqlConnection.Open() +111\r\n   System.Data.Linq.SqlClient.SqlConnectionManager.UseConnection(IConnectionUser user) +41\r\n   System.Data.Linq.SqlClient.SqlProvider.get_IsSqlCe() +34\r\n   System.Data.Linq.SqlClient.SqlProvider.InitializeProviderMode() +18\r\n   System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query) +260\r\n   System.Data.Linq.DataQuery`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator() +93\r\n   System.Linq.<SelectIterator>d__d`2.MoveNext() +90\r\n   System.Linq.Buffer`1..ctor(IEnumerable`1 source) +251\r\n   System.Linq.Enumerable.ToArray(IEnumerable`1 source) +79\r\n   Oxite.Routing.OxiteRoutes.RegisterRoutes() in C:\\SDF\\Oxite\\Oxite\\Routing\\OxiteRoutes.cs:28\r\n   Oxite.Mvc.OxiteApplication.RegisterRoutes() in C:\\SDF\\Oxite\\Oxite.Mvc\\OxiteApplication.cs:64\r\n   Oxite.Mvc.OxiteApplication.OnStart() in C:\\SDF\\Oxite\\Oxite.Mvc\\OxiteApplication.cs:69\r\n   Oxite.Mvc.OxiteApplication.Application_Start() in C:\\SDF\\Oxite\\Oxite.Mvc\\OxiteApplication.cs:51\r\n",
+      "PostedDate": "2008-12-10T12:52:41.117-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I'm using VSTS 2008 and SQL Server 2005 (with an additional instance of SQL 2008) And I get a deployment error when deploying / building the project.  I've got the OxiteSite set as the startup project.  (I noticed that a database is created called Oxite.Database_with_GUID_Value).  Do you have just a regular SQL script to run and I can just change the connection string?  Other than that great work.",
+      "PostedDate": "2008-12-10T16:34:51.01-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Got it.  \r\nOpen the Oxite.sln file.  Went to SQL Server 2005 created an empty DB called Oxite.Database. Go to the Database project in the Oxite solution.  Point the project properties to that database.  Build the project.  Go to the web.config and change your connection string to point to the new database. Hit F5 and enjoy the first sample post.ko",
+      "PostedDate": "2008-12-10T17:03:48.713-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-12-10T18:37:47.413-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Thanks Sean. That did the trick.",
+      "PostedDate": "2008-12-10T21:23:49.163-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Hi,\r\n\r\nWhen I try and deploy the DB, I get the following errors:\r\n\r\nWarning\t1\tTSD04151: Procedure: [dbo].[oxite_GetRecentlyPublishedPostsAndBackgroundServiceActions] contains an unresolved reference to an object. Either the object does not exist or the reference is ambiguous because it could refer to any of the following objects: [dbo].[oxite_BackgroundServiceAction].[Details]::[query].[value] or [Details].[query]::[value].\tC:\\Users\\Kieron.Lanning\\Downloads\\Oxite\\Oxite.Database\\Schema Objects\\Stored Procedures\\dbo.c9_GetPostsForActionCheck.proc.sql\t26\t4\tOxite.Database\r\nWarning\t2\tTSD04151: Procedure: [dbo].[oxite_GetRecentlyPublishedPostsAndBackgroundServiceActions] contains an unresolved reference to an object. Either the object does not exist or the reference is ambiguous because it could refer to any of the following objects: [dbo].[oxite_BackgroundServiceAction].[Details]::[query].[value] or [Details].[query]::[value].\tC:\\Users\\Kieron.Lanning\\Downloads\\Oxite\\Oxite.Database\\Schema Objects\\Stored Procedures\\dbo.c9_GetPostsForActionCheck.proc.sql\t33\t15\tOxite.Database\r\n\r\n",
+      "PostedDate": "2008-12-11T02:53:58.053-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "@Sean,\r\n\r\nI did what you did and created the main DB in SQL Server 2005. However, that doesn't include the membership database?\r\n\r\nAlso, am getting errors like 'Nullable object must have a value' on line 11 of Permalink.aspx. But I thought I saw someone else find a workaround to that somewhere on this site, For now, I just commented it out.\r\n\r\nHave you any suggestions on how to add the membership DB to SQL Server?\r\n\r\nAnthony :-)\r\n",
+      "PostedDate": "2008-12-12T08:22:23.563-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "The latest changesets will get you what you guys need.  We've checked in the Oxite.Database.sql file and added it to the Oxite.VWDExpress.sln (so it's easy to find) and have fixed lots of bugs, which I believe are related to most of the problems you all are having.  We will be adding a new release early next week with all the changes, but for now if you download the lastest changeset you'll have what you need.  Sorry about all the confusion.",
+      "PostedDate": "2008-12-12T20:40:13.88-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-01-08T15:26:34.353-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T15:43:18.017-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:38:08.47-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

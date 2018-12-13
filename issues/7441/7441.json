@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Even though the spam filter in MIXVideos are marked as not normal for their state, emails are still sent.  Check to make sure when comments are added, that state is checked before adding a message to go out.  Same thing for when comments are approved (to ensure a message goes out at that time).\n \nThis problem more than likely affects the root Oxite project.",
+    "LastUpdatedDate": "2017-11-27T23:43:43.37-08:00",
+    "PlannedForRelease": "Oxite.2009.2.15",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "oxite",
+    "ReportedDate": "2009-04-07T13:31:30.977-07:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Emails Sent for Spam Comments",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7441
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

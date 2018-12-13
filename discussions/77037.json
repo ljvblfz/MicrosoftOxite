@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "263373",
+    "ThreadId": "77037",
+    "Html": "<p>Now that PDC is over does anyone want to volunteer a game plan?</p>\r\n<p>Honestly, I think things have changed SO much I'm starting to get a little frightened about how the upgrade from the old Alpha Feb 09 release is going to go for me.</p>\r\n<p>And ya, I know, it was alpha, and this is beta, and it is not for wimps, etc.&nbsp; Just looking for a little update on the game plan now that PDC is out of the way.&nbsp; I'm starting to see MIX10 comments in the source code tab now...so are we parked until MIX10 is out of the way?</p>",
+    "PostedDate": "2009-12-03T13:45:16.917-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "263386",
+    "ThreadId": "77037",
+    "Html": "<p>Not sure if you saw the news, but Nathan and I moved to a different team called &quot;Orchard&quot; in the ASP.NET team (almost 3 weeks ago).&nbsp; It's still pretty early, but we're building a new app (full CMS)...some of which is coming from Oxite.</p>\r\n<p>It's still extremely early, but since this is really our second go around and there's a full team dedicated to building it full time, it's going much faster.&nbsp; There will be an upgrade path from Oxite or Orchard.&nbsp; This is definitely the right path for us to take Oxite to the next level (but really as a product now instead of a side project).&nbsp; Do check it out, but again, it's still really early.&nbsp; There have only been 3 iterations now (each iteration is 3 weeks long) and Nathan and I have only been involved for 1 iteration.</p>\r\n<p><a href=\"http://orchard.codeplex.com\">http://orchard.codeplex.com</a></p>",
+    "PostedDate": "2009-12-03T14:10:42.1-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "263402",
+    "ThreadId": "77037",
+    "Html": "<p>Just to make sure I understand the statement here...at some point Orchard will take OVER what Oxite began?</p>\r\n<p>Will there be a cost?&nbsp; Will it have blog-like features?&nbsp; I mean, can it really take over for oxite at some point?&nbsp; And is it going to be viable from a license perspective for me as a hobby blogger?</p>",
+    "PostedDate": "2009-12-03T15:11:34.473-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "263406",
+    "ThreadId": "77037",
+    "Html": "<p>Orchard is open source.&nbsp; No cost.&nbsp; Yes, it will have blog features (eventually being greater than or equal to Oxite).</p>\r\n<p>Oxite will still exist however but as a more targeted beast.&nbsp; Our old team is still using Oxite to run the PDC and MIX sites and will continue to do so and continue to make the source available.&nbsp; Orchard will take over where Oxite started in building an extensible CMS platform.</p>\r\n<p>Does that clear it all up?</p>",
+    "PostedDate": "2009-12-03T15:28:54.493-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

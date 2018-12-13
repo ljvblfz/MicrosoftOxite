@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "163258",
+    "ThreadId": "48903",
+    "Html": "I would like to keep the right column on post pages.&nbsp; But the data to render the archives is not included when that page is rendered. How would I go about changing that? I'm new to ASP.NET MVC so I could use a little guidance.<br>\r\n",
+    "PostedDate": "2009-03-01T13:24:34.213-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164418",
+    "ThreadId": "48903",
+    "Html": "We're working on some things to make this much easier and help you not have to touch the Oxite code and just add your own code on top to do this, but for now you can change Oxite to get the data you need.  In the Oxite.2009.2.15 release if you look at Oxite.Mvc.OxiteApplication at the registerActionFilters method, take a look at the listActionsCriteria variable and the methods that are added to it.  These are the controller actions that will run the action filters specified at the bottom of that section of code.  Just add a line that adds the PostController.Item method and you should get the same data that is in the sidebar on list pages.<br>\r\n<br>\r\nFor future reference, the location of this code will be changing (to make it easier to add to it without changing the Oxite code) so the above only applies to release Oxite.2009.2.15.\r\n",
+    "PostedDate": "2009-03-04T10:02:01.15-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "180889",
+    "ThreadId": "53739",
+    "Html": "In the source code notes it says plugins were refactored to be called modules, but then there's a note about another plugin framework being added.  What framework was that?  What will be the difference between modules and this new framework?\r\n",
+    "PostedDate": "2009-04-18T16:16:11.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "180931",
+    "ThreadId": "53739",
+    "Html": "When the time comes, I'll let the team that built it talk about it.  Until then, my lips are sealed (but the code is in there so have at it).  :)<br>\r\n<br>\r\nHere's how I think about modules vs. plugins.  Modules are for when you want to build something that can hook into the MVC/Oxite pipeline and build on it.  Plugins are for when you want to write code to do something in one of the extensibility points that Oxite has defined.<br>\r\n<br>\r\nDoes that make sense?\r\n",
+    "PostedDate": "2009-04-18T23:50:57.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "188337",
+    "ThreadId": "53739",
+    "Html": "<p>Erik, if you guys can create a pluggable module architecture and skinning engine like DotNetNuke (DNN), Oxite will replace DNN within a couple of years and become the most successful open source project on Microsoft platform. Keep up the great work! We feel very excited about it.</p>",
+    "PostedDate": "2009-05-08T16:31:25.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "188561",
+    "ThreadId": "53739",
+    "Html": "<p>Our plugin model is going to be great.&nbsp; We're finishing it up this week.&nbsp; It will be very simple and convention based.&nbsp; We're still nailing out what our module model will be, but it will be more involved and more powerful.</p>\r\n<p>I don't know how DNN's skinning works, but I think what we've come up with for skinning is really good.</p>\r\n<p>We're not trying to replace DNN, but thanks for your confidence in what we're building.&nbsp; Glad you're excited!</p>",
+    "PostedDate": "2009-05-09T20:32:43.19-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "213307",
+    "ThreadId": "53739",
+    "Html": "<p>Any update on module architecture?</p>",
+    "PostedDate": "2009-07-17T23:16:13.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "213308",
+    "ThreadId": "53739",
+    "Html": "<p>Yup, go grab the latest code.&nbsp; Most of the module architecture is implemented.&nbsp; The way you register them is temporary and is going to change and module settings and UI aren't in place yet, but creating modules and how they get called is done and you can see that we've broken up almost all of Oxite into modules now.&nbsp; Still more to go, but that's where we're headed so far.&nbsp; :)</p>",
+    "PostedDate": "2009-07-17T23:18:17.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

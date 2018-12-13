@@ -1,0 +1,122 @@
+[
+  {
+    "Id": "151116",
+    "ThreadId": "45323",
+    "Html": "<p dir=ltr style=\"margin-right:0px\">I have been pulling down the latest version of source code but keep getting the same build error.  I was wondering if someone could tell me what else I need to do to get the source to build.  I read the disclaimer on the check-in comments but assumed that I should at least be able to build the project.  My apologies if that assumption is incorrect.<br>\r\n<br>\r\nHere are some of the errors that I have been getting...</p>\r\n<p dir=ltr style=\"margin-right:0px\">Error 1 The type or namespace name 'ReflectedActionDescriptor' could not be found (are you missing a using directive or an assembly reference?) C:\\Users\\bbehm\\Documents\\Visual Studio 2008\\Projects\\Oxite\\Oxite\\Oxite.Mvc\\ActionFilters\\ControllerActionCriteria.cs 13 22 Oxite.Mvc<br>\r\n<br>\r\nError 2 The type or namespace name 'ActionDescriptor' could not be found (are you missing a using directive or an assembly reference?) C:\\Users\\bbehm\\Documents\\Visual Studio 2008\\Projects\\Oxite\\Oxite\\Oxite.Mvc\\ActionFilters\\ActionFilterRegistryContext.cs 14 81 Oxite.Mvc<br>\r\n<br>\r\nError 5 The non-generic type 'System.Web.Mvc.HtmlHelper' cannot be used with type arguments C:\\Users\\bbehm\\Documents\\Visual Studio 2008\\Projects\\Oxite\\Oxite\\Oxite.Mvc\\Extensions\\HtmlHelperExtensions.cs 27 65 Oxite.Mvc<br>\r\n<br>\r\nError 20 Metadata file 'C:\\Users\\bbehm\\Documents\\Visual Studio 2008\\Projects\\Oxite\\Oxite\\Oxite.Mvc\\bin\\Debug\\Oxite.Mvc.dll' could not be found OxiteSite<br>\r\n<br>\r\nThanks for any help you can provide,<br>\r\nBrian</p>\r\n",
+    "PostedDate": "2009-01-26T15:12:56.633-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "151263",
+    "ThreadId": "45323",
+    "Html": "The most recent sources are already using the Release Candidate of ASP.NET MVC. You have to wait for the public availability of the RC before you can compile Oxite.<br>\r\n",
+    "PostedDate": "2009-01-27T03:09:49.02-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "151365",
+    "ThreadId": "45323",
+    "Html": "Ahhh...that would explain it.  Thanks for the info.\r\n",
+    "PostedDate": "2009-01-27T07:44:20.213-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "151508",
+    "ThreadId": "45323",
+    "Html": "The RC is now available:  <a href=\"http://weblogs.asp.net/scottgu/archive/2009/01/27/asp-net-mvc-1-0-release-candidate-now-available.aspx\">http://weblogs.asp.net/scottgu/archive/2009/01/27/asp-net-mvc-1-0-release-candidate-now-available.aspx</a>\r\n",
+    "PostedDate": "2009-01-27T13:26:21.147-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "152988",
+    "ThreadId": "45323",
+    "Html": "I am using RC1, but still struck at <br>\r\nThe type or namespace name 'ModelBinderResult' could not be found (are you missing a using directive or an assembly reference?) ~\\Oxite\\Oxite.Mvc\\ArchiveDataBinder.cs 14 16 Oxite.Mvc.<br>\r\n",
+    "PostedDate": "2009-01-31T21:12:03.987-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "153057",
+    "ThreadId": "45323",
+    "Html": "<p>@sriharshavardhan: Same for me!</p>\r\n<p>Installed MVC RC on Windows 7 and Oxite is missing 'ModelBinderResult' class. Obviously I couldn't find any similar class in the Object Explorer.</p>\r\n<p>Has it been dropped in the Release Candidate?</p>\r\n<p>Additionally, property 'RouteData' of class 'ModelBindingContext' can't be found in ArchiveDataBinder.cs:16</p>\r\n",
+    "PostedDate": "2009-02-01T08:58:41.49-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "153181",
+    "ThreadId": "45323",
+    "Html": "@sriharshavardhan and @geahaad<br>\r\n<br>\r\nSorry, should've specified, this is in our latest check-ins.  Those will be compatibile with ASP.NET MVC RC.  The current release from January will not be compatibile with the RC.  The next release will include all the changes we've been working on this month and will work with the RC, but I would guess we're still a week out (give or take a day or two).  For now if you'd like to check out our progress, grab the latest check-in (again, it will work the RC), but be warned that some of Oxite is currently broken.  We're still in the middle of a big refactor.\r\n",
+    "PostedDate": "2009-02-01T21:35:11.59-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "153844",
+    "ThreadId": "45323",
+    "Html": "Great, thanks for your kind answer, Erik.<br>\r\n<br>\r\nTake your time while cleaning up and moving stuff around.\r\n",
+    "PostedDate": "2009-02-03T09:55:50.6-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "153846",
+    "ThreadId": "45323",
+    "Html": "You're welcome and thanks, will do, although we're excited to get this release out soon.  :)\r\n",
+    "PostedDate": "2009-02-03T09:58:56.633-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156898",
+    "ThreadId": "45323",
+    "Html": "Hi,<br>\r\n<br>\r\nIs 'ModelBinderResult'  error is fixed? I am waiting for new release.\r\n",
+    "PostedDate": "2009-02-11T22:20:55.98-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156900",
+    "ThreadId": "45323",
+    "Html": "We're done with the new release and we're doing final testing/verification.  It will go up tomorrow.\r\n",
+    "PostedDate": "2009-02-11T22:43:59.687-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156901",
+    "ThreadId": "45323",
+    "Html": "Just follow Erik on twitter (@HumanCompiler) and you're up to date :)<div>It seems, we've something to toy with on the upcoming weekend.<br></div><div><br></div><div>Thank you in advance for the hard work you guys did in the last couple of weeks!</div>",
+    "PostedDate": "2009-02-11T22:49:23.537-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156903",
+    "ThreadId": "45323",
+    "Html": "You're welcome and thanks for the twitter mention.  :)\r\n",
+    "PostedDate": "2009-02-11T22:50:23.873-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156946",
+    "ThreadId": "45323",
+    "Html": "I'm missing three references in the latest source, Microsoft.Practices.*<br>\r\nShould I just wait for the release or how could I fix this?<br>\r\n",
+    "PostedDate": "2009-02-12T02:59:56.03-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "156951",
+    "ThreadId": "45323",
+    "Html": "You need to install Unity.  The instructions for the dependencies are <a href=\"http://www.codeplex.com/oxite/Wiki/View.aspx?title=gettingstarted&referringTitle=Home\">here</a>.  Whether you wait for us to release tomorrow or use the current checkin doesn't matter.  You'll need it either way.\r\n",
+    "PostedDate": "2009-02-12T03:15:36.36-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

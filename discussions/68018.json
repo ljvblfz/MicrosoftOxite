@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "231270",
+    "ThreadId": "68018",
+    "Html": "<p>It's cool that Oxite does support plugins, but after enabling, for example, Twitter plugin. Where and how can I useit? Can I use it to display Tweets?</p>",
+    "PostedDate": "2009-09-04T13:48:19.133-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "231280",
+    "ThreadId": "68018",
+    "Html": "<p>We were just talking about this one yesterday actually.&nbsp; That one isn't done.&nbsp; :(&nbsp; When we ship, it will tweet a new blog post on your behalf.&nbsp; It will probably also let you put your tweets in the sidebar, but we're still undecided on if that's just another plugin or the same plugin.</p>\r\n<p>But yah, currently, that plugin isn't functional.&nbsp; We need to finish it.</p>\r\n<p>What would you expect a twitter plugin to do?&nbsp; :)</p>",
+    "PostedDate": "2009-09-04T14:13:27.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "231285",
+    "ThreadId": "68018",
+    "Html": "<p>I believe it should be a plugin, that can tweet on behalf of you about the new post and a widget/gadget that can display N latest tweets for you account / specified Twitter channel.</p>",
+    "PostedDate": "2009-09-04T14:34:52.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "231286",
+    "ThreadId": "68018",
+    "Html": "<p>Well, that's exactly the intention of the twitter plugin, it's just not done.&nbsp; :(</p>",
+    "PostedDate": "2009-09-04T14:36:03.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "231287",
+    "ThreadId": "68018",
+    "Html": "<p>BTW, are you going to introduce the term widget (or smth similar), i.e. graphical plugin on the site?</p>",
+    "PostedDate": "2009-09-04T14:37:52.303-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "231288",
+    "ThreadId": "68018",
+    "Html": "<p>Yup, but still in the planning stages for that.</p>",
+    "PostedDate": "2009-09-04T14:39:01.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]
